@@ -1,0 +1,41 @@
+h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 31.1px;
+    text-align: center;
+    color: #979797;
+}
+
+input{
+    background: #FFFFFF;
+
+    width: 255px;
+    height: 46px;
+    border: 1px solid #CED4DA;
+    box-sizing: border-box;
+    border-radius: 4.8px; 
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.loginButton{
+
+    margin-top: 25px;
+    align-items: center;
+    width: 255px;
+    height: 46px;
+
+    /* Global/03. Success */
+
+    background: rgba(40, 167, 69, 0.5);
+    border:  none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
