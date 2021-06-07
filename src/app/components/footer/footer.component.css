@@ -1,3 +1,69 @@
-div{
-    background-color: aqua;
+*{
+    margin: 0px;
+    padding: 0px;
+    height: 10vh;
+}
+.fondo{
+    background-color: #388E3C;
+    width: 100%;
+}
+
+p{
+    height: fit-content;
+    display: block;
+}
+
+.col{
+    color: white;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+}
+
+span{
+    margin: 0px;
+}
+
+.logo-fondo{
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color: #F7F9C1;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+svg{
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}
+
+@media only screen and (min-width: 770px) {
+    svg {
+      width: 0%;
+      height: 0%;
+    }
+    img{
+        padding-top: 5px;
+        width: 83%;
+        height: 90%;
+    }
+    col{
+        padding-bottom: 50px;
+    }
+
+    .logo-fondo{
+        display: block;
+    }
+
+    .desktop{
+        width: 50%;
+        margin: 0 auto;
+    }
 }
