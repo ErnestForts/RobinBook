@@ -2,8 +2,12 @@
   margin: 0;
 }
 
-#mapa {
-  height: 100vh;
+.page{
   width: 100%;
+}
+
+#mapa {
+  width: 100%;
+  height: 250px;
   padding: 0;
 }
