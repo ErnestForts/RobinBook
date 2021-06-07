@@ -3,9 +3,13 @@
 </div>
 <div>
     <form>
-        <input placeholder="email">
-        <input style="margin-top: 20px;" placeholder="password">
+        <input id="txtEmail" type="email" placeholder="email">
+        <input id="txtPassword" type="password" style="margin-top: 20px;" placeholder="password">
 
-        <button class="loginButton" routerLink="/register">Login</button>
+        <button class="loginButton" routerLink="/login">Login</button>
+
+        <h4><a  routerLink="/register">Olvidaste la contraseña?</a></h4>
+
+        <button class="registerButton" routerLink="/register">Registrarse</button>
     </form>
 </div>

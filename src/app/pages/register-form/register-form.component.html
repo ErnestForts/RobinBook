@@ -1,1 +1,15 @@
-<p>register-form works!</p>
+<div style="margin-top: -30px;">
+    <h2>Registro</h2>
+</div>
+<div>
+    <form [formGroup]="registerForm">
+        <input formControlName="txtEmail" type="email" style="margin-top: 20px;" placeholder="email">
+        <input formControlName="txtNombre" type="text" style="margin-top: 20px;" placeholder="nombre">
+        <input formControlName="txtApellidos" type="text" style="margin-top: 20px;" placeholder="apellidos">
+        <input formControlName="txtPassword" type="password" style="margin-top: 20px;" placeholder="password">
+        <input formControlName="txtRePassword" type="password" style="margin-top: 20px;" placeholder="repite el password">
+
+        <button class="loginButton" (click)="register()">Enviar</button>
+
+    </form>
+</div>

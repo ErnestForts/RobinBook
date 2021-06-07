@@ -6,7 +6,21 @@ h2{
     text-align: center;
     color: #979797;
 }
+h4{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17.3px;
 
+    color: #979797;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+  }
 input{
     background: #FFFFFF;
 
@@ -38,4 +52,27 @@ input{
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
+}
+
+.registerButton{
+
+    margin-top: 10px;
+    align-items: center;
+    width: 255px;
+    height: 46px;
+
+    /* Global/03. Success */
+
+    background: rgba(40, 167, 69, 0.5);
+    border:  none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+button:hover{
+    cursor:pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
