@@ -24,6 +24,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: 'Poppins';
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style:none;
 }
 
 .content {
@@ -45,3 +55,9 @@
     justify-content: space-around;
     align-items: center;
 }
+
+@font-face {
+    font-family: myFirstFont;
+    src: "../assets/fonts/Poppins/Poppins-Medium.ttf";
+}
+
