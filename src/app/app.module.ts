@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
 import { HeaderRankingComponent } from './components/header-ranking/header-ranking.component';
+import { MapaComponent } from './pages/mapa/mapa.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HeaderRankingComponent } from './components/header-ranking/header-ranki
     FooterVacioComponent,
     HeaderMapasComponent,
     HeaderRankingComponent,
+    MapaComponent,
     FooterComponent,
     FooterVacioComponent,
     HeaderMapasComponent,
