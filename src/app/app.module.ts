@@ -8,6 +8,7 @@ import { MapaComponent } from './pages/mapa/mapa.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.component';
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
+import { HeaderLibrosComponent } from './components/header-libros/header-libros.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderMapasComponent } from './components/header-mapas/header-mapas.com
     MapaComponent,
     FooterComponent,
     FooterVacioComponent,
-    HeaderMapasComponent
+    HeaderMapasComponent,
+    HeaderLibrosComponent
   ],
   imports: [
     BrowserModule,

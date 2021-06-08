@@ -118,3 +118,31 @@ border-radius: 5px 5px 0 0;
     align-items: center;
     font-family: 'Poppins';
 }
+
+.desktop-header, .mobile-header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.desktop-footer, .mobile-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+@media only screen and (min-width: 770px) {
+    .mobile{
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+  .desktop{
+    display: none;
+  }
+
+  .col-desktop{
+    padding-top: 0;
+  }
+}

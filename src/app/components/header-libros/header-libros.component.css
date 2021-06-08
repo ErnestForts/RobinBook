@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    height: 10vh;
+}
+.fondo{
+    background-color: #388E3C;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Poppins';
+    margin-left: 15px;
+    margin-top: 3%;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#plus {
+    float: right;
+    margin-top: 1%;
+    margin-right: 5%;
+    color: white;
+    width: 35px; 
+    height: 35px;
+}
