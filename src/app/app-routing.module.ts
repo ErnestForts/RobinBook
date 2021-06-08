@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginFormComponent } from './pages/login-form/login-form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
+import { MapaComponent } from './pages/mapa/mapa.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path:"", component: MapaComponent},
   {path: 'login', component: LoginComponent,
     children: [
     {
@@ -23,8 +25,8 @@ const routes: Routes = [
       component: RegisterFormComponent
     }
     ]
-  },
-];
+  }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
