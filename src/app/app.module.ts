@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.component';
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
 import { HeaderLibrosComponent } from './components/header-libros/header-libros.component';
+import { FavoritosLibrosComponent } from './pages/favoritos-libros/favoritos-libros.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderLibrosComponent } from './components/header-libros/header-libros.
     FooterComponent,
     FooterVacioComponent,
     HeaderMapasComponent,
-    HeaderLibrosComponent
+    HeaderLibrosComponent,
+    FavoritosLibrosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,50 @@
+.busqueda {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F9C1;
+}
+
+#contenedor {
+    background-color: #F7F9C1;
+    margin-top: 30px;
+}
+
+.content {
+    flex: 1 0 auto;
+    background-color: #F7F9C1;
+    margin-top: 90px;
+}
+
+.container {
+    background-color: #F7F9C1;
+}
+
+.desktop-header, .mobile-header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.desktop-footer, .mobile-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+@media only screen and (min-width: 770px) {
+    .mobile{
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+  .desktop{
+    display: none;
+  }
+
+  .col-desktop{
+    padding-top: 0;
+  }
+}

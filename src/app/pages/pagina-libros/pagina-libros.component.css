@@ -1,45 +1,3 @@
-.page {
-    background-color: #F7F9C1;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    background-color: #388E3C;
-    color: white;
-    height: 10%;
-    text-align: left;
-    font-family: 'Poppins';
-}
-
-h2 {
-    font-family: 'Poppins';
-    margin-left: 15px;
-    margin-top: 3%;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-#plus {
-    float: right;
-    margin-top: 1%;
-    margin-right: 3%;
-}
-
-li {
-    list-style:none;
-}
-
 .busqueda {
     margin-top: 100px;
     display: flex;
@@ -100,7 +58,6 @@ li {
     background-color: #F7F9C1;
 }
 
-
 .cardMovie {
 box-shadow: 0 4px 8px 0 rgba(157, 148, 148, 0.2);
 transition: 0.3s;
@@ -110,20 +67,6 @@ text-align: center;
 
 #portaMovie {
 border-radius: 5px 5px 0 0;
-}
-
-.pie {
-    background-color: #388E3C;
-    position: fixed; 
-    bottom: 0;
-    width: 100%;
-    height: 13%;
-    color: white;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Poppins';
 }
 
 .desktop-header, .mobile-header{
