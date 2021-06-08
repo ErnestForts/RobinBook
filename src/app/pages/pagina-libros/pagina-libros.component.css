@@ -44,7 +44,7 @@ li {
     margin-top: 5%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;    
+    justify-content: center;
 }
 
 .buscar {
@@ -55,15 +55,15 @@ li {
     font-family: 'Poppins';
 }
 
-/* #iconoDentro {
+#iconoDentro {
     position: relative;
-    left: 30px;
-} */
+    left: 40px;
+}
 
-/* .buscar::placeholder {
+.buscar::placeholder {
     text-align: center;
     font-family: 'Poppins';
-} */
+}
 
 .content {
     flex: 1 0 auto;
@@ -74,9 +74,9 @@ li {
     display: flex;
     margin-top: 2%;
     margin-bottom:4%;
-    flex-grow: 4;
     align-items: stretch;
-    justify-content: right;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .botones {
@@ -107,10 +107,7 @@ border-radius: 5px 5px 0 0;
 
 .pie {
     background-color: #388E3C;
-    position: absolute; 
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: fixed; 
     bottom: 0;
     width: 100%;
     height: 13%;
