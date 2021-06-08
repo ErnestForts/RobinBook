@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RankingComponent } from './page/ranking/ranking.component';
+import { RankingComponent } from './pages/ranking/ranking.component';
 
 const routes: Routes = [
-  { path: "ranking", component: RankingComponent },
-  {path:"", component: MapaComponent}
+  { path: "ranking", component: RankingComponent }
 ]
-import { MapaComponent } from './pages/mapa/mapa.component';
 
 
 @NgModule({
