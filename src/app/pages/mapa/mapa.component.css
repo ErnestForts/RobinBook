@@ -4,22 +4,33 @@
 
 #contenedor{
   background-color: #F7F9C1;
-  height: 80vh;
+  height: 100vh;
   padding: 0;
 }
 
 #mapa {
   width: 100%;
   height: 80vh;
-  padding: 10px;
   background-color: #B9BB91;
   margin: 0 auto;
   /* margin-top: 8rem; */
 }
 
-.desktop{
+.desktop-row{
   width: 45%;
   margin: auto;
+}
+
+.desktop-header, .mobile-header{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.desktop-footer, .mobile-footer{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
 
 .col-desktop{
@@ -36,6 +47,10 @@
   padding-right: 6px;
 }
 
+h6{
+  font-size: 1.3vw;
+}
+
 .col{
   padding-bottom: 8px;
   color: #388E3C;
@@ -50,8 +65,8 @@
 
 svg{
   margin: auto;
-  width: 70%;
-  height: 70%;
+  width: 2vw;
+  height: auto;
 }
 
 @media only screen and (min-width: 770px) {
@@ -62,6 +77,11 @@ svg{
     #mapa{
       width: 45%;
       height: 50vh;
+      padding: 10px;
+    }
+
+    #contenedor{
+      padding-top: 12vh;
     }
 }
 
@@ -71,13 +91,14 @@ svg{
   }
 
   #contenedor{
-    margin: 0px;
+    margin: 0;
     padding: 0;
   }
 
   #mapa {
     padding: 0;
     margin: 0;
+    margin-top: 10vh;
   }
 
   .col-desktop{

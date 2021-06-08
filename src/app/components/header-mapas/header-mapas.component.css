@@ -9,11 +9,12 @@
 }
 
 h3{
-    padding-top: 5%;
-    height: fit-content;
-    align-self: center;
-    height: 100%;
+    display: block;
+    position: fixed;
     text-align: left;
+    font-size: 5vw;
+    top: 3vh;
+    padding-left: 2%;
 }
 
 .col{
