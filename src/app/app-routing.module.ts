@@ -7,7 +7,7 @@ import { MapaComponent } from './pages/mapa/mapa.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
-  {path:"", component: MapaComponent},
+  {path: 'home', component: MapaComponent},
   {path: 'login', component: LoginComponent,
     children: [
     {

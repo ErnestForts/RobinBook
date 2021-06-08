@@ -1,28 +1,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-<div class="container">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="contenedor">
+    <app-header-vacio class="mobile-header"></app-header-vacio>
     <div class="column left">
     </div>
     <div class="column middle">
-        <div>
+        <div class="logo">
             <img src="../../../assets/logo.jpg" alt="logo">
         </div>
-        <router-outlet name='login'></router-outlet>
-        <router-outlet name='register'></router-outlet>
-        <router-outlet name='forgot'></router-outlet>
-        <!-- <div *ngIf="_router.url != '/login'" style="margin-top: -30px;">
-            <h2>Login</h2>
+        <div class="outletContent">
+            <router-outlet name='login'></router-outlet>
+            <router-outlet name='register'></router-outlet>
+            <router-outlet name='forgot'></router-outlet>
         </div>
-        <div>
-            <form>
-                <input placeholder="email">
-                <input style="margin-top: 20px;" placeholder="password">
-
-                <button class="loginButton">Login</button>
-            </form>
-        </div> -->
     </div>
     <div class="column right">
+        
     </div>
+    <app-footer-vacio class="mobile-footer"></app-footer-vacio>
 </div>
