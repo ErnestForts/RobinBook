@@ -22,6 +22,7 @@
 h2 {
     font-family: 'Poppins';
     margin-left: 15px;
+    margin-top: 3%;
 }
 
 a {
@@ -31,8 +32,8 @@ a {
 
 #plus {
     float: right;
-    margin-top: 10px;
-    margin-right: 15px;
+    margin-top: 1%;
+    margin-right: 3%;
 }
 
 li {
@@ -43,7 +44,7 @@ li {
     margin-top: 5%;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: flex-start;    
 }
 
 .buscar {
@@ -66,15 +67,16 @@ li {
 
 .content {
     flex: 1 0 auto;
+    background-color: #F7F9C1;
 }
 
 .contenedor-botones {
     display: flex;
     margin-top: 2%;
+    margin-bottom:4%;
     flex-grow: 4;
     align-items: stretch;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: right;
 }
 
 .botones {
@@ -85,11 +87,27 @@ li {
     font-family: 'Poppins';
     padding: 10px;
     margin: 1px;
-  }
+}
 
-.footer {
+.container {
+    background-color: #F7F9C1;
+}
+
+
+.cardMovie {
+box-shadow: 0 4px 8px 0 rgba(157, 148, 148, 0.2);
+transition: 0.3s;
+border-radius: 5px;
+text-align: center;
+}
+
+#portaMovie {
+border-radius: 5px 5px 0 0;
+}
+
+.pie {
     background-color: #388E3C;
-    margin-bottom: 0px;
+    position: absolute; 
     left: 0;
     right: 0;
     bottom: 0;
@@ -103,5 +121,3 @@ li {
     align-items: center;
     font-family: 'Poppins';
 }
-
-
