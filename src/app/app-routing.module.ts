@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MapaComponent } from './pages/mapa/mapa.component';
+import { RankingComponent } from './pages/ranking/ranking.component';
 
 const routes: Routes = [
-  {path:"", component: MapaComponent}
-];
+  { path: "ranking", component: RankingComponent }
+]
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
