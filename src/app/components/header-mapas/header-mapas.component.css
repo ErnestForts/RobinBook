@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    height: 10vh;
+}
+.fondo{
+    background-color: #388E3C;
+    width: 100%;
+}
+
+h3{
+    display: block;
+    position: fixed;
+    text-align: left;
+    font-size: 5vw;
+    top: 3vh;
+    padding-left: 2%;
+}
+
+.col{
+    color: white;
+    text-align: center;
+    align-items: center;
+    align-content: flex-end;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.col-9{
+    align-content: center;
+    color: white;
+    height: 100%;
+}
+
+span{
+    margin: 0px;
+}
+
+svg{
+    width: auto;
+    height: 80%;
+}
