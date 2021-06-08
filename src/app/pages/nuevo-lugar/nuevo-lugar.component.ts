@@ -4,11 +4,11 @@ import { MapaServicioService } from 'src/app/services/mapa-servicio.service';
 
 
 @Component({
-  selector: 'app-mapa',
-  templateUrl: './mapa.component.html',
-  styleUrls: ['./mapa.component.css']
+  selector: 'app-nuevo-lugar',
+  templateUrl: './nuevo-lugar.component.html',
+  styleUrls: ['./nuevo-lugar.component.css']
 })
-export class MapaComponent implements OnInit {
+export class NuevoLugarComponent implements OnInit {
 
   public map : Map;
   
