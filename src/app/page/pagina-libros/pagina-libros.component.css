@@ -15,50 +15,18 @@
     background-color: #388E3C;
     color: white;
     height: 10%;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
     font-family: 'Poppins';
-}
-
-.logo{
-    width: 90px;
 }
 
 h2 {
     font-family: 'Poppins';
     margin-left: 15px;
 }
-h3 {
-    font-family: 'Poppins';
-}
 
 a {
     text-decoration: none;
     color: white;
-}
-
-.boxranking{
-    background-color: #b9bb91;
-    color: white;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Poppins';
-    width: 60%;
-    height: 180px;
-}
-.textranking{
-    
-    justify-content: flex-start;
-    
-    font-family: 'Poppins';
-}
-.imgperfil{
-    border-radius: 200px;
-    width: 140px;
 }
 
 #plus {
@@ -67,12 +35,38 @@ a {
     margin-right: 15px;
 }
 
+li {
+    list-style:none;
+}
+
+.busqueda {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.buscar {
+    border-radius: 20px;
+    border: 0;
+    width: 50%;
+    padding: 10px;
+    font-family: 'Poppins';
+}
+
+/* #iconoDentro {
+    position: relative;
+    left: 30px;
+} */
+
+/* .buscar::placeholder {
+    text-align: center;
+    font-family: 'Poppins';
+} */
+
 .content {
     flex: 1 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
+}
 
 .contenedor-botones {
     display: flex;
@@ -109,3 +103,5 @@ a {
     align-items: center;
     font-family: 'Poppins';
 }
+
+
