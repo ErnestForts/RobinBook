@@ -3,7 +3,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="contenedor">
-    <app-header-vacio class="mobile-header"></app-header-vacio>
+    <app-header-vacio *ngIf="router.url == '/login'" id="header" class="mobile-header"></app-header-vacio>
+    <app-header-register-arrow *ngIf="showBar()" id="arrowHeader" class="mobile-header"></app-header-register-arrow>
     <div class="column left">
     </div>
     <div class="column middle">

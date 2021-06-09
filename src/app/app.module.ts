@@ -12,6 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.component';
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
 import { HeaderVacioComponent } from './components/header-vacio/header-vacio.component';
+import { HeaderRegisterArrowComponent } from './components/header-register-arrow/header-register-arrow.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HeaderVacioComponent } from './components/header-vacio/header-vacio.com
     FooterComponent,
     FooterVacioComponent,
     HeaderMapasComponent,
-    HeaderVacioComponent
+    HeaderVacioComponent,
+    HeaderRegisterArrowComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -89,12 +89,22 @@ button:hover{
         align-content: center;
     }
 
+    input{
+        width: 300px;
+        height: 36px;
+        font-size: 16px;
+    }
+    .registerButton{background: rgba(104, 159, 56, 1);}
+
     .contenedor{
         display: flex;
         flex-direction: row;
         justify-content: center;
         max-width: 100%;
         min-height: 100%;
+    }
+    .outletContent{
+        margin-top: 3vh;
     }
 }
 
@@ -107,6 +117,8 @@ button:hover{
         justify-content: center;
         align-content: center;
     }
+    
+    .registerButton{background: rgba(104, 159, 56, 1);}
 
     .contenedor{
         display: flex;

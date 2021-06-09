@@ -1,24 +1,27 @@
-<div class="title">
-    <h2>Login</h2>
-</div>
-
-<div class="contenedor">
-    <div class="formDiv">
-        <form class="formFlex">
-            <input id="txtEmail" type="email" placeholder="email">
-            <div>
-                <input id="txtPassword" type="password" style="margin-top: 20px;" placeholder="password">
-                <span toggle="#password-field" [ngClass]="isVisible" (click)="toggle()"></span>
-            </div>
+<div class="outletContent">
+    <div class="title">
+        <h2>Login</h2>
+    </div>
     
-            <button class="loginButton" routerLink="/login">Entrar</button>
-    
-            <h4 id="registerTitle"><a  routerLink="/register">Olvidaste la contraseña?</a></h4>
-    
-            <button id="registerButton" class="registerButton" routerLink="/register">Registrarse</button>
-        </form>
-    </div>       
-    <div id="registerDiv" class="mobileRegister">
-        <p><a class="forgotLink" routerLink="/forgot">¿Olvidaste la contraseña?</a> | <a class="registerLink" routerLink="/register">Registrate</a></p>
+    <div class="contenedor">
+        <div class="formDiv">
+            <form class="formFlex">
+                <input id="txtEmail" type="email" placeholder="email">
+                <div>
+                    <input id="txtPassword" type="password" style="margin-top: 20px;" placeholder="password">
+                    <span toggle="#password-field" [ngClass]="isVisible" (click)="toggle()"></span>
+                </div>
+        
+                <button class="loginButton" routerLink="/login">Entrar</button>
+        
+                <h4 id="registerTitle"><a  routerLink="/register">Olvidaste la contraseña?</a></h4>
+        
+                <button id="registerButton" class="registerButton" routerLink="/register">Registrarse</button>
+            </form>
+        </div>       
+        <div id="registerDiv" class="mobileRegister">
+            <p><a class="forgotLink" routerLink="/forgot">¿Olvidaste la contraseña?</a> | <a class="registerLink" routerLink="/register">Registrate</a></p>
+        </div>
     </div>
 </div>
+

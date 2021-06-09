@@ -4,6 +4,7 @@ import { LoginFormComponent } from './pages/login-form/login-form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
 import { MapaComponent } from './pages/mapa/mapa.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -23,6 +24,15 @@ const routes: Routes = [
       outlet: 'register',
       path: '',
       component: RegisterFormComponent
+    }
+    ]
+  },
+  {path: 'forgot', component: LoginComponent,
+    children: [
+    {
+      outlet: 'forgot',
+      path: '',
+      component: ForgotPasswordComponent
     }
     ]
   }

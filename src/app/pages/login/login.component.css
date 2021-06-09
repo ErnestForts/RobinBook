@@ -39,14 +39,18 @@ img{
     display: none;
 
 }
+.mobile-header{
+    display: none;
+}
 
 @media only screen and (max-width: 1200px) {
     .contenedor{
         max-width: 100%;
-        min-height: 100vh;
+        max-height: 100vh;
         text-align: center;
         display: flex;
         flex-direction: row;
+        justify-content: center;
         
     }
     .middle {
@@ -55,12 +59,13 @@ img{
         min-height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         margin-top: 50px;
     }
     .logo{
         flex-direction: row;
         justify-content: start;
+        margin-top: 5vh;
     }
 
     .left {
@@ -71,7 +76,7 @@ img{
     }
 
     img{
-        width: 30%;
+        width: 25%;
     }
     .mobile-footer{
         position: fixed;
@@ -83,6 +88,9 @@ img{
         position: fixed;
         top: 0;
         width: 100vw;
+    }
+    .mobile-header{
+        display: block;
     }
 }
 
@@ -95,13 +103,14 @@ img{
         flex-direction: row;
         
     }
+    
     .middle {
         background-color: rgba(247, 249, 193, 1);
         width: 100%;
         min-height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         margin-top: 50px;
     }
     .logo{
@@ -117,7 +126,7 @@ img{
     }
 
     img{
-        width: 50%;
+        width: 35%;
     }
     .mobile-footer{
         position: fixed;
@@ -131,3 +140,4 @@ img{
         width: 100vw;
     }
 }
+
