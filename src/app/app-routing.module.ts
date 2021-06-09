@@ -4,7 +4,7 @@ import { PerfilRankingComponent } from './pages/perfil-ranking/perfil-ranking.co
 import { RankingComponent } from './pages/ranking/ranking.component';
 
 const routes: Routes = [
-  { path: "ranking", component: RankingComponent }
+  { path: "ranking", component: RankingComponent },
   { path: "perfilRanking", component: PerfilRankingComponent}
 ]
 
