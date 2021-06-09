@@ -11,6 +11,8 @@ import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
 import { HeaderNuevoLugarComponent } from './components/header-nuevo-lugar/header-nuevo-lugar.component';
 import { LugaresFavoritosComponent } from './pages/lugares-favoritos/lugares-favoritos.component';
 import { HeaderLugaresFavoritosComponent } from './components/header-lugares-favoritos/header-lugares-favoritos.component';
+import { LugarComponent } from './pages/lugar/lugar.component';
+import { HeaderLugarComponent } from './components/header-lugar/header-lugar.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { HeaderLugaresFavoritosComponent } from './components/header-lugares-fav
     HeaderNuevoLugarComponent,
     LugaresFavoritosComponent,
     HeaderLugaresFavoritosComponent,
+    LugarComponent,
+    HeaderLugarComponent,
   ],
   imports: [
     BrowserModule,
