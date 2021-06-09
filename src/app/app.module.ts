@@ -9,6 +9,7 @@ import { HeaderMapasComponent } from './components/header-mapas/header-mapas.com
 import { RankingComponent } from './pages/ranking/ranking.component';
 import { HeaderRankingComponent } from './components/header-ranking/header-ranking.component';
 import { PerfilRankingComponent } from './pages/perfil-ranking/perfil-ranking.component';
+import { ChatComponent } from './pages/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PerfilRankingComponent } from './pages/perfil-ranking/perfil-ranking.co
     FooterComponent,
     FooterVacioComponent,
     HeaderMapasComponent,
-    PerfilRankingComponent
+    PerfilRankingComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
