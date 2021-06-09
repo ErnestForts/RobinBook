@@ -10,6 +10,7 @@ import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.com
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
 import { HeaderLibrosComponent } from './components/header-libros/header-libros.component';
 import { FavoritosLibrosComponent } from './pages/favoritos-libros/favoritos-libros.component';
+import { HeaderFavoritosComponent } from './components/header-favoritos/header-favoritos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FavoritosLibrosComponent } from './pages/favoritos-libros/favoritos-lib
     FooterVacioComponent,
     HeaderMapasComponent,
     HeaderLibrosComponent,
-    FavoritosLibrosComponent
+    FavoritosLibrosComponent,
+    HeaderFavoritosComponent
   ],
   imports: [
     BrowserModule,
