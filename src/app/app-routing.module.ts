@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
 import { MapaComponent } from './pages/mapa/mapa.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -35,7 +36,8 @@ const routes: Routes = [
       component: ForgotPasswordComponent
     }
     ]
-  }
+  },
+  {path: 'settings', component: SettingsComponent},
 ]
 
 @NgModule({

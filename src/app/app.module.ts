@@ -14,6 +14,7 @@ import { HeaderMapasComponent } from './components/header-mapas/header-mapas.com
 import { HeaderVacioComponent } from './components/header-vacio/header-vacio.component';
 import { HeaderRegisterArrowComponent } from './components/header-register-arrow/header-register-arrow.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     HeaderMapasComponent,
     HeaderVacioComponent,
     HeaderRegisterArrowComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
