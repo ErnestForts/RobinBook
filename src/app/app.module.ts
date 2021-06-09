@@ -13,6 +13,8 @@ import { FavoritosLibrosComponent } from './pages/favoritos-libros/favoritos-lib
 import { HeaderFavoritosComponent } from './components/header-favoritos/header-favoritos.component';
 import { DetalleLibrosComponent } from './pages/detalle-libros/detalle-libros.component';
 import { HeaderDetalleLibrosComponent } from './components/header-detalle-libros/header-detalle-libros.component';
+import { NuevoLibroComponent } from './pages/nuevo-libro/nuevo-libro.component';
+import { HeaderNuevoLibroComponent } from './components/header-nuevo-libro/header-nuevo-libro.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HeaderDetalleLibrosComponent } from './components/header-detalle-libros
     FavoritosLibrosComponent,
     HeaderFavoritosComponent,
     DetalleLibrosComponent,
-    HeaderDetalleLibrosComponent
+    HeaderDetalleLibrosComponent,
+    NuevoLibroComponent,
+    HeaderNuevoLibroComponent
   ],
   imports: [
     BrowserModule,
