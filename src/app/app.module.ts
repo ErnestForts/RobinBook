@@ -12,6 +12,7 @@ import { HeaderLibrosComponent } from './components/header-libros/header-libros.
 import { FavoritosLibrosComponent } from './pages/favoritos-libros/favoritos-libros.component';
 import { HeaderFavoritosComponent } from './components/header-favoritos/header-favoritos.component';
 import { DetalleLibrosComponent } from './pages/detalle-libros/detalle-libros.component';
+import { HeaderDetalleLibrosComponent } from './components/header-detalle-libros/header-detalle-libros.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DetalleLibrosComponent } from './pages/detalle-libros/detalle-libros.co
     HeaderLibrosComponent,
     FavoritosLibrosComponent,
     HeaderFavoritosComponent,
-    DetalleLibrosComponent
+    DetalleLibrosComponent,
+    HeaderDetalleLibrosComponent
   ],
   imports: [
     BrowserModule,

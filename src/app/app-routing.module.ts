@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetalleLibrosComponent } from './pages/detalle-libros/detalle-libros.component';
 import { FavoritosLibrosComponent } from './pages/favoritos-libros/favoritos-libros.component';
 import { MapaComponent } from './pages/mapa/mapa.component';
 import { PaginaLibrosComponent } from './pages/pagina-libros/pagina-libros.component';
@@ -7,7 +8,8 @@ import { PaginaLibrosComponent } from './pages/pagina-libros/pagina-libros.compo
 const routes: Routes = [
   {path:"", component: MapaComponent},
   {path:"libros", component: PaginaLibrosComponent},
-  {path:"favoritos", component: FavoritosLibrosComponent}
+  {path:"favoritos", component: FavoritosLibrosComponent},
+  {path: "detalle", component: DetalleLibrosComponent}
 ];
 
 @NgModule({
