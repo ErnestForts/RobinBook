@@ -13,6 +13,8 @@ import { LugaresFavoritosComponent } from './pages/lugares-favoritos/lugares-fav
 import { HeaderLugaresFavoritosComponent } from './components/header-lugares-favoritos/header-lugares-favoritos.component';
 import { LugarComponent } from './pages/lugar/lugar.component';
 import { HeaderLugarComponent } from './components/header-lugar/header-lugar.component';
+import { MisChatsComponent } from './pages/mis-chats/mis-chats.component';
+import { HeaderMisChatsComponent } from './components/header-mis-chats/header-mis-chats.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { HeaderLugarComponent } from './components/header-lugar/header-lugar.com
     HeaderLugaresFavoritosComponent,
     LugarComponent,
     HeaderLugarComponent,
+    MisChatsComponent,
+    HeaderMisChatsComponent,
   ],
   imports: [
     BrowserModule,

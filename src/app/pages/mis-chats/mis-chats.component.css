@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.busqueda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F9C1;
+}
+
+h3 {
+    font-size: 40px;
+    color: #689F38;
+}
+
+.nombre > h4, .descripcion > h4{
+    font-size: 4vw;
+}
+
+.hora{
+    text-align: center;
+}
+.hora > p {
+    font-size: 3vw;
+}
+
+.caja-burbuja{
+    align-items: center;
+    justify-content: center;
+}
+.burbuja{
+    background-color: #388E3C;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 4.8vw;
+    height: 4.8vw;
+
+}
+
+.burbuja > p{
+    color: white;
+    font-size: 3vw;
+}
+
+.nombre{
+    color: #31384F;
+}
+
+.descripcion{
+    color: #5A6072;
+    margin-top: 1vw;
+}
+
+.madre{
+    background-color: #F7F9C1;
+}
+
+#contenedor {
+    height: 80vh;
+    margin-top: 10vh;
+    overflow-y: scroll;
+}
+
+.content{
+    height: 100%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    justify-content: center;
+    align-content: center;
+}
+
+#favoritos {
+    max-width: 360px;
+}
+
+.desktop-header,
+.mobile-header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.desktop-footer,
+.mobile-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.card {
+    transition: 0.3s;
+    width: 70vw;
+    background-color: #f5f7b500;
+    margin: 2vw auto;
+    border: none;
+    border-radius: 0;
+}
+
+.part2 {
+    display: grid;
+    grid-template-columns: 20vw 60vw;
+    padding: 2vw;
+}
+
+.imagen-contacto{
+    display: inline-block;
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.imagen-contacto > img {
+    width: auto;
+    height: 100%;
+    margin-left: 0vw;
+    border: none;
+}
+
+.info{
+    padding-left: 2vw;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 770px) {
+    .mobile {
+        display: none;
+    }
+
+    .nombre, .descripcion{
+        width: 70%;
+    }
+
+}
+
+@media only screen and (max-width: 769px) {
+    .desktop {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .busqueda {
+        display: none;
+    }
+
+
+}
