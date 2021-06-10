@@ -5,20 +5,26 @@
 .contenido{
     background-color: rgba(247, 249, 193, 1);
     max-width: 100%;
-    min-height: 83vh;
+    min-height: 93vh;
     display: flex;
     flex-direction: column;
 
 }
 
+.desktop-header, .mobile-header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  }
+
 .account{
     width: 100%;
-    max-height: 100vh;
+    /* max-height: 100vh; */
     min-height: fit-content;
     display: flex;
     flex-direction: column;
     /* justify-content: flex-start; */
-    padding-top: 5vh;
+    padding-top: 24vh;
     padding-left: 5vh;    
 }
 .legal{
@@ -51,7 +57,6 @@ p{
     justify-content: space-between;
 }
 
-
 a{    
     text-decoration: none;
     font-family: Poppins;
@@ -65,3 +70,31 @@ a{
     box-shadow: inset 0px -0.5px 0px black;
     cursor: pointer;
 }
+
+
+@media only screen and (min-width: 770px) {
+    .mobile{
+      display: none;
+    }
+
+}
+
+@media only screen and (max-width: 769px) {
+    .desktop{
+      display: none;
+    }
+    .contenido{
+        min-height: 83vh;    
+    }
+
+    .account{
+        width: 100%;
+        /* max-height: 100vh; */
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        padding-top: 8vh;
+        padding-left: 5vh;    
+    }
+  }
