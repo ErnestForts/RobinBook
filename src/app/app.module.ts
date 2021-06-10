@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.component';
-import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderLibrosComponent } from './components/header-libros/header-libros.component';
@@ -35,31 +33,27 @@ import { LoginFormComponent } from './pages/login-form/login-form.component';
 import { HeaderVacioComponent } from './components/header-vacio/header-vacio.component';
 import { HeaderRegisterArrowComponent } from './components/header-register-arrow/header-register-arrow.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.component';
+import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
+import { MapaComponent } from './pages/mapa/mapa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RankingComponent,
     FooterComponent,
-    FooterVacioComponent,
-    HeaderMapasComponent,
     HeaderRankingComponent,
     RegisterFormComponent,
-    FooterVacioComponent,
-    HeaderMapasComponent,
     PerfilRankingComponent,
     ChatComponent,
     PerfilComponent,
     LoginComponent,
     LoginFormComponent,
-    FooterVacioComponent,
-    HeaderMapasComponent,
     HeaderVacioComponent,
     HeaderRegisterArrowComponent,
     ForgotPasswordComponent,
     SettingsComponent,
     PaginaLibrosComponent,
-    FooterVacioComponent,
     HeaderMapasComponent,
     HeaderLibrosComponent,
     FavoritosLibrosComponent,
@@ -76,6 +70,8 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     HeaderLugarComponent,
     MisChatsComponent,
     HeaderMisChatsComponent,
+    FooterVacioComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
