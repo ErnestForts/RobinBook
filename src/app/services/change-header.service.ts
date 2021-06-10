@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class HeaderService {
-  public title = new BehaviorSubject("Title");
+  public title: BehaviorSubject<any>;
   
   constructor() { }
 

@@ -28,73 +28,72 @@
     align-items:flex-start;
     margin-top: 40px;
 }
-.userstyle{
-    display: flex;
-    flex-direction: row;
-    align-items:baseline;
-    justify-content: flex-start;
-    margin-top: 20px;
-    margin-left: 50px;
-}
-.imgperfil{
-    position: static;
-    border-radius: 200px;
-    width: 100px;
-    margin-right: 40px;
-}
-.nombre {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
-    justify-content: flex-start;
-    color: #31384F;
-    margin: 0px 0px;
-}
 .subtitulo {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    justify-content: flex-start;
-    color: #838795;
-    margin-top: 10px;
+    text-align: center;
+    color: white;
 }
 .content{
     display: flex;
     flex-direction: column;
     margin-top: 120px;
 }
-.contentMis{
+.contentCenter{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    justify-content:center;
+    align-items: baseline;
 }
-.mis{
+.imgperfil{
+    border-radius: 200px;
+    width: 110px;
+    margin-top: 10px;
+}
+.titlestyle{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
-    margin: 10px;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-left: 100px;
 }
-
-.title{
+.titlestyle2{
+    display: flex;
+    align-items: baseline;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.titles{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #31384F;
-    margin-top: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #C2C4CB;
 }
 .line{
-    width: 80%;
+    width: 350px;
     border: 0.5px solid #E2E3E4;
+}
+.title2{
+    font-family: 'Poppins';
+    font-style:normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: #5A6072;
+    margin-top: 10px;
+}
+.title3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+    margin-left: 20px;
 }
 
 .desktop-header, .mobile-header{

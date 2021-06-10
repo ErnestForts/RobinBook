@@ -12,8 +12,11 @@ export class NuevoLibroComponent implements OnInit {
 
   constructor(private headerService: HeaderService) { }
 
-  ngOnInit(): void {
+  ponTitulo(): void {
     this.headerService.setTitle('Nuevo Libro');
   }
 
+  ngOnInit(): void {
+    this.ponTitulo()
+  }
 }
