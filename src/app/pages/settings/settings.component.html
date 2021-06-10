@@ -3,18 +3,20 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 
 <div class="contenedor">
-    <app-header-register-arrow class="mobile"></app-header-register-arrow>
+    <!-- <app-header-register-arrow class="mobile"></app-header-register-arrow> -->
+    <app-header-favoritos title="Configuracion" src="..\assets\icons\arrow-left.svg" id="plus" alt="Back">
+    </app-header-favoritos>
     <app-footer class="desktop-header desktop"></app-footer>
     <div class="contenido">
         <div class="account">
             <p>Account Settings</p>
             <div class="vertical-menu">
-                <div class="menuItem1" routerLink="/perfil">
-                    <a class="effect effect-1">Información Personal</a>
+                <div class="menuItem1">
+                    <a routerLink="/perfil" class="effect effect-1">Información Personal</a>
                     <i class="fa fa-chevron-circle-right hvr-icon arrow"></i>
                 </div>
-                <div class="menuItem1">
-                    <a href="#">Notificaciones</a>
+                <div class="menuItem1" >
+                    <a routerLink="/libros/favoritos" class="effect effect-1">Notificaciones</a>
                     <i class="fa fa-chevron-circle-right hvr-icon arrow"></i>
                 </div>
                 

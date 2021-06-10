@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-header-favoritos',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderFavoritosComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+    title;
+  @Input()
+  id;
+  @Input()
+  src;
+  @Input()
+  alt;
+  constructor(private _location: Location) { }
 
   ngOnInit(): void {
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
 }

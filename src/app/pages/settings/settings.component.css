@@ -1,6 +1,9 @@
 *{
     margin: 0;
 }
+a{
+    width: 100%;
+}
 
 .contenido{
     background-color: rgba(247, 249, 193, 1);
