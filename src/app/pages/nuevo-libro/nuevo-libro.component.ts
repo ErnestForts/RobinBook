@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from 'src/app/services/change-header.service';
 
 @Component({
   selector: 'app-nuevo-libro',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevoLibroComponent implements OnInit {
 
-  constructor() { }
+  // constructor() {}
+
+  constructor(private headerService: HeaderService) { }
 
   ngOnInit(): void {
+    this.headerService.setTitle('Nuevo Libro');
   }
 
 }

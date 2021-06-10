@@ -21,7 +21,7 @@ import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
-  {path: "ranking", component: RankingComponent },
+  {path: "ranking", component: RankingComponent, data: {titulo: "ranking"} },
   {path: "perfilRanking", component: PerfilRankingComponent},
   {path: "chat", component: ChatComponent},
   {path: "perfil", component: PerfilComponent},

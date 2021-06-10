@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from 'src/app/services/change-header.service';
 
 @Component({
   selector: 'app-header-principal',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderPrincipalComponent implements OnInit {
 
-  constructor() { }
+  public title: string
+
+  constructor(private headerService: HeaderService) { }
 
   ngOnInit(): void {
+    this.headerService.title.subscribe(updatedTitle => {
+      this.title = updatedTitle;
+    });
   }
 
 }
