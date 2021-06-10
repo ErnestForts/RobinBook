@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: "perfilRanking", component: PerfilRankingComponent},
   { path: "chat", component: ChatComponent},
   { path: "perfil", component: PerfilComponent},
-  {path: 'login', component: LoginComponent,
+  { path: 'login', component: LoginComponent,
     children: [
     {
       outlet: 'login',
