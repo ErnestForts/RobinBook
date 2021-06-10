@@ -36,6 +36,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.component';
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
 import { MapaComponent } from './pages/mapa/mapa.component';
+import { HeaderPrincipalComponent } from './components/header-principal/header-principal.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { MapaComponent } from './pages/mapa/mapa.component';
     MisChatsComponent,
     HeaderMisChatsComponent,
     FooterVacioComponent,
-    MapaComponent
+    MapaComponent,
+    HeaderPrincipalComponent
   ],
   imports: [
     BrowserModule,

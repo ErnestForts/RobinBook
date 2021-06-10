@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    height: 10vh;
+}
+.fondo{
+    background-color: #388E3C;
+    width: 100%;
+    margin: 0px;
+}
+
+.cabecera {
+    border: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+h3 {
+    font-family: 'Poppins';
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: white;
+}
+
+#back {
+    color: white;
+    width: 35px; 
+    height: 35px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.safe {
+    margin-right: 15px;
+    margin-top: 25px;
+}
