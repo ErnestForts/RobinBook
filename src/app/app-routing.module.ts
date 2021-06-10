@@ -8,10 +8,10 @@ import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
 
 const routes: Routes = [
   {path:"mapa", component: MapaComponent},
-  {path:"nuevo-lugar", component: NuevoLugarComponent},
-  {path:"lugares-favoritos", component: LugaresFavoritosComponent},
-  {path:"lugar", component: LugarComponent},
-  {path:"mis-chats", component: MisChatsComponent}
+  {path:"mapa/nuevo-lugar", component: NuevoLugarComponent},
+  {path:"mapa/lugares-favoritos", component: LugaresFavoritosComponent},
+  {path:"mapa/lugares-favoritos/lugarlugar", component: LugarComponent},
+  {path:"mi-perfil/mis-chats", component: MisChatsComponent}
 ];
 
 @NgModule({

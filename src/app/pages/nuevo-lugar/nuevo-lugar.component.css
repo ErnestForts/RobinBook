@@ -58,6 +58,7 @@ input, textarea{
     color: white;
     font-size: 1vw;
     resize: none;
+    text-align: center;
 }
 
 .form-control::placeholder {
