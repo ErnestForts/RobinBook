@@ -21,15 +21,21 @@ import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
-  { path: "ranking", component: RankingComponent },
-  { path: "perfilRanking", component: PerfilRankingComponent},
-  { path: "chat", component: ChatComponent},
-  { path: "perfil", component: PerfilComponent},
+  {path: "ranking", component: RankingComponent },
+  {path: "perfilRanking", component: PerfilRankingComponent},
+  {path: "chat", component: ChatComponent},
+  {path: "perfil", component: PerfilComponent},
   {path:"libros", component: PaginaLibrosComponent},
   {path:"favoritos", component: FavoritosLibrosComponent},
   {path:"detalle", component: DetalleLibrosComponent},
   {path:"nuevo", component: NuevoLibroComponent},
-  { path: 'login', component: LoginComponent,
+  {path: 'settings', component: SettingsComponent},
+  {path:"mapa", component: MapaComponent},
+  {path:"mapa/nuevo-lugar", component: NuevoLugarComponent},
+  {path:"mapa/lugares-favoritos", component: LugaresFavoritosComponent},
+  {path:"mapa/lugares-favoritos/lugarlugar", component: LugarComponent},
+  {path:"mi-perfil/mis-chats", component: MisChatsComponent},
+  {path: 'login', component: LoginComponent,
     children: [
     {
       outlet: 'login',
@@ -55,13 +61,7 @@ const routes: Routes = [
       component: ForgotPasswordComponent
     }
     ]
-  },
-  {path: 'settings', component: SettingsComponent},
-  {path:"mapa", component: MapaComponent},
-  {path:"mapa/nuevo-lugar", component: NuevoLugarComponent},
-  {path:"mapa/lugares-favoritos", component: LugaresFavoritosComponent},
-  {path:"mapa/lugares-favoritos/lugarlugar", component: LugarComponent},
-  {path:"mi-perfil/mis-chats", component: MisChatsComponent}
+  }
 ]
 
 @NgModule({
