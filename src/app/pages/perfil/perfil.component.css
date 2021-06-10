@@ -10,6 +10,7 @@
     margin-top: 10vh;
     overflow-y: scroll;
 }
+
 .header{
     position: absolute;
     left: 0%;
@@ -21,6 +22,7 @@
     background: #388E3C;
     box-shadow: inset 0px -0.5px 0px #E2E3E4;
 }
+
 .headertitle{
     font-family: 'Poppins';
     font-style: normal;
@@ -72,7 +74,6 @@
 .content{
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
 }
 .contentMis{
     display: flex;
