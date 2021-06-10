@@ -1,0 +1,131 @@
+h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 31.1px;
+    text-align: center;
+    color: #979797;
+}
+h4{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17.3px;
+
+    color: #979797;
+}
+.field-icon {
+    float: right;
+    margin-left: -25px;
+    margin-top: 35px;
+    position: relative;
+    z-index: 2;
+  }
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+  }
+input{
+    background: #FFFFFF;
+
+    width: 300px;
+    height: 46px;
+    border: 1px solid #CED4DA;
+    box-sizing: border-box;
+    border-radius: 4.8px; 
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.registerButton{
+
+    margin-top: 30px;
+    align-items: center;
+    width: 255px;
+    height: 46px;
+
+    /* Global/03. Success */
+
+    background: rgba(40, 167, 69, 0.5);
+    border:  none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+button:hover{
+    cursor:pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.formFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+@media only screen and (max-width: 1019px) {
+    .formDiv {
+        max-width: 50%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    input{
+        width: 300px;
+        height: 36px;
+        font-size: 16px;
+    }
+    .registerButton{background: rgba(104, 159, 56, 1);}
+
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        max-width: 100%;
+        min-height: 100%;
+    }
+    .outletContent{
+        margin-top: 3vh;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .formDiv {
+        max-width: 30%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .registerButton{background: rgba(104, 159, 56, 1);}
+
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        max-width: 100%;
+        min-height: 100%;
+    }
+}
+

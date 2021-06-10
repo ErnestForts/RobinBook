@@ -1,0 +1,143 @@
+.contenedor{
+    max-width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.column {
+    float: left;
+}
+  
+.left {
+    background-color: rgba(151, 151, 151, 1);
+    width: 10%;
+    min-height: 100%;
+}
+.right {
+    background-color: rgba(151, 151, 151, 1);
+    background-image: url('../../../assets/RoobinBook_mockUp.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+
+}
+
+.middle {
+    background-color: rgba(247, 249, 193, 1);
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    width: 50%;
+}
+.mobile{
+    display: none;
+
+}
+.mobile-header{
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .contenedor{
+        max-width: 100%;
+        max-height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    .middle {
+        background-color: rgba(247, 249, 193, 1);
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+    .logo{
+        flex-direction: row;
+        justify-content: start;
+        margin-top: 5vh;
+    }
+
+    .left {
+        width: 0%;
+    }
+    .right {
+        width: 0%;
+    }
+
+    img{
+        width: 25%;
+    }
+    .mobile-footer{
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+    }
+
+    .mobile-header{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+    }
+    .mobile-header{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .contenedor{
+        max-width: 100%;
+        min-height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+    .middle {
+        background-color: rgba(247, 249, 193, 1);
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+    .logo{
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .left {
+        width: 0%;
+    }
+    .right {
+        width: 0%;
+    }
+
+    img{
+        width: 35%;
+    }
+    .mobile-footer{
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+    }
+
+    .mobile-header{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+    }
+}
+
