@@ -36,7 +36,6 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.component';
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
 import { MapaComponent } from './pages/mapa/mapa.component';
-import { HeaderPrincipalComponent } from './components/header-principal/header-principal.component';
 import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
 
 @NgModule({
@@ -74,7 +73,6 @@ import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
     HeaderMisChatsComponent,
     FooterVacioComponent,
     MapaComponent,
-    HeaderPrincipalComponent,
     MiPerfilComponent
   ],
   imports: [
