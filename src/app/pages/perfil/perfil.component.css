@@ -1,7 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .bg{
     background-color: #F7F9C1;
-    height: 100vh;
-    padding: 0;
+    height: 80vh;
+    width: 100vw;
+    margin-top: 10vh;
+    overflow-y: scroll;
 }
 .header{
     position: absolute;
@@ -92,6 +99,7 @@
     color: #31384F;
     margin-top: 20px;
 }
+
 .line{
     width: 80%;
     border: 0.5px solid #E2E3E4;
@@ -107,14 +115,15 @@
     bottom: 0;
     width: 100vw;
 }
-@media only screen and (min-width: 751px) {
+
+@media only screen and (min-width: 770px) {
     .mobile{
         display: none;
     }
 
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 769px) {
     .desktop{
         display: none;
     }

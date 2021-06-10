@@ -1,65 +1,62 @@
-.bg{
-    background-color: #F7F9C1;
-    height: 100vh;
+* {
+    margin: 0;
     padding: 0;
 }
+
+.bg{
+    background-color: #F7F9C1;
+    height: 80vh;
+    width: 100vw;
+    margin-top: 10vh;
+    overflow-y: scroll;
+}
 .content{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    margin-top: 120px;
+    margin-top: 3vw;
+    flex: 1 0 auto;
+    background-color: #F7F9C1;
+    justify-content: center;
+    align-content: center;
 } 
 .userstyle{
     display: flex;
     flex-direction: row;
     align-items:baseline;
+    justify-content: center;
     margin-top: 20px;
+    width: 100vw;
 }
 .imgperfil{
     position: static;
-    border-radius: 200px;
-    width: 100px;
-    margin-right: 40px;
+    border-radius: 50%;
+    width: 20vw;
+    margin-right: 5vw;
 }
 .nombre {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 5vw;
     justify-content: flex-start;
     color: #31384F;
     margin: 0px 0px;
+    padding-right: 8vw;
 }
 .subtitulo {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 4vw;
     justify-content: flex-start;
     color: #838795;
-    margin-top: 10px;
+    padding-right: 8vw;
+    margin-top: 1vw;
 }
+
 .puntos{
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 600;
-    font-size: 25px;
-    line-height: 20px;
-    color: #388E3C;
-    margin-left: 30px;
+    font-size: 8vw;
+    color: #388E3C;    
 }
+
 .line{
-    width: 350px;
+    width: 100vw;
     border: 0.5px solid #E2E3E4;
     margin: 20px 0px;
 }
-
-
-
-
 
 
 .desktop-header, .mobile-header{
@@ -72,13 +69,13 @@
     bottom: 0;
     width: 100vw;
 }
-@media only screen and (min-width: 751px) {
+@media only screen and (min-width: 770px) {
     .mobile{
         display: none;
     }
 
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 769px) {
     .desktop{
         display: none;
     }

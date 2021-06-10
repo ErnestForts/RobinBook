@@ -4,8 +4,16 @@
 
 #contenedor {
     background-color: #F7F9C1;
-    height: 100vh;
+    height: 80vh;
+    margin-top: 10vh;
+    overflow-y: scroll;
+    justify-items: center;
     padding: 0;
+}
+
+.content{
+    margin-top: 3vw;
+    margin-bottom: 3vw;
 }
 
 #mapa {
@@ -14,6 +22,10 @@
     width: 45%;
     height: 20vh;
     padding: 10px;
+}
+
+.espacio{
+    padding-top: 15vh;
 }
 
 .subirImagen {
@@ -53,8 +65,9 @@ img{
 }
 
 input, textarea{
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
+    background-color: rgb(255, 255, 255);
+    border: 0.2vw solid #B9BB91;
+
     color: white;
     font-size: 1vw;
     resize: none;
@@ -72,8 +85,8 @@ input, textarea{
 }
 
 .form-control:active, .form-control:focus{
-    background-color: rgba(0, 0, 0, 0.200);
-    border: none;
+    background-color: rgb(255, 255, 255);
+    border: 0.2vw solid #B9BB91;
     box-shadow: none;
     color: white;
 }
@@ -148,6 +161,24 @@ svg {
     #contenedor {
         padding-top: 12vh;
     }
+
+    .espacio{
+        padding-top: 0;
+    }
+
+    .formulario {
+        width: 45%;
+        height: auto;
+        margin: 0 auto;
+        border: 10px solid #B9BB91;
+        border-top: none;
+        background-color: #B9BB91;
+        font-size: 2vw;
+    }
+
+    .col-desktop{
+        padding-top: 0;
+    }
 }
 
 @media only screen and (max-width: 769px) {
@@ -156,7 +187,6 @@ svg {
     }
 
     #contenedor {
-        margin: 0;
         padding: 0;
     }
 
@@ -166,10 +196,6 @@ svg {
 
     .col-desktop {
         padding-top: 0;
-    }
-
-    .espacio{
-        padding-top: 21vh;
     }
 
     .subirImagen {
@@ -210,17 +236,22 @@ svg {
     }
     
     input, textarea{
-        background-color: rgba(0, 0, 0, 0);
-        border: none;
+        background-color: rgb(255, 255, 255);
+        border: 0.2vw solid #B9BB91;
+        margin-top: 2vw;
+        border-radius: 10px;
+        font-size: 4.5vw;
         color: #388E3C;
-        font-size: 3vw;
+    }
+
+    textarea{
+        height: 40vw;
     }
     
     .form-control::placeholder {
         color:#388E3C;
         opacity: 1;
         text-align: center;
-
     }
     
     .negrita::placeholder{
@@ -228,8 +259,8 @@ svg {
     }
     
     .form-control:active, .form-control:focus{
-        background-color: rgba(0, 0, 0, 0.200);
-        border: none;
+        background-color: rgb(255, 255, 255);
+        border: 0.2vw solid #B9BB91;
         box-shadow: none;
         color: #388E3C;
     }

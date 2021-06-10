@@ -3,21 +3,13 @@
     padding: 0;
 }
 
-
-.busqueda {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #F7F9C1;
-}
-
 h3 {
     font-size: 40px;
     color: #689F38;
 }
 
-.nombre > h4, .descripcion > h4{
-    font-size: 4vw;
+.nombre > h4, .mensaje > h4{
+    font-size: 5vw;
 }
 
 .hora{
@@ -50,7 +42,7 @@ h3 {
     color: #31384F;
 }
 
-.descripcion{
+.mensaje{
     color: #5A6072;
     margin-top: 1vw;
 }
@@ -136,7 +128,7 @@ h3 {
         display: none;
     }
 
-    .nombre, .descripcion{
+    .nombre, .mensaje{
         width: 70%;
     }
 
