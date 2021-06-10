@@ -8,12 +8,12 @@ import { HeaderService } from 'src/app/services/change-header.service';
 })
 export class NuevoLibroComponent implements OnInit {
 
-  // constructor() {}
+  constructor() {}
 
-  constructor(private headerService: HeaderService) { }
+  // constructor(private headerService: HeaderService) { }
 
   ponTitulo(): void {
-    this.headerService.setTitle('Nuevo Libro');
+    // this.headerService.setTitle('Nuevo Libro');
   }
 
   ngOnInit(): void {
