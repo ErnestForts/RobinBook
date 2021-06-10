@@ -41,11 +41,6 @@
     width: 140px;
 }
 .nombre {
-    position: static;
-    width: 146px;
-    height: 36px;
-    left: 0px;
-    top: 0px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
@@ -53,17 +48,9 @@
     line-height: 36px;
     text-align: center;
     color: #31384F;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
     margin: 0px 0px;
 }
 .subtitulo {
-    position: static;
-    width: 146px;
-    height: 20px;
-    left: 0px;
-    top: 36px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -71,22 +58,11 @@
     line-height: 20px;
     text-align: center;
     color: #838795;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
     margin: 0px 0px;
 }
 .line{
-    position: static;
-    width: 343px;
-    height: 0px;
-    left: 0px;
-    top: 0px;
+    width: 350px;
     border: 0.5px solid #E2E3E4;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
     margin: 24px 0px;
 }
 .alinelibros{
@@ -105,16 +81,9 @@
     color: #C2C4CB;
 }
 .imglibro{
-    position: static;
     width: 70px;
     height: 90px;
-    left: 0px;
-    top: 0px;
-    /* background: url(https://images-na.ssl-images-amazon.com/images/I/816QLZKwmIL.jpg); */
     border-radius: 12px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
     margin: 0px 16px;
 }
 .librostyle{

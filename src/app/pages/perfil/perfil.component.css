@@ -74,15 +74,8 @@
     color: #C2C4CB;
 }
 .line{
-    position: static;
     width: 350px;
-    height: 0px;
-    left: 0px;
-    top: 0px;
     border: 0.5px solid #E2E3E4;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 .title2{
     font-family: 'Poppins';
