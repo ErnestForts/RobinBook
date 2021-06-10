@@ -14,7 +14,7 @@ h3{
     text-align: left;
     font-size: 5vw;
     top: 3vh;
-    padding-left: 2%;
+    padding-left: 3vw;
 }
 
 
@@ -39,5 +39,9 @@ span{
 
 svg{
     width: auto;
-    height: 7vw;
+    height: 5vw;
+}
+
+.search{
+    padding-right: 7vw;
 }

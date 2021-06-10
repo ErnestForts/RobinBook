@@ -13,6 +13,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { LugarComponent } from './pages/lugar/lugar.component';
+import { LugaresFavoritosComponent } from './pages/lugares-favoritos/lugares-favoritos.component';
+import { MapaComponent } from './pages/mapa/mapa.component';
+import { MisChatsComponent } from './pages/mis-chats/mis-chats.component';
+import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -52,6 +57,11 @@ const routes: Routes = [
     ]
   },
   {path: 'settings', component: SettingsComponent},
+  {path:"mapa", component: MapaComponent},
+  {path:"mapa/nuevo-lugar", component: NuevoLugarComponent},
+  {path:"mapa/lugares-favoritos", component: LugaresFavoritosComponent},
+  {path:"mapa/lugares-favoritos/lugarlugar", component: LugarComponent},
+  {path:"mi-perfil/mis-chats", component: MisChatsComponent}
 ]
 
 @NgModule({

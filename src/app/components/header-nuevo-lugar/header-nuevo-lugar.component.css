@@ -17,14 +17,18 @@ h3{
     padding-left: 2%;
 }
 
-
 .col{
     color: white;
     text-align: center;
     align-items: center;
-    align-content: flex-end;
     height: 100%;
     padding-top: 10px;
+}
+
+p{
+    font-size: 3.5vw;
+    padding-right: 2vw;
+    padding-top: 1.99vw;
 }
 
 .col-9{

@@ -11,20 +11,25 @@
 h3{
     display: block;
     position: fixed;
-    text-align: left;
+    text-align: center;
+    width: 100%;
     font-size: 5vw;
     top: 3vh;
-    padding-left: 2%;
+    padding-right: 20vw;
 }
-
 
 .col{
     color: white;
     text-align: center;
     align-items: center;
-    align-content: flex-end;
     height: 100%;
     padding-top: 10px;
+}
+
+p{
+    font-size: 3.5vw;
+    padding-right: 2vw;
+    padding-top: 1.99vw;
 }
 
 .col-9{
