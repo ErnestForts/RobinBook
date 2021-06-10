@@ -7,7 +7,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { LoginFormComponent } from './pages/login-form/login-form.component';
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FooterComponent } from './components/footer/footer.component';
 import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.component';
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
@@ -19,6 +18,15 @@ import { HeaderVacioComponent } from './components/header-vacio/header-vacio.com
 import { HeaderRegisterArrowComponent } from './components/header-register-arrow/header-register-arrow.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderLibrosComponent } from './components/header-libros/header-libros.component';
+import { FavoritosLibrosComponent } from './pages/favoritos-libros/favoritos-libros.component';
+import { HeaderFavoritosComponent } from './components/header-favoritos/header-favoritos.component';
+import { DetalleLibrosComponent } from './pages/detalle-libros/detalle-libros.component';
+import { HeaderDetalleLibrosComponent } from './components/header-detalle-libros/header-detalle-libros.component';
+import { NuevoLibroComponent } from './pages/nuevo-libro/nuevo-libro.component';
+import { HeaderNuevoLibroComponent } from './components/header-nuevo-libro/header-nuevo-libro.component';
+import { PaginaLibrosComponent } from './pages/pagina-libros/pagina-libros.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +37,6 @@ import { SettingsComponent } from './pages/settings/settings.component';
     HeaderMapasComponent,
     HeaderRankingComponent,
     RegisterFormComponent,
-    FooterComponent,
     FooterVacioComponent,
     HeaderMapasComponent,
     PerfilRankingComponent,
@@ -37,13 +44,22 @@ import { SettingsComponent } from './pages/settings/settings.component';
     PerfilComponent,
     LoginComponent,
     LoginFormComponent,
-    FooterComponent,
     FooterVacioComponent,
     HeaderMapasComponent,
     HeaderVacioComponent,
     HeaderRegisterArrowComponent,
     ForgotPasswordComponent,
-    SettingsComponent
+    SettingsComponent,
+    PaginaLibrosComponent,
+    FooterVacioComponent,
+    HeaderMapasComponent,
+    HeaderLibrosComponent,
+    FavoritosLibrosComponent,
+    HeaderFavoritosComponent,
+    DetalleLibrosComponent,
+    HeaderDetalleLibrosComponent,
+    NuevoLibroComponent,
+    HeaderNuevoLibroComponent
   ],
   imports: [
     BrowserModule,

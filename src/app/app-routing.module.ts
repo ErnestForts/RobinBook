@@ -4,7 +4,10 @@ import { ChatComponent } from './pages/chat/chat.component';
 import { PerfilRankingComponent } from './pages/perfil-ranking/perfil-ranking.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
-
+import { DetalleLibrosComponent } from './pages/detalle-libros/detalle-libros.component';
+import { FavoritosLibrosComponent } from './pages/favoritos-libros/favoritos-libros.component';
+import { NuevoLibroComponent } from './pages/nuevo-libro/nuevo-libro.component';
+import { PaginaLibrosComponent } from './pages/pagina-libros/pagina-libros.component';
 import { LoginFormComponent } from './pages/login-form/login-form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
@@ -17,6 +20,10 @@ const routes: Routes = [
   { path: "perfilRanking", component: PerfilRankingComponent},
   { path: "chat", component: ChatComponent},
   { path: "perfil", component: PerfilComponent},
+  {path:"libros", component: PaginaLibrosComponent},
+  {path:"favoritos", component: FavoritosLibrosComponent},
+  {path:"detalle", component: DetalleLibrosComponent},
+  {path:"nuevo", component: NuevoLibroComponent},
   { path: 'login', component: LoginComponent,
     children: [
     {
