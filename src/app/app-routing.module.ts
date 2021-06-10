@@ -18,23 +18,25 @@ import { LugaresFavoritosComponent } from './pages/lugares-favoritos/lugares-fav
 import { MapaComponent } from './pages/mapa/mapa.component';
 import { MisChatsComponent } from './pages/mis-chats/mis-chats.component';
 import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
+import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
-  {path: "ranking", component: RankingComponent },
-  {path: "perfilRanking", component: PerfilRankingComponent},
-  {path: "chat", component: ChatComponent},
-  {path: "perfil", component: PerfilComponent},
+  {path:"ranking", component: RankingComponent },
+  {path:"ranking/perfil", component: PerfilRankingComponent},
+  {path:"ranking/perfil/chat", component: ChatComponent},
+  {path:"perfil", component: PerfilComponent},
+  {path:"perfil/mis-chats", component: MisChatsComponent},
+  {path:"perfil/mi-perfil", component: MiPerfilComponent},
+  {path:"perfil/settings", component: SettingsComponent},
   {path:"libros", component: PaginaLibrosComponent},
-  {path:"favoritos", component: FavoritosLibrosComponent},
-  {path:"detalle", component: DetalleLibrosComponent},
-  {path:"nuevo", component: NuevoLibroComponent},
-  {path: 'settings', component: SettingsComponent},
+  {path:"libros/favoritos", component: FavoritosLibrosComponent},
+  {path:"libros/detalle", component: DetalleLibrosComponent},
+  {path:"libros/nuevo", component: NuevoLibroComponent},
   {path:"mapa", component: MapaComponent},
-  {path:"mapa/nuevo-lugar", component: NuevoLugarComponent},
-  {path:"mapa/lugares-favoritos", component: LugaresFavoritosComponent},
-  {path:"mapa/lugares-favoritos/lugarlugar", component: LugarComponent},
-  {path:"mi-perfil/mis-chats", component: MisChatsComponent},
+  {path:"mapa/nuevo", component: NuevoLugarComponent},
+  {path:"mapa/favoritos", component: LugaresFavoritosComponent},
+  {path:"mapa/detalle", component: LugarComponent},
   {path: 'login', component: LoginComponent,
     children: [
     {
