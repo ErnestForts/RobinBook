@@ -16,13 +16,9 @@ export class HeaderFavoritosComponent implements OnInit {
   src;
   @Input()
   alt;
-  constructor(private _location: Location) { }
+  constructor(public _location: Location) { }
 
   ngOnInit(): void {
-  }
-
-  backClicked() {
-    this._location.back();
   }
 
 }
