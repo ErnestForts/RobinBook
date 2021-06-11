@@ -19,6 +19,7 @@ import { MapaComponent } from './pages/mapa/mapa.component';
 import { MisChatsComponent } from './pages/mis-chats/mis-chats.component';
 import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
 import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
+import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 
 const routes: Routes = [
   {path:"", redirectTo: '/login', pathMatch: 'full'},
@@ -37,6 +38,7 @@ const routes: Routes = [
   {path:"mapa/nuevo", component: NuevoLugarComponent},
   {path:"mapa/favoritos", component: LugaresFavoritosComponent},
   {path:"mapa/detalle", component: LugarComponent},
+  {path: "nosotros", component: NosotrosComponent},
   {path: 'login', component: LoginComponent,
     children: [
     {
