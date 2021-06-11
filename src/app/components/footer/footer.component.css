@@ -53,6 +53,10 @@ svg{
     height: 3.5vh;
 }
 
+div.active-link{
+    color: #F7F9C1;
+}
+
 @media only screen and (min-width: 770px) {
     svg {
       width: 0%;

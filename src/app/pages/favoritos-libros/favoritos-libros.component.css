@@ -18,7 +18,6 @@
 h3 {
     font-size: 40px;
     color: #689F38;
-    font-family: 'Poppins';
 }
 
 #contenedor {
@@ -45,55 +44,72 @@ h3 {
 
 }
 
-h5 p {
-    color: #1D231E;
+.titulo > h4, .descripcion > h4{
+    font-size: 3vw;
+}
+
+.titulo > h4{
+    color: #31384F;
+}
+
+.descripcion > h4 {
+    color: #5A6072;
+    margin-top: 1vw;
 }
 
 /****************** ESTRELLAS **********************/
 
 .rate {
     float: left;
-    height: 46px;
-    padding: 0 10px;
+    height: auto;
+    width: auto;
+    text-align: left;
 }
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
 }
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
+
+.rate:not(:checked)>label {
+    float: right;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 7vw;
+    color: #ccc;
 }
-.rate:not(:checked) > label:before {
+
+.rate:not(:checked)>label:before {
     content: '★ ';
 }
-.rate > input:checked ~ label {
-    color: #388E3C;    
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: #388E3C;  
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
+
+.rate>input:checked~label {
     color: #388E3C;
 }
 
-.desktop-header, .mobile-header{
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: #388E3C;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: #388E3C;
+}
+
+.desktop-header,
+.mobile-header {
     position: fixed;
     top: 0;
     width: 100vw;
 }
 
-.desktop-footer, .mobile-footer{
+.desktop-footer,
+.mobile-footer {
     position: fixed;
     bottom: 0;
     width: 100vw;
@@ -102,39 +118,47 @@ h5 p {
 /********************* TARJETA **********************/
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    width: 70%;
     background-color: #F7F9C1;
     margin-bottom: 3vw;
     font-family: 'Poppins';
-  }
-
-.description {
-    margin-left: 10px;
 }
 
-  .part2{
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      padding: 1em;
-  }
+.description {
+    margin-left: 3vw;
+padding-top: 19%;
+}
 
-  img {
-      border-radius: 20px;
-      width: 200px;
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+.part2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1em;
+}
+
+.imagen{
+    border-radius: 2vw;
+    overflow: hidden;
+    border-radius: 2vw;
+    height: 40vw;
+    width: 30vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 
 
-  /********************************************************/
+/********************************************************/
 
-  @media only screen and (min-width: 770px) {
-    .mobile{
-      display: none;
+@media only screen and (min-width: 770px) {
+    .mobile {
+        display: none;
     }
 
     img {
@@ -143,21 +167,21 @@ h5 p {
 }
 
 @media only screen and (max-width: 769px) {
-  .desktop{
-    display: none;
-  }
+    .desktop {
+        display: none;
+    }
 
-  .card {
-      width: 100%;
-  }
+    .card {
+        width: 100%;
+    }
 
-  .busqueda {
-      display: none;
-  }
+    .busqueda {
+        display: none;
+    }
 
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
     .container {
         max-width: 100vw;
     }
