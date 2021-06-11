@@ -37,6 +37,7 @@ import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.com
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
 import { MapaComponent } from './pages/mapa/mapa.component';
 import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
+import { HeaderPerfilComponent } from './components/header-perfil/header-perfil.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
     HeaderMisChatsComponent,
     FooterVacioComponent,
     MapaComponent,
-    MiPerfilComponent
+    MiPerfilComponent,
+    HeaderPerfilComponent
   ],
   imports: [
     BrowserModule,
