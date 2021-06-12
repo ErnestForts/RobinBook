@@ -77,10 +77,9 @@
 }
 
 .imagen {
-    height: 55vw;
+    height: 45vw;
     overflow: hidden;
     border-radius: 2vw;
-
 }
 
 /* .portaLibro {
