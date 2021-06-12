@@ -79,7 +79,7 @@
 }
 
 .favorito{
-    padding-right: 7vw;
+    padding-right: 12vw;
 }
 
 .ancho-completo{
@@ -169,9 +169,6 @@
     font-size: 4vw;
 }
 
-#bookmark {
-    width: 30px;
-}
 
 .fecha {
     display: flex;
