@@ -6,38 +6,41 @@
 .fondo{
     background-color: #388E3C;
     width: 100%;
-}
-
-h1{
-    display: block;
-    position: fixed;
-    text-align: left;
-    font-size: 5vw;
-    top: 3vh;
-    padding-left: 2%;
-    font-family: 'Poppins';
-}
-
-.col{
-    color: white;
-    text-align: center;
-    align-items: center;
-    align-content: flex-end;
-    height: 100%;
-    padding-top: 10px;
-}
-
-.col-9{
-    align-content: center;
-    color: white;
-    height: 100%;
-}
-
-span{
     margin: 0px;
 }
 
-svg{
-    width: auto;
-    height: 80%;
+.cabecera {
+    border: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+h1 {
+    font-family: 'Poppins';
+    color: white;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: white;
+}
+
+.safe {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+#plus {
+    fill: white;
+    width: 50px; 
+    height: 50px;
 }
