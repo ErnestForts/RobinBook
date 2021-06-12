@@ -21,7 +21,7 @@
 h1 {
     font-family: 'Poppins';
     color: white;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-left: 20px;
 }
 
@@ -32,64 +32,19 @@ a {
 }
 
 .safe {
-    margin-right: 15px;
-    margin-top: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .botones {
     display: flex;
+    justify-content: space-between;
 }
 
 #plus {
-    color: white;
-    width: 30px; 
-    height: 30px;
-    margin-right: 15px;
-    margin-top: 10px;
+    fill: white;
+    width: 50px; 
+    height: 50px;
 }
 
 
-
-/* *{
-    margin: 0px;
-    padding: 0px;
-    height: 10vh;
-}
-.fondo{
-    background-color: #388E3C;
-    width: 100%;
-}
-
-h3{
-    display: block;
-    position: fixed;
-    text-align: left;
-    font-size: 5vw;
-    top: 3vh;
-    padding-left: 2%;
-}
-
-
-.col{
-    color: white;
-    text-align: center;
-    align-items: center;
-    align-content: flex-end;
-    height: 100%;
-    padding-top: 10px;
-}
-
-.col-9{
-    align-content: center;
-    color: white;
-    height: 100%;
-}
-
-span{
-    margin: 0px;
-}
-
-svg{
-    width: auto;
-    height: 7vw;
-} */

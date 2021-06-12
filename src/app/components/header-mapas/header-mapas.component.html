@@ -7,36 +7,13 @@
         </div>
         <div class="safe">
             <div class="botones">
-                <a href="#">
-                    <img src="..\assets\icons\bookmark.svg" id="plus" alt="Bookmark">
+                <a [routerLink]="['/mapa/favoritos']">
+                    <img src="..\assets\icons\new-map_fav.svg" id="plus" alt="Bookmark">
                 </a>
-                <a href="#">
-                    <img src="..\assets\icons\plus.svg" id="plus" alt="Plus">
+                <a [routerLink]="['/mapa/detalle']">
+                    <img src="..\assets\icons\new-add_book.svg" id="plus" alt="Plus">
                 </a>
             </div>
         </div>
     </div>
 </div>
-
-<!-- <div class="fondo">
-    <div class="row p-2">
-        <div class="col-9">
-            <h3>Mapa</h3>
-        </div>
-        <div class="col" routerLink="./lugares-favoritos">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-bookmark">
-                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-            </svg>
-        </div>
-        <div class="col" routerLink="./nuevo-lugar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-plus">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-            </svg>
-        </div>
-    </div>
-</div> -->
