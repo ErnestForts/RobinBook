@@ -16,20 +16,11 @@
     margin-bottom: 3vw;
 }
 
-#mapa {
-    background-color: #B9BB91;
-    margin: 0 auto;
-    width: 45%;
-    height: 20vh;
-    padding: 10px;
-}
-
 .espacio{
-    padding-top: 15vh;
+    padding-top: 5vh;
 }
 
 .subirImagen {
-
     width: 45%;
     height: 20vh;
     padding: 10px;
@@ -152,6 +143,18 @@ svg {
     width: 2vw;
     height: 2vh;
 }
+
+.boton {
+    background-color: #689F38;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    font-size: 25px;   
+    position: absolute;
+    bottom: 100px;
+}
+
 
 @media only screen and (min-width: 770px) {
     .mobile {

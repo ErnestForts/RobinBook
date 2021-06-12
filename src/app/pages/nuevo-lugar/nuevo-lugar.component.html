@@ -3,7 +3,7 @@
         <div class="row">
             <div class="content">
                 <div class="col col-desktop">
-                    <div class="row desktop-row align-items-end desktop">
+                    <!-- <div class="row desktop-row align-items-end desktop">
                         <div class="col-1">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -20,11 +20,7 @@
                         </div>
                         <div class="col-1">
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div id="mapa"></div>
-                    </div>
+                    </div> -->
                     <div class="row espacio">
                         <div class="subirImagen row">
                             <div class="row info">
@@ -33,7 +29,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="row">
                         <div class="formulario">
                             <div>
@@ -42,14 +37,14 @@
                                         <input type="text" class="form-control negrita" name="titulo" id="titulo"
                                             placeholder="Nombre lugar" required>
                                         <div class="invalid-feedback">
-                                            <div>El título es obligatorio.</div>
+                                            <div>El nombre del lugar es obligatorio</div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <textarea class="form-control" name="interprete" id="interprete"
                                         placeholder="Frase para encontrar el libro" required></textarea>
                                         <div class="invalid-feedback">
-                                            <div>El interprete es obligatorio.</div>
+                                            <div>La frase del libro es obligatoria</div>
                                         </div>
                                     </div>
                                 </form>
@@ -57,13 +52,14 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+        </div>
+        <div class="row">
+            <button class="boton">Guardar</button>
         </div>
     </div>
     <app-header-nuevo-lugar class="mobile mobile-header"></app-header-nuevo-lugar>
     <app-footer class="desktop-header desktop"></app-footer>
     <app-footer class="mobile mobile-footer"></app-footer>
     <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
-
 </div>

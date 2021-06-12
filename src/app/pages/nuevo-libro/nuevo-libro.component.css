@@ -55,6 +55,15 @@
     font-size: 4.5vw;
 }
 
+.boton {
+    background-color: #689F38;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    font-size: 25px;
+}
+
 /********************************************************/
 .desktop-header, .mobile-header{
     position: fixed;
