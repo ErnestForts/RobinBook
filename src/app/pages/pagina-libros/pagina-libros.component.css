@@ -31,10 +31,10 @@
 
 .buscar::placeholder {
     text-align: center;
-    
+
 }
 
-.container{
+.container {
     padding: 0 3vw;
 }
 
@@ -48,7 +48,7 @@
 .contenedor-botones {
     display: flex;
     margin-top: 2%;
-    margin-bottom:4%;
+    margin-bottom: 4%;
     align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
@@ -59,7 +59,7 @@
     border: none;
     border-radius: 10px;
     color: white;
-    
+
     padding: 10px;
     margin: 1px;
 }
@@ -68,41 +68,49 @@
     background-color: #F7F9C1;
 }
 
-.cardMovie {
-box-shadow: 0 4px 8px 0 rgba(157, 148, 148, 0.2);
-transition: 0.3s;
-border-radius: 5px;
-text-align: center;
+.cardLibro {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-align: center;
+    padding: 1vw;
+    margin: 2vw
 }
 
-#portaMovie {
-border-radius: 5px 5px 0 0;
+.imagen {
+    height: 45vw;
+    overflow: hidden;
+    border-radius: 2vw;
 }
 
-.desktop-header, .mobile-header{
+/* .portaLibro {
+} */
+
+.desktop-header,
+.mobile-header {
     position: fixed;
     top: 0;
     width: 100vw;
 }
 
-.desktop-footer, .mobile-footer{
+.desktop-footer,
+.mobile-footer {
     position: fixed;
     bottom: 0;
     width: 100vw;
 }
 
 @media only screen and (min-width: 770px) {
-    .mobile{
-      display: none;
+    .mobile {
+        display: none;
     }
 }
 
 @media only screen and (max-width: 769px) {
-  .desktop{
-    display: none;
-  }
+    .desktop {
+        display: none;
+    }
 
-  .col-desktop{
-    padding-top: 0;
-  }
+    .col-desktop {
+        padding-top: 0;
+    }
 }

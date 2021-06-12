@@ -1,45 +1,62 @@
 <div class="bg">
     <div class="row">
         <div class="content">
-            <div class="userstyle">
-                <div>
-                    <img class="imgperfil" src="..\assets\pics\perfil.png" alt="">
+            <div class="info-usuario">
+                <div class="userstyle">
+                    <div class="contenedor-imagen">
+                        <img class="imgperfil" src="..\assets\pics\perfil.png" alt="">
+                    </div>
+                    <div>
+                        <h4 class="nombre"><b>Ernest Forts</b></h4>
+                        <h4 class="subtitulo">Leer es lo mio!</h4>
+                    </div>  
                 </div>
-                <div>
-                    <p class="nombre">Ernest Forts</p>
-                    <p class="subtitulo">Leer es lo mio!</p>
-                </div>  
             </div>
-            <div class="contentMis">
-                <div class="mis">
-                    <p class="title">Mis Chats</p>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 5L15.5 12L8.5 19" stroke="#838795" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div> 
-                <div class="line"></div>
-                <div class="mis">
-                    <p class="title">Mis Libros</p>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 5L15.5 12L8.5 19" stroke="#838795" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div> 
-                <div class="line"></div>
-                <div class="mis">
-                    <p class="title">Mis Lugares</p>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 5L15.5 12L8.5 19" stroke="#838795" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div> 
-                <div class="line"></div>
-                <div class="mis">
-                    <p class="title">Mi Perfil</p>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 5L15.5 12L8.5 19" stroke="#838795" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div> 
-                <div class="line"></div>
+
+            <div class="menu">
+                <div class="fila" routerLink="/perfil/mis-chats">
+                    <div class="filaStyle">
+                        <div class="info">
+                            <h4 class="nombre"><b>Mis chats</b></h4>
+                        </div>
+                        <div class="contenedor-flecha">
+                            <img class="flecha" src="\assets\icons\arrow-back.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="fila" routerLink="/libros/favoritos">
+                    <div class="filaStyle">
+                        <div class="info">
+                            <h4 class="nombre"><b>Mis libros</b></h4>
+                        </div>
+                        <div class="contenedor-flecha">
+                            <img class="flecha" src="\assets\icons\arrow-back.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="fila" routerLink="/mapa/favoritos">
+                    <div class="filaStyle">
+                        <div class="info">
+                            <h4 class="nombre"><b>Mis lugares</b></h4>
+                        </div>
+                        <div class="contenedor-flecha">
+                            <img class="flecha" src="\assets\icons\arrow-back.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="fila" routerLink="/perfil/mi-perfil">
+                    <div class="filaStyle">
+                        <div class="info">
+                            <h4 class="nombre"><b>Mi perfil</b></h4>
+                        </div>
+                        <div class="contenedor-flecha">
+                            <img class="flecha" src="\assets\icons\arrow-back.svg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            
         </div>
     </div>
 </div>
