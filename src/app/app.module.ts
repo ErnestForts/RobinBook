@@ -39,6 +39,7 @@ import { MapaComponent } from './pages/mapa/mapa.component';
 import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
 import { HeaderPerfilComponent } from './components/header-perfil/header-perfil.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { HeaderNosotrosComponent } from './components/header-nosotros/header-nosotros.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
     MapaComponent,
     MiPerfilComponent,
     HeaderPerfilComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    HeaderNosotrosComponent
   ],
   imports: [
     BrowserModule,

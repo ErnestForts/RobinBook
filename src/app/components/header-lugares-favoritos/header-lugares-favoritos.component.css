@@ -1,48 +1,47 @@
 *{
     margin: 0px;
     padding: 0px;
+    height: 10vh;
 }
 .fondo{
     background-color: #388E3C;
     width: 100%;
-    height: 10vh;
-}
-
-h3{
-    display: block;
-    position: fixed;
-    text-align: center;
-    width: 100%;
-    font-size: 5vw;
-    top: 3vh;
-    padding-right: 20vw;
-}
-
-.col{
-    color: white;
-    text-align: center;
-    align-items: center;
-    height: 100%;
-    padding-top: 10px;
-}
-
-p{
-    font-size: 3.5vw;
-    padding-right: 2vw;
-    padding-top: 1.99vw;
-}
-
-.col-9{
-    align-content: center;
-    color: white;
-    height: 100%;
-}
-
-span{
     margin: 0px;
 }
 
-svg{
-    width: auto;
-    height: 7vw;
+.cabecera {
+    border: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+h2 {
+    font-family: 'Poppins';
+    color: white;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-left: -10px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
+.safe {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+#back {
+    width: 30px; 
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
 }

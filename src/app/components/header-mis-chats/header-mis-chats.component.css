@@ -6,42 +6,50 @@
 .fondo{
     background-color: #388E3C;
     width: 100%;
-}
-
-h3{
-    display: block;
-    position: fixed;
-    text-align: left;
-    font-size: 5vw;
-    top: 3vh;
-    padding-left: 3vw;
-}
-
-
-.col{
-    color: white;
-    text-align: center;
-    align-items: center;
-    align-content: flex-end;
-    height: 100%;
-    padding-top: 10px;
-}
-
-.col-9{
-    align-content: center;
-    color: white;
-    height: 100%;
-}
-
-span{
     margin: 0px;
 }
 
-svg{
-    width: auto;
-    height: 5vw;
+.cabecera {
+    border: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
 }
 
-.search{
-    padding-right: 7vw;
+h3 {
+    font-family: 'Poppins';
+    color: white;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
+.safe {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+#back {
+    width: 30px; 
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.esquina {
+    display: flex;
+}
+
+#plus {
+    width: 40px; 
+    height: 40px;
 }
