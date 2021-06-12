@@ -167,7 +167,10 @@
 .mensaje > p{
     color: #31384F;
     font-size: 4vw;
+}
 
+#bookmark {
+    width: 30px;
 }
 
 .fecha {
@@ -178,7 +181,6 @@
     margin-right: 15px;
     color: #838795 ;
     font-size: 4vw;
-
 }
 
 .btn {

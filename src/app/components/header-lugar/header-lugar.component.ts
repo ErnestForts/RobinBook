@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header-lugar',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderLugarComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  title;
+  @Input()
+  id;
+  @Input()
+  src;
+  @Input()
+  alt;
+
+  constructor(public _location: Location) { }
 
   ngOnInit(): void {
   }
