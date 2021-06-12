@@ -16,7 +16,7 @@ h3 {
     text-align: center;
 }
 .hora > p {
-    font-size: 3vw;
+    font-size: 4vw;
 }
 
 .caja-burbuja{
@@ -24,6 +24,7 @@ h3 {
     justify-content: center;
 }
 .burbuja{
+    display: grid;
     background-color: #388E3C;
     text-align: center;
     align-items: center;
@@ -34,17 +35,9 @@ h3 {
 }
 
 .burbuja > p{
+    margin: auto;
     color: white;
     font-size: 3vw;
-}
-
-.nombre{
-    color: #31384F;
-}
-
-.mensaje{
-    color: #5A6072;
-    margin-top: 1vw;
 }
 
 .madre{
@@ -55,18 +48,6 @@ h3 {
     height: 80vh;
     margin-top: 10vh;
     overflow-y: scroll;
-}
-
-.content{
-    height: 100%;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-    justify-content: center;
-    align-content: center;
-}
-
-#favoritos {
-    max-width: 360px;
 }
 
 .desktop-header,
@@ -83,44 +64,56 @@ h3 {
     width: 100vw;
 }
 
-.card {
-    transition: 0.3s;
-    width: 70vw;
-    background-color: #f5f7b500;
-    margin: 2vw auto;
-    border: none;
-    border-radius: 0;
-}
+/* IMPORTADO DE RANKING */
 
-.part2 {
+.userstyle{
     display: grid;
-    grid-template-columns: 20vw 60vw;
-    padding: 2vw;
+    grid-template-columns: 20vw 50vw 25vw;
+    width: 100vw;
+    align-items: center;
+    justify-items: center;
+    padding: 3vw;
 }
-
-.imagen-contacto{
-    display: inline-block;
-    position: relative;
-    width: 20vw;
-    height: 20vw;
-    overflow: hidden;
+.imgperfil{
+    position: static;
     border-radius: 50%;
-    border: 2px solid white;
-}
-
-.imagen-contacto > img {
-    width: auto;
-    height: 100%;
-    margin-left: 0vw;
-    border: none;
+    width: 20vw;
 }
 
 .info{
-    padding-left: 2vw;
+    justify-self: flex-start;
+    padding-left: 3vw;
+    width: 50vw;
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.nombre {
+    display: -webkit-box;
+    font-size: 5vw;
+    color: #31384F;
+    margin: 0;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.mensaje {
+    font-size: 4vw;
+    color: #838795;
+    margin-top: 1vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.usuario{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding-bottom: 2vw;
+    padding-top: 2vw;
+    margin-top: 2vw;
+    width: 100vw;
+    margin-bottom: 3vw;
+    background-color: #F7F9C1;
 }
 
 @media only screen and (min-width: 770px) {
