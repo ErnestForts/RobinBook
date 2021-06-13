@@ -27,7 +27,6 @@ import { PerfilRankingComponent } from './pages/perfil-ranking/perfil-ranking.co
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { LoginComponent } from './pages/login/login.component';
 import { LoginFormComponent } from './pages/login-form/login-form.component';
-import { HeaderVacioComponent } from './components/header-vacio/header-vacio.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.component';
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
@@ -35,7 +34,6 @@ import { MapaComponent } from './pages/mapa/mapa.component';
 import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
 import { HeaderPerfilComponent } from './components/header-perfil/header-perfil.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
-import { HeaderNosotrosComponent } from './components/header-nosotros/header-nosotros.component';
 import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi-perfil.component';
 
 @NgModule({
@@ -50,7 +48,6 @@ import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi
     PerfilComponent,
     LoginComponent,
     LoginFormComponent,
-    HeaderVacioComponent,
     ForgotPasswordComponent,
     SettingsComponent,
     PaginaLibrosComponent,
@@ -72,7 +69,6 @@ import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi
     MiPerfilComponent,
     HeaderPerfilComponent,
     NosotrosComponent,
-    HeaderNosotrosComponent,
     HeaderMiPerfilComponent
   ],
   imports: [
