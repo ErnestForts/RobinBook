@@ -20,7 +20,6 @@ h2 {
     font-family: 'Poppins';
     color: white;
     margin-top: 20px;
-    margin-left: -10px;
 }
 
 a {
@@ -38,9 +37,26 @@ a {
     justify-content: space-between;
 }
 
+p {
+    color: white;
+    margin-top: 15px;
+}
+
 #back {
     width: 30px; 
     height: 30px;
     margin-top: 20px;
     margin-left: 10px;
+}
+
+#none {
+    display: none;
+}
+
+#ocultar {
+    display: none;
+}
+
+.ocultar {
+    display: none;
 }

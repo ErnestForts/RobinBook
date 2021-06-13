@@ -11,11 +11,23 @@ export class HeaderFavoritosComponent implements OnInit {
   @Input()
   title;
   @Input()
+  title2;
+  @Input()
   id;
+  @Input()
+  id2;
+  @Input()
+  id3;
   @Input()
   src;
   @Input()
+  src2;
+  @Input()
   alt;
+  @Input()
+  alt2;
+  @Input()
+  router;
 
   constructor(public _location: Location) { }
 

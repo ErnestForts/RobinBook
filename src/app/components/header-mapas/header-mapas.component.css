@@ -46,4 +46,12 @@ a {
     height: 50px;
 }
 
+#ocultar {
+    display: none;
+}
+
+.ocultar {
+    display: none;
+}
+
 

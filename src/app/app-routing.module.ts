@@ -25,7 +25,7 @@ const routes: Routes = [
   {path:"", redirectTo: '/login', pathMatch: 'full'},
   {path:"ranking", component: RankingComponent },
   {path:"ranking/perfil", component: PerfilRankingComponent},
-  {path:"ranking/perfil/chat", component: ChatComponent, data: {titulo: "libros" }},
+  {path:"ranking/perfil/chat", component: ChatComponent},
   {path:"perfil", component: PerfilComponent},
   {path:"perfil/mis-chats", component: MisChatsComponent},
   {path:"perfil/mi-perfil", component: MiPerfilComponent},

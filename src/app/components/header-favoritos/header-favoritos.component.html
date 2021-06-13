@@ -2,14 +2,15 @@
     <div class="cabecera">
         <div>
             <a (click)="_location.back()">
-                <img src="..\assets\icons\new-arrow_back.svg" id="back" alt="back">
+                <img [src]="src" [id]="id" [alt]="alt">
             </a>
         </div>
         <div>
             <h2>Favoritos</h2>
         </div>
         <div class="safe">
-            <div class="botones">
+            <div class="botones" [id]="id2">
+                <p>{{title2}}<p>
             </div>
         </div>
     </div>
