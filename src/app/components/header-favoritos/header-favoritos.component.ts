@@ -13,9 +13,13 @@ export class HeaderFavoritosComponent implements OnInit {
   @Input()
   id;
   @Input()
+  id2;
+  @Input()
   src;
   @Input()
   alt;
+  @Input()
+  class;
 
   constructor(public _location: Location) { }
 

@@ -16,16 +16,10 @@
     width: 100vw;
 }
 
-h2 {
+h4 {
     font-family: 'Poppins';
     color: white;
     margin-top: 20px;
-    margin-left: -10px;
-}
-
-a {
-    text-decoration: none;
-    font-family: 'Poppins';
 }
 
 .safe {
@@ -36,6 +30,13 @@ a {
 .botones {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: white;
 }
 
 #back {
@@ -43,4 +44,12 @@ a {
     height: 30px;
     margin-top: 20px;
     margin-left: 10px;
+}
+
+#none {
+    display: none;
+}
+
+#ocultar {
+    display: none;
 }

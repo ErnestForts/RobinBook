@@ -12,10 +12,8 @@ import { HeaderFavoritosComponent } from './components/header-favoritos/header-f
 import { DetalleLibrosComponent } from './pages/detalle-libros/detalle-libros.component';
 import { HeaderDetalleLibrosComponent } from './components/header-detalle-libros/header-detalle-libros.component';
 import { NuevoLibroComponent } from './pages/nuevo-libro/nuevo-libro.component';
-import { HeaderNuevoLibroComponent } from './components/header-nuevo-libro/header-nuevo-libro.component';
 import { PaginaLibrosComponent } from './pages/pagina-libros/pagina-libros.component';
 import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
-import { HeaderNuevoLugarComponent } from './components/header-nuevo-lugar/header-nuevo-lugar.component';
 import { LugaresFavoritosComponent } from './pages/lugares-favoritos/lugares-favoritos.component';
 import { HeaderLugaresFavoritosComponent } from './components/header-lugares-favoritos/header-lugares-favoritos.component';
 import { LugarComponent } from './pages/lugar/lugar.component';
@@ -66,9 +64,7 @@ import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi
     DetalleLibrosComponent,
     HeaderDetalleLibrosComponent,
     NuevoLibroComponent,
-    HeaderNuevoLibroComponent,
     NuevoLugarComponent,
-    HeaderNuevoLugarComponent,
     LugaresFavoritosComponent,
     HeaderLugaresFavoritosComponent,
     LugarComponent,
