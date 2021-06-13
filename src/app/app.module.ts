@@ -10,7 +10,6 @@ import { HeaderLibrosComponent } from './components/header-libros/header-libros.
 import { FavoritosLibrosComponent } from './pages/favoritos-libros/favoritos-libros.component';
 import { HeaderFavoritosComponent } from './components/header-favoritos/header-favoritos.component';
 import { DetalleLibrosComponent } from './pages/detalle-libros/detalle-libros.component';
-import { HeaderDetalleLibrosComponent } from './components/header-detalle-libros/header-detalle-libros.component';
 import { NuevoLibroComponent } from './pages/nuevo-libro/nuevo-libro.component';
 import { PaginaLibrosComponent } from './pages/pagina-libros/pagina-libros.component';
 import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
@@ -55,7 +54,6 @@ import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi
     FavoritosLibrosComponent,
     HeaderFavoritosComponent,
     DetalleLibrosComponent,
-    HeaderDetalleLibrosComponent,
     NuevoLibroComponent,
     NuevoLugarComponent,
     LugaresFavoritosComponent,
