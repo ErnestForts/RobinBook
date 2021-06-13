@@ -27,7 +27,6 @@ import { HeaderMapasComponent } from './components/header-mapas/header-mapas.com
 import { MapaComponent } from './pages/mapa/mapa.component';
 import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
-import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi-perfil.component';
 
 @NgModule({
   declarations: [
@@ -55,8 +54,7 @@ import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi
     FooterVacioComponent,
     MapaComponent,
     MiPerfilComponent,
-    NosotrosComponent,
-    HeaderMiPerfilComponent
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,

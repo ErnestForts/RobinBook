@@ -11,6 +11,8 @@ export class HeaderFavoritosComponent implements OnInit {
   @Input()
   title;
   @Input()
+  title2;
+  @Input()
   id;
   @Input()
   id2;
