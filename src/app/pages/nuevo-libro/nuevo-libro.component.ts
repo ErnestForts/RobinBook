@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderService } from 'src/app/services/change-header.service';
-
 @Component({
   selector: 'app-nuevo-libro',
   templateUrl: './nuevo-libro.component.html',
@@ -10,13 +8,8 @@ export class NuevoLibroComponent implements OnInit {
 
   constructor() {}
 
-  // constructor(private headerService: HeaderService) { }
-
-  ponTitulo(): void {
-    // this.headerService.setTitle('Nuevo Libro');
-  }
+  ponTitulo(): void { }
 
   ngOnInit(): void {
-    this.ponTitulo()
   }
 }

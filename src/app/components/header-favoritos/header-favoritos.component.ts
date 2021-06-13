@@ -18,8 +18,6 @@ export class HeaderFavoritosComponent implements OnInit {
   src;
   @Input()
   alt;
-  @Input()
-  class;
 
   constructor(public _location: Location) { }
 
