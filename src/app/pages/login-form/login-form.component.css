@@ -50,7 +50,14 @@ a:hover {
     flex-direction: column;
     align-items: center;
 }
-
+.footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 2vh;
+}
+.footer a {
+    color: red;
+}
 input{
     background: #FFFFFF;
 
@@ -135,6 +142,10 @@ button:hover{
         min-height: 100%;
     }
 
+    .footer{
+        display:none;
+    }
+
     
 }
 
@@ -203,6 +214,9 @@ button:hover{
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
+    }
+    .footer{
+        display:none;
     }
 
     

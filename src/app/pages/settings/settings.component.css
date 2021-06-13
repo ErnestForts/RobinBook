@@ -5,7 +5,7 @@
 .contenido{
     background-color: rgba(247, 249, 193, 1);
     max-width: 100%;
-    min-height: 93vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
 
@@ -36,6 +36,19 @@
     padding-left: 5vh;
     margin-top: 35vh;
 }
+.logout{
+    width: 100%;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: ; */
+    padding-left: 5vh;
+    padding-top: 15px;
+    color: red;
+}
+.logout a{
+    color: red;
+}
 
 p{
     color: #a2a4a8;
@@ -58,6 +71,7 @@ p{
 }
 
 a{    
+    width: 100%;
     text-decoration: none;
     font-family: Poppins;
     font-style: normal;
@@ -84,7 +98,7 @@ a{
       display: none;
     }
     .contenido{
-        min-height: 83vh;    
+        min-height: 80vh;    
     }
 
     .account{

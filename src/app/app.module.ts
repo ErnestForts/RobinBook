@@ -41,6 +41,7 @@ import { HeaderPerfilComponent } from './components/header-perfil/header-perfil.
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { HeaderNosotrosComponent } from './components/header-nosotros/header-nosotros.component';
 import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi-perfil.component';
+import { FooterLoginComponent } from './components/footer-login/footer-login.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi
     HeaderPerfilComponent,
     NosotrosComponent,
     HeaderNosotrosComponent,
-    HeaderMiPerfilComponent
+    HeaderMiPerfilComponent,
+    FooterLoginComponent
   ],
   imports: [
     BrowserModule,
