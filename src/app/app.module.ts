@@ -17,7 +17,6 @@ import { MisChatsComponent } from './pages/mis-chats/mis-chats.component';
 import { HeaderMisChatsComponent } from './components/header-mis-chats/header-mis-chats.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
-import { HeaderRankingComponent } from './components/header-ranking/header-ranking.component';
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
 import { PerfilRankingComponent } from './pages/perfil-ranking/perfil-ranking.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
@@ -37,7 +36,6 @@ import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi
     AppComponent,
     RankingComponent,
     FooterComponent,
-    HeaderRankingComponent,
     RegisterFormComponent,
     PerfilRankingComponent,
     ChatComponent,
