@@ -16,7 +16,6 @@ import { PaginaLibrosComponent } from './pages/pagina-libros/pagina-libros.compo
 import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
 import { LugaresFavoritosComponent } from './pages/lugares-favoritos/lugares-favoritos.component';
 import { LugarComponent } from './pages/lugar/lugar.component';
-import { HeaderLugarComponent } from './components/header-lugar/header-lugar.component';
 import { MisChatsComponent } from './pages/mis-chats/mis-chats.component';
 import { HeaderMisChatsComponent } from './components/header-mis-chats/header-mis-chats.component';
 import { SettingsComponent } from './pages/settings/settings.component';
@@ -61,7 +60,6 @@ import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi
     NuevoLugarComponent,
     LugaresFavoritosComponent,
     LugarComponent,
-    HeaderLugarComponent,
     MisChatsComponent,
     HeaderMisChatsComponent,
     FooterVacioComponent,
