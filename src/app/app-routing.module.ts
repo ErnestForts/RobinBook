@@ -38,8 +38,8 @@ const routes: Routes = [
   {path:"mapa/nuevo", component: NuevoLugarComponent},
   {path:"mapa/favoritos", component: LugaresFavoritosComponent},
   {path:"mapa/detalle", component: LugarComponent},
-  {path: "nosotros", component: NosotrosComponent},
-  {path: 'login', component: LoginComponent,
+  {path:"nosotros", component: NosotrosComponent},
+  {path:'login', component: LoginComponent,
     children: [
     {
       outlet: 'login',
