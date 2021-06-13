@@ -27,7 +27,6 @@ import { FooterVacioComponent } from './components/footer-vacio/footer-vacio.com
 import { HeaderMapasComponent } from './components/header-mapas/header-mapas.component';
 import { MapaComponent } from './pages/mapa/mapa.component';
 import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
-import { HeaderPerfilComponent } from './components/header-perfil/header-perfil.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi-perfil.component';
 
@@ -58,7 +57,6 @@ import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi
     FooterVacioComponent,
     MapaComponent,
     MiPerfilComponent,
-    HeaderPerfilComponent,
     NosotrosComponent,
     HeaderMiPerfilComponent
   ],

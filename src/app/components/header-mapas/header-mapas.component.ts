@@ -14,6 +14,8 @@ export class HeaderMapasComponent implements OnInit {
   @Input()
   id2;
   @Input()
+  id3;
+  @Input()
   src;
   @Input()
   src2;
