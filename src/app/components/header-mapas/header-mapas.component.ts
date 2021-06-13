@@ -21,6 +21,10 @@ export class HeaderMapasComponent implements OnInit {
   alt;
   @Input()
   alt2;
+  @Input()
+  router1;
+  @Input()
+  router2;
 
   constructor() { }
 

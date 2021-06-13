@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChatComponent } from './pages/chat/chat.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HeaderLibrosComponent } from './components/header-libros/header-libros.component';
 import { FavoritosLibrosComponent } from './pages/favoritos-libros/favoritos-libros.component';
 import { HeaderFavoritosComponent } from './components/header-favoritos/header-favoritos.component';
 import { DetalleLibrosComponent } from './pages/detalle-libros/detalle-libros.component';
@@ -49,7 +48,6 @@ import { HeaderMiPerfilComponent } from './components/header-mi-perfil/header-mi
     SettingsComponent,
     PaginaLibrosComponent,
     HeaderMapasComponent,
-    HeaderLibrosComponent,
     FavoritosLibrosComponent,
     HeaderFavoritosComponent,
     DetalleLibrosComponent,
