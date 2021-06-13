@@ -117,6 +117,12 @@ button:hover{
         justify-content: center;
         align-content: center;
     }
+
+    input{
+        width: 300px;
+        height: 36px;
+        font-size: 16px;
+    }
     
     .registerButton{background: rgba(104, 159, 56, 1);}
 

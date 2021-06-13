@@ -42,6 +42,9 @@ img{
 .mobile-header{
     display: none;
 }
+.mobile-footer{
+    display: none;
+}
 
 @media only screen and (max-width: 1200px) {
     .contenedor{
@@ -76,9 +79,10 @@ img{
     }
 
     img{
-        width: 25%;
+        width: 22%;
     }
     .mobile-footer{
+        display: block;
         position: fixed;
         bottom: 0;
         width: 100vw;
@@ -126,7 +130,7 @@ img{
     }
 
     img{
-        width: 35%;
+        width: 28%;
     }
     .mobile-footer{
         position: fixed;
