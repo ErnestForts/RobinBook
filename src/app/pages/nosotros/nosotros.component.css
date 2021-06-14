@@ -9,14 +9,15 @@
     width: 100vw;
     margin-top: 10vh;
     overflow-y: scroll;
+    display: grid;
 }
 
 .content{
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content:center;
     align-items: center;
-    margin-top: 8vw;
     background-color: #F7F9C1;
 }
 
