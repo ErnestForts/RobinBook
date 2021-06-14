@@ -80,6 +80,12 @@
 
 .favorito{
     padding-right: 12vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorito > img{
+    padding-top: 3vw;
 }
 
 .ancho-completo{
@@ -178,6 +184,44 @@
     margin-right: 15px;
     color: #838795 ;
     font-size: 4vw;
+}
+
+.rate {
+    height: 46px;
+    padding: 0 5px;  
+    display: flex;
+    align-items: right;
+    width: 120px;
+    flex-direction: row-reverse;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #388E3C;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #388E3C;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #388E3C;
 }
 
 .btn {
