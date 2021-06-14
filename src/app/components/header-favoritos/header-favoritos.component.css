@@ -1,12 +1,13 @@
 *{
     margin: 0px;
     padding: 0px;
-    height: 10vh;
 }
+
 .fondo{
     background-color: #388E3C;
     width: 100%;
     margin: 0px;
+    height: 10vh;
 }
 
 .cabecera {
