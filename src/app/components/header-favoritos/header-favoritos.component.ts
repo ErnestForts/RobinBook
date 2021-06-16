@@ -23,6 +23,8 @@ export class HeaderFavoritosComponent implements OnInit {
   @Input()
   src2;
   @Input()
+  src3;
+  @Input()
   alt;
   @Input()
   alt2;

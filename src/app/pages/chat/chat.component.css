@@ -82,6 +82,26 @@
     width: 100vw;
 }
 
+.mobile-footer{
+    background-color: #388E3C;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mobile-footer > input{
+    width: 70vw;
+    height: 80%;
+    padding: 7px;
+    border-radius:15px;
+    border: none;
+}
+
+button{
+    
+}
+
 @media only screen and (min-width: 751px) {
     .mobile {
         display: none;
