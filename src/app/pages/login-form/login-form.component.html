@@ -5,18 +5,18 @@
     
     <div class="contenedor">
         <div class="formDiv">
-            <form class="formFlex">
-                <input id="txtEmail" type="email" placeholder="email">
+            <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="formFlex">
+                <input formControlName="txtEmail" type="email" placeholder="email">
                 <div>
-                    <input id="txtPassword" type="password" style="margin-top: 20px;" placeholder="password">
+                    <input id="txtPassword" formControlName="txtPassword" type="password" style="margin-top: 20px;" placeholder="password">
                     <span toggle="#password-field" [ngClass]="isVisible" (click)="toggle()"></span>
                 </div>
         
-                <button class="loginButton" routerLink="/mapa">Entrar</button>
+                <button type="submit" class="loginButton">Entrar</button>
         
                 <h4 id="registerTitle"><a  routerLink="/register">Olvidaste la contraseña?</a></h4>
         
-                <button id="registerButton" class="registerButton" routerLink="/register">Registrarse</button>
+                <button type='button' id="registerButton" class="registerButton" routerLink="/register">Registrarse</button>
             </form>
         </div>       
         <div id="registerDiv" class="mobileRegister">

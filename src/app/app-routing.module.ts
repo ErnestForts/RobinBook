@@ -22,7 +22,7 @@ import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 
 const routes: Routes = [
-  {path:"", redirectTo: '/login', pathMatch: 'full'},
+  {path: "", redirectTo: '/login', pathMatch: 'full'},
   {path:"ranking", component: RankingComponent },
   {path:"ranking/perfil", component: PerfilRankingComponent},
   {path:"ranking/perfil/chat", component: ChatComponent},
