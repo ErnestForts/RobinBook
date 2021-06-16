@@ -37,24 +37,41 @@
                                          <input type="url" class="form-control" placeholder="https://imagen.com">
                                      </div>
                                      <div class="form-group">
-                                         <input type="text" class="form-control negrita" name="titulo" id="titulo"
+                                         <input type="text" class="form-control negrita" name="nombre" id="nombre"
                                              placeholder="Nombre lugar" required>
                                          <div class="invalid-feedback">
                                              <div>El nombre del lugar es obligatorio</div>
                                          </div>
                                      </div>
                                      <div class="form-group">
-                                         <textarea class="form-control" name="interprete" id="interprete"
+                                         <textarea class="form-control" name="descripcion" id="descripcion"
                                              placeholder="Frase para encontrar el libro" required></textarea>
                                          <div class="invalid-feedback">
                                              <div>La frase del libro es obligatoria</div>
                                          </div>
                                      </div>
+                                     <div class="coordenada">
+                                        <div class="form-group ">
+                                            <label  for="latitud">Latitud</label>
+                                            <input class="form-control" type="text" name="latitud" id="latitud" value="{{userLat}}" disabled>
+                                            <div class="invalid-feedback">
+                                                <div>La frase del libro es obligatoria</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="longitud">Longitud</label>
+                                            <input class="form-control" type="text" name="longitud" id="longitud" value="{{userLon}}" disabled>
+                                            <div class="invalid-feedback">
+                                                <div>La frase del libro es obligatoria</div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     
                                      <div class="row">
                                          <div class="contenedor-boton">
                                              <button class="boton">Guardar</button>
                                          </div>
-                                     </div>
+                                        </div>
                                  </form>
                              </div>
                          </div>

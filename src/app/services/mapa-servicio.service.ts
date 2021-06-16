@@ -10,6 +10,9 @@ import Point from 'ol/geom/Point';
 import {OSM, TileWMS, Vector as VectorSource} from 'ol/source';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
 import Style from 'ol/style/Style';
+import { Lugar } from '../models/lugar/lugar';
+import { tokenize } from '@angular/compiler/src/ml_parser/lexer';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -18,22 +21,69 @@ import Style from 'ol/style/Style';
 export class MapaServicioService {
 
   public map : Map;
-  public puntos : Feature[];
-  vectorSource : VectorSource;
-  vectorLayer : VectorLayer;
+  public vectorSource : VectorSource;
+  public vectorLayer : VectorLayer;
+  private url = 'https://robinbook.herokuapp.com/api/place';
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient) { 
+  }
 
+  //REQUESTS
+  obtenerLugares(token) : Observable<any> {
+
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+
+
+    console.log(this.http.get(this.url));
+
+    return this.http.get(this.url, options);
+
+  }
+
+  obtenerLugar(id: string) : Observable<any> {
+    return this.http.get(`${this.url}/${id}`);
+  }
+
+  lugarNuevo(lugar : Lugar, token) : any {
+
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+
+    return this.http.post(this.url + "/new", lugar, options).subscribe( (result: any) => {
+      console.log(result);
+    });
+
+  }
+
+  editarLugar(lugar : Lugar, token) : any {
+
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+
+    return this.http.put(this.url, lugar).subscribe( (result: any) => {
+      console.table(result);
+    });
+
+  }
+
+  borrarLugar(id: string): any {
+    let options = { headers: new HttpHeaders({'Content-Type': 'application/json'}), body: { id: `${id}`}};
+    return this.http.delete(this.url, options).subscribe( (result: any) => {
+      console.table(result);
+    });
+  }
+
+
+
+  //Creación del mapa
   initializeMap(mapa : Map) {
 
-    //Este es el mapa que se muestra. Puede cambiarse por otro mapa en caso de querer hacerlo siempre que la projection sea EPSG:3857.
     const layers = [
       new TileLayer({
         source: new OSM()
       }),
     ];
 
-    //El view determina el ratio de projection, el punto central del mapa y el nivel de zoom por defecto
     const view= new View({
       constrainResolution: true,
       projection: 'EPSG:3857',
@@ -41,65 +91,91 @@ export class MapaServicioService {
       zoom: 5
     });
 
-    //Se crea el mapa. El target hace referencia al id del elemento HTML que va a ser el mapa.- Le pasamos la imagen del mapa(layers) y la vista por defecto(view)
     mapa = new Map({
       target: 'mapa',
       layers: layers,
       view: view
     });
 
-    //Creamos una nueva capa por encima (vacía)
     this.vectorSource = new VectorSource({});
     this.vectorLayer = new VectorLayer({source: this.vectorSource});
 
-    //Estos son los marcadores. Se utiliza la función fromLonLat para indicar la ubicación del punto en el mapa. La función traduce los valores de las coordenadas a los valores que usa el mapa.
-    let marker = new Feature({
-      geometry: new Point(olProj.fromLonLat([-2.67164, 42.8467])),
-    }); 
+    return mapa;
 
-    let marker2 = new Feature({
-      geometry: new Point(olProj.fromLonLat([-3.7, 40.41])),
-    }); 
+  }
 
-    //Un array para mostrar todos los puntos
-    let markers = [marker, marker2]
+  captureCoords(lugares : Lugar[]){
 
-    //Se crea el estilo del icono a mostrar en el mapa. El anchor indica cual es el punto de la imagen que debe coincidir con el punto del mapa. En este caso centrado en la X y abajo en la Y. crossOrigin es para que funcione en Internet Explorer.
+    let coordenadas : number[][] = new Array;
+
+    for (let i = 0; i < lugares.length; i++) {
+      
+        let lonLat = [lugares[i].longitud, lugares[i].latitud]
+        coordenadas.push(lonLat);
+    }
+
+    console.log(coordenadas);
+
+    return coordenadas;
+
+  }
+
+  createMarkers(lonLat : number[][]){
+
+    let markers : Feature[];
+
+    for (let i = 0; i < lonLat.length; i++) {
+
+      let pin = new Feature({
+
+        geometry: new Point(olProj.fromLonLat([lonLat[i][0], lonLat[i][1]])),
+      
+      }); 
+
+      markers.push(pin);
+
+    }
+
+    console.log(markers);
+    
+    return markers;
+
+  }
+
+  markerStyle(markers : Feature[]){
+
     const markerStyle = new Style({
-        image: new Icon({
-          anchor: [0.5, 1],
-          crossOrigin: 'anonymous',
-          src: 'assets/icons/marker.png',
-          scale: 1,
-        }),
-      });
 
-    //Un bucle para aplicar el estilo a todos los puntos (hasta encontrar una forma de hacerlo el estilo por defecto)
+      image: new Icon({
+
+        anchor: [0.5, 1],
+        crossOrigin: 'anonymous',
+        src: 'assets/icons/marker.png',
+        scale: 1,
+
+      }),
+    
+    });
+
     for (let i = 0; i < markers.length; i++) {
       markers[i].setStyle(markerStyle)
     }
 
-    //Se añaden los puntos a la capa que hemos creado
+  }
+
+  addMarkers(mapa : Map, lugares : Lugar[]){
+
+    let coords = this.captureCoords(lugares);
+    let markers = this.createMarkers(coords);
+
+    this.initializeMap(mapa).addLayer(this.vectorLayer);
+
+    this.markerStyle(markers);
+
     this.vectorSource.addFeatures(markers);
 
-    //Se añade la capa al mapa para mostrarla
-    mapa.addLayer(this.vectorLayer);
+    this.obtenerLugares(localStorage);
 
   }
 
-  obtenerLugares(){
-
-  }
-
-  obtenerLugar(id){
-
-  }
-
-  lugarNuevo(){
-
-  }
-
-  editarLugar(){
-
-  }
 }
