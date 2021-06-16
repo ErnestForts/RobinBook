@@ -1,9 +1,9 @@
 export class Lugar {
-    public id : number,
-    public nombre : string,
-    public descripcion : string,
-    public foto : string,
-    public puntuacion : number,
+    public id : number;
+    public nombre : string;
+    public descripcion : string;
+    public foto : string;
+    public puntuacion : number;
     public tieneLibro : boolean;
     public latitud : number;
     public longitud : number;
