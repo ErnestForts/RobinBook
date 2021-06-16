@@ -1,4 +1,13 @@
-h2{
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.outletContent {
+    margin-bottom: 5vw;
+}
+
+h2 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -6,7 +15,8 @@ h2{
     text-align: center;
     color: #979797;
 }
-h4{
+
+h4 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -14,37 +24,44 @@ h4{
 
     color: #979797;
 }
+
 .field-icon {
     float: right;
     margin-left: -25px;
     margin-top: 35px;
     position: relative;
     z-index: 2;
-  }
+}
+
 a:link {
     text-decoration: none;
 }
 
 a:hover {
     color: red;
-  }
-input{
+}
+
+input {
     background: #FFFFFF;
 
-    width: 300px;
+    width: 70vw;
     height: 46px;
     border: 1px solid #CED4DA;
     box-sizing: border-box;
-    border-radius: 4.8px; 
+    border-radius: 4.8px;
 
     font-family: Montserrat;
     font-style: normal;
     font-size: 20px;
+    padding-left: 7px;
+
 }
 
-.registerButton{
+.registerButton {
 
-    margin-top: 30px;
+    margin-top: 5vw;
+
+
     align-items: center;
     width: 255px;
     height: 46px;
@@ -52,34 +69,35 @@ input{
     /* Global/03. Success */
 
     background: rgba(40, 167, 69, 0.5);
-    border:  none;
+    border: none;
     border-radius: 4px;
     color: #FFFFFF;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-}
-button:hover{
-    cursor:pointer;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    font-size: 4vw;
 }
 
-.formFlex{
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.formFlex {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contenedor{
+.contenedor {
     display: flex;
     flex-direction: column;
     align-content: center;
     max-width: 100%;
-    min-height: 100%;
+    height: 100%;
 }
 
-@media only screen and (max-width: 1019px) {
+@media only screen and (min-width: 900px) and (max-width: 1019px) {
     .formDiv {
         max-width: 50%;
         min-height: 100%;
@@ -89,26 +107,22 @@ button:hover{
         align-content: center;
     }
 
-    input{
-        width: 300px;
-        height: 36px;
-        font-size: 16px;
+    .registerButton {
+        font-size: 2vw;
     }
-    .registerButton{background: rgba(104, 159, 56, 1);}
 
-    .contenedor{
+    .contenedor {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        max-width: 100%;
-        min-height: 100%;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
     }
-    .outletContent{
-        margin-top: 3vh;
-    }
+
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     .formDiv {
         max-width: 30%;
         min-height: 100%;
@@ -118,20 +132,25 @@ button:hover{
         align-content: center;
     }
 
-    input{
+    input {
         width: 300px;
         height: 36px;
         font-size: 16px;
     }
-    
-    .registerButton{background: rgba(104, 159, 56, 1);}
 
-    .contenedor{
+    .registerButton {
+        background: rgba(104, 159, 56, 1);
+    }
+
+    .contenedor {
         display: flex;
         flex-direction: row;
         justify-content: center;
         max-width: 100%;
         min-height: 100%;
     }
-}
 
+    .titulo {
+        margin-top: 0vw;
+    }
+}

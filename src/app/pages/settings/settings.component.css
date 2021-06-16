@@ -2,10 +2,17 @@
     margin: 0;
 }
 
+.contenedor{
+    height: 80vh;
+    margin-top: 10vh;
+    overflow-y: scroll;
+}
+
 .contenido{
+    padding-top: 10vw;
     background-color: rgba(247, 249, 193, 1);
     max-width: 100%;
-    min-height: 90vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 
@@ -15,6 +22,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
+    background-color: #388E3C;
   }
 
 .account{
@@ -24,9 +32,13 @@
     display: flex;
     flex-direction: column;
     /* justify-content: flex-start; */
-    padding-top: 24vh;
     padding-left: 5vh;    
 }
+
+.espacio{
+    height: 35vh;
+}
+
 .legal{
     width: 100%;
     min-height: fit-content;
@@ -34,8 +46,8 @@
     flex-direction: column;
     /* justify-content: ; */
     padding-left: 5vh;
-    margin-top: 35vh;
 }
+
 .logout{
     width: 100%;
     min-height: fit-content;
@@ -46,6 +58,7 @@
     padding-top: 15px;
     color: red;
 }
+
 .logout a{
     color: red;
 }
@@ -59,6 +72,7 @@ p{
     flex-direction: column;
     width: 90%;
 }
+
 .menuItem1{
     height: 44px;
     background: #F7F9C1;
@@ -80,11 +94,23 @@ a{
 
     color: #31384F;
 }
+
 .menuItem1:hover{
     box-shadow: inset 0px -0.5px 0px black;
     cursor: pointer;
 }
 
+app-footer-vacio{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+app-header-favoritos{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
 
 @media only screen and (min-width: 770px) {
     .mobile{
@@ -97,18 +123,15 @@ a{
     .desktop{
       display: none;
     }
-    .contenido{
-        min-height: 80vh;    
-    }
 
-    .account{
+    /* .account{
         width: 100%;
-        /* max-height: 100vh; */
+        max-height: 100vh;
         min-height: fit-content;
         display: flex;
         flex-direction: column;
-        /* justify-content: flex-start; */
+        justify-content: flex-start;
         padding-top: 8vh;
         padding-left: 5vh;    
-    }
+    } */
   }

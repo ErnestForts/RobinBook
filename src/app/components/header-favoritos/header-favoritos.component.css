@@ -1,12 +1,12 @@
 *{
     margin: 0px;
     padding: 0px;
-    height: 10vh;
 }
+
 .fondo{
-    background-color: #388E3C;
     width: 100%;
     margin: 0px;
+    height: 10vh;
 }
 
 .cabecera {
@@ -48,6 +48,12 @@ p {
     margin-top: 20px;
     margin-left: 10px;
 }
+
+.titulo{
+    position: fixed;
+    left: 50%;
+
+transform: translate(-50%, 0%);}
 
 #none {
     display: none;

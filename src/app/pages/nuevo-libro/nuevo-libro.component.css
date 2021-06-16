@@ -70,6 +70,8 @@
     position: fixed;
     top: 0;
     width: 100vw;
+    background-color: #388E3C;
+
 }
 
 .desktop-footer, .mobile-footer{

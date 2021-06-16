@@ -98,6 +98,8 @@ input, textarea{
     position: fixed;
     top: 0;
     width: 100vw;
+    background-color: #388E3C;
+
 }
 
 .desktop-footer,
@@ -144,15 +146,20 @@ svg {
     height: 2vh;
 }
 
+.contenedor-boton{
+    margin-top: 5vw;
+    text-align: center;
+}
+
 .boton {
     background-color: #689F38;
     border: none;
     border-radius: 5px;
     color: white;
-    height: 40px;
-    font-size: 25px;   
-    position: absolute;
-    bottom: 100px;
+    height: 15vw;
+    width: 50vw;
+    /* padding: 5vw; */
+    font-size: 7vw;   
 }
 
 

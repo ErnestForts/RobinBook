@@ -3,7 +3,7 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 
 <div class="contenedor">
-    <app-header-favoritos title="Configuracion" src="..\assets\icons\new-arrow_back.svg" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
+    <app-header-favoritos class="mobile-header" title="Configuracion" src="..\assets\icons\new-arrow_back.svg" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
     <app-footer class="desktop-header desktop"></app-footer>
     <div class="contenido">
         <div class="account">
@@ -20,6 +20,8 @@
                 
               </div>
         </div>
+        <div class="espacio">
+        </div>
         <div class="legal">
             <p>Legal</p>
             <div class="vertical-menu">
@@ -32,12 +34,11 @@
         <div class="logout" routerLink="/nosotros">
             <div class="vertical-menu">
                 <div class="menuItem1">
-                    <a routerLink="/login" class="active hvr-icon-forward">Cerrar sessión</a>
+                    <a routerLink="/login" class="active hvr-icon-forward">Cerrar sesión</a>
                     <i class="fa fa-chevron-circle-right hvr-icon arrow"></i>
                 </div>
               </div>
         </div>
     </div>
-    <!-- <app-footer-vacio></app-footer-vacio> -->
     <app-footer-vacio></app-footer-vacio>
 </div>
