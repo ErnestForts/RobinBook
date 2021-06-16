@@ -15,24 +15,24 @@ export class MapaComponent implements OnInit {
   public lugares : Lugar[];
   
   constructor(public mapaServicio : MapaServicioService) {
-    
+
+
    }
 
   ngOnInit(){
 
-    this.mostrarLugares();
+    // this.addMarkersF();
+    this.cargarLugares();
     
   }
 
-  mostrarLugares(){
-    const token = JSON.parse(localStorage.getItem('user')).token;
-
-    this.mapaServicio.obtenerLugares(token).subscribe((result) => {
+   cargarLugares() {
+    // const token = JSON.parse(localStorage.getItem('user')).token;
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MTgsIk5vbWJyZSI6Ikp1YW4iLCJBcGVsbGlkbyI6IlBlcmV6IiwiRW1haWwiOiJlbWFpbFAiLCJUZWxlZm9ubyI6bnVsbCwiRm90byI6bnVsbCwiRnJhc2UiOm51bGwsInJhbmtpbmciOm51bGx9LCJpYXQiOjE2MjM4NTk5MTEsImV4cCI6MTYyMzkwMzExMX0.iYw_5Hru763XVucBcVjTccOoNVmu6fhSlIcQaxKlkdo';
+    this.mapaServicio.obtenerLugares(token).subscribe( (result: any) => {
       this.lugares = result.data;
-    })
-
-    this.mapaServicio.addMarkers(this.map, this.lugares);
-
+      this.mapaServicio.initializeMap(this.map, this.lugares);
+      });
   }
 
 }

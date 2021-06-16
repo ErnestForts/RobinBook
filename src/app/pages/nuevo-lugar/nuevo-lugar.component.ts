@@ -15,17 +15,14 @@ export class NuevoLugarComponent implements OnInit {
   public map : Map;
   public userLat : number;
   public userLon : number;
-  public ubicacion : number[];
   public lugares : Lugar[];
   
   constructor(public mapaServicio : MapaServicioService) { }
 
   ngOnInit(){
 
-    // this.mapaServicio.initializeMap(this.map);
-    // this.mapaServicio.addMarkers(this.map, this.lugares);
     this.getUserLocation();    
-    console.log(this.ubicacion);
+    this.mostrarLugares();
     
   }
 
@@ -34,23 +31,27 @@ export class NuevoLugarComponent implements OnInit {
 
       navigator.geolocation.getCurrentPosition( (position) => {
 
-       this.asignarValor(position.coords.latitude, position.coords.longitude);
+        this.userLat = position.coords.latitude;
+        this.userLon = position.coords.longitude;
          
       });
 
-    }else {
-      console.log("User not allow")
+    } else {
+      console.log("Not allowed")
     }
 
   }
 
-  asignarValor(lat : number, lon : number){
-  
-    this.userLat = lat;
-    this.userLon = lon;
-    this.ubicacion = [this.userLat, this.userLon];    
-    
-  };
+  mostrarLugares(){
+    const token = JSON.parse(localStorage.getItem('user')).token;
+
+    this.mapaServicio.obtenerLugares(token).subscribe((result) => {
+      this.lugares = result.data;
+    })
+
+    // this.mapaServicio.addMarkers(this.map, this.lugares);
+
+  }
   
 }
 

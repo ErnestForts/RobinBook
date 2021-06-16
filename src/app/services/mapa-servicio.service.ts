@@ -22,7 +22,8 @@ export class MapaServicioService {
   public map : Map;
   public vectorSource : VectorSource;
   public vectorLayer : VectorLayer;
-  private url = 'https://robinbook.herokuapp.com/api/place';
+  private url = 'https://robinbook.herokuapp.com/place';
+  public lugares : Lugar[];
 
   constructor(private http : HttpClient) { 
   }
@@ -37,8 +38,10 @@ export class MapaServicioService {
 
   }
 
-  obtenerLugar(id: string) : Observable<any> {
-    return this.http.get(`${this.url}/${id}`);
+  obtenerLugar(id: string, token) : Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(`${this.url}/${id}`, options);
   }
 
   lugarNuevo(lugar : Lugar, token) : any {
@@ -52,9 +55,7 @@ export class MapaServicioService {
 
   }
 
-  editarLugar(lugar : Lugar, token) : any {
-
-    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+  editarLugar(lugar : Lugar) : any {
 
     return this.http.put(this.url, lugar).subscribe( (result: any) => {
       console.table(result);
@@ -72,7 +73,12 @@ export class MapaServicioService {
 
 
   //Creación del mapa
-  initializeMap(mapa : Map) {
+  initializeMap(mapa : Map, lugares : Lugar[]) {    
+    console.log(lugares);
+    
+
+    let coordenadas : number[][] = new Array;
+    let markers : Feature[] = new Array;
 
     const layers = [
       new TileLayer({
@@ -87,59 +93,29 @@ export class MapaServicioService {
       zoom: 5
     });
 
-    mapa = new Map({
-      target: 'mapa',
-      layers: layers,
-      view: view
-    });
-
     this.vectorSource = new VectorSource({});
     this.vectorLayer = new VectorLayer({source: this.vectorSource});
 
-    return mapa;
-
-  }
-
-  captureCoords(lugares : Lugar[]){
-
-    let coordenadas : number[][] = new Array;
 
     for (let i = 0; i < lugares.length; i++) {
       
         let lonLat = [lugares[i].longitud, lugares[i].latitud]
+        
         coordenadas.push(lonLat);
     }
 
-    console.log(coordenadas);
-
-    return coordenadas;
-
-  }
-
-  createMarkers(lonLat : number[][]){
-
-    let markers : Feature[];
-
-    for (let i = 0; i < lonLat.length; i++) {
+    for (let i = 0; i < coordenadas.length; i++) {
 
       let pin = new Feature({
 
-        geometry: new Point(olProj.fromLonLat([lonLat[i][0], lonLat[i][1]])),
+        geometry: new Point(olProj.fromLonLat([coordenadas[i][0], coordenadas[i][1]]))
       
       }); 
 
       markers.push(pin);
 
     }
-
-    console.log(markers);
     
-    return markers;
-
-  }
-
-  markerStyle(markers : Feature[]){
-
     const markerStyle = new Style({
 
       image: new Icon({
@@ -157,19 +133,20 @@ export class MapaServicioService {
       markers[i].setStyle(markerStyle)
     }
 
-  }
-
-  addMarkers(mapa : Map, lugares : Lugar[]){
-
-    let coords = this.captureCoords(lugares);
-    let markers = this.createMarkers(coords);
-
-    this.initializeMap(mapa).addLayer(this.vectorLayer);
-
-    this.markerStyle(markers);
+    console.log(markers);
+    
 
     this.vectorSource.addFeatures(markers);
 
+    mapa = new Map({
+      target: 'mapa',
+      layers: layers,
+      view: view
+    });
+
+    mapa.addLayer(this.vectorLayer);
+
+    return mapa;
 
   }
 
