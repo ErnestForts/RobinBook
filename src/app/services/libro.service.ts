@@ -25,7 +25,8 @@ export class LibroService {
     return this.http.get(`${this.url}/${id}`);
   }
 
-  añadirLibro(libro: Libro): any {
+  anyadirLibro(libro: Libro, t): any {
+    let headers_object = new HttpHeaders().set("Authorization", "Bearer " + t);
     return this.http.post(this.url, libro).subscribe( (result: any) => {
       console.log(result);
     });
@@ -43,6 +44,4 @@ export class LibroService {
       console.table(result);
     });
   }
-
-
 }
