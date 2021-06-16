@@ -5,7 +5,7 @@
     </div>
     <div class="contenedor">
         <div class="formDiv">
-            <form [formGroup]="registerForm" class="formFlex">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="formFlex">
                 <input formControlName="txtEmail" type="email" style="margin-top: 20px;" placeholder="email">
                 <input formControlName="txtNombre" type="text" style="margin-top: 20px;" placeholder="nombre">
                 <input formControlName="txtApellidos" type="text" style="margin-top: 20px;" placeholder="apellidos">
@@ -18,7 +18,7 @@
                     <span id="spanRepassword" toggle="#txtRePassword" [ngClass]="isVisible" (click)="toggle('Repassword','spanRepassword')"></span>
                 </div>          
         
-                <button class="registerButton" (click)="register()">Enviar</button>
+                <button class="registerButton">Enviar</button>
         
             </form>
         </div>

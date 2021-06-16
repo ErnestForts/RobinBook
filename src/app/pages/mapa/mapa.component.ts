@@ -12,7 +12,11 @@ export class MapaComponent implements OnInit {
 
   public map : Map;
   
-  constructor(public mapaServicio : MapaServicioService) { }
+  constructor(public mapaServicio : MapaServicioService) {
+    const userData = JSON.parse(localStorage.getItem('user'));
+    console.log(userData);
+  
+   }
 
   ngOnInit(){
     this.mapaServicio.initializeMap(this.map);
