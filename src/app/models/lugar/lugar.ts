@@ -1,14 +1,13 @@
 export class Lugar {
-    public id : number;
-    public nombre : string;
-    public descripcion : string;
-    public foto : string;
-    public puntuacion : number;
+    public Lugar_id : number;
+    public Nombre : string;
+    public Descripcion : string;
+    public Foto : string;
     public tieneLibro : boolean;
     public latitud : number;
     public longitud : number;
 
-    constructor(id? : number, nombre? : string, descripcion? : string, foto? : string, puntuacion? : number, tieneLibro? : boolean, latitud? : number, longitud? : number){
+    constructor(Lugar_id? : number, Nombre? : string, Descripcion? : string, Foto? : string, tieneLibro? : boolean, latitud? : number, longitud? : number){
         
     }
 }

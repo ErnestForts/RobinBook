@@ -65,6 +65,62 @@ svg{
   height: auto;
 }
 
+.ol-popup {
+  position: absolute;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 0px;
+  left: -50px;
+  width: 40vw;
+}
+
+.ol-popup-content > .contenedor-foto{
+  border-radius: 2vw;
+  overflow: hidden;
+  height: 20vw;
+  width: 40vw;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.ol-popup:after, .ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+.ol-popup-closer:after {
+  content: "✖";
+  color: #388E3C;
+
+}
 @media only screen and (min-width: 770px) {
     .mobile{
       display: none;
