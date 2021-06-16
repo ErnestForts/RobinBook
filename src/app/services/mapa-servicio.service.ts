@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import Map from 'ol/Map';
 import View from 'ol/View';
@@ -17,14 +18,11 @@ import Style from 'ol/style/Style';
 export class MapaServicioService {
 
   public map : Map;
-  punto1;
-  punto2;
-  vectorSource;
-  vectorLayer;
-  rasterLayer;
-  geolocation;
+  public puntos : Feature[];
+  vectorSource : VectorSource;
+  vectorLayer : VectorLayer;
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
   initializeMap(mapa : Map) {
 
@@ -89,4 +87,19 @@ export class MapaServicioService {
 
   }
 
+  obtenerLugares(){
+
+  }
+
+  obtenerLugar(id){
+
+  }
+
+  lugarNuevo(){
+
+  }
+
+  editarLugar(){
+
+  }
 }
