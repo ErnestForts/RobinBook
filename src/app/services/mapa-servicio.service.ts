@@ -11,7 +11,6 @@ import {OSM, TileWMS, Vector as VectorSource} from 'ol/source';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
 import Style from 'ol/style/Style';
 import { Lugar } from '../models/lugar/lugar';
-import { tokenize } from '@angular/compiler/src/ml_parser/lexer';
 import { Observable } from 'rxjs';
 
 
