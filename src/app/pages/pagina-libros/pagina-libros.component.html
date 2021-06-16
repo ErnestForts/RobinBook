@@ -18,7 +18,7 @@
               <div class="container">
                   <div class="row">
                     <div class="col" *ngFor="let vista of libros;">
-                        <div class="cardLibro" [routerLink]="['/libros/detalle']">
+                        <div class="cardLibro" routerLink="/libros/detalle">
                           <div class="imagen">
                             <img [src]="vista.Foto" class="portaLibro" alt="Avatar" style="width:100%">
                           </div>

@@ -23,6 +23,14 @@ export class PaginaLibrosComponent implements OnInit {
       });
   }
 
+  // mostrarLibro(id) {
+  //   let token = JSON.parse(localStorage.getItem('user')).token;
+  //   this.apiService.obtenerLibro(id, token).subscribe( (result: any) => {
+  //     console.table(result.data);
+  //     this.libroVista = result.data;
+  //     });
+  // }
+
   ngOnInit(): void {
   }
 

@@ -21,7 +21,7 @@ export class LibroService {
     return this.http.get(this.url, options);
   }
 
-  obtenerlibro(id: string, token: string): Observable<any> {
+  obtenerLibro(id: string, token: string): Observable<any> {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
     return this.http.get(`${this.url}/${id}`, options);
