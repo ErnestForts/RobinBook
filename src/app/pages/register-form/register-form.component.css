@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.outletContent{
+.outletContent {
     margin-bottom: 5vw;
 }
 
@@ -53,6 +53,8 @@ input {
     font-family: Montserrat;
     font-style: normal;
     font-size: 20px;
+    padding-left: 7px;
+
 }
 
 .registerButton {
@@ -105,7 +107,7 @@ button:hover {
         align-content: center;
     }
 
-    .registerButton{
+    .registerButton {
         font-size: 2vw;
     }
 

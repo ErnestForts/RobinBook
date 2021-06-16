@@ -131,10 +131,6 @@ img{
         justify-content: flex-start;
     }
 
-    .logo{
-
-    }
-
     .left {
         width: 0%;
     }
@@ -157,6 +153,11 @@ img{
         position: fixed;
         top: 0;
         width: 100vw;
+        background-color: #F7F9C1;
+    }
+
+    .showBar{
+        background-color: #388E3C;
     }
 }
 

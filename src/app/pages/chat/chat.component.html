@@ -1,30 +1,24 @@
 <div class="bg">
     <div class="row">
-        <div class="header">
-            <div class="headerstyle">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.5 19L8.5 12L15.5 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>  
-                <div>
-                    <p class="headertitle">Maria Lopez</p>
-                    <p class="subtitulo">Leer es lo mio!</p>
-                </div>
-                <img class="imgperfil" src="..\assets\pics\perfil.png" alt="">              
-            </div>
-        </div>
+
         <div class="content">
-            <div class="chatv">
-                <p class="textChatv">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <p class="horaChatv">18:34</p>
+            <div class="mensajeEntrante">
+                <div>
+                    <p class="textChatEntrante">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p class="horaChatEntrante">18:34</p>
+                </div>
+                <div></div>
             </div>
-            <div class="chat">
-                <p class="textChat">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <p class="horaChat">18:34</p>
+            <div class="mensajeSaliente">
+                <p class="textChatSaliente">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="horaChatSaliente">18:34</p>
             </div>
         </div>
     </div>
 
-
+    <app-header-favoritos class="mobile mobile-header" title="María López" src="..\assets\icons\new-arrow_back.svg"
+        src2="..\assets\icons\new-chat_plus.svg" id="back" alt="back" alt2="misChats" id2="ocultar">
+    </app-header-favoritos>
     <app-footer class="mobile mobile-footer"></app-footer>
     <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
 </div>
