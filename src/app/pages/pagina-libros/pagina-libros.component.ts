@@ -18,7 +18,6 @@ export class PaginaLibrosComponent implements OnInit {
   mostrarLibros() {
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.apiService.obtenerLibros(token).subscribe( (result: any) => {
-      console.log(result);
       this.libros = result.data;
       });
   }

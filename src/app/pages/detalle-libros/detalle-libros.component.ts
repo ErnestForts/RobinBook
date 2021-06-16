@@ -13,7 +13,7 @@ export class DetalleLibrosComponent implements OnInit {
 public libroVista: Libro;
 
   constructor(private apiService: LibroService) { 
-    this.idlibro = 2;
+    this.idlibro = 1;
     this.mostrarLibro(this.idlibro);
   }
 
