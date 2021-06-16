@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Libro } from 'src/app/models/libro/libro';
 @Component({
   selector: 'app-nuevo-libro',
   templateUrl: './nuevo-libro.component.html',
@@ -6,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevoLibroComponent implements OnInit {
 
-  constructor() {}
+  public libroNew: Libro;
 
-  ponTitulo(): void { }
+  constructor() {
+    this.libroNew = new Libro("","","","");
+  }
+
+  crearLibro(titulo, autor, foto, description) {
+    
+  }
 
   ngOnInit(): void {
   }
