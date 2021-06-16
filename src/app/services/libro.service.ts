@@ -10,26 +10,26 @@ import { Observable } from 'rxjs';
 export class LibroService {
 
   private url: string;
-  public libros: Libro[];
 
   constructor(private http: HttpClient) { 
     this.url = 'https://robinbook.herokuapp.com/book';
-    this.libros = [];
   }
 
-  obtenerLibros(): Observable<any> {
-    return this.http.get(this.url);
+  obtenerLibros(token): Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(this.url, options);
   }
 
-  obtenerlibro(id: string): Observable<any> {
-    return this.http.get(`${this.url}/${id}`);
+  obtenerlibro(id: string, token: string): Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(`${this.url}/${id}`, options);
   }
 
   anyadirLibro(libro: Libro, token): any {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
-
     let options = { headers: headers };
-
     return this.http.post(this.url + "/new", libro, options).subscribe( (result: any) => {
       console.log(result);
     });

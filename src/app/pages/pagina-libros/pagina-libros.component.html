@@ -17,52 +17,17 @@
               </div>
               <div class="container">
                   <div class="row">
-                    <div class="col">
+                    <div class="col" *ngFor="let vista of libros;">
                         <div class="cardLibro" [routerLink]="['/libros/detalle']">
                           <div class="imagen">
-                            <img src="https://i.pinimg.com/236x/72/a8/7f/72a87f18c6aa0ae668ec174c8cca8f6f.jpg" class="portaLibro" alt="Avatar" style="width:100%">
+                            <img [src]="vista.Foto" class="portaLibro" alt="Avatar" style="width:100%">
                           </div>
                             <div class="container">
-                              <p><b>Titulo1</b><br>Subtitulo</p>
+                              <p><b>{{vista.Titulo}}</b><br>{{vista.Descripcion}}</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                      <div class="cardLibro" [routerLink]="['/libros/detalle']">
-                        <div class="imagen">
-                          <img src="https://www.adobe.com/es/express/create/cover/media_10487a00f81e45735d68f68bc2739b65bb4997de1.png?width=2000&format=webply&optimize=medium" class="portaLibro" alt="Avatar" style="width:100%">
-
-                        </div>
-                          <div class="container">
-                              <p><b>Titulo2</b><br>Subtitulo</p>
-                          </div>
-                      </div> 
                     </div>
                   </div>
-                  <div class="row">
-                      <div class="col">
-                        <div class="cardLibro" [routerLink]="['/libros/detalle']">
-                          <div class="imagen">
-                            <img src="https://cdn.domestika.org/c_limit,dpr_auto,f_auto,q_auto,w_820/v1547929697/content-items/002/728/738/Captura_de_pantalla_2019-01-19_a_las_21.22.29-original.png?1547929697" class="portaLibro" alt="Avatar" style="width:100%">
-                          </div>
-                            
-                            <div class="container">
-                              <p><b>Titulo3</b><br>Subtitulo</p>
-                            </div>
-                        </div> 
-                      </div>
-                      <div class="col">
-                        <div class="cardLibro" [routerLink]="['/libros/detalle']">
-                          <div class="imagen">
-                            <img src="https://wmagazin.com/wp-content/uploads/2018/12/Mejoresportadas2018-Ordesa-WMagazin-e1546088378833.jpg" class="portaLibro" alt="Avatar" style="width:100%">
-                          </div>
-                            
-                            <div class="container">
-                              <p><b>Titulo4</b><br>Subtitulo</p>
-                            </div>
-                        </div> 
-                      </div>
-                    </div>
               </div>
           </div>
           </div>
