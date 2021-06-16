@@ -25,9 +25,12 @@ export class LibroService {
     return this.http.get(`${this.url}/${id}`);
   }
 
-  anyadirLibro(libro: Libro, t): any {
-    let headers_object = new HttpHeaders().set("Authorization", "Bearer " + t);
-    return this.http.post(this.url, libro).subscribe( (result: any) => {
+  anyadirLibro(libro: Libro, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+
+    let options = { headers: headers };
+
+    return this.http.post(this.url + "/new", libro, options).subscribe( (result: any) => {
       console.log(result);
     });
   }

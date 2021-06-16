@@ -1,14 +1,14 @@
 export class Libro {
-    public liro_id : number;
-    public titulo : string;
-    public autor : string;
-    public foto: string;
-    public description : string;
+    public libro_id : number;
+    public Titulo : string;
+    public Autor : string;
+    public Foto: string;
+    public Descripcion : string;
 
-    constructor(titulo : string, autor : string, foto : string, description : string){ 
-        this.titulo = titulo;
-        this.autor = autor;
-        this.foto = foto;
-        this.description = description;
+    constructor(Titulo : string, Autor : string, Foto : string, Descripcion : string){ 
+        this.Titulo = Titulo;
+        this.Autor = Autor;
+        this.Foto = Foto;
+        this.Descripcion = Descripcion;
     }
 }
