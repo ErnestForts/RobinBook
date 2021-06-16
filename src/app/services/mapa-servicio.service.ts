@@ -33,9 +33,6 @@ export class MapaServicioService {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
 
-
-    console.log(this.http.get(this.url));
-
     return this.http.get(this.url, options);
 
   }
@@ -173,7 +170,6 @@ export class MapaServicioService {
 
     this.vectorSource.addFeatures(markers);
 
-    this.obtenerLugares(localStorage);
 
   }
 

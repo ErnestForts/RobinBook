@@ -15,14 +15,23 @@ export class MapaComponent implements OnInit {
   public lugares : Lugar[];
   
   constructor(public mapaServicio : MapaServicioService) {
-    const userData = JSON.parse(localStorage.getItem('user'));
-    console.log(userData);
-  
+    
    }
 
   ngOnInit(){
-    this.mapaServicio.initializeMap(this.map);
-    // this.mapaServicio.addMarkers(this.map, this.lugares);
+
+    this.mostrarLugares();
+    
+  }
+
+  mostrarLugares(){
+    const token = JSON.parse(localStorage.getItem('user')).token;
+
+    this.mapaServicio.obtenerLugares(token).subscribe((result) => {
+      this.lugares = result.data;
+    })
+
+    this.mapaServicio.addMarkers(this.map, this.lugares);
 
   }
 
