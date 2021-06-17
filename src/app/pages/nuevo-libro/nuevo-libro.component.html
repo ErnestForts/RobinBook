@@ -9,7 +9,7 @@
                     <h4>Título</h4>
                 </div>
                 <div class="col">
-                    <input type="text" placeholder="Rellenar Título">
+                    <input type="text" placeholder="Rellenar Título" #titulo>
                 </div>
             </div>
             <div class="row izq">
@@ -17,7 +17,7 @@
                     <h4>Autor</h4>
                 </div>
                 <div class="col">
-                    <input type="text" placeholder="Rellenar Autor">
+                    <input type="text" placeholder="Rellenar Autor" #autor>
                 </div>
             </div>
             <div class="row izq">
@@ -25,7 +25,7 @@
                     <h4>Género</h4>
                 </div>
                 <div class="col">
-                    <input type="text" placeholder="Rellenar Género">
+                    <input type="text" placeholder="Rellenar Género" #genero>
                 </div>
             </div>
             <div class="row izq">
@@ -33,7 +33,7 @@
                     <h4>Imagen</h4>
                 </div>
                 <div class="col">
-                    <input type="url" placeholder="https://imagen.com">
+                    <input type="url" placeholder="https://imagen.com" #foto>
                 </div>
             </div>
         </div>
@@ -42,11 +42,11 @@
               <h4>Descripción</h4>  
             </div>
             <div>
-                <textarea id="w3review" class="rellenar" rows="12" cols="25" placeholder="Rellena con una descripción breve del libro."></textarea>
+                <textarea id="w3review" class="rellenar" rows="12" cols="25" placeholder="Rellena con una descripción breve del libro." #description></textarea>
             </div> 
         </div>
         <div class="row izq">
-            <button class="boton">Guardar</button>
+            <button class="boton" (click)="crearLibro(titulo.value, autor.value, foto.value, description.value)">Guardar</button>
         </div>
     </div>
     <app-header-favoritos class="mobile mobile-header" title="Libro" src="..\assets\icons\new-arrow_back.svg"  id="back" alt="back"></app-header-favoritos>

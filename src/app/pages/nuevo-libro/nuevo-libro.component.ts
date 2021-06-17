@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Libro } from 'src/app/models/libro/libro';
+import { LibroService } from 'src/app/services/libro.service';
 @Component({
   selector: 'app-nuevo-libro',
   templateUrl: './nuevo-libro.component.html',
@@ -6,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevoLibroComponent implements OnInit {
 
-  constructor() {}
+  constructor(private apiService: LibroService) {
+  }
 
-  ponTitulo(): void { }
+  crearLibro(titulo, autor, foto, descripcion) {
+    let libroNew = new Libro(titulo, autor, foto, descripcion);
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    console.log(libroNew, token);
+    this.apiService.anyadirLibro(libroNew, token);
+  }
 
   ngOnInit(): void {
   }
