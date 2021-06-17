@@ -20,6 +20,7 @@ import { MisChatsComponent } from './pages/mis-chats/mis-chats.component';
 import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
 import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { NewPasswordComponent } from './pages/new-password/new-password.component';
 
 const routes: Routes = [
   {path: "", redirectTo: '/login', pathMatch: 'full'},
@@ -63,6 +64,15 @@ const routes: Routes = [
       outlet: 'forgot',
       path: '',
       component: ForgotPasswordComponent
+    }
+    ]
+  },
+  {path: 'new-password/:reset', component: LoginComponent,
+    children: [
+    {
+      outlet: 'new-password',
+      path: '',
+      component: NewPasswordComponent
     }
     ]
   }
