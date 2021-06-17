@@ -12,6 +12,7 @@ export class LibroService {
   private url: string;
   private libros: Libro[];
   public libroDetail: Libro;
+  public libroDetailFav: Libro;
 
   constructor(private http: HttpClient) { 
     this.url = 'https://robinbook.herokuapp.com/book';
@@ -38,6 +39,10 @@ export class LibroService {
 
   setLibroDetail(libroDetail: Libro) {
     this.libroDetail = libroDetail;
+  }
+
+  setFav(libroDetailFav: Libro) {
+    this.libroDetailFav = libroDetailFav;
   }
 
   anyadirLibro(libro: Libro, token): any {
@@ -71,5 +76,13 @@ export class LibroService {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
     return this.http.get(`${this.url}/coment/${id}`, options);
+  }
+
+  anyadirComent(rawComent, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/coment", rawComent, options).subscribe( (result: any) => {
+      console.log(result);
+    });
   }
 }
