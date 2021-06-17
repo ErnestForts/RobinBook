@@ -43,7 +43,7 @@
   padding-right: 6px;
 }
 
-h6{
+.col > h6{
   font-size: 1.3vw;
 }
 
@@ -121,6 +121,18 @@ svg{
   color: #388E3C;
 
 }
+
+.tieneLibro {
+  font-size: 3.5vw;
+  color: #388E3C;
+}
+
+.noTieneLibro {
+  color: #b12f27;
+  font-size: 3.5vw;
+
+}
+
 @media only screen and (min-width: 770px) {
     .mobile{
       display: none;

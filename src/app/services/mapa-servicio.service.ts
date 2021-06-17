@@ -79,10 +79,32 @@ export class MapaServicioService {
     });
   }
 
+  anyadirLugarFav(lugarFav, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/newfav", lugarFav, options).subscribe( (result: any) => {
+      console.log(result);
+    });
+  }
+
   obtenerLugaresFav(id: string, token: string): Observable<any> {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
     return this.http.get(`${this.url}/fav/${id}`, options);
+  }
+
+  obtenerComentsById(id: string, token: string): Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(`${this.url}/coment/${id}`, options);
+  }
+
+  anyadirComent(rawComent, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/coment", rawComent, options).subscribe( (result: any) => {
+      console.log(result);
+    });
   }
 
 }

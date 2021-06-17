@@ -47,8 +47,9 @@
     padding-right: 6px;
 }
 
-.pista>h6 {
+.pista > h6 {
     font-size: 4.5vw;
+    line-height: 7.5vw;
     color: #5A6072;
 }
 

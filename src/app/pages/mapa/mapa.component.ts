@@ -1,8 +1,6 @@
 import {
   Component,
-  Input,
   OnInit,
-  ViewChild
 } from '@angular/core';
 
 import Map from 'ol/Map';
@@ -13,7 +11,6 @@ import Feature from 'ol/Feature';
 import Point from 'ol/geom/Point';
 import {
   OSM,
-  TileWMS,
   Vector as VectorSource
 } from 'ol/source';
 import {
@@ -30,7 +27,6 @@ import {
 import {
   MapaServicioService
 } from 'src/app/services/mapa-servicio.service';
-import { toStringHDMS } from 'ol/coordinate';
 
 
 @Component({
@@ -49,10 +45,12 @@ export class MapaComponent implements OnInit {
   constructor(public mapaServicio: MapaServicioService) {
     this.info = {
       nombre: 'nombre',
-              foto: 'foto',
-              descripcion: 'descripcion',
-              tieneLibro: 'tieneLibro',
-              lugar_id: 'lugar_id'
+      foto: 'foto',
+      descripcion: 'descripcion',
+      tieneLibro: 'tieneLibro',
+      lugar_id: 'lugar_id',
+      latitud: 0,
+      longitud: 0
     }
   }
 
@@ -65,7 +63,6 @@ export class MapaComponent implements OnInit {
   cargarLugares() {
     const token = JSON.parse(localStorage.getItem('user')).token;
     let container = document.getElementById('popup');
-    let content = document.getElementById('popup-content');
     let closer = document.getElementById('popup-closer');
 
     const layers = [
@@ -145,19 +142,15 @@ export class MapaComponent implements OnInit {
             foto: feature.get('foto'),
             descripcion: feature.get('descripcion'),
             tieneLibro: feature.get('tieneLibro'),
-            lugar_id: feature.get('lugar_id')
-          }
-
-          if (this.info.tieneLibro == 0) {
-            this.info.tieneLibro = 'No tiene libro'
-          } else{
-            this.info.tieneLibro = 'Tiene libro'
+            lugar_id: feature.get('lugar_id'),
+            latitud: feature.get('latitud'),
+            longitud: feature.get('longitud')
 
           }
-        content.innerHTML = `<h6>${this.info.nombre}</6>
-                             <h6>${this.info.tieneLibro}</6>`;
+
         } else {
-
+          popup.setPosition(undefined);
+          closer.blur();
         }
 
         closer.onclick = function () {
@@ -183,7 +176,7 @@ export class MapaComponent implements OnInit {
 
       coordenadas[i] = (lonLat);
 
-      console.log(lugares[i].Descripcion);
+      console.log(lugares[i]);
 
 
       let pin = new Feature({
@@ -193,6 +186,8 @@ export class MapaComponent implements OnInit {
         foto: lugares[i].Foto,
         descripcion: lugares[i].Descripcion,
         tieneLibro: lugares[i].tieneLibro,
+        latitud: lugares[i].latitud,
+        longitud: lugares[i].longitud
 
       });
 
@@ -201,4 +196,14 @@ export class MapaComponent implements OnInit {
 
     }
   }
+
+  sendValueIdDetail(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro) {
+
+    let lugarDetail = new Lugar(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro);
+    console.log(lugarDetail);
+    
+    this.mapaServicio.setLugarDetail(lugarDetail);
+
+  }
+
 }
