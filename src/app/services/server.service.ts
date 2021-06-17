@@ -3,6 +3,8 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 const baseUrl = 'https://robinbook.herokuapp.com';
 
+// const baseUrl = 'http://localhost:4000';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,8 +23,25 @@ export class ServerService {
     if (method === 'GET') {
       return this.get(route, data);
     }
-
+    
     const header = (this.loggedIn) ? { Authorization: `Bearer ${this.token}` } : undefined;    
+
+    return this.http.request(method, baseUrl + route, {
+      body: data,
+      responseType: 'json',
+      observe: 'body',
+      headers: header
+    });
+  }
+
+  requestCustomHeader(method: string, route: string, data?: any) {
+    if (method === 'GET') {
+      return this.get(route, data);
+    }
+
+    const header = {
+      reset: data.reset,
+    } 
     return this.http.request(method, baseUrl + route, {
       body: data,
       responseType: 'json',

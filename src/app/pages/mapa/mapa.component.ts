@@ -13,8 +13,11 @@ export class MapaComponent implements OnInit {
   public map : Map;
   
   constructor(public mapaServicio : MapaServicioService) {
-    const userData = JSON.parse(localStorage.getItem('user'));
-    console.log(userData);
+
+    //informacion del usuario simpre esta en localStorage y se puede acceder desde cualquier pagina
+    
+    // const userData = JSON.parse(localStorage.getItem('user'));
+
   
    }
 
