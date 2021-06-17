@@ -41,14 +41,18 @@ export class LibroService {
     this.libroDetail = libroDetail;
   }
 
-  setFav(libroDetailFav: Libro) {
-    this.libroDetailFav = libroDetailFav;
-  }
-
   anyadirLibro(libro: Libro, token): any {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
     return this.http.post(this.url + "/new", libro, options).subscribe( (result: any) => {
+      console.log(result);
+    });
+  }
+
+  anyadirLibroFav(libroFav, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/newfav", libroFav, options).subscribe( (result: any) => {
       console.log(result);
     });
   }

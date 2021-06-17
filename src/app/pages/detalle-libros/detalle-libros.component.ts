@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Libro } from 'src/app/models/libro/libro';
+import { Librofav } from 'src/app/models/libro/librofav';
 import { LibroService } from 'src/app/services/libro.service';
 import { Coments } from 'src/app/models/coments/coments';
 import { Rawcoments } from 'src/app/models/coments/rawcoments';
@@ -27,8 +28,11 @@ public coments: Coments[];
       });
   }
 
-  sendFav(libroVista) {
-    this.apiService.setFav(libroVista);;
+  sendFav(id_Libro) {
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
+    let libroFav = new Librofav(id_User, id_Libro);
+    this.apiService.anyadirLibroFav(libroFav, token);
   }
 
   sendComent(coment, libro_id) {
