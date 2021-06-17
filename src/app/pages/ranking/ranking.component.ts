@@ -14,19 +14,19 @@ export class RankingComponent implements OnInit {
   constructor(private server: ServerService, private router: Router) {
 
     this.server.get('/api/users').subscribe((response: any) => {
-
       this.usuarios = response.data;
-      console.log(response.data);
-      
     })
    }
 
   ngOnInit(): void {
   }
 
-  userDetail(i:Number){
-    console.log(i);
-    
+  userDetail(i:number){
+    this.router.navigate(['ranking/perfil',i], {
+      state: {
+        user: JSON.stringify(this.usuarios[i])
+      }
+    });
   }
 
 }

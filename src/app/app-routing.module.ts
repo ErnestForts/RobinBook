@@ -25,7 +25,7 @@ import { NewPasswordComponent } from './pages/new-password/new-password.componen
 const routes: Routes = [
   {path: "", redirectTo: '/login', pathMatch: 'full'},
   {path:"ranking", component: RankingComponent },
-  {path:"ranking/perfil", component: PerfilRankingComponent},
+  {path:"ranking/perfil/:id", component: PerfilRankingComponent},
   {path:"ranking/perfil/chat", component: ChatComponent},
   {path:"perfil", component: PerfilComponent},
   {path:"perfil/mis-chats", component: MisChatsComponent},
