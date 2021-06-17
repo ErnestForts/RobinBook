@@ -1,17 +1,21 @@
 export class User {
-    public id?:number;
-    public email?:string;
-    public nombre?:string;
-    public apellido?:string;
-    public token?:string;
-    public password?:string;
+    public user_id?:number;
+    public Email?:string;
+    public Nombre?:string;
+    public Apellido?:string;
+    public Telefono?:string;
+    public Foto?:string;
+    public Frase?:string;
+    public ranking?:string;
 
-    constructor(id?:number,email?:string,nombre?:string,apellido?:string,token?:string,password?:string){
-        this.id = id;
-        this.email = email;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.token = token;
-        this.password = password;
+    constructor(user_id?:number,Email?:string,Nombre?:string,Apellido?:string,Telefono?:string,Foto?:string,Frase?:string, ranking?:string){
+        this.user_id = user_id;
+        this.Email = Email;
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Telefono = Telefono;
+        this.Foto = Foto;
+        this.Frase = Frase;
+        this.ranking = ranking;
     }
 }
