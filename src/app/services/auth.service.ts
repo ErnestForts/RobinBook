@@ -27,12 +27,11 @@ export class AuthService {
   }
 
   login(user) {
-    if (user.email !== '' && user.password !== '' ) {     
+    if (user.txtEmail !== '' && user.txtPassword !== '' ) {     
       return this.server.request('POST', '/api/users/login', {
         Email: user.txtEmail,
         Password: user.txtPassword
       }).subscribe((response: any) => {
-        console.log(response);
         if (response.auth === true && response.token !== undefined) {
           this.token = response.token;
           this.server.setLoggedIn(true, this.token);
@@ -44,6 +43,21 @@ export class AuthService {
           localStorage.setItem('user', JSON.stringify(userData));
           this.router.navigateByUrl('/mapa');
         }
+      });
+    }else{
+      return undefined
+    }
+  }
+
+  forgot(data){   
+    if (data.txtEmail !== '') {     
+      return this.server.request('PUT', '/api/users/forgot-password', {
+        Email: data.txtEmail,
+      }).subscribe((response: any) => {
+        if (response.emailStatus != 'OK') {
+          return undefined
+        }
+        return response
       });
     }else{
       return undefined

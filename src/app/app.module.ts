@@ -29,6 +29,7 @@ import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { FooterLoginComponent } from './components/footer-login/footer-login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NewPasswordComponent } from './pages/new-password/new-password.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { HttpClientModule } from '@angular/common/http';
     MiPerfilComponent,
     NosotrosComponent,
     HeaderFavoritosComponent,
-    FooterLoginComponent
+    FooterLoginComponent,
+    NewPasswordComponent
   ],
   imports: [
     BrowserModule,
