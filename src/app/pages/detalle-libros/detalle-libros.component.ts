@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Libro } from 'src/app/models/libro/libro';
 import { LibroService } from 'src/app/services/libro.service';
+import { Coments } from 'src/app/models/coments/coments';
 
 @Component({
   selector: 'app-detalle-libros',
@@ -10,19 +11,20 @@ import { LibroService } from 'src/app/services/libro.service';
 export class DetalleLibrosComponent implements OnInit {
 
 public libroVista: Libro;
+public coments: Coments[];
 
   constructor(private apiService: LibroService) { 
-    // this.mostrarLibro(this.apiService.libroDetail);
     this.libroVista = this.apiService.libroDetail;
+    this.mostrarComents(this.libroVista.libro_id);
   }
 
-  // mostrarLibro(id) {
-  //   let token = JSON.parse(localStorage.getItem('user')).token;
-  //   this.apiService.obtenerLibro(id, token).subscribe( (result: any) => {
-  //     console.table(result.data);
-  //     this.libroVista = result.data;
-  //     });
-  // }
+  mostrarComents(id: string): void {
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    this.apiService.obtenerComentsById(id, token).subscribe( (result: any) => {
+      console.table(result.data);
+      this.coments = result.data;
+      });
+  }
 
   ngOnInit(): void {
   }

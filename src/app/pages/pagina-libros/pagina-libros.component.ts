@@ -22,8 +22,8 @@ export class PaginaLibrosComponent implements OnInit {
       });
   }
 
-  sendValueIdDetail(Titulo, Autor, Descripcion, Foto) {
-    let libroDetail = new Libro(Titulo, Autor, Foto, Descripcion);
+  sendValueIdDetail(Titulo, Autor, Descripcion, Foto, libro_id) {
+    let libroDetail = new Libro(Titulo, Autor, Foto, Descripcion, libro_id);
     this.apiService.setLibroDetail(libroDetail);
   }
 

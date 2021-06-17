@@ -66,4 +66,10 @@ export class LibroService {
     let options = { headers: headers };
     return this.http.get(`${this.url}/fav/${id}`, options);
   }
+
+  obtenerComentsById(id: string, token: string): Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(`${this.url}/coment/${id}`, options);
+  }
 }
