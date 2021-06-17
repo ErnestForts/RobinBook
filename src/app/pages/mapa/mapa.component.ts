@@ -51,7 +51,8 @@ export class MapaComponent implements OnInit {
       nombre: 'nombre',
               foto: 'foto',
               descripcion: 'descripcion',
-              tieneLibro: 'tieneLibro'
+              tieneLibro: 'tieneLibro',
+              lugar_id: 'lugar_id'
     }
   }
 
@@ -60,11 +61,12 @@ export class MapaComponent implements OnInit {
     this.cargarLugares();
 
   }
+
   cargarLugares() {
-    // const token = JSON.parse(localStorage.getItem('user')).token;
-    var container = document.getElementById('popup');
-    var content = document.getElementById('popup-content');
-    var closer = document.getElementById('popup-closer');
+    const token = JSON.parse(localStorage.getItem('user')).token;
+    let container = document.getElementById('popup');
+    let content = document.getElementById('popup-content');
+    let closer = document.getElementById('popup-closer');
 
     const layers = [
       new TileLayer({
@@ -79,16 +81,28 @@ export class MapaComponent implements OnInit {
       zoom: 5
     });
 
+    const markerStyle = new Style({
+
+      image: new Icon({
+
+        anchor: [0.5, 0.9],
+        crossOrigin: 'anonymous',
+        src: 'assets/icons/marker.png',
+        scale: 1,
+
+      }),
+
+    });
+
     this.map = new Map({
       target: 'mapa',
       layers: layers,
       view: view
     });
-    console.log(this.map);
 
-    this.map.forEachFeatureAtPixel
+    console.log(this.map);
     
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MTgsIk5vbWJyZSI6Ikp1YW4iLCJBcGVsbGlkbyI6IlBlcmV6IiwiRW1haWwiOiJlbWFpbFAiLCJUZWxlZm9ubyI6bnVsbCwiRm90byI6bnVsbCwiRnJhc2UiOm51bGwsInJhbmtpbmciOm51bGx9LCJpYXQiOjE2MjM4NTk5MTEsImV4cCI6MTYyMzkwMzExMX0.iYw_5Hru763XVucBcVjTccOoNVmu6fhSlIcQaxKlkdo';
+    // const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MTgsIk5vbWJyZSI6Ikp1YW4iLCJBcGVsbGlkbyI6IlBlcmV6IiwiRW1haWwiOiJlbWFpbFAiLCJUZWxlZm9ubyI6bnVsbCwiRm90byI6bnVsbCwiRnJhc2UiOm51bGwsInJhbmtpbmciOm51bGwsInJlc2V0VG9rZW4iOm51bGx9LCJpYXQiOjE2MjM5MTAxNzEsImV4cCI6MTYyMzk1MzM3MX0.MncHVoQB2WvJ3C_8YVE1q2m8YrKwjoYzjmlgNlr0dy8';
     this.mapaServicio.obtenerLugares(token).subscribe((result: any) => {
 
       this.lugares = result.data;
@@ -110,49 +124,9 @@ export class MapaComponent implements OnInit {
       });
 
 
-      for (let i = 0; i < this.lugares.length; i++) {
-
-        let lonLat = [this.lugares[i].longitud, this.lugares[i].latitud]
-
-        coordenadas[i] = (lonLat);
-
-        console.log(this.lugares[i].Descripcion);
-
-
-        let pin = new Feature({
-
-          geometry: new Point(olProj.fromLonLat([coordenadas[i][0], coordenadas[i][1]])),
-          nombre: this.lugares[i].Nombre,
-          foto: this.lugares[i].Foto,
-          descripcion: this.lugares[i].Descripcion,
-          tieneLibro: this.lugares[i].tieneLibro,
-
-        });
-
-        markers.push(pin);
-
-
-      }
-
-      const markerStyle = new Style({
-
-        image: new Icon({
-
-          anchor: [0.5, 0.9],
-          crossOrigin: 'anonymous',
-          src: 'assets/icons/marker.png',
-          scale: 1,
-
-        }),
-
-      });
-
-      for (let i = 0; i < markers.length; i++) {
-        markers[i].setStyle(markerStyle)
-      }
+      this.addMarkers(this.lugares, markers, coordenadas, markerStyle);
 
       console.log(markers);
-
 
       this.vectorSource.addFeatures(markers);
 
@@ -170,7 +144,8 @@ export class MapaComponent implements OnInit {
             nombre: feature.get('nombre'),
             foto: feature.get('foto'),
             descripcion: feature.get('descripcion'),
-            tieneLibro: feature.get('tieneLibro')
+            tieneLibro: feature.get('tieneLibro'),
+            lugar_id: feature.get('lugar_id')
           }
 
           if (this.info.tieneLibro == 0) {
@@ -197,5 +172,33 @@ export class MapaComponent implements OnInit {
     });
 
 
+
+
+  }
+
+  addMarkers(lugares : Lugar[], markers : Feature[], coordenadas : number[][], markerStyle : Style){
+    for (let i = 0; i < lugares.length; i++) {
+
+      let lonLat = [lugares[i].longitud, lugares[i].latitud]
+
+      coordenadas[i] = (lonLat);
+
+      console.log(lugares[i].Descripcion);
+
+
+      let pin = new Feature({
+
+        geometry: new Point(olProj.fromLonLat([coordenadas[i][0], coordenadas[i][1]])),
+        nombre: lugares[i].Nombre,
+        foto: lugares[i].Foto,
+        descripcion: lugares[i].Descripcion,
+        tieneLibro: lugares[i].tieneLibro,
+
+      });
+
+      markers.push(pin);
+      markers[i].setStyle(markerStyle);
+
+    }
   }
 }

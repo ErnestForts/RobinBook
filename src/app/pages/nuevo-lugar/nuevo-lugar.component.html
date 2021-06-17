@@ -34,18 +34,18 @@
                              <div>
                                  <form>
                                      <div class="form-group">
-                                         <input type="url" class="form-control" placeholder="https://imagen.com">
+                                         <input type="url" class="form-control" placeholder="https://imagen.com" required #foto>
                                      </div>
                                      <div class="form-group">
                                          <input type="text" class="form-control negrita" name="nombre" id="nombre"
-                                             placeholder="Nombre lugar" required>
+                                             placeholder="Nombre lugar" required #nombre>
                                          <div class="invalid-feedback">
                                              <div>El nombre del lugar es obligatorio</div>
                                          </div>
                                      </div>
                                      <div class="form-group">
                                          <textarea class="form-control" name="descripcion" id="descripcion"
-                                             placeholder="Frase para encontrar el libro" required></textarea>
+                                             placeholder="Frase para encontrar el libro" required #descripcion></textarea>
                                          <div class="invalid-feedback">
                                              <div>La frase del libro es obligatoria</div>
                                          </div>
@@ -53,14 +53,14 @@
                                      <div class="coordenada">
                                         <div class="form-group ">
                                             <label  for="latitud">Latitud</label>
-                                            <input class="form-control" type="text" name="latitud" id="latitud" value="{{userLat}}" disabled>
+                                            <input class="form-control" type="text" name="latitud" id="latitud" value="{{userLat}}" disabled #latitud>
                                             <div class="invalid-feedback">
                                                 <div>La frase del libro es obligatoria</div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="longitud">Longitud</label>
-                                            <input class="form-control" type="text" name="longitud" id="longitud" value="{{userLon}}" disabled>
+                                            <input class="form-control" type="text" name="longitud" id="longitud" value="{{userLon}}" disabled #longitud>
                                             <div class="invalid-feedback">
                                                 <div>La frase del libro es obligatoria</div>
                                             </div>
@@ -69,7 +69,7 @@
                                      
                                      <div class="row">
                                          <div class="contenedor-boton">
-                                             <button class="boton">Guardar</button>
+                                             <button class="boton" (click)="nuevoLugar(nombre.value, descripcion.value, foto.value, latitud.value, longitud.value)">Guardar</button>
                                          </div>
                                         </div>
                                  </form>

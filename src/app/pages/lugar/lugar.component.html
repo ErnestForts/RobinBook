@@ -16,7 +16,7 @@
                             </svg>
                         </div>
                         <div class="col col-nueva favoritos">
-                            <h6 class="">Nombre del lugar</h6>
+                            <h6 class="">{{lugarVista.Nombre}}</h6>
                         </div>
                         <div class="col-1 col-special">
                         </div>
@@ -25,11 +25,18 @@
                     <div class="row content">
                         <div class="ancho-completo">
                             <div class="container imagen">
-                                <img src="https://content.skyscnr.com/m/3e470eec55b19a41/original/GettyImages-528314677.jpg?resize=1800px:1800px&quality=100"
+                                <img [src]="lugarVista.Foto"
                                     class="img-thumbnail" alt="...">
                             </div>
                             <div class="row pista">
-                                <h6>Hola, soy una pista para encontrar el libro que estás buscando.</h6>
+                                <h6><b>{{lugarVista.Nombre}}</b></h6>
+                            </div>
+                            <div class="row pista">
+                                <h6>{{lugarVista.Descripcion}}</h6>
+                            </div>
+                            <div class="row pista">
+                                <h6 *ngIf="tieneLibro == true; else elseBlock" class="tieneLibro"><b>Libro disponible.</b></h6>
+                                <ng-template #elseBlock><h6 class="noTieneLibro"><b>No hay ningún libro en estos momentos.</b></h6></ng-template>
                             </div>
                             <div class="row iconos">
                                 <div class="rate col-1">
@@ -56,7 +63,7 @@
                                 2 REVIEWS
                             </div>
                             <div class="bajar">
-                                MOST INTERESTING<a href="#"><img src="..\assets\icons\arrow-back.svg" id="" alt=""></a>
+                                MOST INTERESTING<a href="#"><img src="..\assets\icons\arrow_back.svg" id="" alt=""></a>
                             </div>
 
                         </div>
@@ -122,7 +129,7 @@
             </div>
         </div>
     </div>
-    <app-header-favoritos class="mobile mobile-header" title="Lugar" src="..\assets\icons\new-arrow_back.svg" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
+    <app-header-favoritos class="mobile mobile-header" title="Favoritos" src="..\assets\icons\new-arrow_back.svg" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
     <app-footer class="desktop-header desktop"></app-footer>
     <app-footer class="mobile mobile-footer"></app-footer>
     <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>

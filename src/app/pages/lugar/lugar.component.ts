@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Lugar } from 'src/app/models/lugar/lugar';
+import { MapaServicioService } from 'src/app/services/mapa-servicio.service';
 
 @Component({
   selector: 'app-lugar',
@@ -7,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LugarComponent implements OnInit {
 
-  constructor() { }
+  public lugarVista : Lugar;
+  public tieneLibro : boolean;
+
+  constructor(private apiService: MapaServicioService) { 
+
+    this.lugarVista = this.apiService.lugarDetail;
+    console.log(this.lugarVista.tieneLibro);
+    
+    this.tieneLibro = this.lugarVista.tieneLibro;
+      
+  }
 
   ngOnInit(): void {
   }

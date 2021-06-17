@@ -22,7 +22,6 @@ export class NuevoLugarComponent implements OnInit {
   ngOnInit(){
 
     this.getUserLocation();    
-    this.mostrarLugares();
     
   }
 
@@ -37,20 +36,19 @@ export class NuevoLugarComponent implements OnInit {
       });
 
     } else {
-      console.log("Not allowed")
+
+      console.log("Not allowed");
+
     }
 
   }
 
-  mostrarLugares(){
-    const token = JSON.parse(localStorage.getItem('user')).token;
-
-    this.mapaServicio.obtenerLugares(token).subscribe((result) => {
-      this.lugares = result.data;
-    })
-
-    // this.mapaServicio.addMarkers(this.map, this.lugares);
-
+  nuevoLugar(nombre : string, descripcion : string, foto : string, latitud : string, longitud : string) {
+    let nuevoLugar = new Lugar(nombre, descripcion, foto, Number(latitud), Number(longitud));
+    // let token = JSON.parse(localStorage.getItem('user')).token;
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MTgsIk5vbWJyZSI6Ikp1YW4iLCJBcGVsbGlkbyI6IlBlcmV6IiwiRW1haWwiOiJlbWFpbFAiLCJUZWxlZm9ubyI6bnVsbCwiRm90byI6bnVsbCwiRnJhc2UiOm51bGwsInJhbmtpbmciOm51bGwsInJlc2V0VG9rZW4iOm51bGx9LCJpYXQiOjE2MjM5MTAxNzEsImV4cCI6MTYyMzk1MzM3MX0.MncHVoQB2WvJ3C_8YVE1q2m8YrKwjoYzjmlgNlr0dy8';
+    console.log(latitud, longitud);
+    this.mapaServicio.lugarNuevo(nuevoLugar, token);
   }
   
 }

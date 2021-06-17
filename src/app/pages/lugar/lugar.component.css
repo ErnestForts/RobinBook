@@ -332,6 +332,14 @@
     background-color: rgba(238, 238, 238, 0);
 }
 
+.tieneLibro > b{
+    color: #388E3C;
+}
+
+.noTieneLibro > b{
+    color: #b12f27;
+}
+
 @media only screen and (min-width: 770px) {
 
     .mobile {

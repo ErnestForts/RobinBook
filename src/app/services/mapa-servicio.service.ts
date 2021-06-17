@@ -26,6 +26,7 @@ export class MapaServicioService {
   private url = 'https://robinbook.herokuapp.com/place';
   public lugares : Lugar[];
   public info; 
+  public lugarDetail: Lugar;
 
   constructor(private http : HttpClient) { 
   }
@@ -46,13 +47,19 @@ export class MapaServicioService {
     return this.http.get(`${this.url}/${id}`, options);
   }
 
+  setLugarDetail(lugarDetail: Lugar) {
+    this.lugarDetail = lugarDetail;
+  }
+
   lugarNuevo(lugar : Lugar, token) : any {
 
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
 
     return this.http.post(this.url + "/new", lugar, options).subscribe( (result: any) => {
+      
       console.log(result);
+      
     });
 
   }
@@ -70,6 +77,12 @@ export class MapaServicioService {
     return this.http.delete(this.url, options).subscribe( (result: any) => {
       console.table(result);
     });
+  }
+
+  obtenerLugaresFav(id: string, token: string): Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(`${this.url}/fav/${id}`, options);
   }
 
 }
