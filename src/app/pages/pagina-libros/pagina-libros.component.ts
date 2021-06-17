@@ -9,26 +9,23 @@ import { LibroService } from '../../services/libro.service';
 })
 export class PaginaLibrosComponent implements OnInit {
 
-  public libros: Libro[];
+  public librosVista: Libro[];
 
   constructor(private apiService: LibroService) {
     this.mostrarLibros();
   }
 
-  mostrarLibros() {
+  mostrarLibros(): void {
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.apiService.obtenerLibros(token).subscribe( (result: any) => {
-      this.libros = result.data;
+      this.librosVista = result.data;
       });
   }
 
-  // mostrarLibro(id) {
-  //   let token = JSON.parse(localStorage.getItem('user')).token;
-  //   this.apiService.obtenerLibro(id, token).subscribe( (result: any) => {
-  //     console.table(result.data);
-  //     this.libroVista = result.data;
-  //     });
-  // }
+  sendValueIdDetail(Titulo, Autor, Descripcion, Foto) {
+    let libroDetail = new Libro(Titulo, Autor, Foto, Descripcion);
+    this.apiService.setLibroDetail(libroDetail);
+  }
 
   ngOnInit(): void {
   }

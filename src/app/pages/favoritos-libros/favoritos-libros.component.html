@@ -8,17 +8,17 @@
                     <h3>Favoritos</h3>
               </div>
               <div class="container tarjetas" *ngFor="let vista of librosFav;">
-                <!-- <div class="card" routerLink="/libros/detalle">
+                <div class="card" routerLink="/libros/detalle">
                   <div class="part2">
                     <div class="imagen">
-                      <img src="https://i.pinimg.com/236x/72/a8/7f/72a87f18c6aa0ae668ec174c8cca8f6f.jpg" class="" alt="...">
+                      <img [src]="vista.Foto" class="" alt="...">
                     </div>
                     <div class="description">
                       <div class="titulo">
-                        <h4><b>Titulo1</b></h4>
+                        <h4><b>{{vista.Titulo}}</b></h4>
                       </div>
                       <div class="descripcion">
-                        <h4>Descripcion</h4>
+                        <h4>{{vista.Descripcion}}</h4>
                       </div>
                       <div class="">
                         <div class="rate">
@@ -36,7 +36,7 @@
                       </div>
                     </div>
                   </div>
-                </div> -->
+                </div>
                 <!-- <div class="card" routerLink="/libros/detalle">
                   <div class="part2">
                     <div class="imagen">

@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 export class LibroService {
 
   private url: string;
+  private libros: Libro[];
+  public libroDetail: Libro;
 
   constructor(private http: HttpClient) { 
     this.url = 'https://robinbook.herokuapp.com/book';
@@ -21,10 +23,21 @@ export class LibroService {
     return this.http.get(this.url, options);
   }
 
+  mostrarLibros(): void {
+  let token = JSON.parse(localStorage.getItem('user')).token;
+  this.obtenerLibros(token).subscribe( (result: any) => {
+    this.libros = result.data;
+    });
+  }
+
   obtenerLibro(id: string, token: string): Observable<any> {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
     return this.http.get(`${this.url}/${id}`, options);
+  }
+
+  setLibroDetail(libroDetail: Libro) {
+    this.libroDetail = libroDetail;
   }
 
   anyadirLibro(libro: Libro, token): any {

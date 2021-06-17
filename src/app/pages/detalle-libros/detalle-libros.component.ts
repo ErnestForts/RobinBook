@@ -9,21 +9,20 @@ import { LibroService } from 'src/app/services/libro.service';
 })
 export class DetalleLibrosComponent implements OnInit {
 
-@Input() idlibro;
 public libroVista: Libro;
 
   constructor(private apiService: LibroService) { 
-    this.idlibro = 1;
-    this.mostrarLibro(this.idlibro);
+    // this.mostrarLibro(this.apiService.libroDetail);
+    this.libroVista = this.apiService.libroDetail;
   }
 
-  mostrarLibro(id) {
-    let token = JSON.parse(localStorage.getItem('user')).token;
-    this.apiService.obtenerLibro(id, token).subscribe( (result: any) => {
-      console.table(result.data);
-      this.libroVista = result.data;
-      });
-  }
+  // mostrarLibro(id) {
+  //   let token = JSON.parse(localStorage.getItem('user')).token;
+  //   this.apiService.obtenerLibro(id, token).subscribe( (result: any) => {
+  //     console.table(result.data);
+  //     this.libroVista = result.data;
+  //     });
+  // }
 
   ngOnInit(): void {
   }
