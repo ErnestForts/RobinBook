@@ -2,17 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import Map from 'ol/Map';
-import View from 'ol/View';
-import Icon from 'ol/style/Icon';
-import * as olProj from 'ol/proj';
-import Feature from 'ol/Feature';
-import Point from 'ol/geom/Point';
-import {OSM, TileWMS, Vector as VectorSource} from 'ol/source';
+
+import { Vector as VectorSource} from 'ol/source';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
-import Style from 'ol/style/Style';
 import { Lugar } from '../models/lugar/lugar';
 import { Observable } from 'rxjs';
-import { Overlay } from 'ol';
 
 
 @Injectable({
@@ -48,7 +42,10 @@ export class MapaServicioService {
   }
 
   setLugarDetail(lugarDetail: Lugar) {
+
+    // console.log("Ahora este es el bueno "+lugarDetail.Lugar_id);
     this.lugarDetail = lugarDetail;
+
   }
 
   lugarNuevo(lugar : Lugar, token) : any {
@@ -100,6 +97,8 @@ export class MapaServicioService {
   }
 
   anyadirComent(rawComent, token): any {
+    console.log("Rawcoment: " + rawComent);
+    
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
     return this.http.post(this.url + "/coment", rawComent, options).subscribe( (result: any) => {

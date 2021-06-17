@@ -9,24 +9,12 @@ import Icon from 'ol/style/Icon';
 import * as olProj from 'ol/proj';
 import Feature from 'ol/Feature';
 import Point from 'ol/geom/Point';
-import {
-  OSM,
-  Vector as VectorSource
-} from 'ol/source';
-import {
-  Tile as TileLayer,
-  Vector as VectorLayer
-} from 'ol/layer';
+import { OSM, Vector as VectorSource } from 'ol/source';
+import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
 import Style from 'ol/style/Style';
-import {
-  Overlay
-} from 'ol';
-import {
-  Lugar
-} from 'src/app/models/lugar/lugar';
-import {
-  MapaServicioService
-} from 'src/app/services/mapa-servicio.service';
+import { Overlay } from 'ol';
+import { Lugar } from 'src/app/models/lugar/lugar';
+import { MapaServicioService } from 'src/app/services/mapa-servicio.service';
 
 
 @Component({
@@ -97,13 +85,12 @@ export class MapaComponent implements OnInit {
       view: view
     });
 
-    console.log(this.map);
+    // console.log(this.map);
     
-    // const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MTgsIk5vbWJyZSI6Ikp1YW4iLCJBcGVsbGlkbyI6IlBlcmV6IiwiRW1haWwiOiJlbWFpbFAiLCJUZWxlZm9ubyI6bnVsbCwiRm90byI6bnVsbCwiRnJhc2UiOm51bGwsInJhbmtpbmciOm51bGwsInJlc2V0VG9rZW4iOm51bGx9LCJpYXQiOjE2MjM5MTAxNzEsImV4cCI6MTYyMzk1MzM3MX0.MncHVoQB2WvJ3C_8YVE1q2m8YrKwjoYzjmlgNlr0dy8';
     this.mapaServicio.obtenerLugares(token).subscribe((result: any) => {
 
       this.lugares = result.data;
-      console.log(this.lugares);
+      // console.log(this.lugares);
       
       let coordenadas: number[][] = new Array;
       let markers: Feature[] = new Array;
@@ -123,7 +110,7 @@ export class MapaComponent implements OnInit {
 
       this.addMarkers(this.lugares, markers, coordenadas, markerStyle);
 
-      console.log(markers);
+      // console.log(markers);
 
       this.vectorSource.addFeatures(markers);
 
@@ -176,7 +163,7 @@ export class MapaComponent implements OnInit {
 
       coordenadas[i] = (lonLat);
 
-      console.log(lugares[i]);
+      // console.log(lugares[i]);
 
 
       let pin = new Feature({
@@ -187,7 +174,8 @@ export class MapaComponent implements OnInit {
         descripcion: lugares[i].Descripcion,
         tieneLibro: lugares[i].tieneLibro,
         latitud: lugares[i].latitud,
-        longitud: lugares[i].longitud
+        longitud: lugares[i].longitud,
+        lugar_id: lugares[i].Lugar_id
 
       });
 
@@ -197,10 +185,10 @@ export class MapaComponent implements OnInit {
     }
   }
 
-  sendValueIdDetail(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro) {
+  sendValueIdDetail(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id) {
 
-    let lugarDetail = new Lugar(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro);
-    console.log(lugarDetail);
+    let lugarDetail = new Lugar(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id);
+    // console.log("CONSOLEANDO "+lugarDetail.Lugar_id);
     
     this.mapaServicio.setLugarDetail(lugarDetail);
 

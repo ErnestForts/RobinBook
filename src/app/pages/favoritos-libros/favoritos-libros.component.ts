@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Libro } from 'src/app/models/libro/libro';
 import { LibroService } from 'src/app/services/libro.service';
-import { User } from '../../models/user';
 
 @Component({
   selector: 'app-favoritos-libros',
