@@ -19,12 +19,7 @@ public coments: Coments[];
 public librosFav: Libro[];
 
 
-<<<<<<< HEAD
   constructor(private apiService: LibroService, public dialog: MatDialog) { 
-=======
-
-  constructor(private apiService: LibroService) { 
->>>>>>> main
     this.libroVista = this.apiService.libroDetail;
     this.mostrarComents(this.libroVista.libro_id);
     this.mostrarLibrosFav();
