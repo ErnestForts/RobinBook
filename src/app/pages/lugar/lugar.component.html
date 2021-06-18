@@ -92,8 +92,9 @@
                     <div class="sendComent">
                         <div>
                             <input type="text" placeholder="Escribir comentario" #coment><br>
-                            <button class="boton" (click)="sendComent(coment.value, lugarVista.Lugar_id)">Enviar
-                                comentario</button>
+                        </div>
+                        <div class="contenedor-boton">
+                            <button (click)="sendComent(coment.value, lugarVista.Lugar_id)"><p>Enviar comentario</p></button>
                         </div>
                     </div>
                 </div>
@@ -104,7 +105,6 @@
         id="back" alt="back" id2="ocultar" id3="ocultar">
     </app-header-favoritos>
     <app-footer class="desktop-header desktop"></app-footer>
-    <app-footer class="mobile mobile-footer"></app-footer>
     <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
 
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Libro } from 'src/app/models/libro/libro';
 import { Librofav } from 'src/app/models/libro/librofav';
 import { LibroService } from 'src/app/services/libro.service';
@@ -13,19 +13,28 @@ import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toas
   styleUrls: ['./detalle-libros.component.css']
 })
 export class DetalleLibrosComponent implements OnInit {
-
+  
 public libroVista: Libro;
 public coments: Coments[];
 public librosFav: Libro[];
 
 
+<<<<<<< HEAD
   constructor(private apiService: LibroService, public dialog: MatDialog) { 
+=======
+
+  constructor(private apiService: LibroService) { 
+>>>>>>> main
     this.libroVista = this.apiService.libroDetail;
     this.mostrarComents(this.libroVista.libro_id);
     this.mostrarLibrosFav();
   }
 
-  mostrarComents(id: string): void {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
+  mostrarComents(id: string) {
     
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.apiService.obtenerComentsById(id, token).subscribe( (result: any) => {
@@ -57,19 +66,23 @@ public librosFav: Libro[];
     this.apiService.anyadirLibroFav(libroFav, token);
   }
 
-  sendComent(coment, libro_id) {
+  sendComent (coment, libro_id) {
+
+    if (coment != "") {
+      let token = JSON.parse(localStorage.getItem('user')).token;
+      let id_user = JSON.parse(localStorage.getItem('user')).user.user_id;
+      let rawComent = new Rawcoments(libro_id, id_user, coment);
     
-    let token = JSON.parse(localStorage.getItem('user')).token;
-    let id_user = JSON.parse(localStorage.getItem('user')).user.user_id;
-    let rawComent = new Rawcoments(libro_id, id_user, coment);    
-    this.apiService.anyadirComent(rawComent, token);
-  }
+      this.apiService.anyadirComent(rawComent, token);
+      setTimeout(()=>{
+        this.mostrarComents(libro_id);
+      }, 500)      
+    } else {
 
-  guardadoFav() {
-    this.dialog.open(ToastFavoritosComponent);
-  }
-
-  ngOnInit(): void {
+      console.log("comentario vacío");
+      
+    }
+      
   }
 
 }

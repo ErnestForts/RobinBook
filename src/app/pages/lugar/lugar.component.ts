@@ -42,15 +42,23 @@ export class LugarComponent implements OnInit {
     this.mapaServicio.anyadirLugarFav(lugarFav, token);
   }
 
-  sendComent(coment, lugar_id) {
+  sendComent (coment, lugar_id) {
 
-    console.log("INTERESA"+coment, lugar_id);
+    if (coment != "") {
+      let token = JSON.parse(localStorage.getItem('user')).token;
+      let id_user = JSON.parse(localStorage.getItem('user')).user.user_id;
+      let rawComent = new RawcomentsLugar(lugar_id, id_user, coment);
     
-    let token = JSON.parse(localStorage.getItem('user')).token;
-    let id_user = JSON.parse(localStorage.getItem('user')).user.user_id;
-    let rawComent = new RawcomentsLugar(lugar_id, id_user, coment);
-    this.mapaServicio.anyadirComent(rawComent, token);
+      this.mapaServicio.anyadirComent(rawComent, token);
+      setTimeout(()=>{
+        this.mostrarComents(lugar_id);
+      }, 500)      
+    } else {
 
+      console.log("comentario vacío");
+      
+    }
+      
   }
 
   ngOnInit(): void {
