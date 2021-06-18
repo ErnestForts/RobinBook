@@ -62,6 +62,8 @@ public librosFav: Libro[];
   }
 
   async publicaComentario(coment, libro_id) {
+    console.log(libro_id);
+    
 
     const result = await this.sendComent(coment, libro_id);
     this.mostrarComents(this.libroVista.libro_id);
