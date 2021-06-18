@@ -1,8 +1,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
-<div class="madre">
-    <div class="contenedor">
+<div class="madre" #pagina>
+    <div class="contenedor" >
         <div class="imagen">
            <img [src]="libroVista.Foto" alt="...">
         </div>
@@ -48,7 +48,7 @@
                 MOST INTERESTING<a href="#"><img src="..\assets\icons\arrow-down.svg" id="" alt=""></a>
             </div>
         </div>
-        <div class="comentarios" *ngFor="let coment of coments;">
+        <div class="comentarios" *ngFor="let coment of coments;" #comentarios>
             <div class="uncomentario">
                 <div class="separacion">
                     <div class="rostro">
@@ -71,13 +71,14 @@
     <div class="sendComent">
         <div>
             <input type="text" placeholder="Escribir comentario" #coment><br>
-            <button class="boton" (click)="sendComent(coment.value, libroVista.libro_id)">Enviar comentario</button>
+        </div>
+        <div class="contenedor-boton">
+            <button (click)="sendComent(coment.value, libroVista.libro_id)"><p>Enviar comentario</p></button>
         </div>
         
     </div>
   <app-header-favoritos class="mobile mobile-header" src="..\assets\icons\new-arrow_back.svg" title="Detalle Libro" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
   <app-footer class="desktop-header desktop"></app-footer>
-  <app-footer class="mobile mobile-footer"></app-footer>
   <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
 
 </div>
