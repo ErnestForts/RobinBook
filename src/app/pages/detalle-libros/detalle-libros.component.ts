@@ -23,7 +23,11 @@ public librosFav: Libro[];
     this.mostrarLibrosFav();
   }
 
-  mostrarComents(id: string): void {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
+  mostrarComents(id: string) {
     
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.apiService.obtenerComentsById(id, token).subscribe( (result: any) => {
@@ -55,16 +59,22 @@ public librosFav: Libro[];
     this.apiService.anyadirLibroFav(libroFav, token);
   }
 
-  sendComent(coment, libro_id) {
-    
-    let token = JSON.parse(localStorage.getItem('user')).token;
-    let id_user = JSON.parse(localStorage.getItem('user')).user.user_id;
-    let rawComent = new Rawcoments(libro_id, id_user, coment);
-    
-    this.apiService.anyadirComent(rawComent, token);
-  }
+  sendComent (coment, libro_id) {
 
-  ngOnInit(): void {
+    if (coment != "") {
+      let token = JSON.parse(localStorage.getItem('user')).token;
+      let id_user = JSON.parse(localStorage.getItem('user')).user.user_id;
+      let rawComent = new Rawcoments(libro_id, id_user, coment);
+    
+      this.apiService.anyadirComent(rawComent, token);
+      
+      this.mostrarComents(libro_id);
+    } else {
+
+      console.log("comentario vacío");
+      
+    }
+      
   }
 
 }
