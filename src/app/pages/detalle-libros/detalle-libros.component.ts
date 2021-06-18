@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Libro } from 'src/app/models/libro/libro';
 import { Librofav } from 'src/app/models/libro/librofav';
 import { LibroService } from 'src/app/services/libro.service';
@@ -11,10 +11,11 @@ import { Rawcoments } from 'src/app/models/comentsLibros/rawcoments';
   styleUrls: ['./detalle-libros.component.css']
 })
 export class DetalleLibrosComponent implements OnInit {
-
+  
 public libroVista: Libro;
 public coments: Coments[];
 public librosFav: Libro[];
+
 
 
   constructor(private apiService: LibroService) { 
@@ -67,8 +68,9 @@ public librosFav: Libro[];
       let rawComent = new Rawcoments(libro_id, id_user, coment);
     
       this.apiService.anyadirComent(rawComent, token);
-      
-      this.mostrarComents(libro_id);
+      setTimeout(()=>{
+        this.mostrarComents(libro_id);
+      }, 500)      
     } else {
 
       console.log("comentario vacío");
