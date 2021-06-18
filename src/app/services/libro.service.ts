@@ -70,6 +70,14 @@ export class LibroService {
     });
   }
 
+  borrarlibroFav(libroFav, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers, body: libroFav };
+    return this.http.delete(this.url + "/deletefav", options).subscribe( (result: any) => {
+      console.log(result);
+    });
+  }
+
   obtenerLibrosFav(id: string, token: string): Observable<any> {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };

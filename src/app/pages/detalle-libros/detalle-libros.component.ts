@@ -61,6 +61,13 @@ public librosFav: Libro[];
     this.apiService.anyadirLibroFav(libroFav, token);
   }
 
+  borrarFav(id_Libro) {
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
+    let libroFav = new Librofav(id_User, id_Libro);
+    this.apiService.borrarlibroFav(libroFav, token);
+  }
+
   guardadoFav() {
     this.dialog.open(ToastFavoritosComponent);
   }
