@@ -4,6 +4,9 @@ import { Lugar } from 'src/app/models/lugar/lugar';
 import { MapaServicioService } from 'src/app/services/mapa-servicio.service';
 import { Lugarfav } from 'src/app/models/lugar/lugarfav';
 import { RawcomentsLugar } from 'src/app/models/comentsLugar/rawcoments-lugar';
+import {MatDialog} from '@angular/material/dialog';
+import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toast-favoritos.component';
+
 
 @Component({
   selector: 'app-lugar',
@@ -16,7 +19,7 @@ export class LugarComponent implements OnInit {
   public tieneLibro : boolean;
   public coments: Coments[];
 
-  constructor(private mapaServicio: MapaServicioService) { 
+  constructor(private mapaServicio: MapaServicioService, public dialog: MatDialog) { 
 
     this.lugarVista = this.mapaServicio.lugarDetail;
     // console.log(this.lugarVista.tieneLibro);
@@ -40,6 +43,10 @@ export class LugarComponent implements OnInit {
     let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
     let lugarFav = new Lugarfav(id_User, id_Lugar);
     this.mapaServicio.anyadirLugarFav(lugarFav, token);
+  }
+
+  guardadoFav() {
+    this.dialog.open(ToastFavoritosComponent);
   }
 
   sendComent (coment, lugar_id) {

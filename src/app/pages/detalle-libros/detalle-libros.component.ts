@@ -61,6 +61,10 @@ public librosFav: Libro[];
     this.apiService.anyadirLibroFav(libroFav, token);
   }
 
+  guardadoFav() {
+    this.dialog.open(ToastFavoritosComponent);
+  }
+
   sendComent(coment, libro_id) {
 
     if (coment != "") {
@@ -76,9 +80,5 @@ public librosFav: Libro[];
       console.log("comentario vacío");
     }
   }
-
-  guardadoFav() {
-    this.dialog.open(ToastFavoritosComponent);
-}
 
 }

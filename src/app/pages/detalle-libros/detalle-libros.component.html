@@ -20,7 +20,9 @@
                 <label for="star1" title="text">1 star</label>
             </div>
             <div class="botones">
-                <a routerLink="/libros/favoritos" (click)="sendFav(libroVista.libro_id)" (click)="guardadoFav()"><img src="..\assets\icons\bookmark-black.svg" id="" alt=""></a>
+                <a (click)="sendFav(libroVista.libro_id); guardadoFav();">
+                    <img src="..\assets\icons\bookmark-black.svg" id="" alt="">
+                </a>
             </div>
        </div>
        <div class="description">
