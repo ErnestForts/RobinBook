@@ -9,6 +9,8 @@
     overflow-y: scroll;
     justify-items: center;
     padding: 0;
+    padding-bottom: 3vw;
+
 }
 
 .content{
@@ -147,8 +149,8 @@ svg {
 }
 
 .contenedor-boton{
-    margin-top: 5vw;
     text-align: center;
+    padding: 4vw;
 }
 
 .boton {
@@ -160,6 +162,19 @@ svg {
     width: 50vw;
     /* padding: 5vw; */
     font-size: 7vw;   
+}
+
+.coordenada{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.coordenada > div > label{
+    display: block;
+    text-align: center;
+    font-size: 4vw;
 }
 
 

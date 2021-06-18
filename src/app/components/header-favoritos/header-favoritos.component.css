@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-.fondo{
+.fondo {
     width: 100%;
     margin: 0px;
     height: 10vh;
@@ -43,17 +43,17 @@ p {
 }
 
 #back {
-    width: 30px; 
+    width: 30px;
     height: 30px;
     margin-top: 20px;
     margin-left: 10px;
 }
 
-.titulo{
+.titulo {
     position: fixed;
     left: 50%;
-
-transform: translate(-50%, 0%);}
+    transform: translate(-50%, 0%);
+}
 
 #none {
     display: none;
@@ -65,4 +65,13 @@ transform: translate(-50%, 0%);}
 
 .ocultar {
     display: none;
+}
+
+.contenedor-perfil{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.contenedor-perfil > img{
+    height: 50px;
 }

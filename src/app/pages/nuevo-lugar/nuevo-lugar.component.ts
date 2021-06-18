@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { async } from '@angular/core/testing';
 import Map from 'ol/Map';
+import { Lugar } from 'src/app/models/lugar/lugar';
 import { MapaServicioService } from 'src/app/services/mapa-servicio.service';
 
 
@@ -11,11 +13,42 @@ import { MapaServicioService } from 'src/app/services/mapa-servicio.service';
 export class NuevoLugarComponent implements OnInit {
 
   public map : Map;
+  public userLat : number;
+  public userLon : number;
+  public lugares : Lugar[];
   
   constructor(public mapaServicio : MapaServicioService) { }
 
   ngOnInit(){
-    this.mapaServicio.initializeMap(this.map);
+
+    this.getUserLocation();    
+    
   }
 
+  getUserLocation() {
+    if (navigator.geolocation) {
+
+      navigator.geolocation.getCurrentPosition( (position) => {
+
+        this.userLat = position.coords.latitude;
+        this.userLon = position.coords.longitude;
+         
+      });
+
+    } else {
+
+      // console.log("Not allowed");
+
+    }
+
+  }
+
+  nuevoLugar(nombre : string, descripcion : string, foto : string, latitud : string, longitud : string) {
+    let nuevoLugar = new Lugar(nombre, descripcion, foto, Number(latitud), Number(longitud));
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    // console.log(latitud, longitud);
+    this.mapaServicio.lugarNuevo(nuevoLugar, token);
+  }
+  
 }
+

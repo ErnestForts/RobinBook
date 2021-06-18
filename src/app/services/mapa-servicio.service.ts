@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import Map from 'ol/Map';
-import View from 'ol/View';
-import Icon from 'ol/style/Icon';
-import * as olProj from 'ol/proj';
-import Feature from 'ol/Feature';
-import Point from 'ol/geom/Point';
-import {OSM, TileWMS, Vector as VectorSource} from 'ol/source';
+
+import { Vector as VectorSource} from 'ol/source';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
-import Style from 'ol/style/Style';
+import { Lugar } from '../models/lugar/lugar';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -17,76 +15,95 @@ import Style from 'ol/style/Style';
 export class MapaServicioService {
 
   public map : Map;
-  punto1;
-  punto2;
-  vectorSource;
-  vectorLayer;
-  rasterLayer;
-  geolocation;
+  public vectorSource : VectorSource;
+  public vectorLayer : VectorLayer;
+  private url = 'https://robinbook.herokuapp.com/place';
+  public lugares : Lugar[];
+  public info; 
+  public lugarDetail: Lugar;
 
-  constructor() { }
+  constructor(private http : HttpClient) { 
+  }
 
-  initializeMap(mapa : Map) {
+  //REQUESTS
+  obtenerLugares(token) : Observable<any> {
 
-    //Este es el mapa que se muestra. Puede cambiarse por otro mapa en caso de querer hacerlo siempre que la projection sea EPSG:3857.
-    const layers = [
-      new TileLayer({
-        source: new OSM()
-      }),
-    ];
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
 
-    //El view determina el ratio de projection, el punto central del mapa y el nivel de zoom por defecto
-    const view= new View({
-      constrainResolution: true,
-      projection: 'EPSG:3857',
-      center: olProj.fromLonLat([-3.7, 40.41]),
-      zoom: 5
+    return this.http.get(this.url, options);
+
+  }
+
+  obtenerLugar(id: string, token) : Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(`${this.url}/${id}`, options);
+  }
+
+  setLugarDetail(lugarDetail: Lugar) {
+
+    // console.log("Ahora este es el bueno "+lugarDetail.Lugar_id);
+    this.lugarDetail = lugarDetail;
+
+  }
+
+  lugarNuevo(lugar : Lugar, token) : any {
+
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+
+    return this.http.post(this.url + "/new", lugar, options).subscribe( (result: any) => {
+      
+      console.log(result);
+      
     });
 
-    //Se crea el mapa. El target hace referencia al id del elemento HTML que va a ser el mapa.- Le pasamos la imagen del mapa(layers) y la vista por defecto(view)
-    mapa = new Map({
-      target: 'mapa',
-      layers: layers,
-      view: view
+  }
+
+  editarLugar(lugar : Lugar) : any {
+
+    return this.http.put(this.url, lugar).subscribe( (result: any) => {
+      console.table(result);
     });
 
-    //Creamos una nueva capa por encima (vacía)
-    this.vectorSource = new VectorSource({});
-    this.vectorLayer = new VectorLayer({source: this.vectorSource});
+  }
 
-    //Estos son los marcadores. Se utiliza la función fromLonLat para indicar la ubicación del punto en el mapa. La función traduce los valores de las coordenadas a los valores que usa el mapa.
-    let marker = new Feature({
-      geometry: new Point(olProj.fromLonLat([-2.67164, 42.8467])),
-    }); 
+  borrarLugar(id: string): any {
+    let options = { headers: new HttpHeaders({'Content-Type': 'application/json'}), body: { id: `${id}`}};
+    return this.http.delete(this.url, options).subscribe( (result: any) => {
+      console.table(result);
+    });
+  }
 
-    let marker2 = new Feature({
-      geometry: new Point(olProj.fromLonLat([-3.7, 40.41])),
-    }); 
+  anyadirLugarFav(lugarFav, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/newfav", lugarFav, options).subscribe( (result: any) => {
+      console.log(result);
+    });
+  }
 
-    //Un array para mostrar todos los puntos
-    let markers = [marker, marker2]
+  obtenerLugaresFav(id: string, token: string): Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(`${this.url}/fav/${id}`, options);
+  }
 
-    //Se crea el estilo del icono a mostrar en el mapa. El anchor indica cual es el punto de la imagen que debe coincidir con el punto del mapa. En este caso centrado en la X y abajo en la Y. crossOrigin es para que funcione en Internet Explorer.
-    const markerStyle = new Style({
-        image: new Icon({
-          anchor: [0.5, 1],
-          crossOrigin: 'anonymous',
-          src: 'assets/icons/marker.png',
-          scale: 1,
-        }),
-      });
+  obtenerComentsById(id: string, token: string): Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(`${this.url}/coment/${id}`, options);
+  }
 
-    //Un bucle para aplicar el estilo a todos los puntos (hasta encontrar una forma de hacerlo el estilo por defecto)
-    for (let i = 0; i < markers.length; i++) {
-      markers[i].setStyle(markerStyle)
-    }
-
-    //Se añaden los puntos a la capa que hemos creado
-    this.vectorSource.addFeatures(markers);
-
-    //Se añade la capa al mapa para mostrarla
-    mapa.addLayer(this.vectorLayer);
-
+  anyadirComent(rawComent, token): any {
+    console.log("Rawcoment: " + rawComent);
+    
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/coment", rawComent, options).subscribe( (result: any) => {
+      console.log(result);
+    });
   }
 
 }

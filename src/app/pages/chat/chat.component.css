@@ -22,23 +22,24 @@
     width: 50px;
 }
 
-.mensajeEntrante {
+.mensajeEntrante, .mensajeSaliente{
     padding: 10px 12px;
+    width: 70vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+}
+.mensajeEntrante {
     background: #689F38;
     border-radius: 12px 12px 12px 0px;
-    width: 250px;
-    order: 1;
-    margin-left: 10px;
+    align-self: flex-start;
+    margin-left: 1.5vw;
 }
 
 .mensajeSaliente {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 10px 12px;
     background: #388E3C;
     border-radius: 12px 12px 0px 12px;
-    width: 250px;
+    align-self: flex-end;
+    margin-right: 1.5vw;
 }
 
 .textChatEntrante {
@@ -51,8 +52,6 @@
     font-weight: normal;
     font-size: 16px;
     color: #FFFFFF;
-    margin-left: 10px;
-
 }
 
 .horaChatEntrante {
@@ -81,6 +80,26 @@
     position: fixed;
     bottom: 0;
     width: 100vw;
+}
+
+.mobile-footer{
+    background-color: #388E3C;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mobile-footer > input{
+    width: 70vw;
+    height: 80%;
+    padding: 7px;
+    border-radius:15px;
+    border: none;
+}
+
+button{
+    
 }
 
 @media only screen and (min-width: 751px) {

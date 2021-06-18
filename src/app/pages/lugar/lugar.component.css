@@ -47,8 +47,9 @@
     padding-right: 6px;
 }
 
-.pista>h6 {
+.pista > h6 {
     font-size: 4.5vw;
+    line-height: 7.5vw;
     color: #5A6072;
 }
 
@@ -330,6 +331,38 @@
 
 .corazon {
     background-color: rgba(238, 238, 238, 0);
+}
+
+.tieneLibro > b{
+    color: #388E3C;
+}
+
+.noTieneLibro > b{
+    color: #b12f27;
+}
+
+.boton {
+    background-color: #689F38;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+input {
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    background-color: white;
+}
+
+.sendComent {
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (min-width: 770px) {
