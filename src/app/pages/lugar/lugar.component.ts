@@ -53,13 +53,6 @@ export class LugarComponent implements OnInit {
 
   }
 
-  async publicaComentario(coment, lugar_id) {
-
-    const result = await this.sendComent(coment, lugar_id);
-    this.mostrarComents(this.lugarVista.Lugar_id);
-
-  }
-
   ngOnInit(): void {
   }
 

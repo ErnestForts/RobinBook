@@ -3,7 +3,7 @@ import { Libro } from 'src/app/models/libro/libro';
 import { Librofav } from 'src/app/models/libro/librofav';
 import { LibroService } from 'src/app/services/libro.service';
 import { Coments } from 'src/app/models/comentsLibros/coments';
-import { RawcomentsLugar } from 'src/app/models/comentsLugar/rawcoments-lugar';
+import { Rawcoments } from 'src/app/models/comentsLibros/rawcoments';
 
 @Component({
   selector: 'app-detalle-libros',
@@ -24,6 +24,7 @@ public librosFav: Libro[];
   }
 
   mostrarComents(id: string): void {
+    
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.apiService.obtenerComentsById(id, token).subscribe( (result: any) => {
       console.table(result.data);
@@ -55,19 +56,12 @@ public librosFav: Libro[];
   }
 
   sendComent(coment, libro_id) {
+    
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id_user = JSON.parse(localStorage.getItem('user')).user.user_id;
-    let rawComent = new RawcomentsLugar(libro_id, id_user, coment);
-    this.apiService.anyadirComent(rawComent, token);
-  }
-
-  async publicaComentario(coment, libro_id) {
-    console.log(libro_id);
+    let rawComent = new Rawcoments(libro_id, id_user, coment);
     
-
-    const result = await this.sendComent(coment, libro_id);
-    this.mostrarComents(this.libroVista.libro_id);
-
+    this.apiService.anyadirComent(rawComent, token);
   }
 
   ngOnInit(): void {
