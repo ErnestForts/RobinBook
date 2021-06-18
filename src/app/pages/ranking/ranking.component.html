@@ -1,85 +1,19 @@
 <div class="bg">
     <div class="row">
         <div class="content">
-
-            <div class="usuario" routerLink="/ranking/perfil">
+            <div *ngFor="let usuario of usuarios; let i = index" class="usuario" (click)="userDetail(i)">
                 <div class="userstyle">
                     <div>
-                        <img class="imgperfil" src="..\assets\pics\perfil.png" alt="">
+                        <img class="imgperfil" src={{usuario.Foto}} alt="">
                     </div>
                     <div class="info">
-                        <h4 class="nombre"><b>Ernest Forts</b></h4>
-                        <h4 class="subtitulo">Leer es lo mio!</h4>
+                        <h4 class="nombre"><b>{{usuario.Nombre}}</b></h4>
+                        <h4 class="subtitulo">{{usuario.Frase}}</h4>
                     </div>
                     <div class="contenedor-puntos">
-                        <p class="puntos">240pt</p>
+                        <p class="puntos">{{usuario.ranking}}pt</p>
                     </div>
                 </div>
-                
-            </div>
-
-            <div class="usuario" routerLink="/ranking/perfil">
-                <div class="userstyle">
-                    <div>
-                        <img class="imgperfil" src="..\assets\pics\perfil.png" alt="">
-                    </div>
-                    <div class="info">
-                        <h4 class="nombre"><b>Maria Lopez</b></h4>
-                        <h4 class="subtitulo">Me gusta leer!</h4>
-                    </div>
-                    <div class="contenedor-puntos">
-                        <p class="puntos">190pt</p>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="usuario" routerLink="/ranking/perfil">
-                <div class="userstyle">
-                    <div>
-                        <img class="imgperfil" src="..\assets\pics\perfil.png" alt="">
-                    </div>
-                    <div class="info">
-                        <h4 class="nombre"><b>Jose Perez</b></h4>
-                        <h4 class="subtitulo">Leer es lo mejor</h4>
-                    </div>
-                    <div class="contenedor-puntos">
-                        <p class="puntos">135pt</p>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="usuario" routerLink="/ranking/perfil">
-                <div class="userstyle">
-                    <div>
-                        <img class="imgperfil" src="..\assets\pics\perfil.png" alt="">
-                    </div>
-                    <div class="info">
-                        <h4 class="nombre"><b>Pepe Gutierrez</b></h4>
-                        <h4 class="subtitulo">Me gusta leer!</h4>
-                    </div>
-                    <div class="contenedor-puntos">
-                        <p class="puntos">115pt</p>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="usuario" routerLink="/ranking/perfil">
-                <div class="userstyle">
-                    <div>
-                        <img class="imgperfil" src="..\assets\pics\perfil.png" alt="">
-                    </div>
-                    <div class="info">
-                        <h4 class="nombre"><b>Julián Muñoz</b></h4>
-                        <h4 class="subtitulo">Me gusta leer!</h4>
-                    </div>
-                    <div class="contenedor-puntos">
-                        <p class="puntos">30pt</p>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </div>

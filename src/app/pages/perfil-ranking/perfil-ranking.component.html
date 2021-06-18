@@ -4,15 +4,15 @@
 
             <div class="parte1">
                 <div>
-                    <img class="imgperfil" src="..\assets\pics\perfil.png" alt="">
+                    <img class="imgperfil" src={{usuario.Foto}} alt="">
                 </div>
 
                 <div class="row">
                     <div class="row nombre">
-                        <p class="">Ernest Forts</p>
+                        <p class="">{{usuario.Nombre}}</p>
                     </div>
                         <div class="row subtitulo">
-                    <p class="">Leer es lo mio!</p>
+                    <p class="">{{usuario.Frase}}</p>
     
                     </div>
                 </div>
@@ -23,70 +23,10 @@
             <div class="alinelibros">
                 <p class="textlibros">LIBROS</p>
             </div>
-            <div class="librostyle">
-                <img class="imglibro" src="../../../assets/pics/libro.jpg" alt="">
+            <div *ngFor="let book of books; let i = index" class="librostyle">
+                <img class="imglibro" src={{book.Foto}} alt="">
                 <div>
-                    <p class="titlelibro">El señor de los anillos</p>
-                    <p class="titlelibro2">La comunidad del anillo</p>
-                    <div>
-                        <svg width="73" height="24" viewBox="0 0 73 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M56.75 14.4875L55.6287 21L61.5 17.9252L67.3713 21L66.25 14.4875L71 9.87539L64.4357 8.92523L61.5 3L58.5643 8.92523L52 9.87539L56.75 14.4875ZM64.718 17.3622L61.5 15.6769L58.282 17.3622L58.8966 13.7928L56.2931 11.2649L59.891 10.7441L61.5 7.49658L63.109 10.7441L66.7069 11.2649L64.1034 13.7928L64.718 17.3622Z" fill="#388E3C"/>
-                            <path d="M36.5 17.9252L30.6287 21L31.75 14.4875L27 9.87539L33.5643 8.92523L36.5 3L39.4357 8.92523L46 9.87539L41.25 14.4875L42.3713 21L36.5 17.9252Z" fill="#388E3C"/>
-                            <path d="M12.5 17.9252L6.62868 21L7.75 14.4875L3 9.87539L9.56434 8.92523L12.5 3L15.4357 8.92523L22 9.87539L17.25 14.4875L18.3713 21L12.5 17.9252Z" fill="#388E3C"/>
-                        </svg>
-                    </div>
-                </div>    
-            </div>
-            <div class="librostyle">
-                <img class="imglibro" src="../../../assets/pics/libro.jpg" alt="">
-                <div>
-                    <p class="titlelibro">El señor de los anillos</p>
-                    <p class="titlelibro2">La comunidad del anillo</p>
-                    <div>
-                        <svg width="73" height="24" viewBox="0 0 73 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M56.75 14.4875L55.6287 21L61.5 17.9252L67.3713 21L66.25 14.4875L71 9.87539L64.4357 8.92523L61.5 3L58.5643 8.92523L52 9.87539L56.75 14.4875ZM64.718 17.3622L61.5 15.6769L58.282 17.3622L58.8966 13.7928L56.2931 11.2649L59.891 10.7441L61.5 7.49658L63.109 10.7441L66.7069 11.2649L64.1034 13.7928L64.718 17.3622Z" fill="#388E3C"/>
-                            <path d="M36.5 17.9252L30.6287 21L31.75 14.4875L27 9.87539L33.5643 8.92523L36.5 3L39.4357 8.92523L46 9.87539L41.25 14.4875L42.3713 21L36.5 17.9252Z" fill="#388E3C"/>
-                            <path d="M12.5 17.9252L6.62868 21L7.75 14.4875L3 9.87539L9.56434 8.92523L12.5 3L15.4357 8.92523L22 9.87539L17.25 14.4875L18.3713 21L12.5 17.9252Z" fill="#388E3C"/>
-                        </svg>
-                    </div>
-                </div>    
-            </div>
-
-            <div class="librostyle">
-                <img class="imglibro" src="../../../assets/pics/libro.jpg" alt="">
-                <div>
-                    <p class="titlelibro">El señor de los anillos</p>
-                    <p class="titlelibro2">La comunidad del anillo</p>
-                    <div>
-                        <svg width="73" height="24" viewBox="0 0 73 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M56.75 14.4875L55.6287 21L61.5 17.9252L67.3713 21L66.25 14.4875L71 9.87539L64.4357 8.92523L61.5 3L58.5643 8.92523L52 9.87539L56.75 14.4875ZM64.718 17.3622L61.5 15.6769L58.282 17.3622L58.8966 13.7928L56.2931 11.2649L59.891 10.7441L61.5 7.49658L63.109 10.7441L66.7069 11.2649L64.1034 13.7928L64.718 17.3622Z" fill="#388E3C"/>
-                            <path d="M36.5 17.9252L30.6287 21L31.75 14.4875L27 9.87539L33.5643 8.92523L36.5 3L39.4357 8.92523L46 9.87539L41.25 14.4875L42.3713 21L36.5 17.9252Z" fill="#388E3C"/>
-                            <path d="M12.5 17.9252L6.62868 21L7.75 14.4875L3 9.87539L9.56434 8.92523L12.5 3L15.4357 8.92523L22 9.87539L17.25 14.4875L18.3713 21L12.5 17.9252Z" fill="#388E3C"/>
-                        </svg>
-                    </div>
-                </div>    
-            </div>
-
-            <div class="librostyle">
-                <img class="imglibro" src="../../../assets/pics/libro.jpg" alt="">
-                <div>
-                    <p class="titlelibro">El señor de los anillos</p>
-                    <p class="titlelibro2">La comunidad del anillo</p>
-                    <div>
-                        <svg width="73" height="24" viewBox="0 0 73 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M56.75 14.4875L55.6287 21L61.5 17.9252L67.3713 21L66.25 14.4875L71 9.87539L64.4357 8.92523L61.5 3L58.5643 8.92523L52 9.87539L56.75 14.4875ZM64.718 17.3622L61.5 15.6769L58.282 17.3622L58.8966 13.7928L56.2931 11.2649L59.891 10.7441L61.5 7.49658L63.109 10.7441L66.7069 11.2649L64.1034 13.7928L64.718 17.3622Z" fill="#388E3C"/>
-                            <path d="M36.5 17.9252L30.6287 21L31.75 14.4875L27 9.87539L33.5643 8.92523L36.5 3L39.4357 8.92523L46 9.87539L41.25 14.4875L42.3713 21L36.5 17.9252Z" fill="#388E3C"/>
-                            <path d="M12.5 17.9252L6.62868 21L7.75 14.4875L3 9.87539L9.56434 8.92523L12.5 3L15.4357 8.92523L22 9.87539L17.25 14.4875L18.3713 21L12.5 17.9252Z" fill="#388E3C"/>
-                        </svg>
-                    </div>
-                </div>    
-            </div>
-
-            <div class="librostyle">
-                <img class="imglibro" src="../../../assets/pics/libro.jpg" alt="">
-                <div>
-                    <p class="titlelibro">El señor de los anillos</p>
-                    <p class="titlelibro2">La comunidad del anillo</p>
+                    <p class="titlelibro">{{book.Titulo}}</p>
                     <div>
                         <svg width="73" height="24" viewBox="0 0 73 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M56.75 14.4875L55.6287 21L61.5 17.9252L67.3713 21L66.25 14.4875L71 9.87539L64.4357 8.92523L61.5 3L58.5643 8.92523L52 9.87539L56.75 14.4875ZM64.718 17.3622L61.5 15.6769L58.282 17.3622L58.8966 13.7928L56.2931 11.2649L59.891 10.7441L61.5 7.49658L63.109 10.7441L66.7069 11.2649L64.1034 13.7928L64.718 17.3622Z" fill="#388E3C"/>
