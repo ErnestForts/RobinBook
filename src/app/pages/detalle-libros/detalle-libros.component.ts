@@ -61,7 +61,7 @@ public librosFav: Libro[];
     this.apiService.anyadirLibroFav(libroFav, token);
   }
 
-  sendComent (coment, libro_id) {
+  sendComent(coment, libro_id) {
 
     if (coment != "") {
       let token = JSON.parse(localStorage.getItem('user')).token;
@@ -73,11 +73,12 @@ public librosFav: Libro[];
         this.mostrarComents(libro_id);
       }, 500)      
     } else {
-
       console.log("comentario vacío");
-      
     }
-      
   }
+
+  guardadoFav() {
+    this.dialog.open(ToastFavoritosComponent);
+}
 
 }
