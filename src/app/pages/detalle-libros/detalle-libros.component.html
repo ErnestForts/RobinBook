@@ -20,7 +20,7 @@
                 <label for="star1" title="text">1 star</label>
             </div>
             <div class="botones">
-                <a routerLink="/libros/favoritos" (click)="sendFav(libroVista.libro_id)"><img src="..\assets\icons\bookmark-black.svg" id="" alt=""></a>
+                <a routerLink="/libros/favoritos" (click)="sendFav(libroVista.libro_id)" (click)="guardadoFav()"><img src="..\assets\icons\bookmark-black.svg" id="" alt=""></a>
             </div>
        </div>
        <div class="description">
@@ -71,7 +71,9 @@
     <div class="sendComent">
         <div>
             <input type="text" placeholder="Escribir comentario" #coment><br>
-            <button class="boton" (click)="sendComent(coment.value, libroVista.libro_id)">Enviar comentario</button>
+        </div>
+        <div class="contenedor-boton">
+            <button (click)="sendComent(coment.value, libroVista.libro_id)"><p>Enviar comentario</p></button>
         </div>
     </div>
   <app-header-favoritos class="mobile mobile-header" src="..\assets\icons\new-arrow_back.svg" title="Detalle Libro" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>

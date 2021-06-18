@@ -30,6 +30,9 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { FooterLoginComponent } from './components/footer-login/footer-login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewPasswordComponent } from './pages/new-password/new-password.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastFavoritosComponent } from './components/toast-favoritos/toast-favoritos.component';
 
 @NgModule({
   declarations: [
@@ -60,14 +63,17 @@ import { NewPasswordComponent } from './pages/new-password/new-password.componen
     NosotrosComponent,
     HeaderFavoritosComponent,
     FooterLoginComponent,
-    NewPasswordComponent
+    NewPasswordComponent,
+    ToastFavoritosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

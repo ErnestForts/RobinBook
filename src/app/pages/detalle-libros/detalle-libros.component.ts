@@ -4,6 +4,8 @@ import { Librofav } from 'src/app/models/libro/librofav';
 import { LibroService } from 'src/app/services/libro.service';
 import { Coments } from 'src/app/models/comentsLibros/coments';
 import { Rawcoments } from 'src/app/models/comentsLibros/rawcoments';
+import {MatDialog} from '@angular/material/dialog';
+import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toast-favoritos.component';
 
 @Component({
   selector: 'app-detalle-libros',
@@ -17,7 +19,7 @@ public coments: Coments[];
 public librosFav: Libro[];
 
 
-  constructor(private apiService: LibroService) { 
+  constructor(private apiService: LibroService, public dialog: MatDialog) { 
     this.libroVista = this.apiService.libroDetail;
     this.mostrarComents(this.libroVista.libro_id);
     this.mostrarLibrosFav();
@@ -59,9 +61,12 @@ public librosFav: Libro[];
     
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id_user = JSON.parse(localStorage.getItem('user')).user.user_id;
-    let rawComent = new Rawcoments(libro_id, id_user, coment);
-    
+    let rawComent = new Rawcoments(libro_id, id_user, coment);    
     this.apiService.anyadirComent(rawComent, token);
+  }
+
+  guardadoFav() {
+    this.dialog.open(ToastFavoritosComponent);
   }
 
   ngOnInit(): void {
