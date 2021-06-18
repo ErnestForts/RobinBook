@@ -60,7 +60,6 @@ export class LugarComponent implements OnInit {
 
   }
 
-
   ngOnInit(): void {
   }
 
