@@ -42,10 +42,8 @@ export class MapaServicioService {
   }
 
   setLugarDetail(lugarDetail: Lugar) {
-
     // console.log("Ahora este es el bueno "+lugarDetail.Lugar_id);
     this.lugarDetail = lugarDetail;
-
   }
 
   lugarNuevo(lugar : Lugar, token) : any {

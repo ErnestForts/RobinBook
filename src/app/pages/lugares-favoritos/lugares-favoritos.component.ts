@@ -19,13 +19,11 @@ export class LugaresFavoritosComponent implements OnInit {
   }
 
   mostrarLugaresFav() {
-
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.mapaServicio.obtenerLugaresFav(id, token).subscribe( (result : any) => {
       this.lugaresFav = result.data;
       });
-
   }
 
   sendValueIdDetail(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id) {

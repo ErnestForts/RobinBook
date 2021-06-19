@@ -17,7 +17,6 @@ export class DetalleLibrosComponent implements OnInit {
   
 public libroVista: Libro;
 public coments: Coments[];
-public Show: boolean;
 public librosFav: Libro[];
 
 
@@ -25,7 +24,6 @@ public librosFav: Libro[];
     this.libroVista = this.apiService.libroDetail;
     this.mostrarComents(this.libroVista.libro_id);
     this.librosFav = this.apiService.librosFav;
-    this.Show = this.inFav();
   }
 
   mostrarComents(id: string) {
@@ -82,8 +80,6 @@ public librosFav: Libro[];
     }
     return result;
   }
-
-
   ngOnInit(): void {
   }
 }

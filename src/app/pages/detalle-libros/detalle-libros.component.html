@@ -21,10 +21,10 @@
             </div>
             <div class="botones">
                 <a (click)="sendFav(libroVista.libro_id); guardadoFav();" *ngIf="!inFav();">
-                    <img src="..\assets\icons\add-bookmark.svg" id="" alt="">
+                    <img src="..\assets\icons\add-bookmark.svg">
                 </a>
                 <a (click)="borrarFav(libroVista.libro_id); borradoFav();" *ngIf="inFav();">
-                    <img src="..\assets\icons\remove-bookmark.svg" id="" alt="">
+                    <img src="..\assets\icons\remove-bookmark.svg">
                 </a>
             </div>
        </div>

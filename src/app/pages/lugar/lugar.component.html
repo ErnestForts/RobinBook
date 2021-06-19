@@ -56,12 +56,12 @@
                                 <div class="col">
                                 </div>
                                 <div class="col-1 icono favorito">
-                                    <a (click)="sendFav(lugarVista.Lugar_id); guardadoFav();">
+                                    <a (click)="sendFav(lugarVista.Lugar_id); guardadoFav();" *ngIf="!inFav();">
                                         <img src="..\assets\icons\add-bookmark.svg" id="" alt="">
                                     </a>
                                 </div>
                                 <div class="col-2 icono favorito">
-                                    <a (click)="borrarFav(lugarVista.Lugar_id); borradoFav();">
+                                    <a (click)="borrarFav(lugarVista.Lugar_id); borradoFav();" *ngIf="inFav();">
                                         <img src="..\assets\icons\remove-bookmark.svg" id="" alt="">
                                     </a>
                                 </div>

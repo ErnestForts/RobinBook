@@ -19,17 +19,16 @@ export class LugarComponent implements OnInit {
   public lugarVista : Lugar;
   public tieneLibro : boolean;
   public coments: Coments[];
-  public lugarFav: Lugarfav[];
+  public lugaresFav: Lugar[];
 
   constructor(private mapaServicio: MapaServicioService, public dialog: MatDialog) { 
-
     this.lugarVista = this.mapaServicio.lugarDetail;
     // console.log(this.lugarVista.tieneLibro);
     this.mostrarComents(this.lugarVista.Lugar_id);
-
     
     this.tieneLibro = this.lugarVista.tieneLibro;
-      
+    
+    this.mostrarLugaresFav();      
   }
 
   mostrarComents(id: string): void {
@@ -37,6 +36,15 @@ export class LugarComponent implements OnInit {
     this.mapaServicio.obtenerComentsById(id, token).subscribe( (result: any) => {
       // console.table(result.data);
       this.coments = result.data;
+      });
+  }
+
+  mostrarLugaresFav() {
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
+    this.mapaServicio.obtenerLugaresFav(id, token).subscribe( (result : any) => {
+            console.table(result.data);
+      this.lugaresFav = result.data;
       });
   }
 
@@ -76,6 +84,16 @@ export class LugarComponent implements OnInit {
     } else {
       console.log("comentario vacío");
     }  
+  }
+
+  inFav(): boolean {
+    let result= false;
+    for(let lugar of this.lugaresFav) {
+      if(lugar.Lugar_id == this.lugarVista.Lugar_id) {
+        result = true;
+      } 
+    }
+    return result;
   }
 
   ngOnInit(): void {
