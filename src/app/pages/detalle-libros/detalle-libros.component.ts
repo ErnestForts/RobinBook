@@ -6,6 +6,7 @@ import { Coments } from 'src/app/models/comentsLibros/coments';
 import { Rawcoments } from 'src/app/models/comentsLibros/rawcoments';
 import {MatDialog} from '@angular/material/dialog';
 import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toast-favoritos.component';
+import { ToastBorrarfavComponent } from 'src/app/components/toast-borrarfav/toast-borrarfav.component';
 
 @Component({
   selector: 'app-detalle-libros',
@@ -70,6 +71,10 @@ public librosFav: Libro[];
 
   guardadoFav() {
     this.dialog.open(ToastFavoritosComponent);
+  }
+
+  borradoFav() {
+    this.dialog.open(ToastBorrarfavComponent);
   }
 
   sendComent(coment, libro_id) {

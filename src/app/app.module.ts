@@ -33,6 +33,7 @@ import { NewPasswordComponent } from './pages/new-password/new-password.componen
 import { MatDialogModule } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastFavoritosComponent } from './components/toast-favoritos/toast-favoritos.component';
+import { ToastBorrarfavComponent } from './components/toast-borrarfav/toast-borrarfav.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { ToastFavoritosComponent } from './components/toast-favoritos/toast-favo
     HeaderFavoritosComponent,
     FooterLoginComponent,
     NewPasswordComponent,
-    ToastFavoritosComponent
+    ToastFavoritosComponent,
+    ToastBorrarfavComponent
   ],
   imports: [
     BrowserModule,

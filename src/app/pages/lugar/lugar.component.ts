@@ -6,6 +6,7 @@ import { Lugarfav } from 'src/app/models/lugar/lugarfav';
 import { RawcomentsLugar } from 'src/app/models/comentsLugar/rawcoments-lugar';
 import {MatDialog} from '@angular/material/dialog';
 import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toast-favoritos.component';
+import { ToastBorrarfavComponent } from 'src/app/components/toast-borrarfav/toast-borrarfav.component';
 
 
 @Component({
@@ -55,6 +56,10 @@ export class LugarComponent implements OnInit {
     let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
     let lugarFav = new Lugarfav(id_User, id_Lugar);
     this.mapaServicio.borrarlugarFav(lugarFav, token);
+  }
+
+  borradoFav() {
+    this.dialog.open(ToastBorrarfavComponent);
   }
 
   sendComent (coment, lugar_id) {

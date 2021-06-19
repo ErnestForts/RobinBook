@@ -39,7 +39,6 @@
 }
 
 .botones {
-    color: #1D231E;
     padding: 10px;
     position: relative;
     margin-right: 10px;
@@ -129,6 +128,7 @@ input {
     justify-content:space-evenly;
     align-items: center;
 }
+
 
 /****************** ESTRELLAS **********************/
 

@@ -57,12 +57,12 @@
                                 </div>
                                 <div class="col-1 icono favorito">
                                     <a (click)="sendFav(lugarVista.Lugar_id); guardadoFav();">
-                                        <img src="..\assets\icons\bookmark-black.svg" id="" alt="">
+                                        <img src="..\assets\icons\add-bookmark.svg" id="" alt="">
                                     </a>
                                 </div>
                                 <div class="col-2 icono favorito">
-                                    <a (click)="borrarFav(lugarVista.Lugar_id);">
-                                        <img src="..\assets\icons\heart.svg" id="" alt="">
+                                    <a (click)="borrarFav(lugarVista.Lugar_id); borradoFav();">
+                                        <img src="..\assets\icons\remove-bookmark.svg" id="" alt="">
                                     </a>
                                 </div>
                             </div>
