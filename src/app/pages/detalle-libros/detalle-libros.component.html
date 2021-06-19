@@ -20,10 +20,10 @@
                 <label for="star1" title="text">1 star</label>
             </div>
             <div class="botones">
-                <a (click)="sendFav(libroVista.libro_id); guardadoFav();">
+                <a (click)="sendFav(libroVista.libro_id); guardadoFav();" *ngIf="!inFav();">
                     <img src="..\assets\icons\add-bookmark.svg" id="" alt="">
                 </a>
-                <a (click)="borrarFav(libroVista.libro_id); borradoFav()">
+                <a (click)="borrarFav(libroVista.libro_id); borradoFav();" *ngIf="inFav();">
                     <img src="..\assets\icons\remove-bookmark.svg" id="" alt="">
                 </a>
             </div>

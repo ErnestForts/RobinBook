@@ -12,19 +12,12 @@ export class FavoritosLibrosComponent implements OnInit {
   public librosFav: Libro[];
 
   constructor(private apiService: LibroService) { 
-    this.mostrarLibrosFav();
+    this.apiService.mostrarLibrosFav();
+    this.librosFav = this.apiService.librosFav;
   }
 
   ngOnInit(): void {
-  }
-
-  mostrarLibrosFav() {
-    let token = JSON.parse(localStorage.getItem('user')).token;
-    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
-    this.apiService.obtenerLibrosFav(id, token).subscribe( (result: any) => {
-      console.table(result.data);
-      this.librosFav = result.data;
-      });
+    this.apiService.mostrarLibrosFav();
   }
 
   sendValueIdDetail(Titulo, Autor, Descripcion, Foto, libro_id) {

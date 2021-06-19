@@ -13,9 +13,11 @@ export class LibroService {
   private libros: Libro[];
   public libroDetail: Libro;
   public libroDetailFav: Libro;
+  public librosFav: Libro[];
 
   constructor(private http: HttpClient) { 
     this.url = 'https://robinbook.herokuapp.com/book';
+    this.mostrarLibrosFav();
   }
 
   obtenerLibros(token): Observable<any> {
@@ -27,7 +29,7 @@ export class LibroService {
   mostrarLibros(): void {
   let token = JSON.parse(localStorage.getItem('user')).token;
   this.obtenerLibros(token).subscribe( (result: any) => {
-    this.libros = result.data;
+     this.libros = result.data;
     });
   }
 
@@ -76,6 +78,15 @@ export class LibroService {
     return this.http.delete(this.url + "/deletefav", options).subscribe( (result: any) => {
       console.log(result);
     });
+  }
+
+  mostrarLibrosFav(): void {
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
+    this.obtenerLibrosFav(id, token).subscribe( (result: any) => {
+      console.table(result.data);
+      this.librosFav = result.data;
+      });
   }
 
   obtenerLibrosFav(id: string, token: string): Observable<any> {

@@ -4,7 +4,7 @@ import { Librofav } from 'src/app/models/libro/librofav';
 import { LibroService } from 'src/app/services/libro.service';
 import { Coments } from 'src/app/models/comentsLibros/coments';
 import { Rawcoments } from 'src/app/models/comentsLibros/rawcoments';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toast-favoritos.component';
 import { ToastBorrarfavComponent } from 'src/app/components/toast-borrarfav/toast-borrarfav.component';
 
@@ -17,47 +17,27 @@ export class DetalleLibrosComponent implements OnInit {
   
 public libroVista: Libro;
 public coments: Coments[];
+public Show: boolean;
 public librosFav: Libro[];
 
 
   constructor(private apiService: LibroService, public dialog: MatDialog) { 
     this.libroVista = this.apiService.libroDetail;
     this.mostrarComents(this.libroVista.libro_id);
-    this.mostrarLibrosFav();
-  }
-
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.librosFav = this.apiService.librosFav;
+    this.Show = this.inFav();
   }
 
   mostrarComents(id: string) {
-    
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.apiService.obtenerComentsById(id, token).subscribe( (result: any) => {
-      console.table(result.data);
       this.coments = result.data;
-      });
-  }
-
-    mostrarLibrosFav() {
-    let token = JSON.parse(localStorage.getItem('user')).token;
-    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
-    this.apiService.obtenerLibrosFav(id, token).subscribe( (result: any) => {
-      console.table(result.data);
-      this.librosFav = result.data;
       });
   }
 
   sendFav(id_Libro) {
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
-    // for(let libro of libroFav) {
-    //   if(libro.id_Libro == id_Libro) {
-
-    //   }
-    // }
-    // let token = JSON.parse(localStorage.getItem('user')).token;
-    // let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
     let libroFav = new Librofav(id_User, id_Libro);
     this.apiService.anyadirLibroFav(libroFav, token);
   }
@@ -93,4 +73,17 @@ public librosFav: Libro[];
     }
   }
 
+  inFav(): boolean {
+    let result: boolean= false;
+    for(let libro of this.librosFav) {
+      if(libro.libro_id == this.libroVista.libro_id) {
+        result = true;
+      } 
+    }
+    return result;
+  }
+
+
+  ngOnInit(): void {
+  }
 }

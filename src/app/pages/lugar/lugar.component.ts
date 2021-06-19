@@ -74,11 +74,8 @@ export class LugarComponent implements OnInit {
         this.mostrarComents(lugar_id);
       }, 500)      
     } else {
-
       console.log("comentario vacío");
-      
-    }
-      
+    }  
   }
 
   ngOnInit(): void {
