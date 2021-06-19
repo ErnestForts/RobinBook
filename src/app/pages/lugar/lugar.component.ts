@@ -18,6 +18,7 @@ export class LugarComponent implements OnInit {
   public lugarVista : Lugar;
   public tieneLibro : boolean;
   public coments: Coments[];
+  public lugarFav: Lugarfav[];
 
   constructor(private mapaServicio: MapaServicioService, public dialog: MatDialog) { 
 
@@ -47,6 +48,13 @@ export class LugarComponent implements OnInit {
 
   guardadoFav() {
     this.dialog.open(ToastFavoritosComponent);
+  }
+
+  borrarFav(id_Lugar) {
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
+    let lugarFav = new Lugarfav(id_User, id_Lugar);
+    this.mapaServicio.borrarlugarFav(lugarFav, token);
   }
 
   sendComent (coment, lugar_id) {

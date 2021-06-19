@@ -84,6 +84,14 @@ export class MapaServicioService {
     });
   }
 
+  borrarlugarFav(lugarFav, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers, body: lugarFav };
+    return this.http.delete(this.url + "/deletefav", options).subscribe( (result: any) => {
+      console.log(result);
+    });
+  }
+
   obtenerLugaresFav(id: string, token: string): Observable<any> {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
