@@ -14,5 +14,6 @@ export class Libro {
         this.Foto = Foto;
         this.Descripcion = Descripcion;
         this.Genero = Genero;
+        this.libro_id = libro_id;
     }
 }

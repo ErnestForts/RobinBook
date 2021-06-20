@@ -24,8 +24,8 @@ export class FavoritosLibrosComponent implements OnInit {
       });
   }
 
-  sendValueIdDetail(Titulo, Autor, Descripcion, Foto, libro_id) {
-    let libroDetail = new Libro(Titulo, Autor, Foto, Descripcion, libro_id);
+  sendValueIdDetail(Titulo, Autor, Descripcion, Foto, Genero, libro_id) {
+    let libroDetail = new Libro(Titulo, Autor, Foto, Descripcion, Genero, libro_id);
     this.apiService.setLibroDetail(libroDetail);
   }
 
