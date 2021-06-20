@@ -19,7 +19,10 @@ public libroVista: Libro;
 public coments: Coments[];
 public librosFav: Libro[];
 public contadorLike: string;
-
+public esFavorito : boolean;
+public stars = [1, 2, 3, 4, 5];
+public rating : number = 1;
+public hoverState : number = 0;
 
   constructor(private apiService: LibroService, public dialog: MatDialog) { 
     this.libroVista = this.apiService.libroDetail;
@@ -39,6 +42,7 @@ public contadorLike: string;
     let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
     let libroFav = new Librofav(id_User, id_Libro);
     this.apiService.anyadirLibroFav(libroFav, token);
+    this.esFavorito = true;
   }
 
   borrarFav(id_Libro) {
@@ -46,6 +50,7 @@ public contadorLike: string;
     let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
     let libroFav = new Librofav(id_User, id_Libro);
     this.apiService.borrarlibroFav(libroFav, token);
+    this.esFavorito = false;
   }
 
   guardadoFav() {
@@ -72,20 +77,29 @@ public contadorLike: string;
     }
   }
 
-  inFav(): boolean {
-    let result: boolean= false;
-    for(let libro of this.librosFav) {
-      if(libro.libro_id == this.libroVista.libro_id) {
-        result = true;
-      } 
-    }
-    return result;
-  }
-
   contadorLikes() {
     ;
   }
 
   ngOnInit(): void {
   }
+
+    //ESTRELLAS
+    onStarEnter(starId : number){
+      this.hoverState = starId;
+      console.log(this.hoverState);
+      
+    }
+  
+    onStarLeave(){
+      this.hoverState = 0;
+      console.log(this.hoverState);
+  
+    }
+  
+    onStarClicked(starId : number){
+      this.rating = starId;
+      console.log(this.rating);
+      
+    }
 }

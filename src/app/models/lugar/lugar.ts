@@ -8,6 +8,7 @@ export class Lugar {
     public latitud : number;
     public longitud : number;
     public PuntosTotales? : number;
+    public puntuacion : number;
 
     constructor(Nombre? : string, Descripcion? : string, Foto? : string, latitud? : number, longitud? : number, tieneLibro? : boolean, Lugar_id? : string){
 

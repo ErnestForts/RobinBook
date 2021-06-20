@@ -10,6 +10,8 @@ import { LibroService } from 'src/app/services/libro.service';
 export class FavoritosLibrosComponent implements OnInit {
 
   public librosFav: Libro[];
+  public stars = [1, 2, 3, 4, 5];
+
 
   constructor(private apiService: LibroService) { 
     this.mostrarLibrosFav();
@@ -21,6 +23,10 @@ export class FavoritosLibrosComponent implements OnInit {
     this.apiService.obtenerLibrosFav(id, token).subscribe( (result: any) => {
       console.table(result.data);
       this.librosFav = result.data;
+      for (let i = 0; i < this.librosFav.length; i++) {
+        this.librosFav[i].puntuacion = Math.round(this.librosFav[i].PuntosTotales/this.librosFav[i].VecesPuntuado);
+              
+            }
       });
   }
 

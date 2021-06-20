@@ -7,47 +7,40 @@
                     <div class="busqueda">
                         <h3>Favoritos</h3>
                     </div>
-                    <div class="col content" *ngFor="let vista of lugaresFav;">
-                        <div class="card" routerLink="/mapa/detalle" (click)="sendValueIdDetail(vista.Nombre, vista.Descripcion, vista.Foto, vista.latitud, vista.longitud, vista.tieneLibro, vista.Lugar_id)">
+                    <div class="col content" *ngFor="let lugar of lugaresFav;">
+                        <div class="card" routerLink="/mapa/detalle"
+                            (click)="sendValueIdDetail(lugar.Nombre, lugar.Descripcion, lugar.Foto, lugar.latitud, lugar.longitud, lugar.tieneLibro, lugar.Lugar_id)">
                             <div class="part2">
                                 <div class="col col-imagen d-flex">
                                     <div class="imagen">
-                                        <img [src]="vista.Foto"
-                                            class="" alt="...">
+                                        <img [src]="lugar.Foto" class="" alt="...">
                                     </div>
                                 </div>
                                 <div class="col info">
                                     <div class="row nombre">
-                                        <h4><b>{{vista.Nombre}}</b></h4>
+                                        <h4><b>{{lugar.Nombre}}</b></h4>
                                     </div>
                                     <div class="row descripcion">
-                                        <h4>{{vista.Descripcion}}</h4>
+                                        <h4>{{lugar.Descripcion}}</h4>
                                     </div>
                                     <div class="row">
-                                        <div class="rate">
-                                            <input type="radio" id="star5" name="rate" value="5" />
-                                            <label for="star5" title="text"></label>
-                                            <input type="radio" id="star4" name="rate" value="4" />
-                                            <label for="star4" title="text"></label>
-                                            <input type="radio" id="star3" name="rate" value="3" />
-                                            <label for="star3" title="text"></label>
-                                            <input type="radio" id="star2" name="rate" value="2" />
-                                            <label for="star2" title="text"></label>
-                                            <input type="radio" id="star1" name="rate" value="1" />
-                                            <label for="star1" title="text"></label>
+                                        <div class="estrellas">
+                                            <ng-container *ngFor="let star of stars;">
+                                                <app-star [starId]="star" rating="{{lugar.puntuacion}}"></app-star>
+                                            </ng-container>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>  
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <app-header-favoritos class="mobile mobile-header" title="Favoritos" src="..\assets\icons\new-arrow_back.svg" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
-    <app-footer class="desktop-header desktop"></app-footer>
-    <app-footer class="mobile mobile-footer"></app-footer>
-    <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
+        <app-header-favoritos class="mobile mobile-header" title="Favoritos" src="..\assets\icons\new-arrow_back.svg"
+            id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
+        <app-footer class="desktop-header desktop"></app-footer>
+        <app-footer class="mobile mobile-footer"></app-footer>
+        <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
 
-</div>
+    </div>

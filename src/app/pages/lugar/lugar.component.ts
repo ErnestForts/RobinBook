@@ -20,6 +20,10 @@ export class LugarComponent implements OnInit {
   public tieneLibro : boolean;
   public coments: Coments[];
   public lugaresFav: Lugar[];
+  public esFavorito : boolean;
+  public stars = [1, 2, 3, 4, 5];
+  public rating : number = 1;
+  public hoverState : number = 0;
 
   constructor(private mapaServicio: MapaServicioService, public dialog: MatDialog) { 
     this.lugarVista = this.mapaServicio.lugarDetail;
@@ -28,6 +32,8 @@ export class LugarComponent implements OnInit {
     
     this.tieneLibro = this.lugarVista.tieneLibro;
     this.mostrarLugaresFav();      
+
+
   }
 
   mostrarComents(id: string): void {
@@ -42,9 +48,25 @@ export class LugarComponent implements OnInit {
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.mapaServicio.obtenerLugaresFav(id, token).subscribe( (result : any) => {
-            console.log(result.data);
+
+      console.log(result.data);
       this.lugaresFav = result.data;
-      });
+
+      for(let lugar of this.lugaresFav) {
+        if(lugar.Lugar_id == this.lugarVista.Lugar_id) {
+          
+          this.esFavorito = true;
+          console.log(this.esFavorito);
+          break;
+          
+        } else {
+
+          this.esFavorito = false;
+          console.log(this.esFavorito);
+
+        }
+      }
+    });
   }
 
   sendFav(id_Lugar) {
@@ -52,6 +74,7 @@ export class LugarComponent implements OnInit {
     let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
     let lugarFav = new Lugarfav(id_User, id_Lugar);
     this.mapaServicio.anyadirLugarFav(lugarFav, token);
+    this.esFavorito = true;
   }
 
   guardadoFav() {
@@ -63,6 +86,7 @@ export class LugarComponent implements OnInit {
     let id_User = JSON.parse(localStorage.getItem('user')).user.user_id;
     let lugarFav = new Lugarfav(id_User, id_Lugar);
     this.mapaServicio.borrarlugarFav(lugarFav, token);
+    this.esFavorito = false;
   }
 
   borradoFav() {
@@ -85,18 +109,26 @@ export class LugarComponent implements OnInit {
     }  
   }
 
-  inFav(): boolean {
-    let result: boolean;
-    for(let lugar of this.lugaresFav) {
-      if(lugar.Lugar_id == this.lugarVista.Lugar_id) {
-        result = true;
-      } 
-    }
-    return result;
+  ngOnInit(): void {
   }
 
-  ngOnInit(): void {
-    this.mostrarLugaresFav();
+  //ESTRELLAS
+  onStarEnter(starId : number){
+    this.hoverState = starId;
+    console.log(this.hoverState);
+    
+  }
+
+  onStarLeave(){
+    this.hoverState = 0;
+    console.log(this.hoverState);
+
+  }
+
+  onStarClicked(starId : number){
+    this.rating = starId;
+    console.log(this.rating);
+    
   }
 
 }

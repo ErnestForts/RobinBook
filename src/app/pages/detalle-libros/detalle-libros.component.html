@@ -7,26 +7,21 @@
            <img [src]="libroVista.Foto" alt="...">
         </div>
        <div class="marco">
-            <div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-            </div>
+        <div class="estrellas">
+            <ng-container *ngFor="let star of stars;">
+            <app-star (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating"></app-star>
+        </ng-container>
+        </div>
             <div class="botones">
-                <a (click)="sendFav(libroVista.libro_id); guardadoFav();" *ngIf="!inFav();">
+                <a (click)="sendFav(libroVista.libro_id); guardadoFav();" *ngIf="esFavorito == false; else esFav">
                     <img src="..\assets\icons\add-bookmark.svg">
                 </a>
-                <a (click)="borrarFav(libroVista.libro_id); borradoFav();" *ngIf="inFav();">
+            </div>
+            <ng-template class="botones" #esFav>
+                <a (click)="borrarFav(libroVista.libro_id); borradoFav();">
                     <img src="..\assets\icons\remove-bookmark.svg">
                 </a>
-            </div>
+            </ng-template>
        </div>
        <div class="description">
             <p style="color:rgb(168, 164, 164);">

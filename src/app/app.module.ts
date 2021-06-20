@@ -34,6 +34,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastFavoritosComponent } from './components/toast-favoritos/toast-favoritos.component';
 import { ToastBorrarfavComponent } from './components/toast-borrarfav/toast-borrarfav.component';
+import { StarComponent } from './components/star/star.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { ToastBorrarfavComponent } from './components/toast-borrarfav/toast-borr
     FooterLoginComponent,
     NewPasswordComponent,
     ToastFavoritosComponent,
-    ToastBorrarfavComponent
+    ToastBorrarfavComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

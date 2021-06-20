@@ -190,50 +190,6 @@
     font-size: 4vw;
 }
 
-.rate {
-    height: 46px;
-    padding: 0 5px;
-    display: flex;
-    align-items: right;
-    width: 120px;
-    flex-direction: row-reverse;
-}
-
-.rate:not(:checked)>input {
-    position: absolute;
-    top: -9999px;
-}
-
-.rate:not(:checked)>label {
-    width: 1em;
-    overflow: hidden;
-    white-space: nowrap;
-    cursor: pointer;
-    font-size: 30px;
-    color: #ccc;
-}
-
-.rate:not(:checked)>label:before {
-    content: '★ ';
-}
-
-.rate>input:checked~label {
-    color: #388E3C;
-}
-
-.rate:not(:checked)>label:hover,
-.rate:not(:checked)>label:hover~label {
-    color: #388E3C;
-}
-
-.rate>input:checked+label:hover,
-.rate>input:checked+label:hover~label,
-.rate>input:checked~label:hover,
-.rate>input:checked~label:hover~label,
-.rate>label:hover~input:checked~label {
-    color: #388E3C;
-}
-
 .btn {
     box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5) inset;
     border-radius: 3px;
@@ -367,6 +323,26 @@ input {
     background-color: #388E3C;
     justify-content:space-evenly;
     align-items: center;
+}
+
+.marco {
+    border: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.botones {
+    padding: 10px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.estrellas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vw;
 }
 
 @media only screen and (min-width: 770px) {

@@ -44,6 +44,13 @@
     margin-right: 10px;
 }
 
+.estrellas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vw;
+}
+
 .description {
     max-width: 100vw;
     min-width: 100vw;

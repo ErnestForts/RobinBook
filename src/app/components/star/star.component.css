@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.star-rating-filled{
+    filter: invert(42%) sepia(86%) saturate(387%) hue-rotate(73deg) brightness(92%) contrast(84%);
+
+}
+
+.star-rating-blank{
+    filter: invert(90%) sepia(0%) saturate(0%) hue-rotate(140deg) brightness(95%) contrast(84%);
+}
+
+img{
+    filter: invert(90%) sepia(0%) saturate(0%) hue-rotate(140deg) brightness(95%) contrast(84%);
+}

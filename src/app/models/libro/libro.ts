@@ -6,6 +6,7 @@ export class Libro {
     public Descripcion : string;
     public VecesPuntuado?: number;
     public PuntosTotales?: number;
+    public puntuacion: number;
 
     constructor(Titulo: string, Autor: string, Foto: string, Descripcion: string, libro_id?: string){ 
         this.Titulo = Titulo;

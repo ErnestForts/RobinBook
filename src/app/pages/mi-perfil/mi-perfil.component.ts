@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-mi-perfil',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mi-perfil.component.css']
 })
 export class MiPerfilComponent implements OnInit {
+  public user: User;
 
-  constructor() { }
-
+  constructor() {
+    this.user = JSON.parse(localStorage.getItem('user')).user;
+    console.log(this.user);
+    
+   }
   ngOnInit(): void {
   }
 

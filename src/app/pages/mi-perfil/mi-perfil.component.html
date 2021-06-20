@@ -3,7 +3,7 @@
     <div class="content">
 
         <div class="row imagen">
-            <img class="imgperfil" src="..\assets\pics\perfil.png" alt="">
+            <img class="imgperfil" src="{{user.Foto}}" alt="">
         </div>
 
         <div class="info">
@@ -18,7 +18,7 @@
                         <p class="title2">Nombre y apellido</p>
                     </div>
                     <div class="row">
-                        <p class="title3">Ernest Forts</p>
+                        <p class="title3">{{user.Nombre}}</p>
                     </div>
                 </div>
                 <div>
@@ -29,7 +29,7 @@
                         <p class="title2">Frase</p>
                     </div>
                     <div class="row">
-                        <p class="title3">Lo mio es leer!</p>
+                        <p class="title3">{{user.Frase}}</p>
                     </div>
                 </div>
                 <div>
@@ -44,21 +44,10 @@
                 </div>
                 <div class="row separado">
                     <div class="row">
-                        <p class="title2">Movil</p>
-                    </div>
-                    <div class="row">
-                        <p class="title3">666 66 66 66</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="line"></div>
-                </div>
-                <div class="row separado">
-                    <div class="row">
                         <p class="title2">Teléfono</p>
                     </div>
                     <div class="row">
-                        <p class="title3">+34 987 87 87 87</p>
+                        <p class="title3">{{user.Telefono}}</p>
                     </div>
                 </div>
                 <div>
@@ -69,18 +58,35 @@
                         <p class="title2">Email</p>
                     </div>
                     <div class="row">
-                        <p class="title3">ernest.forts@eram.cat</p>
+                        <p class="title3">{{user.Email}}</p>
                     </div>
                 </div>
                 <div>
                     <div class="line"></div>
                 </div>
-
+            </div>
+            <div id="parte3" class="row">
+                <div class="row separado">
+                    <div class="titlestyle">
+                        <p class="titles">Ranking</p>
+                    </div>
+                </div>
+                <div class="row separado">
+                    <div class="row">
+                        <p class="title2">Puntos</p>
+                    </div>
+                    <div class="row">
+                        <p class="title3">{{user.ranking}}pt</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="line"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<app-header-favoritos class="mobile mobile-header" title="Perfil" src="..\assets\icons\new-arrow_back.svg" title2="Editar" id="back" alt="back"></app-header-favoritos>
-<app-footer class="desktop-header desktop"></app-footer>
-<app-footer class="mobile mobile-footer"></app-footer>
-<app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
+    <app-header-favoritos class="mobile mobile-header" title="Perfil" src="..\assets\icons\new-arrow_back.svg"
+        title2="Editar" id="back" alt="back"></app-header-favoritos>
+    <app-footer class="desktop-header desktop"></app-footer>
+    <app-footer class="mobile mobile-footer"></app-footer>
+    <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
