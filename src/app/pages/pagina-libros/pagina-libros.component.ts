@@ -36,8 +36,10 @@ export class PaginaLibrosComponent implements OnInit {
 
   changeVista(buscar: string) {
     this.librosVista = this.librosVista.filter(libro => libro.Genero.includes(buscar));
-    console.log(this.librosVista);
+  }
 
+  buscarTitulo(titulo: string) {
+    this.librosVista = this.librosVista.filter(libro => libro.Titulo.includes(titulo));
   }
 
   setActive(number: string) {
