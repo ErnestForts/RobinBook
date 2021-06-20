@@ -80,6 +80,7 @@ public librosFav: Libro[];
     }
     return result;
   }
+  
   ngOnInit(): void {
   }
 }

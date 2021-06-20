@@ -11,10 +11,10 @@ export class NuevoLibroComponent implements OnInit {
   constructor(private apiService: LibroService) {
   }
 
-  crearLibro(titulo, autor, foto, descripcion) {
-    let libroNew = new Libro(titulo, autor, foto, descripcion);
+  crearLibro(titulo, autor, foto, descripcion, genero) {
+    let libroNew = new Libro(titulo, autor, foto, descripcion, genero);
     let token = JSON.parse(localStorage.getItem('user')).token;
-    console.log(libroNew, token);
+    console.log(libroNew);
     this.apiService.anyadirLibro(libroNew, token);
   }
 

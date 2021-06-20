@@ -6,12 +6,13 @@ export class Libro {
     public Descripcion : string;
     public VecesPuntuado?: number;
     public PuntosTotales?: number;
+    public Genero: string;
 
-    constructor(Titulo: string, Autor: string, Foto: string, Descripcion: string, libro_id?: string){ 
+    constructor(Titulo: string, Autor: string, Foto: string, Descripcion: string, Genero: string, libro_id?: string){ 
         this.Titulo = Titulo;
         this.Autor = Autor;
         this.Foto = Foto;
         this.Descripcion = Descripcion;
-        this.libro_id = libro_id;
+        this.Genero = Genero;
     }
 }

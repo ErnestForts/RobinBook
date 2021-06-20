@@ -25,7 +25,16 @@
                     <h4>Género</h4>
                 </div>
                 <div class="col">
-                    <input type="text" placeholder="Rellenar Género" #genero>
+                    <select name="pets" id="pet-select" #genero>
+                        <option value="">Selecciona el Género</option>
+                        <option value="fantastica">Fantástica</option>
+                        <option value="ficcion">Ficción</option>
+                        <option value="suspenso">Suspenso</option>
+                        <option value="drama">Drama</option>
+                        <option value="accion">Acción</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="romance">Romance</option>
+                    </select>
                 </div>
             </div>
             <div class="row izq">
@@ -46,7 +55,7 @@
             </div> 
         </div>
         <div class="row izq">
-            <button class="boton" (click)="crearLibro(titulo.value, autor.value, foto.value, description.value)">Guardar</button>
+            <button class="boton" (click)="crearLibro(titulo.value, autor.value, foto.value, description.value, genero.value)">Guardar</button>
         </div>
     </div>
     <app-header-favoritos class="mobile mobile-header" title="Libro" src="..\assets\icons\new-arrow_back.svg"  id="back" alt="back"></app-header-favoritos>
