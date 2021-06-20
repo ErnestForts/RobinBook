@@ -18,6 +18,7 @@ export class DetalleLibrosComponent implements OnInit {
 public libroVista: Libro;
 public coments: Coments[];
 public librosFav: Libro[];
+public contadorLike: string;
 
 
   constructor(private apiService: LibroService, public dialog: MatDialog) { 
@@ -80,6 +81,11 @@ public librosFav: Libro[];
     }
     return result;
   }
+
+  contadorLikes() {
+    ;
+  }
+
   ngOnInit(): void {
   }
 }

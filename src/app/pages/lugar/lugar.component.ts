@@ -27,7 +27,6 @@ export class LugarComponent implements OnInit {
     this.mostrarComents(this.lugarVista.Lugar_id);
     
     this.tieneLibro = this.lugarVista.tieneLibro;
-    
     this.mostrarLugaresFav();      
   }
 
@@ -43,7 +42,7 @@ export class LugarComponent implements OnInit {
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.mapaServicio.obtenerLugaresFav(id, token).subscribe( (result : any) => {
-            console.table(result.data);
+            console.log(result.data);
       this.lugaresFav = result.data;
       });
   }
@@ -87,7 +86,7 @@ export class LugarComponent implements OnInit {
   }
 
   inFav(): boolean {
-    let result= false;
+    let result: boolean;
     for(let lugar of this.lugaresFav) {
       if(lugar.Lugar_id == this.lugarVista.Lugar_id) {
         result = true;
@@ -97,6 +96,7 @@ export class LugarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.mostrarLugaresFav();
   }
 
 }
