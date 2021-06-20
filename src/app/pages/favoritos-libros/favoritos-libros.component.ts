@@ -19,7 +19,6 @@ export class FavoritosLibrosComponent implements OnInit {
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.apiService.obtenerLibrosFav(id, token).subscribe( (result: any) => {
-      console.table(result.data);
       this.librosFav = result.data;
       });
   }

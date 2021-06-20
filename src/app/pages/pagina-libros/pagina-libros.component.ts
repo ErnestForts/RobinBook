@@ -27,6 +27,11 @@ export class PaginaLibrosComponent implements OnInit {
     this.apiService.setLibroDetail(libroDetail);
   }
 
+  changeVista(buscar: string) {
+    this.librosVista = this.librosVista.filter(libro => libro.Genero.includes(buscar));
+    console.log(this.librosVista);
+  }
+
   ngOnInit(): void {
   }
 
