@@ -27,7 +27,8 @@ public hoverState : number = 0;
   constructor(private apiService: LibroService, public dialog: MatDialog) { 
     this.libroVista = this.apiService.libroDetail;
     this.mostrarComents(this.libroVista.libro_id);
-    this.librosFav = this.apiService.librosFav;
+    this.mostrarLibrosFav();      
+
   }
 
   mostrarComents(id: string) {
@@ -78,6 +79,31 @@ public hoverState : number = 0;
     }
   }
 
+  mostrarLibrosFav() {
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
+    this.apiService.obtenerLibrosFav(id, token).subscribe( (result : any) => {
+
+      console.log(result.data);
+      this.librosFav = result.data;
+
+      for(let lugar of this.librosFav) {
+        if(lugar.libro_id == this.libroVista.libro_id) {
+          
+          this.esFavorito = true;
+          console.log(this.esFavorito);
+          break;
+          
+        } else {
+
+          this.esFavorito = false;
+          console.log(this.esFavorito);
+
+        }
+      }
+    });
+  }
+
   contadorLikes() {
     ;
   }
@@ -85,22 +111,22 @@ public hoverState : number = 0;
   ngOnInit(): void {
   }
 
-    //ESTRELLAS
-    onStarEnter(starId : number){
-      this.hoverState = starId;
-      console.log(this.hoverState);
-      
-    }
-  
-    onStarLeave(){
-      this.hoverState = 0;
-      console.log(this.hoverState);
-  
-    }
-  
-    onStarClicked(starId : number){
-      this.rating = starId;
-      console.log(this.rating);
-      
-    }
+  //ESTRELLAS
+  onStarEnter(starId : number){
+    this.hoverState = starId;
+    console.log(this.hoverState);
+    
+  }
+
+  onStarLeave(){
+    this.hoverState = 0;
+    console.log(this.hoverState);
+
+  }
+
+  onStarClicked(starId : number){
+    this.rating = starId;
+    console.log(this.rating);
+    
+  }
 }
