@@ -7,13 +7,13 @@
                   <img src="..\assets\icons\search.svg" id="iconoDentro"/><input type="search" class="buscar" placeholder="buscar">
               </div>
               <div class="contenedor-botones">
-                  <button class="botones" (click)="changeVista('fantastica')">Fantástica</button>
-                  <button class="botones" (click)="changeVista('ficcion')">Ficción</button>
-                  <button class="botones" (click)="changeVista('suspenso')">Suspenso</button>
-                  <button class="botones" (click)="changeVista('drama')">Drama</button>
-                  <button class="botones" (click)="changeVista('accion')">Acción</button>
-                  <button class="botones" (click)="changeVista('aventura')">Aventura</button>
-                  <button class="botones" (click)="changeVista('romance')">Romance</button>
+                  <button class="botones" (click)="changeVista('fantastica'); setActive('1');" [ngClass]="statusClass1">Fantástica</button>
+                  <button class="botones" (click)="changeVista('ficcion'); setActive('2');" [ngClass]="statusClass2">Ficción</button>
+                  <button class="botones" (click)="changeVista('suspenso'); setActive('3');" [ngClass]="statusClass3">Suspenso</button>
+                  <button class="botones" (click)="changeVista('drama'); setActive('4');" [ngClass]="statusClass4">Drama</button>
+                  <button class="botones" (click)="changeVista('accion'); setActive('5');" [ngClass]="statusClass5">Acción</button>
+                  <button class="botones" (click)="changeVista('aventura'); setActive('6');" [ngClass]="statusClass6">Aventura</button>
+                  <button class="botones" (click)="changeVista('romance'); setActive('7');" [ngClass]="statusClass7">Romance</button>
               </div>
               <div class="container">
                   <div class="row">
