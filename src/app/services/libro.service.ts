@@ -84,7 +84,6 @@ export class LibroService {
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.obtenerLibrosFav(id, token).subscribe( (result: any) => {
-      console.table(result.data);
       this.librosFav = result.data;
       });
   }

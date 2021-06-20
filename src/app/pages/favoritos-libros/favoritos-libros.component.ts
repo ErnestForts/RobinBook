@@ -21,7 +21,6 @@ export class FavoritosLibrosComponent implements OnInit {
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.apiService.obtenerLibrosFav(id, token).subscribe( (result: any) => {
-      console.table(result.data);
       this.librosFav = result.data;
       for (let i = 0; i < this.librosFav.length; i++) {
         this.librosFav[i].puntuacion = Math.round(this.librosFav[i].PuntosTotales/this.librosFav[i].VecesPuntuado);
@@ -30,8 +29,8 @@ export class FavoritosLibrosComponent implements OnInit {
       });
   }
 
-  sendValueIdDetail(Titulo, Autor, Descripcion, Foto, libro_id) {
-    let libroDetail = new Libro(Titulo, Autor, Foto, Descripcion, libro_id);
+  sendValueIdDetail(Titulo, Autor, Descripcion, Foto, Genero, libro_id) {
+    let libroDetail = new Libro(Titulo, Autor, Foto, Descripcion, Genero, libro_id);
     this.apiService.setLibroDetail(libroDetail);
   }
 

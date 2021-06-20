@@ -65,6 +65,16 @@
     font-size: 25px;
 }
 
+select {
+    font-size: .9rem;
+    padding: 2px 5px;
+}
+
+.output {
+    background: center/cover no-repeat url('/media/cc0-images/hamster.jpg');
+    position: relative;
+}
+
 /********************************************************/
 .desktop-header, .mobile-header{
     position: fixed;

@@ -4,21 +4,21 @@
           <div id="contenedor">
             <div class="content">
               <div class="busqueda">
-                  <img src="..\assets\icons\search.svg" id="iconoDentro"/><input type="search" class="buscar" placeholder="buscar">
+                  <input type="search" class="buscar" placeholder="Inserta titulo y pulsa lupa" #titulo><img src="..\assets\icons\magnifier.svg" id="iconoDentro" (click)="buscarTitulo(titulo.value)"/>
               </div>
               <div class="contenedor-botones">
-                  <button class="botones">Fantástica</button>
-                  <button class="botones">Ficción</button>
-                  <button class="botones">Suspenso</button>
-                  <button class="botones">Drama</button>
-                  <button class="botones">Acción</button>
-                  <button class="botones">Aventura</button>
-                  <button class="botones">Romance</button>
+                  <button class="botones" (click)="changeVista('fantastica'); setActive('1');" [ngClass]="statusClass1">Fantástica</button>
+                  <button class="botones" (click)="changeVista('ficcion'); setActive('2');" [ngClass]="statusClass2">Ficción</button>
+                  <button class="botones" (click)="changeVista('suspenso'); setActive('3');" [ngClass]="statusClass3">Suspenso</button>
+                  <button class="botones" (click)="changeVista('drama'); setActive('4');" [ngClass]="statusClass4">Drama</button>
+                  <button class="botones" (click)="changeVista('accion'); setActive('5');" [ngClass]="statusClass5">Acción</button>
+                  <button class="botones" (click)="changeVista('aventura'); setActive('6');" [ngClass]="statusClass6">Aventura</button>
+                  <button class="botones" (click)="changeVista('romance'); setActive('7');" [ngClass]="statusClass7">Romance</button>
               </div>
               <div class="container">
                   <div class="row">
                     <div class="col" *ngFor="let vista of librosVista;">
-                        <div class="cardLibro" routerLink="/libros/detalle" (click)="sendLibroDetail(vista.Titulo, vista.Autor, vista.Descripcion, vista.Foto, vista.libro_id)">
+                        <div class="cardLibro" routerLink="/libros/detalle" (click)="sendLibroDetail(vista.Titulo, vista.Autor, vista.Descripcion, vista.Foto, vista.Genero, vista.libro_id)">
                           <div class="imagen">
                             <img [src]="vista.Foto" class="portaLibro" alt="Avatar" style="width:100%">
                           </div>

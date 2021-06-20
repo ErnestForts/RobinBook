@@ -34,6 +34,7 @@ public hoverState : number = 0;
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.apiService.obtenerComentsById(id, token).subscribe( (result: any) => {
       this.coments = result.data;
+      console.log(this.coments);
       });
   }
 
@@ -80,7 +81,7 @@ public hoverState : number = 0;
   contadorLikes() {
     ;
   }
-
+  
   ngOnInit(): void {
   }
 

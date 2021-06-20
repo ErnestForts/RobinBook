@@ -26,7 +26,6 @@
 
 #iconoDentro {
     position: relative;
-    left: 40px;
 }
 
 .buscar::placeholder {
@@ -80,6 +79,16 @@
     overflow: hidden;
     border-radius: 2vw;
 }
+
+.active{
+    background-color: #388E3C;
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+  }
+  
+  .not-active{
+    cursor: pointer;
+  }
 
 /* .portaLibro {
 } */
