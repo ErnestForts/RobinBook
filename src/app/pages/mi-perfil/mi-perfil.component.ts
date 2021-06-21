@@ -10,9 +10,7 @@ export class MiPerfilComponent implements OnInit {
   public user: User;
 
   constructor() {
-    this.user = JSON.parse(localStorage.getItem('user')).user;
-    console.log(this.user);
-    
+    this.user = JSON.parse(localStorage.getItem('user')).user;    
    }
   ngOnInit(): void {
   }

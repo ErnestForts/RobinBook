@@ -30,11 +30,6 @@ export class RegisterFormComponent implements OnInit {
     },{validator: MustMatch('txtPassword', 'txtRePassword')});
   }
 
-  register(){
-    console.log(this.registerForm.get('txtEmail')?.value);
-    
-  }
-
   onSubmit(){
     if (!this.registerForm.valid) {
       console.log('Form not valid. Please check that fields are correctly filled in');
