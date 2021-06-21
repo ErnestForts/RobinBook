@@ -28,6 +28,11 @@
     position: relative;
 }
 
+datalist {
+    display: none;
+    width: 30px;
+}
+
 .buscar::placeholder {
     text-align: center;
 
