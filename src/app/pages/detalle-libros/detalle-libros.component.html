@@ -12,6 +12,11 @@
             <app-star (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating"></app-star>
         </ng-container>
         </div>
+            <div class="send">
+                <a>
+                    <img src="..\assets\icons\send.svg">
+                </a>
+            </div>
             <div class="botones">
                 <a (click)="sendFav(libroVista.libro_id); guardadoFav();" *ngIf="esFavorito == false; else esFav">
                     <img src="..\assets\icons\add-bookmark.svg">

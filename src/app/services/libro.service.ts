@@ -107,4 +107,13 @@ export class LibroService {
       console.log(result);
     });
   }
+
+  mailRecomendar(libroMail, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/newfav", libroMail, options).subscribe( (result: any) => {
+      console.log(result);
+    });
+  }
+
 }
