@@ -17,6 +17,7 @@ export class PaginaLibrosComponent implements OnInit {
   public statusClass5 = 'not-active';
   public statusClass6 = 'not-active';
   public statusClass7 = 'not-active';
+  public statusVolver = 'active';
 
   constructor(private apiService: LibroService) {
     this.mostrarLibros();
@@ -42,14 +43,29 @@ export class PaginaLibrosComponent implements OnInit {
     this.librosVista = this.librosVista.filter(libro => libro.Titulo.includes(titulo));
   }
 
+  reloadLista() {
+    this.mostrarLibros();
+    this.statusVolver = 'active';
+    this.statusClass1 = 'not-active'; this.statusClass2 = 'not-active'; this.statusClass3 = 'not-active'; this.statusClass4 = 'not-active'; this.statusClass5 = 'not-active'; this.statusClass6 = 'not-active'; this.statusClass7 = 'not-active';
+  }
+
   setActive(number: string) {
-    if(number == '1') this.statusClass1 = 'active';
-    else if (number == '2') this.statusClass2 = 'active';
-    else if (number == '3') this.statusClass3 = 'active';
-    else if (number == '4') this.statusClass4 = 'active';
-    else if (number == '5') this.statusClass5 = 'active';
-    else if (number == '6') this.statusClass6 = 'active';
-    else if (number == '7') this.statusClass7 = 'active';
+    if(number == '1') {
+      this.statusClass2 = 'active'; this.statusClass3 = 'active'; this.statusClass4 = 'active'; this.statusClass5 = 'active'; this.statusClass6 = 'active'; this.statusClass7 = 'active';
+    } else if(number == '2') {
+      this.statusClass1 = 'active'; this.statusClass3 = 'active'; this.statusClass4 = 'active'; this.statusClass5 = 'active'; this.statusClass6 = 'active'; this.statusClass7 = 'active';
+    } else if(number == '3') {
+      this.statusClass1 = 'active'; this.statusClass2 = 'active'; this.statusClass4 = 'active'; this.statusClass5 = 'active'; this.statusClass6 = 'active'; this.statusClass7 = 'active';
+    } else if(number == '4') {
+      this.statusClass1 = 'active'; this.statusClass2 = 'active'; this.statusClass3 = 'active'; this.statusClass5 = 'active'; this.statusClass6 = 'active'; this.statusClass7 = 'active';
+    } else if(number == '5') {
+      this.statusClass1 = 'active'; this.statusClass2 = 'active'; this.statusClass3 = 'active'; this.statusClass4 = 'active'; this.statusClass6 = 'active'; this.statusClass7 = 'active';
+    } else if(number == '6') {
+      this.statusClass1 = 'active'; this.statusClass2 = 'active'; this.statusClass3 = 'active'; this.statusClass4 = 'active'; this.statusClass5 = 'active'; this.statusClass7 = 'active';
+    } else {
+      this.statusClass1 = 'active'; this.statusClass2 = 'active'; this.statusClass3 = 'active'; this.statusClass4 = 'active'; this.statusClass5 = 'active'; this.statusClass6 = 'active';
+    }
+    this.statusVolver = 'not-active'
   }
 
   ngOnInit(): void {

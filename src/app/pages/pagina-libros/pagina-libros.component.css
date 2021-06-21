@@ -61,10 +61,19 @@ datalist {
 .botones {
     background-color: #689F38;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
+    color: white;
+    padding: 7px;
+    margin: 2px;
+}
+
+.botonVolver {
+    background-color: #388E3C;
+    border: none;
+    border-radius: 20px;
     color: white;
     padding: 10px;
-    margin: 1px;
+    margin: 5px;
 }
 
 .container {
@@ -86,10 +95,8 @@ datalist {
 }
 
 .active{
-    background-color: #388E3C;
-    cursor: pointer;
-    transform: scale(1.2, 1.2);
-  }
+    display: none;
+}
   
   .not-active{
     cursor: pointer;
