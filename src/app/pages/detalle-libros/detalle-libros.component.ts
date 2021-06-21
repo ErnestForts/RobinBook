@@ -7,6 +7,7 @@ import { Rawcoments } from 'src/app/models/comentsLibros/rawcoments';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toast-favoritos.component';
 import { ToastBorrarfavComponent } from 'src/app/components/toast-borrarfav/toast-borrarfav.component';
+import { ToastLibromailComponent } from 'src/app/components/toast-libromail/toast-libromail.component';
 
 @Component({
   selector: 'app-detalle-libros',
@@ -61,6 +62,10 @@ public hoverState : number = 0;
 
   borradoFav() {
     this.dialog.open(ToastBorrarfavComponent);
+  }
+
+  enviarMail() {
+    this.dialog.open(ToastLibromailComponent);
   }
 
   sendComent(coment, libro_id) {

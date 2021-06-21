@@ -35,6 +35,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastFavoritosComponent } from './components/toast-favoritos/toast-favoritos.component';
 import { ToastBorrarfavComponent } from './components/toast-borrarfav/toast-borrarfav.component';
 import { StarComponent } from './components/star/star.component';
+import { ToastLibromailComponent } from './components/toast-libromail/toast-libromail.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { StarComponent } from './components/star/star.component';
     NewPasswordComponent,
     ToastFavoritosComponent,
     ToastBorrarfavComponent,
-    StarComponent
+    StarComponent,
+    ToastLibromailComponent
   ],
   imports: [
     BrowserModule,
