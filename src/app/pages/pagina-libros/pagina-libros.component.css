@@ -28,6 +28,27 @@
     position: relative;
 }
 
+#iconoDentro:hover {
+    transform: scale(1.4, 1.4);
+  }
+
+.animacion {
+    animation-duration: 5s;
+    animation-name: slidein;
+}
+  
+  @keyframes slidein {
+    from {
+      margin-left: 50%;
+      transform: rotate(270deg);
+    }
+  
+    to {
+      margin-left: 3%;
+    }
+  }
+  
+
 datalist {
     display: none;
     width: 30px;

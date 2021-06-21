@@ -41,6 +41,9 @@ export class PaginaLibrosComponent implements OnInit {
 
   buscarTitulo(titulo: string) {
     this.librosVista = this.librosVista.filter(libro => libro.Titulo.includes(titulo));
+    this.statusVolver = 'non-active';
+    this.statusClass1 = 'active'; this.statusClass2 = 'active'; this.statusClass3 = 'active'; this.statusClass4 = 'active'; this.statusClass5 = 'active'; this.statusClass6 = 'active'; this.statusClass7 = 'active';
+
   }
 
   reloadLista() {
@@ -66,6 +69,12 @@ export class PaginaLibrosComponent implements OnInit {
       this.statusClass1 = 'active'; this.statusClass2 = 'active'; this.statusClass3 = 'active'; this.statusClass4 = 'active'; this.statusClass5 = 'active'; this.statusClass6 = 'active';
     }
     this.statusVolver = 'not-active'
+  }
+
+  presionarEnter(e, titulo){     
+    if(e.keyCode === 13) {
+      this.buscarTitulo(titulo);     
+    }  
   }
 
   ngOnInit(): void {
