@@ -39,6 +39,7 @@ import { EditMiPerfilComponent } from './pages/edit-mi-perfil/edit-mi-perfil.com
 import { ToastLibromailComponent } from './components/toast-libromail/toast-libromail.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FilterPipe } from './pipes/filter.pipe';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     HttpClientModule,
     MatDialogModule,
     NoopAnimationsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

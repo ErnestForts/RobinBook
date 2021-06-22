@@ -5,9 +5,6 @@
             <div class="content">
               <div class="busqueda">
                   <input [(ngModel)]="filterTerm" type="search" class="buscar iconoDentro" placeholder="Inserta titulo" list="busqueda" (keyup)="presionarEnter($event, titulo.value)" #titulo><img src="..\assets\icons\magnifier.svg" class="animacion" id="iconoDentro" (click)="buscarTitulo(titulo.value)"/>
-                  <!-- <datalist id="busqueda">
-                    <option *ngFor="let libro of librosVista" [value]="libro.Titulo">
-                  </datalist> -->
               </div>
               <div class="contenedor-botones">
                   <button class="botones" (click)="changeVista('fantastica'); setActive('1');" [ngClass]="statusClass1">Fantástica</button>
@@ -21,7 +18,7 @@
               </div>
               <div class="container">
                   <div class="row">
-                    <div class="col" *ngFor="let vista of librosVista | filter:filterTerm">
+                    <div class="col" *ngFor="let vista of librosVista | filter:filterTerm:'Titulo'">
                         <div class="cardLibro" routerLink="/libros/detalle" (click)="sendLibroDetail(vista.Titulo, vista.Autor, vista.Descripcion, vista.Foto, vista.Genero, vista.libro_id)">
                           <div class="imagen">
                             <img [src]="vista.Foto" class="portaLibro" alt="Avatar" style="width:100%">

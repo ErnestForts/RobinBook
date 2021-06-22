@@ -16,7 +16,21 @@
     width: 100vw;
     margin-top: 10vh;
     overflow-y: scroll;
-} 
+}
+.busqueda{
+    margin-top: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F9C1;
+}
+
+.buscar {
+    border-radius: 20px;
+    border: 0;
+    width: 60vw;
+    padding: 2vw;
+}
 .userstyle{
     display: grid;
     grid-template-columns: 20vw 50vw 25vw;
