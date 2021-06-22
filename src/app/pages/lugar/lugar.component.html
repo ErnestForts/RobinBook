@@ -39,6 +39,9 @@
                                     <h6 class="noTieneLibro"><b>No hay ningún libro en estos momentos.</b></h6>
                                 </ng-template>
                             </div>
+                            <div class="row pista contenedor-modificar">
+                                <button (click)="modificarLugar();" [routerLink]="['modificar']" class="modificar">Modificar</button>
+                            </div>
                             <div class="marco">
                                 <div class="estrellas">
                                     <ng-container *ngFor="let star of stars;">

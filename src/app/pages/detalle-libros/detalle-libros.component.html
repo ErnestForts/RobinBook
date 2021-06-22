@@ -6,6 +6,9 @@
         <div class="imagen">
            <img [src]="libroVista.Foto" alt="...">
         </div>
+        <div class="row pista contenedor-modificar">
+            <button (click)="modificarLibro();" [routerLink]="['modificar']" class="modificar">Modificar</button>
+        </div>
        <div class="marco">
         <div class="estrellas">
             <ng-container *ngFor="let star of stars;">

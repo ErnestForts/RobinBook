@@ -119,6 +119,12 @@ public hoverState : number = 0;
     }, 500)  
 
   }
+
+  modificarLibro(){
+    // console.log(this.libroVista);
+    
+    this.apiService.modificarLibro(this.libroVista);
+  }
   
   ngOnInit(): void {
   }

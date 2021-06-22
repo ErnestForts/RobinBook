@@ -14,6 +14,7 @@ export class LibroService {
   public libroDetail: Libro;
   public libroDetailFav: Libro;
   public librosFav: Libro[];
+  public libroModificable: Libro;
 
   constructor(private http: HttpClient) { 
     this.url = 'https://robinbook.herokuapp.com/book';
@@ -59,10 +60,14 @@ export class LibroService {
     });
   }
 
-  editarLibro(libro: Libro): any {
-    return this.http.put(this.url, libro).subscribe( (result: any) => {
-      console.table(result);
-    });
+  editarLibro(libro, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.patch(this.url, libro, options);
+  }
+
+  modificarLibro(libroModificable : Libro){
+    this.libroModificable = libroModificable;
   }
 
   borrarlibro(id: string): any {

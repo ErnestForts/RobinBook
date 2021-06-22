@@ -1,1 +1,65 @@
-<p>editar-libro works!</p>
+<div class="madre">
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="formFlex">
+        <div class="contenedor">
+            <div class="content">
+                <div class="row izq">
+                    <div class="col-3">
+                        <h4>Título</h4>
+                    </div>
+                    <div class="col">
+                        <input formControlName="txtTitulo" type="text" placeholder="Rellenar Título" #titulo>
+                    </div>
+                </div>
+                <div class="row izq">
+                    <div class="col-3">
+                        <h4>Autor</h4>
+                    </div>
+                    <div class="col">
+                        <input formControlName="txtAutor" type="text" placeholder="Rellenar Autor" #autor>
+                    </div>
+                </div>
+                <div class="row izq">
+                    <div class="col-3">
+                        <h4>Género</h4>
+                    </div>
+                    <div class="col">
+                        <select formControlName="txtGenero" name="pets" id="pet-select" #genero>
+                            <option value="">Selecciona el Género</option>
+                            <option value="fantastica">Fantástica</option>
+                            <option value="ficcion">Ficción</option>
+                            <option value="suspenso">Suspenso</option>
+                            <option value="drama">Drama</option>
+                            <option value="accion">Acción</option>
+                            <option value="aventura">Aventura</option>
+                            <option value="romance">Romance</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row izq">
+                    <div class="col-3">
+                        <h4>Imagen</h4>
+                    </div>
+                    <div class="col">
+                        <input formControlName="txtFoto" type="url" placeholder="https://imagen.com" #foto>
+                    </div>
+                </div>
+            </div>
+            <div class="description izq">
+                <div class="descripcion">
+                    <h4>Descripción</h4>
+                </div>
+                <div>
+                    <textarea formControlName="txtDescripcion" id="w3review" class="rellenar" rows="12" cols="25" placeholder="Rellena con una descripción breve del libro." #description></textarea>
+                </div>
+            </div>
+            <div class="contenedor-guardar">
+                <button class="boton" type="submit" class="guardar">Guardar</button>
+            </div>
+        </div>
+    </form>
+    <app-header-favoritos class="mobile mobile-header" title="Libro" src="..\assets\icons\new-arrow_back.svg" id="back"
+        alt="back"></app-header-favoritos>
+    <app-footer class="desktop-header desktop"></app-footer>
+    <app-footer class="mobile mobile-footer"></app-footer>
+    <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
+</div>

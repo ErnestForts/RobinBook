@@ -21,6 +21,7 @@ export class MapaServicioService {
   public lugares : Lugar[];
   public info; 
   public lugarDetail: Lugar;
+  public lugarModificable: Lugar;
 
   constructor(private http : HttpClient) { 
   }
@@ -44,6 +45,7 @@ export class MapaServicioService {
   setLugarDetail(lugarDetail: Lugar) {
     // console.log("Ahora este es el bueno "+lugarDetail.Lugar_id);
     this.lugarDetail = lugarDetail;
+    
   }
 
   lugarNuevo(lugar : Lugar, token) : any {
@@ -59,14 +61,10 @@ export class MapaServicioService {
 
   }
 
-  editarLugar(lugar : Lugar, token) : any {
+  editarLugar(lugar: Lugar, token) : any {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
-
-    return this.http.patch(this.url, lugar).subscribe( (result: any) => {
-      console.table(result);
-    });
-
+    return this.http.patch(this.url, lugar, options);
   }
 
   borrarLugar(id: string): any {
@@ -128,6 +126,10 @@ export class MapaServicioService {
     return this.http.post(this.url + "/like", datos, options).subscribe( (result: any) => {
       console.log(result);
     });
+  }
+
+  modificarLugar(lugarModificable : Lugar){
+    this.lugarModificable = lugarModificable;
   }
 
 

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    background-color: #F7F9C1;
+    height: 80vh;
+    margin-top: 10vh;
+    overflow-y: scroll;
+    justify-items: center;
+}
+
+.content{
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.row{
+    width: 100vw;
+}
+
+.col-3 > h4{
+    align-self: center;
+    font-size: 5vw;
+    font-weight: 600;
+    padding-top: 2.3vw;
+}
+
+.description {
+    text-align: left;
+    background-color: #F7F9C1;
+}
+
+.descripcion > h4{
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+.descripcion{
+    padding-bottom: 3vw;
+}
+
+.izq{
+    padding-left: 7.5vw;
+    padding-bottom: 3vw;
+}
+
+.rellenar {
+    border: 0.2vw solid #B9BB91;
+    border-radius: 10px;
+    width: 85vw;
+    padding: 2vw;
+    resize: none;
+    font-size: 4.5vw;
+}
+
+.boton {
+    background-color: #689F38;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    font-size: 25px;
+}
+
+select {
+    font-size: .9rem;
+    padding: 2px 5px;
+}
+
+.output {
+    background: center/cover no-repeat url('/media/cc0-images/hamster.jpg');
+    position: relative;
+}
+
+/********************************************************/
+.desktop-header, .mobile-header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: #388E3C;
+
+}
+
+.desktop-footer, .mobile-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.contenedor-guardar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vw;
+}
+
+.guardar{
+    padding: 7px;
+    width: 60%;
+    border-radius: 25px;
+    background-color: #689F38;
+    color: white;
+    border: none;
+}
+
+@media only screen and (min-width: 770px) {
+    .mobile{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+  .desktop{
+    display: none;
+  }
+}

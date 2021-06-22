@@ -22,6 +22,8 @@ import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { NewPasswordComponent } from './pages/new-password/new-password.component';
 import { EditMiPerfilComponent } from './pages/edit-mi-perfil/edit-mi-perfil.component';
+import { EditarLugarComponent } from './pages/editar-lugar/editar-lugar.component';
+import { EditarLibroComponent } from './pages/editar-libro/editar-libro.component';
 
 const routes: Routes = [
   {path: "", redirectTo: '/login', pathMatch: 'full'},
@@ -37,10 +39,12 @@ const routes: Routes = [
   {path:"libros/favoritos", component: FavoritosLibrosComponent},
   {path:"libros/detalle", component: DetalleLibrosComponent},
   {path:"libros/nuevo", component: NuevoLibroComponent},
+  {path:"libros/detalle/modificar", component: EditarLibroComponent},
   {path:"mapa", component: MapaComponent},
   {path:"mapa/nuevo", component: NuevoLugarComponent},
   {path:"mapa/favoritos", component: LugaresFavoritosComponent},
   {path:"mapa/detalle", component: LugarComponent},
+  {path:"mapa/detalle/modificar", component: EditarLugarComponent},
   {path:"nosotros", component: NosotrosComponent},
   {path:'login', component: LoginComponent,
     children: [

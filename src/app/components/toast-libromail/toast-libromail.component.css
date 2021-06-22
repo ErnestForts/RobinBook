@@ -1,24 +1,7 @@
-* {
-    background-color: #F7F9C1;
-}
-
-.mat-dialog-title {
+button{
+    padding: 9px;
     background-color: #689F38;
-}
-
-.mat-dialog-content {
-    background-color: #388E3C;
-}
-
-.mat-dialog-actions {
-    background-color: #F7F9C1;
-    display: flex;
-}
-
-.mat-button {
-    background-color: #388E3C;
-}
-
-.mat-dialog-close {
-    background-color: #F7F9C1;
+    color: white;
+    border-radius: 25px;
+    border: none;
 }
