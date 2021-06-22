@@ -130,8 +130,21 @@ public hoverState : number = 0;
   }
 
   onStarClicked(starId : number){
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
+
     this.rating = starId;
     console.log(this.rating);
+
+    let datos = {
+      libro_id: this.libroVista.libro_id,
+      id_Libro: this.libroVista.libro_id,
+      id_User: id,
+      user_id: id
+    }
+
+    this.apiService.puntuar(datos, token);
     
   }
+  
 }

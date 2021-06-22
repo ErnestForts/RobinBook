@@ -117,4 +117,11 @@ export class LibroService {
     });
   }
 
+  puntuar(datos, token){
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/puntuar", datos, options).subscribe( (result: any) => {
+      console.log(result);
+    });
+  }
 }
