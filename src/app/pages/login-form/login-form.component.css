@@ -136,6 +136,12 @@ button:hover {
     display: none;
 }
 
+.has-error input[type="email"],
+.has-error input[type="password"] {
+    border-color: rgb(216, 12, 12);
+    color: rgb(230, 14, 14);
+}
+
 @media only screen and (max-width: 1019px) {
     .formDiv {
         max-width: 50%;

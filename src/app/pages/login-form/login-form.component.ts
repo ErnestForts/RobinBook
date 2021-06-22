@@ -11,9 +11,11 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginFormComponent implements OnInit {
 
   formLogin: FormGroup;
+  public passwordInvalid: boolean;
+  public emailInvalid: boolean;
   public loginInvalid: boolean;
   private formSubmitAttempt: boolean;
-
+  
   private _shown = false;
   public isVisible = 'fa fa-fw fa-eye field-icon toggle-password';
   constructor(@Inject(DOCUMENT) private document: Document,private fb: FormBuilder, private authService: AuthService) {
@@ -28,19 +30,33 @@ export class LoginFormComponent implements OnInit {
 
   
   onSubmit() {
-    this.loginInvalid = false;
+    this.emailInvalid = false;
+    this.passwordInvalid = false;
     this.formSubmitAttempt = false;
+    this.loginInvalid = false;
     if (this.formLogin.valid) {
       try {
-        this.authService.login(this.formLogin.value);      
+        this.authService.login(this.formLogin.value);
+        this.authService.isLoggedIn.subscribe((response:any) =>{
+          if(!response){
+            this.loginInvalid = true;
+          }
+        });            
       } catch (err) {
-        this.loginInvalid = true;
-        
+        console.log('invalid '+ err);  
       }
     } else {
       this.formSubmitAttempt = true;
+      if(this.formLogin.value.txtEmail == ''){
+        this.emailInvalid = true;
+      }
+      if(this.formLogin.value.txtPassword == ''){
+        this.passwordInvalid = true;
+      }
+      console.log('attempt');
     }
   }
+  get formControls() { return this.formLogin.controls; }
 
 
   toggle() {

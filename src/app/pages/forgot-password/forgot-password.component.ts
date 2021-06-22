@@ -25,8 +25,10 @@ export class ForgotPasswordComponent implements OnInit {
     this.formSubmitAttempt = false;
     if (this.formForgot.valid) {
       try {
-        const response = this.authService.forgot(this.formForgot.value);  
-        console.log(response); 
+        this.authService.forgot(this.formForgot.value).subscribe((response: any) => {
+          //toast email enviado
+          
+        });
       } catch (err) {
         this.loginInvalid = true;
         
@@ -35,5 +37,4 @@ export class ForgotPasswordComponent implements OnInit {
       this.formSubmitAttempt = true;
     }
   }
-
 }

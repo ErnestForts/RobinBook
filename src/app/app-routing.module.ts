@@ -21,6 +21,7 @@ import { NuevoLugarComponent } from './pages/nuevo-lugar/nuevo-lugar.component';
 import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { NewPasswordComponent } from './pages/new-password/new-password.component';
+import { EditMiPerfilComponent } from './pages/edit-mi-perfil/edit-mi-perfil.component';
 
 const routes: Routes = [
   {path: "", redirectTo: '/login', pathMatch: 'full'},
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path:"perfil", component: PerfilComponent},
   {path:"perfil/mis-chats", component: MisChatsComponent},
   {path:"perfil/mi-perfil", component: MiPerfilComponent},
+  {path:"perfil/mi-perfil/edit", component: EditMiPerfilComponent},
   {path:"perfil/settings", component: SettingsComponent},
   {path:"libros", component: PaginaLibrosComponent},
   {path:"libros/favoritos", component: FavoritosLibrosComponent},

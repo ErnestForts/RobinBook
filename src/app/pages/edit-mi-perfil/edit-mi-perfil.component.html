@@ -1,0 +1,87 @@
+<div class="bg">
+
+    <div class="outletContent">
+        <div class="contenedor">
+            <div class="formDiv">
+                <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="formFlex">
+                    <div class="row imagen">
+                        <img class="imgperfil" src="{{urlFotoPerfil}}" alt="">
+                    </div>
+                    <div id="parte1" class="row">
+                        <div class="row separado">
+                            <div class="titlestyle">
+                                <p class="titles">información general</p>
+                            </div>
+                        </div>
+                        <div class="row separado">
+                            <div class="row">
+                                <p class="title2">Nombre y apellido</p>
+                            </div>
+                            <div class="row">
+                                <input formControlName="txtNombreCompleto" type="text" style="margin-top: 5px;" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="row separado">
+                            <div class="row">
+                                <p class="title2">Frase</p>
+                            </div>
+                            <div class="row">
+                                <input formControlName="txtFrase" type="text" style="margin-top: 5px;" placeholder="Frase">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="row separado">
+                            <div class="row">
+                                <p class="title2">Foto Perfil</p>
+                            </div>
+                            <div class="row">
+                                <input formControlName="txtFoto" type="text" style="margin-top: 5px;" placeholder="Foto">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div id="parte2" class="row">
+                        <div class="row separado">
+                            <div class="titlestyle">
+                                <p class="titles">Contacto</p>
+                            </div>
+                        </div>
+                        <div class="row separado">
+                            <div class="row">
+                                <p class="title2">Teléfono</p>
+                            </div>
+                            <div class="row">
+                                <input formControlName="txtTelefono" type="text" style="margin-top: 5px;" placeholder="Telefono">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="row separado">
+                            <div class="row">
+                                <p class="title2">Email</p>
+                            </div>
+                            <div class="row">
+                                <input formControlName="txtEmail" type="text" style="margin-top: 5px;" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row separado">
+                            <div class="line"></div>
+                            <button class="registerButton" type="submit">Modificar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <app-header-favoritos class="mobile-header showBar" src="..\assets\icons\new-arrow_back.svg" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
+    <app-footer class="desktop-header desktop"></app-footer>
+    <app-footer class="mobile mobile-footer"></app-footer>
+    <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>

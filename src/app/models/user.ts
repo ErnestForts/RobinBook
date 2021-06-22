@@ -2,6 +2,7 @@ export class User {
     public user_id?:number;
     public Email?:string;
     public Nombre?:string;
+    public NombreCompleto?:string;
     public Apellido?:string;
     public Telefono?:string;
     public Foto?:string;
@@ -13,6 +14,7 @@ export class User {
         this.Email = Email;
         this.Nombre = Nombre;
         this.Apellido = Apellido;
+        this.NombreCompleto = this.Nombre +" " + this.Apellido;
         this.Telefono = Telefono;
         this.Foto = Foto;
         this.Frase = Frase;

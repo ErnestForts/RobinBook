@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-mi-perfil',
@@ -9,10 +11,10 @@ import { User } from 'src/app/models/user';
 export class MiPerfilComponent implements OnInit {
   public user: User;
 
-  constructor() {
+  constructor(private router: Router,private usuarioService: UsuarioService) {
     this.user = JSON.parse(localStorage.getItem('user')).user;    
    }
   ngOnInit(): void {
+    this.user = JSON.parse(localStorage.getItem('user')).user
   }
-
 }

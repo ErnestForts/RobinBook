@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, throwError } from 'rxjs';
 import { ServerService } from './server.service';
 @Injectable({
   providedIn: 'root'
@@ -42,6 +42,9 @@ export class AuthService {
           };
           localStorage.setItem('user', JSON.stringify(userData));
           this.router.navigateByUrl('/mapa');
+        }else{
+          this.loggedIn.next(false);
+          ;
         }
       });
     }else{
@@ -53,11 +56,6 @@ export class AuthService {
     if (data.txtEmail !== '') {     
       return this.server.request('PUT', '/api/users/forgot-password', {
         Email: data.txtEmail,
-      }).subscribe((response: any) => {
-        if (response.emailStatus != 'OK') {
-          return undefined
-        }
-        return response
       });
     }else{
       return undefined
