@@ -19,7 +19,7 @@ public libroVista: Libro;
 public coments: Coments[];
 public librosFav: Libro[];
 public contadorLike: string;
-public esFavorito : boolean;
+public esFavorito : boolean = false;
 public stars = [1, 2, 3, 4, 5];
 public rating : number = 1;
 public hoverState : number = 0;
