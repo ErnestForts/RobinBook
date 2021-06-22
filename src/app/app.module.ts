@@ -37,6 +37,8 @@ import { ToastBorrarfavComponent } from './components/toast-borrarfav/toast-borr
 import { StarComponent } from './components/star/star.component';
 import { EditMiPerfilComponent } from './pages/edit-mi-perfil/edit-mi-perfil.component';
 import { ToastLibromailComponent } from './components/toast-libromail/toast-libromail.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -72,7 +74,8 @@ import { ToastLibromailComponent } from './components/toast-libromail/toast-libr
     ToastBorrarfavComponent,
     StarComponent,
     EditMiPerfilComponent,
-    ToastLibromailComponent
+    ToastLibromailComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -81,7 +84,8 @@ import { ToastLibromailComponent } from './components/toast-libromail/toast-libr
     ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
