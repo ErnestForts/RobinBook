@@ -12,6 +12,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class RankingComponent implements OnInit {
 
   public usuarios:User[];
+  public filterTerm: string;
   constructor(private server: ServerService, private router: Router,private apiService: UsuarioService) {
 
     this.mostrarUsuarios();

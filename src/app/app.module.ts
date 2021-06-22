@@ -41,6 +41,7 @@ import { EditarLibroComponent } from './pages/editar-libro/editar-libro.componen
 import { EditarLugarComponent } from './pages/editar-lugar/editar-lugar.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FilterPipe } from './pipes/filter.pipe';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     HttpClientModule,
     MatDialogModule,
     NoopAnimationsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

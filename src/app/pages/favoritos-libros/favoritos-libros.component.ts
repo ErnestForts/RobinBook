@@ -12,7 +12,7 @@ export class FavoritosLibrosComponent implements OnInit {
   public librosFav: Libro[];
   public stars = [1, 2, 3, 4, 5];
 
-
+  noBooks: boolean;
   constructor(private apiService: LibroService) { 
     this.mostrarLibrosFav();
   }
@@ -21,12 +21,15 @@ export class FavoritosLibrosComponent implements OnInit {
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.apiService.obtenerLibrosFav(id, token).subscribe( (result: any) => {
-      this.librosFav = result.data;
-      for (let i = 0; i < this.librosFav.length; i++) {
-        this.librosFav[i].puntuacion = Math.round(this.librosFav[i].PuntosTotales/this.librosFav[i].VecesPuntuado);
-              
-            }
-      });
+    this.librosFav = result.data;
+    for (let i = 0; i < this.librosFav.length; i++) {
+      this.librosFav[i].puntuacion = Math.round(this.librosFav[i].PuntosTotales/this.librosFav[i].VecesPuntuado);
+            
+    }
+    if(!this.librosFav.length){
+      this.noBooks = true; 
+    }
+    });
   }
 
   sendValueIdDetail(Titulo, Autor, Descripcion, Foto, Genero, libro_id) {
