@@ -79,8 +79,7 @@
                                 <div class="fecha">
                                     <div>
                                         <p>
-                                            <a href="#" class="btn btn-counter multiple-count"
-                                                data-count="0"><span>&#x2764;</span></a>
+                                            <a class="btn btn-counter multiple-count" [attr.data-count]="coment.LikeComent" (click)="contadorLikes(coment.id_ComentLugar)"><span>&#x2764;</span></a>
                                         </p>
                                     </div>
                                 </div>

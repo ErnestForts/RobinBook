@@ -39,6 +39,8 @@ import { EditMiPerfilComponent } from './pages/edit-mi-perfil/edit-mi-perfil.com
 import { ToastLibromailComponent } from './components/toast-libromail/toast-libromail.component';
 import { EditarLibroComponent } from './pages/editar-libro/editar-libro.component';
 import { EditarLugarComponent } from './pages/editar-lugar/editar-lugar.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,8 @@ import { EditarLugarComponent } from './pages/editar-lugar/editar-lugar.componen
     EditMiPerfilComponent,
     ToastLibromailComponent,
     EditarLibroComponent,
-    EditarLugarComponent
+    EditarLugarComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -85,7 +88,8 @@ import { EditarLugarComponent } from './pages/editar-lugar/editar-lugar.componen
     ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

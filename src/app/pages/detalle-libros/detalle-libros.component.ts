@@ -109,8 +109,15 @@ public hoverState : number = 0;
     });
   }
 
-  contadorLikes() {
-    ;
+  contadorLikes(id_ComentLibro) {
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id = this.libroVista.libro_id;
+    let datos = { id_Libro: id, id_ComentLibro: id_ComentLibro};
+    this.apiService.likearComent(datos, token);
+    setTimeout(()=>{
+      this.mostrarComents(this.libroVista.libro_id);
+    }, 500)  
+
   }
   
   ngOnInit(): void {

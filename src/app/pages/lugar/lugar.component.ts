@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Coments } from 'src/app/models/comentsLibros/coments';
 import { Lugar } from 'src/app/models/lugar/lugar';
 import { MapaServicioService } from 'src/app/services/mapa-servicio.service';
 import { Lugarfav } from 'src/app/models/lugar/lugarfav';
@@ -7,6 +6,7 @@ import { RawcomentsLugar } from 'src/app/models/comentsLugar/rawcoments-lugar';
 import {MatDialog} from '@angular/material/dialog';
 import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toast-favoritos.component';
 import { ToastBorrarfavComponent } from 'src/app/components/toast-borrarfav/toast-borrarfav.component';
+import { ComentsLugar } from 'src/app/models/comentsLugar/coments-lugar';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class LugarComponent implements OnInit {
 
   public lugarVista : Lugar;
   public tieneLibro : boolean;
-  public coments: Coments[];
+  public coments: ComentsLugar[];
   public lugaresFav: Lugar[];
   public esFavorito : boolean = false;
   public stars = [1, 2, 3, 4, 5];
@@ -39,7 +39,7 @@ export class LugarComponent implements OnInit {
   mostrarComents(id: string): void {
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.mapaServicio.obtenerComentsById(id, token).subscribe( (result: any) => {
-      // console.table(result.data);
+      console.table(result.data);
       this.coments = result.data;
       });
   }
@@ -107,6 +107,18 @@ export class LugarComponent implements OnInit {
     } else {
       console.log("comentario vacío");
     }  
+  }
+
+  contadorLikes(id_ComentLugar) {
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id = this.lugarVista.Lugar_id;
+    let datos = { id_Lugar: id, id_ComentLugar: id_ComentLugar};
+    this.mapaServicio.likearComent(datos, token);
+
+    setTimeout(()=>{
+      this.mostrarComents(this.lugarVista.Lugar_id);
+    }, 500)  
+
   }
 
   ngOnInit(): void {

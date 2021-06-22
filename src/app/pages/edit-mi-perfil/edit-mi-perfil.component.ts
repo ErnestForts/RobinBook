@@ -23,7 +23,7 @@ export class EditMiPerfilComponent implements OnInit {
       txtFrase: this.usuario.Frase,
       txtTelefono: this.usuario.Telefono,
       txtEmail: [this.usuario.Email,[Validators.email, Validators.required]],
-      txtFoto: ['', Validators.required],
+      txtFoto: this.usuario.Foto,
     });
   }
 

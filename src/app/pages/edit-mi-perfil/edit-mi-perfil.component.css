@@ -29,6 +29,7 @@
 }
 
 .imagen{
+    margin-top: 1vh;
     justify-content: center;
     align-items: center;
 }
@@ -92,6 +93,18 @@
     bottom: 0;
     width: 100vw;
 }
+
+.boton {
+    background-color: #689F38;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    font-size: 25px;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
 
 @media only screen and (min-width: 770px) {
     .mobile{

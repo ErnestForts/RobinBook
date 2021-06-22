@@ -122,4 +122,13 @@ export class MapaServicioService {
     });
   }
 
+  likearComent(datos, token){
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/like", datos, options).subscribe( (result: any) => {
+      console.log(result);
+    });
+  }
+
+
 }
