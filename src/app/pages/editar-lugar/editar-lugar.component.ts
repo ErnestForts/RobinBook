@@ -3,13 +3,13 @@ import Map from 'ol/Map';
 import { Lugar } from 'src/app/models/lugar/lugar';
 import { MapaServicioService } from 'src/app/services/mapa-servicio.service';
 
-
 @Component({
-  selector: 'app-nuevo-lugar',
-  templateUrl: './nuevo-lugar.component.html',
-  styleUrls: ['./nuevo-lugar.component.css']
+  selector: 'app-editar-lugar',
+  templateUrl: './editar-lugar.component.html',
+  styleUrls: ['./editar-lugar.component.css']
 })
-export class NuevoLugarComponent implements OnInit {
+export class EditarLugarComponent implements OnInit {
+
 
   public map : Map;
   public userLat : number;
@@ -42,12 +42,12 @@ export class NuevoLugarComponent implements OnInit {
 
   }
 
-  nuevoLugar(nombre : string, descripcion : string, foto : string, latitud : string, longitud : string) {
+  editar(nombre : string, descripcion : string, foto : string, latitud : string, longitud : string) {
     let nuevoLugar = new Lugar(nombre, descripcion, foto, Number(latitud), Number(longitud));
     let token = JSON.parse(localStorage.getItem('user')).token;
     // console.log(latitud, longitud);
-    this.mapaServicio.lugarNuevo(nuevoLugar, token);
+    this.mapaServicio.editarLugar(nuevoLugar, token);
   }
-  
-}
+ 
 
+}

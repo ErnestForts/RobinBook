@@ -59,9 +59,11 @@ export class MapaServicioService {
 
   }
 
-  editarLugar(lugar : Lugar) : any {
+  editarLugar(lugar : Lugar, token) : any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
 
-    return this.http.put(this.url, lugar).subscribe( (result: any) => {
+    return this.http.patch(this.url, lugar).subscribe( (result: any) => {
       console.table(result);
     });
 

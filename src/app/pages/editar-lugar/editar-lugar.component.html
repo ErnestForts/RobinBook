@@ -1,0 +1,89 @@
+<div>
+    <div id="contenedor">
+        <div class="row">
+            <div class="content">
+                <div class="col col-desktop">
+                    <!-- <div class="row desktop-row align-items-end desktop">
+                       <div class="col-1">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                               xmlns="http://www.w3.org/2000/svg">
+                               <g id="Iconly/Light/Arrow - Left 2">
+                                   <g id="Arrow - Left 2">
+                                       <path id="Stroke 1" d="M15.5 19L8.5 12L15.5 5" stroke="#388E3C"
+                                           stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                   </g>
+                               </g>
+                           </svg>
+                       </div>
+                       <div class="col nuevo-lugar">
+                           <h6>Nuevo lugar</h6>
+                       </div>
+                       <div class="col-1">
+                       </div>
+                   </div> -->
+                    <div class="row espacio">
+                        <div class="subirImagen row">
+                            <div class="row info">
+                                <h6 class="col-7">Subir imagen</h6>
+                                <img src="/assets/icons/image.svg" class="col-1" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="formulario">
+                            <div>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="url" class="form-control" placeholder="https://imagen.com" required #foto>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control negrita" name="nombre" id="nombre"
+                                            placeholder="Nombre lugar" required #nombre>
+                                        <div class="invalid-feedback">
+                                            <div>El nombre del lugar es obligatorio</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="descripcion" id="descripcion"
+                                            placeholder="Frase para encontrar el libro" required #descripcion></textarea>
+                                        <div class="invalid-feedback">
+                                            <div>La frase del libro es obligatoria</div>
+                                        </div>
+                                    </div>
+                                    <div class="coordenada">
+                                       <div class="form-group ">
+                                           <label  for="latitud">Latitud</label>
+                                           <input class="form-control" type="text" name="latitud" id="latitud" value="{{userLat}}" disabled #latitud>
+                                           <div class="invalid-feedback">
+                                               <div>La frase del libro es obligatoria</div>
+                                           </div>
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="longitud">Longitud</label>
+                                           <input class="form-control" type="text" name="longitud" id="longitud" value="{{userLon}}" disabled #longitud>
+                                           <div class="invalid-feedback">
+                                               <div>La frase del libro es obligatoria</div>
+                                           </div>
+                                       </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="contenedor-boton">
+                                            <button class="boton">Guardar</button>
+                                        </div>
+                                       </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <app-header-favoritos class="mobile mobile-header" title="Lugar" src="..\assets\icons\new-arrow_back.svg" id="back"
+        alt="back"></app-header-favoritos>
+    <app-footer class="desktop-header desktop"></app-footer>
+    <app-footer class="mobile mobile-footer"></app-footer>
+    <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
+</div>
