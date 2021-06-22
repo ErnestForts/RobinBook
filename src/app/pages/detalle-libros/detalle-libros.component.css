@@ -44,6 +44,11 @@
     margin-right: 10px;
 }
 
+.send {
+    padding: 10px;
+    margin-left: 110px;
+}
+
 .estrellas{
     display: flex;
     justify-content: center;

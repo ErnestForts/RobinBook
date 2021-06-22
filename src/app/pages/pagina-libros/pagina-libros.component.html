@@ -4,7 +4,10 @@
           <div id="contenedor">
             <div class="content">
               <div class="busqueda">
-                  <input type="search" class="buscar" placeholder="Inserta titulo y pulsa lupa" #titulo><img src="..\assets\icons\magnifier.svg" id="iconoDentro" (click)="buscarTitulo(titulo.value)"/>
+                  <input type="search" class="buscar iconoDentro" placeholder="Inserta titulo" list="busqueda" (keyup)="presionarEnter($event, titulo.value)" #titulo><img src="..\assets\icons\magnifier.svg" class="animacion" id="iconoDentro" (click)="buscarTitulo(titulo.value)"/>
+                  <datalist id="busqueda">
+                    <option *ngFor="let libro of librosVista" [value]="libro.Titulo">
+                  </datalist>
               </div>
               <div class="contenedor-botones">
                   <button class="botones" (click)="changeVista('fantastica'); setActive('1');" [ngClass]="statusClass1">Fantástica</button>
@@ -14,6 +17,7 @@
                   <button class="botones" (click)="changeVista('accion'); setActive('5');" [ngClass]="statusClass5">Acción</button>
                   <button class="botones" (click)="changeVista('aventura'); setActive('6');" [ngClass]="statusClass6">Aventura</button>
                   <button class="botones" (click)="changeVista('romance'); setActive('7');" [ngClass]="statusClass7">Romance</button>
+                  <button class="botonVolver" (click)="reloadLista();" [ngClass]="statusVolver">V O L V E R</button>
               </div>
               <div class="container">
                   <div class="row">

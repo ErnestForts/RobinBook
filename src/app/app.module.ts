@@ -36,6 +36,7 @@ import { ToastFavoritosComponent } from './components/toast-favoritos/toast-favo
 import { ToastBorrarfavComponent } from './components/toast-borrarfav/toast-borrarfav.component';
 import { StarComponent } from './components/star/star.component';
 import { EditMiPerfilComponent } from './pages/edit-mi-perfil/edit-mi-perfil.component';
+import { ToastLibromailComponent } from './components/toast-libromail/toast-libromail.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { EditMiPerfilComponent } from './pages/edit-mi-perfil/edit-mi-perfil.com
     ToastFavoritosComponent,
     ToastBorrarfavComponent,
     StarComponent,
-    EditMiPerfilComponent
+    EditMiPerfilComponent,
+    ToastLibromailComponent
   ],
   imports: [
     BrowserModule,

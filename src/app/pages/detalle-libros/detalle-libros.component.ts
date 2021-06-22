@@ -7,6 +7,7 @@ import { Rawcoments } from 'src/app/models/comentsLibros/rawcoments';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toast-favoritos.component';
 import { ToastBorrarfavComponent } from 'src/app/components/toast-borrarfav/toast-borrarfav.component';
+import { ToastLibromailComponent } from 'src/app/components/toast-libromail/toast-libromail.component';
 
 @Component({
   selector: 'app-detalle-libros',
@@ -19,7 +20,7 @@ public libroVista: Libro;
 public coments: Coments[];
 public librosFav: Libro[];
 public contadorLike: string;
-public esFavorito : boolean;
+public esFavorito : boolean = false;
 public stars = [1, 2, 3, 4, 5];
 public rating : number = 1;
 public hoverState : number = 0;
@@ -61,6 +62,10 @@ public hoverState : number = 0;
 
   borradoFav() {
     this.dialog.open(ToastBorrarfavComponent);
+  }
+
+  enviarMail() {
+    this.dialog.open(ToastLibromailComponent);
   }
 
   sendComent(coment, libro_id) {
@@ -125,8 +130,21 @@ public hoverState : number = 0;
   }
 
   onStarClicked(starId : number){
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
+
     this.rating = starId;
     console.log(this.rating);
+
+    let datos = {
+      libro_id: this.libroVista.libro_id,
+      id_Libro: this.libroVista.libro_id,
+      id_User: id,
+      user_id: id
+    }
+
+    this.apiService.puntuar(datos, token);
     
   }
+  
 }
