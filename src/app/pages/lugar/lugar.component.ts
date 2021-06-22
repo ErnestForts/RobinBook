@@ -20,7 +20,7 @@ export class LugarComponent implements OnInit {
   public tieneLibro : boolean;
   public coments: Coments[];
   public lugaresFav: Lugar[];
-  public esFavorito : boolean;
+  public esFavorito : boolean = false;
   public stars = [1, 2, 3, 4, 5];
   public rating : number = 1;
   public hoverState : number = 0;
