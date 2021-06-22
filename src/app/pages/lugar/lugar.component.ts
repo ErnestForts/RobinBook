@@ -126,8 +126,20 @@ export class LugarComponent implements OnInit {
   }
 
   onStarClicked(starId : number){
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
+
     this.rating = starId;
     console.log(this.rating);
+
+    let datos = {
+      lugar_id: this.lugarVista.Lugar_id,
+      id_Lugar: this.lugarVista.Lugar_id,
+      id_User: id,
+      user_id: id
+    }
+
+    this.mapaServicio.puntuar(datos, token);
     
   }
 

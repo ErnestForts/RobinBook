@@ -7,6 +7,7 @@ import { Rawcoments } from 'src/app/models/comentsLibros/rawcoments';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toast-favoritos.component';
 import { ToastBorrarfavComponent } from 'src/app/components/toast-borrarfav/toast-borrarfav.component';
+import { MapaComponent } from '../mapa/mapa.component';
 
 @Component({
   selector: 'app-detalle-libros',
@@ -125,8 +126,21 @@ public hoverState : number = 0;
   }
 
   onStarClicked(starId : number){
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
+
     this.rating = starId;
     console.log(this.rating);
+
+    let datos = {
+      libro_id: this.libroVista.libro_id,
+      id_Libro: this.libroVista.libro_id,
+      id_User: id,
+      user_id: id
+    }
+
+    this.apiService.puntuar(datos, token);
     
   }
+  
 }
