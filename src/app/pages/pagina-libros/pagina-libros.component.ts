@@ -19,6 +19,8 @@ export class PaginaLibrosComponent implements OnInit {
   public statusClass7 = 'not-active';
   public statusVolver = 'active';
 
+  public filterTerm: string;
+
   constructor(private apiService: LibroService) {
     this.mostrarLibros();
   }
