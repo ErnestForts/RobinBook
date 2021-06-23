@@ -3,8 +3,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 const baseUrl = 'https://robinbook.herokuapp.com';
 
-// const baseUrl = 'http://localhost:4000';
-
 @Injectable({
   providedIn: 'root'
 })
