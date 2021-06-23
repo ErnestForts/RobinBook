@@ -1,12 +1,16 @@
 <div class="bg">
     <div class="row">
         <div class="content" *ngFor="let mensaje of mensajesVista">
-            <div class="mensajeEntrante" *ngIf="mensaje.user_id != user_id;">
-                <p class="textChatEntrante"> {{mensaje.mensaje}} </p>
+            <div *ngIf="mensaje.user_id != user_id; else mensajeSaliente">
+                <div class="mensajeEntrante" >
+                    <p class="textChatEntrante"> {{mensaje.mensaje}} </p>
+                </div>
             </div>
-            <div class="mensajeSaliente">
-                <p class="textChatSaliente"> {{mensaje.mensaje}} </p>
-            </div>
+            <ng-template #mensajeSaliente>
+                <div class="mensajeSaliente">
+                    <p class="textChatSaliente"> {{mensaje.mensaje}} </p>
+                </div>
+            </ng-template>
         </div>
     </div>
     <div class="sendComent">
@@ -14,11 +18,14 @@
             <input type="text" placeholder="Escribir mensaje" #insertar><br>
         </div>
         <div class="contenedor-boton">
-            <button (click)="sendComent(insertar.value)"><p>Enviar mensaje</p></button>
+            <button (click)="sendComent(insertar.value)">
+                <p>Enviar mensaje</p>
+            </button>
         </div>
     </div>
-    <app-header-favoritos class="mobile mobile-header" [title]="chatVista.Nombre" src="..\assets\icons\new-arrow_back.svg"
-        [src3]="chatVista.Foto" id="back" alt="back" alt2="" id2="ocultar" id3="foto-perfil">
+    <app-header-favoritos class="mobile mobile-header" [title]="chatVista.Nombre"
+        src="..\assets\icons\new-arrow_back.svg" [src3]="chatVista.Foto" id="back" alt="back" alt2="" id2="ocultar"
+        id3="foto-perfil">
     </app-header-favoritos>
     <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
 </div>

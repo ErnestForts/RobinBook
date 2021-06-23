@@ -11,19 +11,22 @@
                     <div class="row nombre">
                         <p class="">{{usuario.Nombre}}</p>
                     </div>
-                        <div class="row subtitulo">
-                    <p class="">{{usuario.Frase}}</p>
-    
+                    <div class="row subtitulo">
+                        <p class="">{{usuario.Frase}}</p>
+                    </div>
+                    <div class="row crear-chat" *ngIf="sameUser == false;">
+                        <button><img src="..\assets\icons\message-circle.svg" alt=""></button>
                     </div>
                 </div>
-    
+
                 <div class="line"></div>
             </div>
-            
+
             <div class="alinelibros">
                 <p class="textlibros">LIBROS</p>
             </div>
-            <div *ngFor="let book of books; let i = index" class="librostyle" routerLink="/libros/detalle" (click)="sendLibroDetail(book.Titulo, book.Autor, book.Descripcion, book.Foto, book.Genero, book.libro_id)">
+            <div *ngFor="let book of books; let i = index" class="librostyle" routerLink="/libros/detalle"
+                (click)="sendLibroDetail(book.Titulo, book.Autor, book.Descripcion, book.Foto, book.Genero, book.libro_id)">
                 <img class="imglibro" src={{book.Foto}} alt="">
                 <div>
                     <p class="titlelibro">{{book.Titulo}}</p>
@@ -32,14 +35,15 @@
                             <app-star [starId]="star" rating="{{book.puntuacion}}"></app-star>
                         </ng-container>
                     </div>
-                </div>    
+                </div>
             </div>
             <div *ngIf="noBooks">
                 <p>Aun no tiene libros favoritos</p>
             </div>
         </div>
     </div>
-    <app-header-favoritos class="mobile mobile-header" title="Perfil Ranking" src="..\assets\icons\new-arrow_back.svg" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
+    <app-header-favoritos class="mobile mobile-header" title="Perfil Ranking" src="..\assets\icons\new-arrow_back.svg"
+        id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
     <app-footer class="desktop-header desktop"></app-footer>
     <app-footer class="mobile mobile-footer"></app-footer>
     <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
