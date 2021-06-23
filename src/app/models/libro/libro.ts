@@ -16,5 +16,8 @@ export class Libro {
         this.Descripcion = Descripcion;
         this.Genero = Genero;
         this.libro_id = libro_id;
+        this.PuntosTotales = puntosTotales;
+        this.VecesPuntuado = vecesPuntuado;
+        
     }
 }

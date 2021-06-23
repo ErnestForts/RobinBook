@@ -31,11 +31,11 @@ export class LugarComponent implements OnInit {
 
   constructor(private mapaServicio: MapaServicioService, public dialog: MatDialog) { 
     this.lugarVista = this.mapaServicio.lugarDetail;
-    // console.log(this.lugarVista.tieneLibro);
     this.mostrarComents(this.lugarVista.Lugar_id);
     
     this.tieneLibro = this.lugarVista.tieneLibro;
-    this.mostrarLugaresFav();      
+    this.mostrarLugaresFav();     
+    this.checkPuntuado(); 
 
 
   }
@@ -137,14 +137,15 @@ export class LugarComponent implements OnInit {
 
     this.mapaServicio.getPuntuado(id, token).subscribe( (result : any) => {
       this.puntuaciones = result.data;
-      console.log("INTERESA"+result.data);
       
       for (let i = 0; i < this.puntuaciones.length; i++) {
         if (this.puntuaciones[i].id_Lugar == this.lugarVista.Lugar_id) {
 
           this.estaPuntuado = true;
           this.rating = Math.round(this.lugarVista.PuntosTotales/this.lugarVista.VecesPuntuado);
-          console.log(this.estaPuntuado);
+          console.log('vecesPuntuado: '+this.lugarVista.VecesPuntuado);
+          console.log('puntosTotales: '+this.lugarVista.PuntosTotales);
+          console.log('Rating'+this.rating);
           
           return;
 
@@ -183,6 +184,9 @@ export class LugarComponent implements OnInit {
   onStarClicked(starId : number){
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
+
+    this.estaPuntuado = true;
+
 
     this.rating = starId;
     console.log(this.rating);

@@ -9,7 +9,7 @@
                     </div>
                     <div class="col content" *ngFor="let lugar of lugaresFav;">
                         <div class="card" routerLink="/mapa/detalle"
-                            (click)="sendValueIdDetail(lugar.Nombre, lugar.Descripcion, lugar.Foto, lugar.latitud, lugar.longitud, lugar.tieneLibro, lugar.Lugar_id)">
+                            (click)="sendValueIdDetail(lugar.Nombre, lugar.Descripcion, lugar.Foto, lugar.latitud, lugar.longitud, lugar.tieneLibro, lugar.Lugar_id, lugar.PuntosTotales, lugar.VecesPuntuado)">
                             <div class="part2">
                                 <div class="col col-imagen d-flex">
                                     <div class="imagen">

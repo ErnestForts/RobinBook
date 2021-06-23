@@ -143,7 +143,7 @@ public puntuaciones : ValoracionLibro[];
 
           this.estaPuntuado = true;
           this.rating = Math.round(this.libroVista.PuntosTotales/this.libroVista.VecesPuntuado);
-          console.log(this.estaPuntuado);
+          console.log('Rating'+this.rating);
           
           return;
 

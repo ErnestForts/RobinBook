@@ -55,7 +55,11 @@
                                     <ng-container *ngFor="let star of stars;">
                                         <app-star (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()"
                                             (starClicked)="onStarClicked($event)" [starId]="star"
-                                            [rating]="hoverState || rating"></app-star>
+                                            [rating]="hoverState || rating"
+                                            *ngIf="estaPuntuado == false; else yaPuntuado"></app-star>
+                                        <ng-template #yaPuntuado>
+                                            <app-star [starId]="star" [rating]="rating"></app-star>
+                                        </ng-template>
                                     </ng-container>
                                 </div>
 
