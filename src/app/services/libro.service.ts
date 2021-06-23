@@ -130,6 +130,13 @@ export class LibroService {
     });
   }
 
+  getPuntuado(id_User, token){
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    
+    return this.http.get(this.url + `/valorar${id_User}`, options);
+  }
+
   likearComent(datos, token){
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
@@ -137,4 +144,5 @@ export class LibroService {
       console.log(result);
     });
   }
+
 }
