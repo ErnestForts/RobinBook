@@ -11,36 +11,6 @@
                     <p class="textChatSaliente">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
-            <!-- <div class="mensajeSaliente">
-                <div>
-                    <p class="textChatSaliente">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="horaChatSaliente">18:34</p>
-                </div>
-            </div>
-            <div class="mensajeSaliente">
-                <div>
-                    <p class="textChatSaliente">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="horaChatSaliente">18:34</p>
-                </div>
-            </div>
-            <div class="mensajeEntrante">
-                <div>
-                    <p class="textChatEntrante">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="horaChatEntrante">18:34</p>
-                </div>
-            </div>
-            <div class="mensajeEntrante">
-                <div>
-                    <p class="textChatEntrante">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="horaChatEntrante">18:34</p>
-                </div>
-            </div>
-            <div class="mensajeEntrante">
-                <div>
-                    <p class="textChatEntrante">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="horaChatEntrante">18:34</p>
-                </div>
-            </div> -->
         </div>
     </div>
 
@@ -48,8 +18,8 @@
         <input type="textarea" name="" id="">
         <button class="btn"><img src="..\assets\icons\send.svg" alt=""></button>
     </div>
-    <app-header-favoritos class="mobile mobile-header" title="María López" src="..\assets\icons\new-arrow_back.svg"
-        src3="..\assets\pics\perfil.png" id="back" alt="back" alt2="" id2="ocultar" id3="foto-perfil">
+    <app-header-favoritos class="mobile mobile-header" [title]="chatVista.Nombre" src="..\assets\icons\new-arrow_back.svg"
+        [src3]="chatVista.Foto" id="back" alt="back" alt2="" id2="ocultar" id3="foto-perfil">
     </app-header-favoritos>
     <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
 </div>

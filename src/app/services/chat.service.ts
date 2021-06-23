@@ -24,4 +24,9 @@ export class ChatService {
   setChatRoomDetail(chatRoom: Chats) {
     this.chatRoom = chatRoom;
   }
+
+  getChatRoomDetail() {
+    return this.chatRoom;
+  }
+
 }
