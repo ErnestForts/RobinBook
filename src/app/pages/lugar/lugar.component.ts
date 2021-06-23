@@ -7,6 +7,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { ToastFavoritosComponent } from 'src/app/components/toast-favoritos/toast-favoritos.component';
 import { ToastBorrarfavComponent } from 'src/app/components/toast-borrarfav/toast-borrarfav.component';
 import { ComentsLugar } from 'src/app/models/comentsLugar/coments-lugar';
+import { ValoracionLugar } from 'src/app/models/lugar/valoracion-lugar';
 
 
 @Component({
@@ -21,9 +22,12 @@ export class LugarComponent implements OnInit {
   public coments: ComentsLugar[];
   public lugaresFav: Lugar[];
   public esFavorito : boolean = false;
+  public estaPuntuado : boolean = false;
   public stars = [1, 2, 3, 4, 5];
   public rating : number = 1;
   public hoverState : number = 0;
+  public puntuaciones : ValoracionLugar[];
+
 
   constructor(private mapaServicio: MapaServicioService, public dialog: MatDialog) { 
     this.lugarVista = this.mapaServicio.lugarDetail;
@@ -127,6 +131,39 @@ export class LugarComponent implements OnInit {
     this.mapaServicio.modificarLugar(this.lugarVista);
   }
 
+  checkPuntuado(){
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
+
+    this.mapaServicio.getPuntuado(id, token).subscribe( (result : any) => {
+      this.puntuaciones = result.data;
+      console.log("INTERESA"+result.data);
+      
+      for (let i = 0; i < this.puntuaciones.length; i++) {
+        if (this.puntuaciones[i].id_Lugar == this.lugarVista.Lugar_id) {
+
+          this.estaPuntuado = true;
+          this.rating = Math.round(this.lugarVista.PuntosTotales/this.lugarVista.VecesPuntuado);
+          console.log(this.estaPuntuado);
+          
+          return;
+
+        } else {
+          this.estaPuntuado = false;
+          console.log(this.estaPuntuado);
+        }
+      }
+    });
+  }
+
+  modificarEstadoLibro(){
+    if(this.tieneLibro == true){
+      this.tieneLibro = false;
+    } else {
+      this.tieneLibro = true;
+    }
+  }
+
   ngOnInit(): void {
   }
 
@@ -154,7 +191,8 @@ export class LugarComponent implements OnInit {
       lugar_id: this.lugarVista.Lugar_id,
       id_Lugar: this.lugarVista.Lugar_id,
       id_User: id,
-      user_id: id
+      user_id: id,
+      numEstrellas: this.rating
     }
 
     this.mapaServicio.puntuar(datos, token);

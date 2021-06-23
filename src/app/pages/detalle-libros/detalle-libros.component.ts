@@ -22,7 +22,7 @@ public coments: Coments[];
 public librosFav: Libro[];
 public contadorLike: string;
 public esFavorito : boolean = false;
-public estaPuntuado : boolean = true;
+public estaPuntuado : boolean = false;
 public stars = [1, 2, 3, 4, 5];
 public rating : number = 1;
 public hoverState : number = 0;
@@ -142,6 +142,7 @@ public puntuaciones : ValoracionLibro[];
         if (this.puntuaciones[i].id_Libro == this.libroVista.libro_id) {
 
           this.estaPuntuado = true;
+          this.rating = Math.round(this.libroVista.PuntosTotales/this.libroVista.VecesPuntuado);
           console.log(this.estaPuntuado);
           
           return;
@@ -183,7 +184,8 @@ public puntuaciones : ValoracionLibro[];
       libro_id: this.libroVista.libro_id,
       id_Libro: this.libroVista.libro_id,
       id_User: id,
-      user_id: id
+      user_id: id,
+      numEstrellas: this.rating
     }
 
     this.apiService.puntuar(datos, token);

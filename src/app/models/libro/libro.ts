@@ -9,7 +9,7 @@ export class Libro {
     public puntuacion?: number;
     public Genero: string;
 
-    constructor(Titulo: string, Autor: string, Foto: string, Descripcion: string, Genero: string, libro_id?: string){ 
+    constructor(Titulo: string, Autor: string, Foto: string, Descripcion: string, Genero: string, libro_id?: string, puntosTotales?: number, vecesPuntuado?: number){ 
         this.Titulo = Titulo;
         this.Autor = Autor;
         this.Foto = Foto;

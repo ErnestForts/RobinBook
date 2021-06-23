@@ -42,6 +42,12 @@
                             <div class="row pista contenedor-modificar">
                                 <button (click)="modificarLugar();" [routerLink]="['modificar']" class="modificar">Modificar</button>
                             </div>
+                            <div class="row pista contenedor-modificar">
+                                <button (click)="modificarEstadoLibro();" class="modificar" *ngIf="tieneLibro == true; else dejarLibro">Recoger libro</button>
+                                <ng-template #dejarLibro>
+                                <button (click)="modificarEstadoLibro();" class="modificar" >Dejar libro</button>
+                                </ng-template>
+                            </div>
                             <div class="marco">
                                 <div class="estrellas">
                                     <ng-container *ngFor="let star of stars;">

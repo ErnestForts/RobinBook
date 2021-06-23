@@ -28,23 +28,26 @@
                     </div>
 
                     <div class="row">
-                        <div id="mapa"></div>
-                        <div id="popup" class="ol-popup">
-                            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-                            <div routerLink="/mapa/detalle"
-                                (click)="sendValueIdDetail(info.nombre, info.descripcion, info.foto, info.latitud, info.longitud, info.tieneLibro, info.lugar_id)">
-                            
+                        <div class="contenedor-mapa">
+                            <div id="mapa"></div>
+                            <div id="popup" class="ol-popup">
+                                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                                <div routerLink="/mapa/detalle"
+                                    (click)="sendValueIdDetail(info.nombre, info.descripcion, info.foto, info.latitud, info.longitud, info.tieneLibro, info.lugar_id)">
+
                                     <div class="popup-content">
                                         <h6 class="popup-content"><b>{{this.info.nombre}}</b></h6>
-                                        <h6 class="popup-content tieneLibro" *ngIf="info.tieneLibro == true; else elseBlock"><b>Libro
+                                        <h6 class="popup-content tieneLibro"
+                                            *ngIf="info.tieneLibro == true; else elseBlock"><b>Libro
                                                 disponible.</b></h6>
                                         <ng-template #elseBlock>
                                             <h6 class="popup-content noTieneLibro"><b>No hay libro disponible.</b></h6>
                                         </ng-template>
                                     </div>
-                                
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

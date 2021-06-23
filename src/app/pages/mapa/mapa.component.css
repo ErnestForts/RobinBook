@@ -9,11 +9,18 @@
   margin-top: 10vh;
 }
 
-#mapa {
-  width: 100%;
+.contenedor-mapa{
+  margin: 0;
+  padding: 0;
   height: 80vh;
-  background-color: #B9BB91;
   margin: 0 auto;
+
+}
+
+#mapa {
+  background-color: #B9BB91;
+  height: 100%;
+  width: 100%;
 }
 
 

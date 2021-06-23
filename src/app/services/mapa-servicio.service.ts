@@ -120,6 +120,13 @@ export class MapaServicioService {
     });
   }
 
+  getPuntuado(id, token){
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    
+    return this.http.get(this.url + `/valorar/${id}`, options);
+  }
+
   likearComent(datos, token){
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
