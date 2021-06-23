@@ -1,11 +1,11 @@
 <div class="bg">
     <div class="row">
         <div class="content" *ngFor="let mensaje of mensajesVista">
-            <div class="mensajeEntrante">
+            <div class="mensajeEntrante" *ngIf="mensaje.user_id != user_id;">
                 <p class="textChatEntrante"> {{mensaje.mensaje}} </p>
             </div>
             <div class="mensajeSaliente">
-                <p class="textChatSaliente">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="textChatSaliente"> {{mensaje.mensaje}} </p>
             </div>
         </div>
     </div>

@@ -12,11 +12,12 @@ export class ChatComponent implements OnInit {
 
   public chatVista: Chats;
   public mensajesVista: Mensajes[];
+  public user_id: string;
 
   constructor(private chatService: ChatService) { 
     this.chatVista = this.chatService.getChatRoomDetail();
     this.mostrarMensajes(this.chatVista.id_chatRoom);
-    console.log (this.chatVista.id_chatRoom);
+    this.user_id = JSON.parse(localStorage.getItem('user')).user.user_id;
   }
 
   mostrarMensajes(id: string) {
