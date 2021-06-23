@@ -1,30 +1,22 @@
 <div class="bg">
     <div class="row">
-        <div class="content">
+        <div class="content" *ngFor="let mensaje of mensajesVista">
             <div class="mensajeEntrante">
-                <div>
-                    <p class="textChatEntrante">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </div>
+                <p class="textChatEntrante"> {{mensaje.mensaje}} </p>
             </div>
             <div class="mensajeSaliente">
-                <div>
-                    <p class="textChatSaliente">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </div>
+                <p class="textChatSaliente">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
     </div>
     <div class="sendComent">
         <div>
-            <input type="text" placeholder="Escribir comentario" #coment><br>
+            <input type="text" placeholder="Escribir mensaje" #insertar><br>
         </div>
         <div class="contenedor-boton">
-            <button><p>Enviar comentario</p></button>
+            <button (click)="sendComent(insertar.value)"><p>Enviar mensaje</p></button>
         </div>
     </div>
-    <!-- <div class="escritura mobile-footer">
-        <input type="textarea" name="" id="">
-        <button class="btn"><img src="..\assets\icons\send.svg" alt=""></button>
-    </div> -->
     <app-header-favoritos class="mobile mobile-header" [title]="chatVista.Nombre" src="..\assets\icons\new-arrow_back.svg"
         [src3]="chatVista.Foto" id="back" alt="back" alt2="" id2="ocultar" id3="foto-perfil">
     </app-header-favoritos>

@@ -15,9 +15,33 @@ export class ChatComponent implements OnInit {
 
   constructor(private chatService: ChatService) { 
     this.chatVista = this.chatService.getChatRoomDetail();
-    console.log(this.chatVista);
-
+    this.mostrarMensajes(this.chatVista.id_chatRoom);
+    console.log (this.chatVista.id_chatRoom);
   }
+
+  mostrarMensajes(id: string) {
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    this.chatService.obtenerMensajesById(id, token).subscribe( (result: any) => {
+      this.mensajesVista = result.data;
+      console.log(this.mensajesVista);
+      });
+  }
+
+  sendComent(mensaje) {
+
+    if (mensaje != "") {
+      let token = JSON.parse(localStorage.getItem('user')).token;
+      let user_id = JSON.parse(localStorage.getItem('user')).user.user_id;
+      let sendMensaje = new Mensajes(this.chatVista.id_chatRoom, mensaje, user_id);    
+      this.chatService.anyadirMensaje(sendMensaje, token);
+      setTimeout(()=>{
+        this.mostrarMensajes(this.chatVista.id_chatRoom);
+      }, 500)      
+    } else {
+      console.log("comentario vacío");
+    }
+  }
+
 
   ngOnInit(): void {
   }

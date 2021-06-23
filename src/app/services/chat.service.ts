@@ -29,4 +29,18 @@ export class ChatService {
     return this.chatRoom;
   }
 
+  obtenerMensajesById(id: string, token: string): Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(`${this.url}/mensaje/${id}`, options);
+  }
+
+  anyadirMensaje(mensaje, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/mensaje", mensaje, options).subscribe( (result: any) => {
+      console.log(result);
+    });
+  }
+
 }
