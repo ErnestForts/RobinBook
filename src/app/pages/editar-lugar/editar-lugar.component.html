@@ -1,0 +1,54 @@
+<div>
+    <div id="contenedor">
+        <div class="row">
+            <div class="content">
+                <div class="col col-desktop">
+                    <div class="row espacio">
+                        <div class="subirImagen row">
+                            <div class="row info">
+                                <h6 class="col-7">Subir imagen</h6>
+                                <img src="/assets/icons/image.svg" class="col-1" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="formulario">
+                            <div>
+                                <form [formGroup]="placeForm" (ngSubmit)="onSubmit()" class="formFlex">
+                                    <div class="form-group">
+                                        <input formControlName="txtFoto" type="url" class="form-control" placeholder="https://imagen.com" required #foto>
+                                    </div>
+                                    <div class="form-group">
+                                        <input formControlName="txtNombre" type="text" class="form-control negrita" name="nombre" id="nombre"
+                                            placeholder="Nombre lugar" required #nombre>
+                                        <div class="invalid-feedback">
+                                            <div>El nombre del lugar es obligatorio</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea formControlName="txtDescripcion" class="form-control" name="descripcion" id="descripcion"
+                                            placeholder="Frase para encontrar el libro" required #descripcion></textarea>
+                                        <div class="invalid-feedback">
+                                            <div>La frase del libro es obligatoria</div>
+                                        </div>
+                                    </div>                                   
+                                    <div class="row">
+                                        <div class="contenedor-boton">
+                                            <button class="boton" type="submit">Guardar</button>
+                                        </div>
+                                       </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <app-header-favoritos class="mobile mobile-header" title="Lugar" src="..\assets\icons\new-arrow_back.svg" id="back"
+        alt="back"></app-header-favoritos>
+    <app-footer class="desktop-header desktop"></app-footer>
+    <app-footer class="mobile mobile-footer"></app-footer>
+    <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
+</div>

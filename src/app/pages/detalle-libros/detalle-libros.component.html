@@ -6,11 +6,19 @@
         <div class="imagen">
            <img [src]="libroVista.Foto" alt="...">
         </div>
+        <div class="pista contenedor-modificar">
+            <button (click)="modificarLibro();" [routerLink]="['modificar']" class="modificar">Modificar</button>
+        </div>
        <div class="marco">
         <div class="estrellas">
             <ng-container *ngFor="let star of stars;">
-            <app-star (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating"></app-star>
+            <app-star (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating" *ngIf="estaPuntuado == false; else puntito"></app-star>
+            <ng-template #puntito>
+                <app-star [starId]="star" [rating]="rating" ></app-star>
+            </ng-template>
+            
         </ng-container>
+
         </div>
             <div class="send">
                 <a (click)="enviarMail();">

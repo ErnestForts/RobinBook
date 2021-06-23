@@ -37,8 +37,11 @@ import { ToastBorrarfavComponent } from './components/toast-borrarfav/toast-borr
 import { StarComponent } from './components/star/star.component';
 import { EditMiPerfilComponent } from './pages/edit-mi-perfil/edit-mi-perfil.component';
 import { ToastLibromailComponent } from './components/toast-libromail/toast-libromail.component';
+import { EditarLibroComponent } from './pages/editar-libro/editar-libro.component';
+import { EditarLugarComponent } from './pages/editar-lugar/editar-lugar.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FilterPipe } from './pipes/filter.pipe';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -75,6 +78,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     StarComponent,
     EditMiPerfilComponent,
     ToastLibromailComponent,
+    EditarLibroComponent,
+    EditarLugarComponent,
     FilterPipe
   ],
   imports: [
@@ -85,7 +90,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     HttpClientModule,
     MatDialogModule,
     NoopAnimationsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

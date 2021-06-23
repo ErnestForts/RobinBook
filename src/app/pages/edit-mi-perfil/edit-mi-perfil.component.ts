@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { User } from 'src/app/models/user';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
@@ -12,7 +13,7 @@ export class EditMiPerfilComponent implements OnInit {
   public usuario: User;
   public profileForm:FormGroup;
   public urlFotoPerfil: string;
-  constructor(private fb: FormBuilder, private usuarioService: UsuarioService) {
+  constructor(private fb: FormBuilder, private usuarioService: UsuarioService,private snackBar: MatSnackBar) {
     this.usuario = JSON.parse(localStorage.getItem('user')).user;
     this.urlFotoPerfil = this.usuario.Foto;
    }
@@ -34,7 +35,7 @@ export class EditMiPerfilComponent implements OnInit {
     }
     let nombreCompleto:string = this.profileForm.get('txtNombreCompleto').value
     let user = new User(this.usuario.user_id,this.profileForm.get('txtEmail').value, nombreCompleto.split(/ (.+)/)[0],nombreCompleto.split(/ (.+)/)[1],this.profileForm.get('txtTelefono').value,this.profileForm.get('txtFoto').value,this.profileForm.get('txtFrase').value,this.usuario.ranking);
-    
+    console.log(user);
     this.usuarioService.modificarUsuario(user).subscribe((response:any) => {
       if(response.success == 1){
         const userData = {
@@ -43,6 +44,13 @@ export class EditMiPerfilComponent implements OnInit {
         };
         localStorage.setItem('user', JSON.stringify(userData));
         this.urlFotoPerfil = user.Foto;
+        this.snackBar.open('Datos modificados!','Vale',{
+          duration: 2500,
+          verticalPosition: 'bottom', // Allowed values are  'top' | 'bottom'
+          horizontalPosition: 'center', // Allowed values are 'start' | 'center' | 'end' | 'left' | 'right'
+        });
+      }else{
+        console.log(response);
       }
     })
   }
