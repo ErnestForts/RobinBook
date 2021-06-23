@@ -45,7 +45,7 @@ export class EditMiPerfilComponent implements OnInit {
         localStorage.setItem('user', JSON.stringify(userData));
         this.urlFotoPerfil = user.Foto;
         this.snackBar.open('Datos modificados!','Vale',{
-          duration: 2000,
+          duration: 2500,
           verticalPosition: 'bottom', // Allowed values are  'top' | 'bottom'
           horizontalPosition: 'center', // Allowed values are 'start' | 'center' | 'end' | 'left' | 'right'
         });

@@ -345,6 +345,23 @@ input {
     margin-left: 3vw;
 }
 
+.contenedor-modificar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modificar{
+    margin-top: 10px;
+    width: 60%;
+    border-radius: 25px;
+    background-color: #689F38;
+    color: white;
+    border: none;
+
+}
+
 @media only screen and (min-width: 770px) {
 
     .mobile {
