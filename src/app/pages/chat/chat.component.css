@@ -67,6 +67,34 @@
     color: #F7F9C1;
 }
 
+.sendComent {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #388E3C;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.contenedor-boton > button{
+    background-color: #27642A;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 7px;
+    justify-items: center;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 90vw;
+    padding-left: 7px;
+}
+
 .desktop-header,
 .mobile-header {
     position: fixed;
@@ -96,10 +124,6 @@
     padding: 7px;
     border-radius:15px;
     border: none;
-}
-
-button{
-    
 }
 
 @media only screen and (min-width: 751px) {

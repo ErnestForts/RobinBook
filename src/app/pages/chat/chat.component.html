@@ -13,11 +13,18 @@
             </div>
         </div>
     </div>
-
-    <div class="escritura mobile-footer">
+    <div class="sendComent">
+        <div>
+            <input type="text" placeholder="Escribir comentario" #coment><br>
+        </div>
+        <div class="contenedor-boton">
+            <button><p>Enviar comentario</p></button>
+        </div>
+    </div>
+    <!-- <div class="escritura mobile-footer">
         <input type="textarea" name="" id="">
         <button class="btn"><img src="..\assets\icons\send.svg" alt=""></button>
-    </div>
+    </div> -->
     <app-header-favoritos class="mobile mobile-header" [title]="chatVista.Nombre" src="..\assets\icons\new-arrow_back.svg"
         [src3]="chatVista.Foto" id="back" alt="back" alt2="" id2="ocultar" id3="foto-perfil">
     </app-header-favoritos>
