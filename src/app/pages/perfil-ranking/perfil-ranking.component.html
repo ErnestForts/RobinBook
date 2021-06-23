@@ -15,7 +15,8 @@
                         <p class="">{{usuario.Frase}}</p>
                     </div>
                     <div class="row crear-chat" *ngIf="sameUser == false;">
-                        <button><img src="..\assets\icons\message-circle.svg" alt=""></button>
+                        <button (click)="sendChatRoomDetail(usuario.user_id)" *ngIf="newChatRoom == false;"><img src="..\assets\icons\message-circle.svg" alt="">IR AL CHAT ROOM</button>
+                        <button (click)="createChatRoom(usuario.user_id)" *ngIf="newChatRoom == true;"><img src="..\assets\icons\message-circle.svg" alt="">CREAR UN CHAT ROOM</button>
                     </div>
                 </div>
 

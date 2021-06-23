@@ -12,10 +12,10 @@ export class MisChatsComponent implements OnInit {
   public chatRooms: Chats[];
 
   constructor(private chatService: ChatService) { 
-    this.mostrarComents();
+    this.mostrarChatsRooms();
   }
 
-  mostrarComents() {
+  mostrarChatsRooms() {
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.chatService.getChatRooms(id, token).subscribe( (result: any) => {

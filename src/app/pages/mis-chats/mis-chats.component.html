@@ -4,7 +4,7 @@
         <div class="">
             <div id="contenedor">
                     <div class="content" *ngFor="let chat of chatRooms">
-                        <div class="usuario" routerLink="/perfil/chat"  (click)="sendChatRoomDetail(chat.user_id_origen, chat.user_id_destino, chat.id_chatRoom, chat.Nombre, chat.Email, chat.Foto)">
+                        <div class="usuario" routerLink="/perfil/chat" (click)="sendChatRoomDetail(chat.user_id_origen, chat.user_id_destino, chat.id_chatRoom, chat.Nombre, chat.Email, chat.Foto)">
                             <div class="userstyle">
                                 <div>
                                     <img class="imgperfil" [src]="chat.Foto" alt="">
@@ -13,9 +13,9 @@
                                     <h4 class="nombre"><b>{{chat.Nombre}}</b></h4>
                                 </div>
                                 <div>
-                                    <div class="row hora">
+                                    <!-- <div class="row hora">
                                         <p class="hora">11:30</p>
-                                    </div>
+                                    </div> -->
                                     <div class="row caja-burbuja">
                                         <div class="burbuja">
                                             <p>2</p>
