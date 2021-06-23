@@ -10,6 +10,6 @@ export class ChatService {
   private url: string;
 
   constructor(private http: HttpClient) { 
-    this.url = 'https://robinbook.herokuapp.com/book';
+    this.url = 'https://robinbook.herokuapp.com/chat';
   }
 }
