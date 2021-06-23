@@ -3,15 +3,14 @@
     <div class="madre">
         <div class="">
             <div id="contenedor">
-                    <div class="content">
+                    <div class="content" *ngFor="let chat of chatRooms">
                         <div class="usuario">
                             <div class="userstyle">
                                 <div>
-                                    <img class="imgperfil" src="https://www.adl-logistica.org/wp-content/uploads/2019/07/imagen-perfil-sin-foto-300x300.png" alt="">
+                                    <img class="imgperfil" [src]="chat.Foto" alt="">
                                 </div>
                                 <div class="info">
-                                    <h4 class="nombre"><b>Nombre del contacto</b></h4>
-                                    <h4 class="mensaje">Último mensaje de la conversación.</h4>
+                                    <h4 class="nombre"><b>{{chat.Nombre}}</b></h4>
                                 </div>
                                 <div>
                                     <div class="row hora">
@@ -25,94 +24,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="usuario">
-                            <div class="userstyle">
-                                <div>
-                                    <img class="imgperfil" src="https://www.adl-logistica.org/wp-content/uploads/2019/07/imagen-perfil-sin-foto-300x300.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <h4 class="nombre"><b>Nombre del contacto</b></h4>
-                                    <h4 class="mensaje">Último mensaje de la conversación.</h4>
-                                </div>
-                                <div>
-                                    <div class="row hora">
-                                        <p class="hora">11:30</p>
-                                    </div>
-                                    <div class="row caja-burbuja">
-                                        <div class="burbuja">
-                                            <p>2</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="usuario">
-                            <div class="userstyle">
-                                <div>
-                                    <img class="imgperfil" src="https://www.adl-logistica.org/wp-content/uploads/2019/07/imagen-perfil-sin-foto-300x300.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <h4 class="nombre"><b>Nombre del contacto</b></h4>
-                                    <h4 class="mensaje">Último mensaje de la conversación.</h4>
-                                </div>
-                                <div>
-                                    <div class="row hora">
-                                        <p class="hora">11:30</p>
-                                    </div>
-                                    <div class="row caja-burbuja">
-                                        <div class="burbuja">
-                                            <p>2</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <div class="usuario">
-                            <div class="userstyle">
-                                <div>
-                                    <img class="imgperfil" src="https://www.adl-logistica.org/wp-content/uploads/2019/07/imagen-perfil-sin-foto-300x300.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <h4 class="nombre"><b>Nombre del contacto</b></h4>
-                                    <h4 class="mensaje">Último mensaje de la conversación.</h4>
-                                </div>
-                                <div>
-                                    <div class="row hora">
-                                        <p class="hora">11:30</p>
-                                    </div>
-                                    <div class="row caja-burbuja">
-                                        <div class="burbuja">
-                                            <p>2</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <div class="usuario">
-                            <div class="userstyle">
-                                <div>
-                                    <img class="imgperfil" src="https://www.adl-logistica.org/wp-content/uploads/2019/07/imagen-perfil-sin-foto-300x300.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <h4 class="nombre"><b>Nombre del contacto</b></h4>
-                                    <h4 class="mensaje">Último mensaje de la conversación.</h4>
-                                </div>
-                                <div>
-                                    <div class="row hora">
-                                        <p class="hora">11:30</p>
-                                    </div>
-                                    <div class="row caja-burbuja">
-                                        <div class="burbuja">
-                                            <p>2</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
     </div>

@@ -12,4 +12,10 @@ export class ChatService {
   constructor(private http: HttpClient) { 
     this.url = 'https://robinbook.herokuapp.com/chat';
   }
+
+  getChatRooms(id: string, token: string): Observable<any> {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.get(`${this.url}/get/${id}`, options);
+  }
 }
