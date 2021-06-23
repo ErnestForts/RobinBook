@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Libro } from 'src/app/models/libro/libro';
 import { User } from 'src/app/models/user';
+import { ChatService } from 'src/app/services/chat.service';
 import { LibroService } from 'src/app/services/libro.service';
 import { ServerService } from 'src/app/services/server.service';
 
@@ -14,17 +15,20 @@ export class PerfilRankingComponent implements OnInit {
 
   public usuario:User;
   public books:Libro[];
-  routeState: any;
-  noBooks: boolean;
+  public routeState: any;
+  public noBooks: boolean;
   public stars = [1, 2, 3, 4, 5];
-  constructor(private router: Router,private route: ActivatedRoute, private apiService: LibroService) {
+  public sameUser: boolean = false;
+
+  constructor(private router: Router,private route: ActivatedRoute, private apiService: LibroService, private chatService : ChatService) {
     if (this.router.getCurrentNavigation().extras.state) {
       this.routeState = this.router.getCurrentNavigation().extras.state;
       if (this.routeState) {
         this.usuario = this.routeState.user ? JSON.parse(this.routeState.user) : '';
       }
     } 
-    this.getBooks();   
+    this.getBooks(); 
+    this.compararDatos();  
 
     // this.server.get(`/book/fav/${this.usuario.user_id}`).subscribe((response: any) => {
     //   this.books = response.data;
@@ -59,5 +63,16 @@ export class PerfilRankingComponent implements OnInit {
         element.puntuacion = Math.round(element.PuntosTotales/element.VecesPuntuado);
       });
     });
+  }
+
+  compararDatos(){
+
+    const myId = JSON.parse(localStorage.getItem('user')).user.user_id;
+
+    if(this.usuario.user_id == myId ){
+
+      this.sameUser = true;
+
+    }
   }
 } 
