@@ -24,6 +24,12 @@ export class MisChatsComponent implements OnInit {
       });
   }
 
+  sendChatRoomDetail(user_id_origen, user_id_destino, id_chatRoom, Nombre, Email, Foto) {
+    let chatRoom = new Chats(user_id_origen, user_id_destino, id_chatRoom, Nombre, Email, Foto);
+    console.log(chatRoom);
+    this.chatService.setChatRoomDetail(chatRoom);
+  }
+
   ngOnInit(): void {
   }
 
