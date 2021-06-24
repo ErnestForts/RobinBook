@@ -15,7 +15,7 @@
     </div>
     <div class="sendComent">
         <div>
-            <input type="text" placeholder="Escribir mensaje" #insertar><br>
+            <input type="text" placeholder="Escribir mensaje" (keyup)="presionarEnter($event, insertar.value);" #insertar><br>
         </div>
         <div class="contenedor-boton">
             <button (click)="sendComent(insertar.value)">

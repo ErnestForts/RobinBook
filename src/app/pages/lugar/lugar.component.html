@@ -108,7 +108,7 @@
                     </div>
                     <div class="sendComent">
                         <div>
-                            <input type="text" placeholder="Escribir comentario" #coment><br>
+                            <input type="text" placeholder="Escribir comentario" (keyup)="presionarEnter($event, coment.value, lugarVista.Lugar_id);" #coment><br>
                         </div>
                         <div class="contenedor-boton">
                             <button (click)="sendComent(coment.value, lugarVista.Lugar_id)">

@@ -46,4 +46,10 @@ export class ChatComponent implements OnInit {
     this.mostrarMensajes(this.chatVista.id_chatRoom);
   }
 
+  presionarEnter(e, mensaje){     
+    if(e.keyCode === 13) {
+      this.sendComent(mensaje);     
+    }  
+  }
+
 }

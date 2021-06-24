@@ -83,10 +83,10 @@
     </div>
     <div class="sendComent">
         <div>
-            <input type="text" placeholder="Escribir comentario" #coment><br>
+            <input type="text" placeholder="Escribir comentario" (keyup)="presionarEnter($event, coment.value, libroVista.libro_id);" #coment><br>
         </div>
         <div class="contenedor-boton">
-            <button (click)="sendComent(coment.value, libroVista.libro_id)"><p>Enviar comentario</p></button>
+            <button (click)="sendComent(coment.value, libroVista.libro_id);"><p>Enviar comentario</p></button>
         </div>
     </div>
   <app-header-favoritos class="mobile mobile-header" src="..\assets\icons\new-arrow_back.svg" title="Detalle Libro" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>

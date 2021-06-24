@@ -191,5 +191,11 @@ public puntuaciones : ValoracionLibro[];
     this.apiService.puntuar(datos, token);
     
   }
+
+  presionarEnter(e, coment, libroVista){     
+    if(e.keyCode === 13) {
+      this.sendComent(coment, libroVista);     
+    }  
+  }
   
 }

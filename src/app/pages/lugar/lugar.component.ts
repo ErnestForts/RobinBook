@@ -97,7 +97,7 @@ export class LugarComponent implements OnInit {
     this.dialog.open(ToastBorrarfavComponent);
   }
 
-  sendComent (coment, lugar_id) {
+  sendComent(coment, lugar_id) {
 
     if (coment != "") {
       let token = JSON.parse(localStorage.getItem('user')).token;
@@ -201,6 +201,12 @@ export class LugarComponent implements OnInit {
 
     this.mapaServicio.puntuar(datos, token);
     
+  }
+
+  presionarEnter(e, coment, lugarVista){     
+    if(e.keyCode === 13) {
+      this.sendComent(coment, lugarVista);     
+    }  
   }
 
 }
