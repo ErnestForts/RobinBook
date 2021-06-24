@@ -45,7 +45,6 @@ export class NuevoLugarComponent implements OnInit {
   nuevoLugar(nombre : string, descripcion : string, foto : string, latitud : string, longitud : string) {
     let nuevoLugar = new Lugar(nombre, descripcion, foto, Number(latitud), Number(longitud));
     let token = JSON.parse(localStorage.getItem('user')).token;
-    // console.log(latitud, longitud);
     this.mapaServicio.lugarNuevo(nuevoLugar, token);
   }
   

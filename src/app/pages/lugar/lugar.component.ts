@@ -125,9 +125,7 @@ export class LugarComponent implements OnInit {
 
   }
 
-  modificarLugar(){
-    console.log(this.lugarVista);
-    
+  modificarLugar(){  
     this.mapaServicio.modificarLugar(this.lugarVista);
   }
 

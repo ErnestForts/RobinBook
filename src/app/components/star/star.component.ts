@@ -21,18 +21,18 @@ export class StarComponent implements OnInit {
 
   onStarEnter(){
     this.starEnter.emit(this.starId);
-    console.log(this.starId);
+    // console.log(this.starId);
     
   }
 
   onStarLeave(){
     this.starLeave.emit();
-    console.log(this.starId);
+    // console.log(this.starId);
   }
 
   onStarClicked(){
     this.starClicked.emit(this.starId)
-    console.log(this.starId);
+    // console.log(this.starId);
   }
 
 }

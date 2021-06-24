@@ -14,7 +14,6 @@ export class NuevoLibroComponent implements OnInit {
   crearLibro(titulo, autor, foto, descripcion, genero) {
     let libroNew = new Libro(titulo, autor, foto, descripcion, genero);
     let token = JSON.parse(localStorage.getItem('user')).token;
-    console.log(libroNew);
     this.apiService.anyadirLibro(libroNew, token);
   }
 

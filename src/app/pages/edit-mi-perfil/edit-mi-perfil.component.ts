@@ -35,7 +35,6 @@ export class EditMiPerfilComponent implements OnInit {
     }
     let nombreCompleto:string = this.profileForm.get('txtNombreCompleto').value
     let user = new User(this.usuario.user_id,this.profileForm.get('txtEmail').value, nombreCompleto.split(/ (.+)/)[0],nombreCompleto.split(/ (.+)/)[1],this.profileForm.get('txtTelefono').value,this.profileForm.get('txtFoto').value,this.profileForm.get('txtFrase').value,this.usuario.ranking);
-    console.log(user);
     this.usuarioService.modificarUsuario(user).subscribe((response:any) => {
       if(response.success == 1){
         const userData = {

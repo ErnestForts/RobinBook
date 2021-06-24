@@ -26,9 +26,7 @@ export class EditarLibroComponent implements OnInit {
       txtDescripcion: this.libro.Descripcion,
       txtAutor: this.libro.Autor,
       txtGenero: this.libro.Genero
-    });
-    console.log(this.libro);
-    
+    });    
   }
 
   editar() {

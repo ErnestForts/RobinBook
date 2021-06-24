@@ -40,7 +40,6 @@ public puntuaciones : ValoracionLibro[];
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.apiService.obtenerComentsById(id, token).subscribe( (result: any) => {
       this.coments = result.data;
-      console.log(this.coments);
       });
   }
 
@@ -92,22 +91,13 @@ public puntuaciones : ValoracionLibro[];
     let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.apiService.obtenerLibrosFav(id, token).subscribe( (result : any) => {
-
-      console.log(result.data);
       this.librosFav = result.data;
-
       for(let lugar of this.librosFav) {
         if(lugar.libro_id == this.libroVista.libro_id) {
-          
           this.esFavorito = true;
-          console.log(this.esFavorito);
-          break;
-          
+          break;          
         } else {
-
           this.esFavorito = false;
-          console.log(this.esFavorito);
-
         }
       }
     });
@@ -121,12 +111,9 @@ public puntuaciones : ValoracionLibro[];
     setTimeout(()=>{
       this.mostrarComents(this.libroVista.libro_id);
     }, 500)  
-
   }
 
   modificarLibro(){
-    // console.log(this.libroVista);
-    
     this.apiService.modificarLibro(this.libroVista);
   }
 

@@ -73,12 +73,6 @@ export class PaginaLibrosComponent implements OnInit {
     this.statusVolver = 'not-active'
   }
 
-  presionarEnter(e, titulo){     
-    if(e.keyCode === 13) {
-      this.buscarTitulo(titulo);     
-    }  
-  }
-
   ngOnInit(): void {
   }
 

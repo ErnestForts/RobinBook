@@ -22,7 +22,6 @@ export class LugaresFavoritosComponent implements OnInit {
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.mapaServicio.obtenerLugaresFav(id, token).subscribe( (result : any) => {
       this.lugaresFav = result.data;
-      console.log(this.lugaresFav);
       for (let i = 0; i < this.lugaresFav.length; i++) {
         this.lugaresFav[i].puntuacion = Math.round(this.lugaresFav[i].PuntosTotales/this.lugaresFav[i].VecesPuntuado);
             }
@@ -30,12 +29,8 @@ export class LugaresFavoritosComponent implements OnInit {
   }
 
   sendValueIdDetail(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id, puntosTotales, vecesPuntuado) {
-
-    let lugarDetail = new Lugar(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id, puntosTotales, vecesPuntuado);
-    // console.log("CONSOLEANDO "+lugarDetail.Lugar_id);
-    
+    let lugarDetail = new Lugar(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id, puntosTotales, vecesPuntuado);    
     this.mapaServicio.setLugarDetail(lugarDetail);
-
   }
 
   ngOnInit(): void {
