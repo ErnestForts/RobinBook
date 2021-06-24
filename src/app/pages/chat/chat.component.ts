@@ -38,7 +38,7 @@ export class ChatComponent implements OnInit {
       }, 400)      
     } else {
       console.log("comentario vacío");
-    }
+    }  
   }
 
 

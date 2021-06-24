@@ -104,11 +104,7 @@ export class PerfilRankingComponent implements OnInit {
         console.log(this.lugarRoom)
       }
     }
-  }
-
-  sendChatRoomDetail() {
     let chatRoom = this.chatRooms[this.lugarRoom];
-    console.log(chatRoom)
     this.chatService.setChatRoomDetail(chatRoom);
   }
 
@@ -117,9 +113,9 @@ export class PerfilRankingComponent implements OnInit {
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     let newRoom = { user_id_origen: id, user_id_destino: user_id };
     this.chatService.crearChatRoom(newRoom, token).subscribe( (result: any) => {
-      this.sendChatRoomDetail();
-      console.log(result);
     });
-  }
-  
+    setTimeout(() => {
+      this.router.navigate(['/perfil/mis-chats']);
+    }, 300)
+  }  
 } 
