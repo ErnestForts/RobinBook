@@ -24,7 +24,6 @@ export class ChatComponent implements OnInit {
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.chatService.obtenerMensajesById(id, token).subscribe( (result: any) => {
       this.mensajesVista = result.data;
-      console.log(this.mensajesVista);
       });
   }
 

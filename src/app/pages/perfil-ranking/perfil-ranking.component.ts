@@ -22,6 +22,7 @@ export class PerfilRankingComponent implements OnInit {
   public sameUser: boolean = false;
   public newChatRoom: boolean = true;
   public chatRooms: Chats[];
+  public lugarRoom: number;
 
 
   constructor(private router: Router,private route: ActivatedRoute, private apiService: LibroService, private chatService : ChatService) {
@@ -92,7 +93,6 @@ export class PerfilRankingComponent implements OnInit {
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.chatService.getChatRooms(id, token).subscribe( (result: any) => {
       this.chatRooms = result.data;
-      console.log(this.chatRooms);
       });
   }
 
@@ -100,18 +100,19 @@ export class PerfilRankingComponent implements OnInit {
     for(let chats of this.chatRooms) {
       if(chats.user_id_origen === user_id || chats.user_id_destino === user_id) {
         this.newChatRoom = false;
+        this.lugarRoom = this.chatRooms.indexOf(chats);
       }
     }
   }
 
-  sendChatRoomDetail(user_id) {
-    // let chatRoom = new Chats(user_id_origen, user_id_destino, id_chatRoom, Nombre, Email, Foto);
-    // console.log(chatRoom);
-    // this.chatService.setChatRoomDetail(chatRoom);
+  sendChatRoomDetail() {
+    let chatRoom = this.chatRooms[this.lugarRoom];
+    this.chatService.setChatRoomDetail(chatRoom);
   }
 
   createChatRoom(user_id) {
-
+    let id = JSON.parse(localStorage.getItem('user')).user.user_id;
+    // let newChat = new Chats(id, user_id)
   }
   
 } 
