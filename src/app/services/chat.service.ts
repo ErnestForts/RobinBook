@@ -43,4 +43,12 @@ export class ChatService {
     });
   }
 
+  crearChatRoom(newRoom, token): any {
+    let headers = new HttpHeaders().set("authorization", "bearer " + token);
+    let options = { headers: headers };
+    return this.http.post(this.url + "/new", newRoom, options).subscribe( (result: any) => {
+      console.log(result);
+    });
+  }
+
 }

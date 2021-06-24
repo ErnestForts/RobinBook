@@ -111,8 +111,10 @@ export class PerfilRankingComponent implements OnInit {
   }
 
   createChatRoom(user_id) {
+    let token = JSON.parse(localStorage.getItem('user')).token;
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
-    // let newChat = new Chats(id, user_id)
+    let newRoom = { user_id_origen: id, user_id_destino: user_id };
+    this.chatService.crearChatRoom(newRoom, token);
   }
   
 } 
