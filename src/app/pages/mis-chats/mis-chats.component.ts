@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { set } from 'ol/transform';
 import { Chats } from 'src/app/models/chats/chats';
+import { Mensajes } from 'src/app/models/chats/mensajes';
 import { ChatService } from 'src/app/services/chat.service';
 
 @Component({
@@ -10,6 +12,7 @@ import { ChatService } from 'src/app/services/chat.service';
 export class MisChatsComponent implements OnInit {
 
   public chatRooms: Chats[];
+  public idRoomAndMensajes: Mensajes[];
 
   constructor(private chatService: ChatService) { 
     this.mostrarChatsRooms();
@@ -28,7 +31,22 @@ export class MisChatsComponent implements OnInit {
     this.chatService.setChatRoomDetail(chatRoom);
   }
 
-  ngOnInit(): void {
-  }
+  // getChatRoomsDetails() {
+  //   this.idRoomAndMensajes = [];
+  //   let token = JSON.parse(localStorage.getItem('user')).token;
+  //   for(let chat of this.chatRooms) {
+  //     this.chatService.obtenerMensajesById(chat.id_chatRoom, token).subscribe( (result: any) => {
+  //       this.idRoomAndMensajes.push(result.data);
+  //       });
+  //   }
+  // }
 
+  ngOnInit(): void {
+  //   setTimeout(() => {
+  //     this.getChatRoomsDetails();
+  //   }, 500)
+  //   setTimeout(()=> {
+  //     console.log(this.idRoomAndMensajes)
+  //   }, 1000);
+  }
 }

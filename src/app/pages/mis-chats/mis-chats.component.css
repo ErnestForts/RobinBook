@@ -81,6 +81,10 @@ h3 {
     width: 20vw;
 }
 
+.logo{
+    position: static;
+    width: 20vw;
+}
 .info{
     justify-self: flex-start;
     padding-left: 3vw;
