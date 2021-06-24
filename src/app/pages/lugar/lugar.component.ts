@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Lugar } from 'src/app/models/lugar/lugar';
 import { MapaServicioService } from 'src/app/services/mapa-servicio.service';
 import { Lugarfav } from 'src/app/models/lugar/lugarfav';
@@ -27,7 +27,6 @@ export class LugarComponent implements OnInit {
   public rating : number = 1;
   public hoverState : number = 0;
   public puntuaciones : ValoracionLugar[];
-  // @ViewChild('coment') inputComent;
 
 
   constructor(private mapaServicio: MapaServicioService, public dialog: MatDialog) { 
@@ -99,7 +98,6 @@ export class LugarComponent implements OnInit {
   }
 
   sendComent(coment, lugar_id) {
-    // this.clearComent();
 
     if (coment != "") {
       let token = JSON.parse(localStorage.getItem('user')).token;
@@ -206,14 +204,9 @@ export class LugarComponent implements OnInit {
   }
 
   presionarEnter(e, coment, lugarVista){
-    // this.clearComent();
     if(e.keyCode === 13) {
       this.sendComent(coment, lugarVista);     
     }  
   }
-
-  // clearComent(){
-  //   this.inputComent.nativeElement.value = ' ';
-  // }
 
 }
