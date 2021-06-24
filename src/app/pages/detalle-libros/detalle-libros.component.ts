@@ -123,20 +123,20 @@ public puntuaciones : ValoracionLibro[];
 
     this.apiService.getPuntuado(id, token).subscribe( (result : any) => {
       this.puntuaciones = result.data;
-      console.log("INTERESA"+result.data);
+      // console.log("INTERESA"+result.data);
       
       for (let i = 0; i < this.puntuaciones.length; i++) {
         if (this.puntuaciones[i].id_Libro == this.libroVista.libro_id) {
 
           this.estaPuntuado = true;
           this.rating = Math.round(this.libroVista.PuntosTotales/this.libroVista.VecesPuntuado);
-          console.log('Rating'+this.rating);
+          // console.log('Rating'+this.rating);
           
           return;
 
         } else {
           this.estaPuntuado = false;
-          console.log(this.estaPuntuado);
+          // console.log(this.estaPuntuado);
         }
       }
     });
@@ -148,13 +148,13 @@ public puntuaciones : ValoracionLibro[];
   //ESTRELLAS
   onStarEnter(starId : number){
     this.hoverState = starId;
-    console.log(this.hoverState);
+    // console.log(this.hoverState);
     
   }
 
   onStarLeave(){
     this.hoverState = 0;
-    console.log(this.hoverState);
+    // console.log(this.hoverState);
 
   }
 
@@ -165,7 +165,7 @@ public puntuaciones : ValoracionLibro[];
     this.estaPuntuado = true;
 
     this.rating = starId;
-    console.log(this.rating);
+    // console.log(this.rating);
 
     let datos = {
       libro_id: this.libroVista.libro_id,

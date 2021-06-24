@@ -70,7 +70,7 @@ export class MapaServicioService {
   borrarLugar(id: string): any {
     let options = { headers: new HttpHeaders({'Content-Type': 'application/json'}), body: { id: `${id}`}};
     return this.http.delete(this.url, options).subscribe( (result: any) => {
-      console.table(result);
+      // console.table(result);   
     });
   }
 
@@ -78,7 +78,7 @@ export class MapaServicioService {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
     return this.http.post(this.url + "/newfav", lugarFav, options).subscribe( (result: any) => {
-      console.log(result);
+      // console.log(result);
     });
   }
 
@@ -86,7 +86,7 @@ export class MapaServicioService {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers, body: lugarFav };
     return this.http.delete(this.url + "/deletefav", options).subscribe( (result: any) => {
-      console.log(result);
+      // console.log(result);
     });
   }
 
@@ -108,7 +108,7 @@ export class MapaServicioService {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
     return this.http.post(this.url + "/coment", rawComent, options).subscribe( (result: any) => {
-      console.log(result);
+      // console.log(result);
     });
   }
 
@@ -116,7 +116,7 @@ export class MapaServicioService {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
     return this.http.post(this.url + "/puntuar", datos, options).subscribe( (result: any) => {
-      console.log(result);
+      // console.log(result);
     });
   }
 
@@ -131,7 +131,7 @@ export class MapaServicioService {
     let headers = new HttpHeaders().set("authorization", "bearer " + token);
     let options = { headers: headers };
     return this.http.post(this.url + "/like", datos, options).subscribe( (result: any) => {
-      console.log(result);
+      // console.log(result);
     });
   }
 

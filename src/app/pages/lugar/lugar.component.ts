@@ -43,7 +43,7 @@ export class LugarComponent implements OnInit {
   mostrarComents(id: string): void {
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.mapaServicio.obtenerComentsById(id, token).subscribe( (result: any) => {
-      console.table(result.data);
+      // console.table(result.data);
       this.coments = result.data;
       });
   }
@@ -53,20 +53,20 @@ export class LugarComponent implements OnInit {
     let id = JSON.parse(localStorage.getItem('user')).user.user_id;
     this.mapaServicio.obtenerLugaresFav(id, token).subscribe( (result : any) => {
 
-      console.log(result.data);
+      // console.log(result.data);
       this.lugaresFav = result.data;
 
       for(let lugar of this.lugaresFav) {
         if(lugar.Lugar_id == this.lugarVista.Lugar_id) {
           
           this.esFavorito = true;
-          console.log(this.esFavorito);
+          // console.log(this.esFavorito);
           break;
           
         } else {
 
           this.esFavorito = false;
-          console.log(this.esFavorito);
+          // console.log(this.esFavorito);
 
         }
       }
@@ -141,15 +141,15 @@ export class LugarComponent implements OnInit {
 
           this.estaPuntuado = true;
           this.rating = Math.round(this.lugarVista.PuntosTotales/this.lugarVista.VecesPuntuado);
-          console.log('vecesPuntuado: '+this.lugarVista.VecesPuntuado);
-          console.log('puntosTotales: '+this.lugarVista.PuntosTotales);
-          console.log('Rating'+this.rating);
+          // console.log('vecesPuntuado: '+this.lugarVista.VecesPuntuado);
+          // console.log('puntosTotales: '+this.lugarVista.PuntosTotales);
+          // console.log('Rating'+this.rating);
           
           return;
 
         } else {
           this.estaPuntuado = false;
-          console.log(this.estaPuntuado);
+          // console.log(this.estaPuntuado);
         }
       }
     });
@@ -169,13 +169,13 @@ export class LugarComponent implements OnInit {
   //ESTRELLAS
   onStarEnter(starId : number){
     this.hoverState = starId;
-    console.log(this.hoverState);
+    // console.log(this.hoverState);
     
   }
 
   onStarLeave(){
     this.hoverState = 0;
-    console.log(this.hoverState);
+    // console.log(this.hoverState);
 
   }
 
