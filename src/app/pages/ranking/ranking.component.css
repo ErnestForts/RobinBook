@@ -3,22 +3,24 @@
     padding: 0;
 }
 
-.bg{
+.bg {
     background-color: #F7F9C1;
+
 }
-.content{
-    margin-top: 3vw;
+
+.content {
     flex: 1 0 auto;
     background-color: #F7F9C1;
     justify-content: center;
     align-content: center;
-    height: 80vh;
-    width: 100vw;
-    margin-top: 10vh;
     overflow-y: scroll;
+    padding-top: 23%;
+    padding-bottom: 23%;
+
 }
-.busqueda{
-    margin-top: 1vh;
+
+.busqueda {
+    margin-top: 1%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,12 +28,12 @@
 }
 
 .buscar {
-    border-radius: 20px;
     border: 0;
     width: 60vw;
     padding: 2vw;
 }
-.userstyle{
+
+.userstyle {
     display: grid;
     grid-template-columns: 20vw 50vw 25vw;
     width: 100vw;
@@ -39,36 +41,35 @@
     justify-items: center;
     padding: 3vw;
 }
-.imgperfil{
+
+.imgperfil {
     position: static;
     border-radius: 50%;
     width: 20vw;
 }
 
-.info{
+.info {
     justify-self: flex-start;
     padding-left: 3vw;
 }
 
 .nombre {
-    font-size: 5vw;
     color: #31384F;
     margin: 0;
 }
+
 .subtitulo {
-    font-size: 4vw;
     color: #838795;
     margin-top: 1vw;
 }
 
-.puntos{
+.puntos {
     font-weight: 600;
-    font-size: 8vw;
-    color: #388E3C;    
+    color: #388E3C;
 }
 
-.usuario{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.usuario {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     padding-bottom: 2vw;
     padding-top: 2vw;
@@ -79,25 +80,48 @@
 }
 
 
-.desktop-header, .mobile-header{
+.desktop-header,
+.mobile-header {
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
+    height: 10%;
 }
-.desktop-footer, .mobile-footer{
+
+.desktop-footer,
+.mobile-footer {
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
+    height: 10%;
 }
+
 @media only screen and (min-width: 770px) {
-    .mobile{
+    .mobile {
         display: none;
     }
 
 }
+
 @media only screen and (max-width: 769px) {
-    .desktop{
+    .desktop {
         display: none;
     }
-    
+
+}
+
+@media (min-aspect-ratio: 141/398) and (max-aspect-ratio: 300/667){
+    .content{
+        padding-top: 30%;
+        padding-bottom: 30%;
+
+    }
+}
+
+@media (max-aspect-ratio: 141/398){
+    .content{
+        padding-top: 60%;
+        padding-bottom: 60%;
+
+    }
 }

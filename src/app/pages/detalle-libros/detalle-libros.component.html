@@ -1,6 +1,3 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
 <div class="madre" #pagina>
     <div class="contenedor" >
         <div class="imagen">
@@ -37,28 +34,28 @@
             </ng-template>
        </div>
        <div class="description">
-            <p style="color:rgb(168, 164, 164);">
+            <h4 style="color:rgb(168, 164, 164);">
                 TITULO
-            </p>
-            <h4>
-                {{libroVista.Titulo}}
             </h4>
-            <p style="color:rgb(168, 164, 164);">
+            <h3>
+                {{libroVista.Titulo}}
+            </h3>
+            <h4 style="color:rgb(168, 164, 164);">
                 DESCRIPCION
-            </p>
-            <p>
+            </h4>
+            <h3>
                 {{libroVista.Descripcion}}
-            </p>
-            <p>
-                <br><b>Autor: </b>  {{libroVista.Autor}}<br><b>Genero: </b>  {{libroVista.Genero}}
-            </p>
+            </h3>
+            <h4>
+                <b>Autor: </b>  {{libroVista.Autor}}
+            </h4>
+            <h4>
+                <b>Genero: </b>  {{libroVista.Genero}}
+            </h4>
         </div>
         <div class="divisor" *ngIf="coments">
             <div class="reviews">
                 {{coments.length}} REVIEWS
-            </div>
-            <div class="bajar">
-                MOST INTERESTING<a><img src="..\assets\icons\arrow-down.svg" id="" alt=""></a>
             </div>
         </div>
         <div class="comentarios" *ngFor="let coment of coments;" #comentarios>

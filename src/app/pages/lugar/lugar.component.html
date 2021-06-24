@@ -1,5 +1,5 @@
 <div>
-    <div>
+    <div class="madre">
         <div class="row">
             <div id="contenedor">
                 <div class="col col-nueva col-desktop">
@@ -16,27 +16,27 @@
                             </svg>
                         </div>
                         <div class="col col-nueva favoritos">
-                            <h6 class="">{{lugarVista.Nombre}}</h6>
+                            <h5 class="">{{lugarVista.Nombre}}</h5>
                         </div>
                         <div class="col-1 col-special">
                         </div>
                     </div>
-                    <div class="row content">
+                    <div class="content">
                         <div class="ancho-completo">
                             <div class="container imagen">
                                 <img [src]="lugarVista.Foto" class="img-thumbnail" alt="...">
                             </div>
                             <div class="row pista">
-                                <h6><b>{{lugarVista.Nombre}}</b></h6>
+                                <h5><b>{{lugarVista.Nombre}}</b></h5>
                             </div>
                             <div class="row pista">
-                                <h6>{{lugarVista.Descripcion}}</h6>
+                                <h5>{{lugarVista.Descripcion}}</h5>
                             </div>
                             <div class="row pista">
-                                <h6 *ngIf="tieneLibro == true; else elseBlock" class="tieneLibro"><b>Libro
-                                        disponible.</b></h6>
+                                <h5 *ngIf="tieneLibro == true; else elseBlock" class="tieneLibro"><b>Libro
+                                        disponible.</b></h5>
                                 <ng-template #elseBlock>
-                                    <h6 class="noTieneLibro"><b>No hay ningún libro en estos momentos.</b></h6>
+                                    <h5 class="noTieneLibro"><b>No hay ningún libro en estos momentos.</b></h5>
                                 </ng-template>
                             </div>
                             <div class="row pista contenedor-modificar">
@@ -78,10 +78,7 @@
                         </div>
                         <div class="divisor" *ngIf="coments">
                             <div class="reviews">
-                                {{coments.length}} REVIEWS
-                            </div>
-                            <div class="bajar">
-                                MOST INTERESTING<a><img src="..\assets\icons\arrow-down.svg" id="" alt=""></a>
+                                <h5>{{coments.length}} REVIEWS</h5>
                             </div>
                         </div>
                         <div class="comentarios" *ngFor="let coment of coments;">
@@ -91,16 +88,16 @@
                                         <img [src]="coment.Foto" id="" alt="">
                                     </div>
                                     <div class="comentario">
-                                        <p><b>{{coment.Nombre}}</b><br>{{coment.Coment}}</p>
+                                        <h5><b>{{coment.Nombre}}</b><br>{{coment.Coment}}</h5>
                                     </div>
                                 </div>
                                 <div class="fecha">
                                     <div>
-                                        <p>
+                                        <h5>
                                             <a class="btn btn-counter multiple-count"
                                                 [attr.data-count]="coment.LikeComent"
                                                 (click)="contadorLikes(coment.id_ComentLugar)"><span>&#x2764;</span></a>
-                                        </p>
+                                        </h5>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +109,7 @@
                         </div>
                         <div class="contenedor-boton">
                             <button (click)="sendComent(coment.value, lugarVista.Lugar_id)">
-                                <p>Enviar comentario</p>
+                                <h6>Enviar comentario</h6>
                             </button>
                         </div>
                     </div>

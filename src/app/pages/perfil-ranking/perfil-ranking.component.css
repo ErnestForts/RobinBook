@@ -3,56 +3,63 @@
     padding: 0;
 }
 
-.bg{
+.bg {
     background-color: #F7F9C1;
-    height: 80vh;
-    width: 100vw;
-    margin-top: 10vh;
+    height: 100%;
+    width: 100%;
     overflow-y: scroll;
+    display: grid;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+
 }
 
-.content{
+.contenedor-content {
+
     display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    margin-top: 3vw;
+
+
+}
+
+.content {
+    margin: auto;
+    flex: 1 0 auto;
     background-color: #F7F9C1;
+    justify-content: center;
+    align-content: center;
 }
 
-.parte1{
+.parte1 {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
-.imgperfil{
+.imgperfil {
     border-radius: 50%;
     width: 40vw;
 }
 
-.nombre > p {
+.nombre>p {
     font-weight: 600;
-    font-size: 6vw;
     text-align: center;
     color: #31384F;
 }
 
-.subtitulo > p{
+.subtitulo>p {
     font-weight: 500;
-    font-size: 3.2vw;
     text-align: center;
     color: #838795;
 }
 
-.line{
+.line {
     width: 100vw;
     border-bottom: 0.5px solid #E2E3E4;
     padding-top: 6vw;
 }
 
-.alinelibros{
+.alinelibros {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,63 +67,71 @@
     margin-bottom: 5vw;
 }
 
-.textlibros{
+.textlibros {
     font-weight: 600;
-    font-size: 3.3vw;
     padding-top: 0.5vw;
     text-transform: uppercase;
     color: #C2C4CB;
 }
 
-.imglibro{
+.contenedor-imagen {}
+
+.imglibro {
     width: 19.4vw;
     height: 25vw;
     border-radius: 12px;
     margin: 0px 16px;
 }
 
-.librostyle{
+.librostyle {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
     position: static;
     margin-bottom: 5.5vw;
+    width: 100%;
 }
 
-.titlelibro{
+.titlelibro {
     font-weight: 600;
-    font-size: 4.4vw;
     color: #31384F;
 }
 
-.titlelibro2{
-    font-size: 3.5vw;
+.titlelibro2 {
     color: #5A6072;
 }
 
 .desktop-header, .mobile-header{
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
+    height: 10%;
+  }
+  
+  .desktop-footer, .mobile-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+  }
+
+app-header-favoritos{
+    height: 10%;
     background-color: #388E3C;
 
 }
-.desktop-footer, .mobile-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-}
 
 @media only screen and (min-width: 770px) {
-    .mobile{
+    .mobile {
         display: none;
     }
 
 }
+
 @media only screen and (max-width: 769px) {
-    .desktop{
+    .desktop {
         display: none;
     }
-    
+
 }

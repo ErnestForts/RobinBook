@@ -3,11 +3,17 @@
     padding: 0;
 }
 
+app-header-favoritos{
+    height: 10%;
+    background-color: #388E3C;
+
+}
+
 .bg{
     background-color: #F7F9C1;
-    height: 80vh;
+    height: 100%;
     width: 100vw;
-    margin-top: 10vh;
+    margin-top: 10%;
     overflow-y: scroll;
 }
 
@@ -22,7 +28,6 @@
 .subtitulo{
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
     line-height: 20px;
     text-align: center;
     color: white;
@@ -34,7 +39,7 @@
 }
 
 .imgperfil{
-    border-radius: 200px;
+    border-radius: 50%;
     width: 30vw;
 }
 
@@ -57,7 +62,6 @@
 
 .titles{
     font-weight: 600;
-    font-size: 3.2vw;
     line-height: 20px;
     text-transform: uppercase;
     color: #C2C4CB;
@@ -70,38 +74,34 @@
 }
 
 .title2{
-    font-size: 3.5vw;
     color: #5A6072;
 }
 
 .title3{
     font-weight: 600;
-    font-size: 4.5vw;
     color: black;
 }
 
 .desktop-header, .mobile-header{
     position: fixed;
     top: 0;
-    width: 100vw;
-    background-color: #388E3C;
-
-}
-.desktop-footer, .mobile-footer{
+    width: 100%;
+    height: 10%;
+  }
+  
+  .desktop-footer, .mobile-footer{
     position: fixed;
     bottom: 0;
-    width: 100vw;
-}
+    width: 100%;
+    height: 10%;
+  }
 
 .boton {
     background-color: #689F38;
-    border: none;
-    border-radius: 5px;
     color: white;
     height: 40px;
-    font-size: 25px;
-    margin-top: 1vh;
-    margin-bottom: 2vh;;
+    margin-top: 1%;
+    margin-bottom: 2%;;
 }
 
 @media only screen and (min-width: 770px) {

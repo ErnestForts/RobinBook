@@ -1,11 +1,19 @@
 * {
     margin: 0;
+    padding: 0;
+
+}
+
+app-header-favoritos{
+    height: 10%;
+    background-color: #388E3C;
+
 }
 
 #contenedor {
     background-color: #F7F9C1;
-    height: 80vh;
-    margin-top: 10vh;
+    height: 100%;
+    margin-top: 10%;
     overflow-y: scroll;
     justify-items: center;
     padding: 0;
@@ -19,12 +27,12 @@
 }
 
 .espacio{
-    padding-top: 5vh;
+    padding-top: 5%;
 }
 
 .subirImagen {
     width: 45%;
-    height: 20vh;
+    height: 20%;
     padding: 10px;
     margin: 0 auto;
     border: 10px solid #B9BB91;
@@ -45,12 +53,11 @@ img{
 
 .formulario {
     width: 45%;
-    height: 14vh;
+    height: 14%;
     margin: 0 auto;
     border: 10px solid #B9BB91;
     border-top: none;
     background-color: #B9BB91;
-    font-size: 2vw;
 }
 
 .form-group{
@@ -62,7 +69,6 @@ input, textarea{
     border: 0.2vw solid #B9BB91;
 
     color: white;
-    font-size: 1vw;
     resize: none;
     text-align: center;
 }
@@ -88,7 +94,6 @@ input, textarea{
     color: white;
     text-align: right;
     height: auto;
-    font-size: 1vw;
 }
 
 .desktop-row {
@@ -96,20 +101,19 @@ input, textarea{
     margin: auto;
 }
 
-.desktop-header, .mobile-header {
+.desktop-header, .mobile-header{
     position: fixed;
     top: 0;
-    width: 100vw;
-    background-color: #388E3C;
-
-}
-
-.desktop-footer,
-.mobile-footer {
+    width: 100%;
+    height: 10%;
+  }
+  
+  .desktop-footer, .mobile-footer{
     position: fixed;
     bottom: 0;
-    width: 100vw;
-}
+    width: 100%;
+    height: 10%;
+  }
 
 .col-desktop {
     padding-top: 5rem;
@@ -121,7 +125,6 @@ input, textarea{
 }
 
 h6 {
-    font-size: 1.3vw;
 }
 
 .col {
@@ -145,7 +148,7 @@ svg {
 .prueba {
     margin: 0;
     width: 2vw;
-    height: 2vh;
+    height: 2%;
 }
 
 .contenedor-boton{
@@ -156,11 +159,9 @@ svg {
 .boton {
     background-color: #689F38;
     border: none;
-    border-radius: 5px;
     color: white;
     height: 15vw;
     width: 50vw;
-    font-size: 7vw;   
 }
 
 .coordenada{
@@ -170,7 +171,6 @@ svg {
 .coordenada > div > label{
     display: block;
     text-align: center;
-    font-size: 4vw;
 }
 
 
@@ -180,7 +180,7 @@ svg {
     }
 
     #contenedor {
-        padding-top: 12vh;
+        padding-top: 12%;
     }
 
     .espacio{
@@ -194,7 +194,6 @@ svg {
         border: 10px solid #B9BB91;
         border-top: none;
         background-color: #B9BB91;
-        font-size: 2vw;
     }
 
     .col-desktop{
@@ -247,7 +246,7 @@ svg {
         width: 100%;
         height: 14vw;
         margin: 0 auto;
-        margin-top: 2vh;
+        margin-top: 2%;
         border: none;
         background-color: rgba(0, 0, 0, 0);
     }
@@ -261,7 +260,6 @@ svg {
         border: 0.2vw solid #B9BB91;
         margin-top: 2vw;
         border-radius: 10px;
-        font-size: 4.5vw;
         color: #388E3C;
     }
 

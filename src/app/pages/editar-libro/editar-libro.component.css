@@ -3,10 +3,16 @@
     padding: 0;
 }
 
+app-header-favoritos{
+    height: 10%;
+    background-color: #388E3C;
+
+}
+
 .contenedor {
     background-color: #F7F9C1;
-    height: 80vh;
-    margin-top: 10vh;
+    height: 100%;
+    margin-top: 10%;
     overflow-y: scroll;
     justify-items: center;
 }
@@ -22,7 +28,6 @@
 
 .col-3 > h4{
     align-self: center;
-    font-size: 5vw;
     font-weight: 600;
     padding-top: 2.3vw;
 }
@@ -33,7 +38,6 @@
 }
 
 .descripcion > h4{
-    font-size: 5vw;
     font-weight: 600;
 }
 
@@ -48,24 +52,18 @@
 
 .rellenar {
     border: 0.2vw solid #B9BB91;
-    border-radius: 10px;
     width: 85vw;
     padding: 2vw;
     resize: none;
-    font-size: 4.5vw;
 }
 
 .boton {
     background-color: #689F38;
-    border: none;
-    border-radius: 5px;
     color: white;
     height: 40px;
-    font-size: 25px;
 }
 
 select {
-    font-size: .9rem;
     padding: 2px 5px;
 }
 
@@ -78,16 +76,16 @@ select {
 .desktop-header, .mobile-header{
     position: fixed;
     top: 0;
-    width: 100vw;
-    background-color: #388E3C;
-
-}
-
-.desktop-footer, .mobile-footer{
+    width: 100%;
+    height: 10%;
+  }
+  
+  .desktop-footer, .mobile-footer{
     position: fixed;
     bottom: 0;
-    width: 100vw;
-}
+    width: 100%;
+    height: 10%;
+  }
 
 .contenedor-guardar{
     display: flex;
@@ -97,9 +95,7 @@ select {
 }
 
 .guardar{
-    padding: 7px;
     width: 60%;
-    border-radius: 25px;
     background-color: #689F38;
     color: white;
     border: none;

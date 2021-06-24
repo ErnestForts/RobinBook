@@ -1,7 +1,6 @@
 <div class="bg">
-    <div class="row">
+    <div class="contenedor-content">
         <div class="content">
-
             <div class="parte1">
                 <div>
                     <img class="imgperfil" src={{usuario.Foto}} alt="">
@@ -28,7 +27,9 @@
             </div>
             <div *ngFor="let book of books; let i = index" class="librostyle" routerLink="/libros/detalle"
                 (click)="sendLibroDetail(book.Titulo, book.Autor, book.Descripcion, book.Foto, book.Genero, book.libro_id)">
-                <img class="imglibro" src={{book.Foto}} alt="">
+                <div class="contenedor-imagen">
+                    <img class="imglibro" src={{book.Foto}} alt="">
+                </div>
                 <div>
                     <p class="titlelibro">{{book.Titulo}}</p>
                     <div>
@@ -43,7 +44,7 @@
             </div>
         </div>
     </div>
-    <app-header-favoritos class="mobile mobile-header" title="Perfil Ranking" src="..\assets\icons\new-arrow_back.svg"
+    <app-header-favoritos class="mobile mobile-header" title="Perfil" src="..\assets\icons\new-arrow_back.svg"
         id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
     <app-footer class="desktop-header desktop"></app-footer>
     <app-footer class="mobile mobile-footer"></app-footer>

@@ -1,30 +1,27 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
 <div class="madre">
     <div class="contenedor">
         <div class="content">
-            <div class="row izq">
-                <div class="col-3">
+            <div class="info">
+                <div class="descripcion">
                     <h4>Título</h4>
                 </div>
-                <div class="col">
+                <div class="info-input">
                     <input type="text" placeholder="Rellenar Título" #titulo>
                 </div>
             </div>
-            <div class="row izq">
-                <div class="col-3">
+            <div  class="info">
+                <div class="descripcion">
                     <h4>Autor</h4>
                 </div>
-                <div class="col">
+                <div class="info-input">
                     <input type="text" placeholder="Rellenar Autor" #autor>
                 </div>
             </div>
-            <div class="row izq">
-                <div class="col-3">
+            <div class="info">
+                <div class="descripcion">
                     <h4>Género</h4>
                 </div>
-                <div class="col">
+                <div>
                     <select name="pets" id="pet-select" #genero>
                         <option value="">Selecciona el Género</option>
                         <option value="fantastica">Fantástica</option>
@@ -37,16 +34,16 @@
                     </select>
                 </div>
             </div>
-            <div class="row izq">
-                <div class="col-3">
+            <div class="info">
+                <div class="descripcion">
                     <h4>Imagen</h4>
                 </div>
-                <div class="col">
+                <div class="info-input">
                     <input type="url" placeholder="https://imagen.com" #foto>
                 </div>
             </div>
         </div>
-        <div class="description izq">
+        <div class="contenedor-descripcion">
             <div class="descripcion">
               <h4>Descripción</h4>  
             </div>
@@ -54,7 +51,7 @@
                 <textarea id="w3review" class="rellenar" rows="12" cols="25" placeholder="Rellena con una descripción breve del libro." #description></textarea>
             </div> 
         </div>
-        <div class="row izq">
+        <div class="contenedor-boton">
             <button class="boton" (click)="crearLibro(titulo.value, autor.value, foto.value, description.value, genero.value)">Guardar</button>
         </div>
     </div>

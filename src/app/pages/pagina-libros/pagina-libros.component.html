@@ -4,7 +4,8 @@
           <div id="contenedor">
             <div class="content">
               <div class="busqueda">
-                  <input [(ngModel)]="filterTerm" type="search" class="buscar iconoDentro" placeholder="Inserta titulo" list="busqueda" (keyup)="presionarEnter($event, titulo.value)" #titulo><img src="..\assets\icons\magnifier.svg" class="animacion" id="iconoDentro" (click)="buscarTitulo(titulo.value)"/>
+                  <input [(ngModel)]="filterTerm" type="search" class="buscar iconoDentro" placeholder="Inserta titulo" list="busqueda" (keyup)="presionarEnter($event, titulo.value)" #titulo>
+                  <img src="..\assets\icons\magnifier.svg" class="animacion" id="iconoDentro" (click)="buscarTitulo(titulo.value)"/>
               </div>
               <div class="contenedor-botones">
                   <button class="botones" (click)="changeVista('fantastica'); setActive('1');" [ngClass]="statusClass1">Fantástica</button>
@@ -23,9 +24,9 @@
                           <div class="imagen">
                             <img [src]="vista.Foto" class="portaLibro" alt="Avatar" style="width:100%">
                           </div>
-                            <div class="container">
-                                <p><b>{{vista.Titulo}}</b></p>
-                                <p class="descripcion">{{vista.Descripcion}}</p>
+                            <div class="container info">
+                                <h5 class="titulo"><b>{{vista.Titulo}}</b></h5>
+                                <h5 class="descripcion">{{vista.Descripcion}}</h5>
                             </div>
                         </div>
                     </div>

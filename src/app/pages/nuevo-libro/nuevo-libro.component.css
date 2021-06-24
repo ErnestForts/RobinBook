@@ -1,103 +1,133 @@
-  
-* {
-    margin: 0;
-    padding: 0;
-}
+  * {
+      margin: 0;
+      padding: 0;
+  }
 
-.contenedor {
-    background-color: #F7F9C1;
-    height: 80vh;
-    margin-top: 10vh;
-    overflow-y: scroll;
-    justify-items: center;
-}
+  app-header-favoritos {
+      height: 10%;
+      background-color: #388E3C;
 
-.content{
-    margin-top: 3vw;
-    margin-bottom: 3vw;
-}
+  }
 
-.row{
-    width: 100vw;
-}
+  .contenedor {
+      padding-top: 20%;
+      padding-bottom: 23%;
+      background-color: #F7F9C1;
+      justify-content: center;
+      align-content: center;
+  }
 
-.col-3 > h4{
-    align-self: center;
-    font-size: 5vw;
-    font-weight: 600;
-    padding-top: 2.3vw;
-}
+  .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 3%;
+      padding-bottom: 2%;
+  }
 
-.description {
-    text-align: left;
-    background-color: #F7F9C1;
-}
+  .info-input {
 
-.descripcion > h4{
-    font-size: 5vw;
-    font-weight: 600;
-}
-
-.descripcion{
-    padding-bottom: 3vw;
-}
-
-.izq{
-    padding-left: 7.5vw;
-    padding-bottom: 3vw;
-}
-
-.rellenar {
-    border: 0.2vw solid #B9BB91;
-    border-radius: 10px;
-    width: 85vw;
-    padding: 2vw;
-    resize: none;
-    font-size: 4.5vw;
-}
-
-.boton {
-    background-color: #689F38;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    height: 40px;
-    font-size: 25px;
-}
-
-select {
-    font-size: .9rem;
-    padding: 2px 5px;
-}
-
-.output {
-    background: center/cover no-repeat url('/media/cc0-images/hamster.jpg');
-    position: relative;
-}
-
-/********************************************************/
-.desktop-header, .mobile-header{
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    background-color: #388E3C;
+    padding-top: 3%;
+    align-content: flex-end;
+    width: 90%;
 
 }
 
-.desktop-footer, .mobile-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
+.info-input > input, select{
+
+    width: 100%;
+    padding: 4%;
 }
+
+  h4 {
+      font-weight: 600;
+  }
+
+  .contenedor-descripcion {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .descripcion {
+      padding-top: 3%;
+      align-self: flex-start;
+      padding-left: 10%;
+      padding-bottom: 3vw;
+  }
+
+  .rellenar {
+      width: 85vw;
+      padding: 2vw;
+      resize: none;
+  }
+
+  .contenedor-boton {
+      margin-top: 5%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .boton {
+      background-color: #689F38;
+      color: white;
+      padding: 4%;
+  }
+
+  select {
+      padding: 2px 5px;
+      background-color: white;
+  }
+
+  .output {
+      background: center/cover no-repeat url('/media/cc0-images/hamster.jpg');
+      position: relative;
+  }
+
+  /********************************************************/
+  .desktop-header,
+  .mobile-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 10%;
+  }
+
+  .desktop-footer,
+  .mobile-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 10%;
+  }
 
   @media only screen and (min-width: 770px) {
-    .mobile{
-      display: none;
-    }
-}
-
-@media only screen and (max-width: 769px) {
-  .desktop{
-    display: none;
+      .mobile {
+          display: none;
+      }
   }
-}
+
+  @media only screen and (max-width: 769px) {
+      .desktop {
+          display: none;
+      }
+  }
+
+  @media (min-aspect-ratio: 141/398) and (max-aspect-ratio: 300/667) {
+      .contenedor {
+          padding-top: 30%;
+          padding-bottom: 30%;
+
+      }
+  }
+
+  @media (max-aspect-ratio: 141/398) {
+      .contenedor {
+          padding-top: 60%;
+          padding-bottom: 60%;
+
+      }
+  }
