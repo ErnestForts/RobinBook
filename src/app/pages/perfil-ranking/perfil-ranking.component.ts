@@ -84,8 +84,7 @@ export class PerfilRankingComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=>{
       this.newOrNotChatRoom(this.usuario.user_id);
-      console.log(this.usuario);
-    }, 300)    
+    }, 250);
   }
 
   mostrarChatsRooms() {
@@ -97,16 +96,19 @@ export class PerfilRankingComponent implements OnInit {
   }
 
   newOrNotChatRoom(user_id) {
+    console.log(this.chatRooms)
     for(let chats of this.chatRooms) {
       if(chats.user_id_origen === user_id || chats.user_id_destino === user_id) {
         this.newChatRoom = false;
         this.lugarRoom = this.chatRooms.indexOf(chats);
+        console.log(this.lugarRoom)
       }
     }
   }
 
   sendChatRoomDetail() {
     let chatRoom = this.chatRooms[this.lugarRoom];
+    console.log(chatRoom)
     this.chatService.setChatRoomDetail(chatRoom);
   }
 

@@ -14,7 +14,7 @@ export class ChatComponent implements OnInit {
   public mensajesVista: Mensajes[];
   public user_id: string;
 
-  constructor(private chatService: ChatService) { 
+  constructor(private chatService: ChatService) {
     this.chatVista = this.chatService.getChatRoomDetail();
     this.user_id = JSON.parse(localStorage.getItem('user')).user.user_id;
   }
