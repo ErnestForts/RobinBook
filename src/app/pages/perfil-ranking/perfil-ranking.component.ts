@@ -84,7 +84,7 @@ export class PerfilRankingComponent implements OnInit {
     setTimeout(()=>{
       this.newOrNotChatRoom(this.usuario.user_id);
       console.log(this.usuario);
-    }, 200)    
+    }, 300)    
   }
 
   mostrarChatsRooms() {
