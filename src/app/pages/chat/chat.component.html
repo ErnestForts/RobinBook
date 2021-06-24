@@ -18,7 +18,7 @@
             <input type="text" placeholder="Escribir mensaje" (keyup)="presionarEnter($event, insertar.value);" #insertar><br>
         </div>
         <div class="contenedor-boton">
-            <button (click)="sendComent(insertar.value)">
+            <button type="reset" value="Reset" (click)="sendComent(insertar.value)">
                 <p>Enviar mensaje</p>
             </button>
         </div>
