@@ -47,13 +47,13 @@ export class LoginFormComponent implements OnInit {
       }
     } else {
       this.formSubmitAttempt = true;
-      if(this.formLogin.value.txtEmail == ''){
+      if(this.formLogin.value.txtEmail == '' && this.formLogin.value.txtPassword == ''){
+        this.loginInvalid = true;
+      }
+      
+      if(!this.formLogin.get('txtEmail').valid){
         this.emailInvalid = true;
       }
-      if(this.formLogin.value.txtPassword == ''){
-        this.passwordInvalid = true;
-      }
-      console.log('attempt');
     }
   }
   get formControls() { return this.formLogin.controls; }
