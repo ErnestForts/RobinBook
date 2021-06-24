@@ -38,7 +38,9 @@ export class MapaComponent implements OnInit {
       tieneLibro: 'tieneLibro',
       lugar_id: 'lugar_id',
       latitud: 0,
-      longitud: 0
+      longitud: 0,
+      puntosTotales: 0,
+      vecesPuntuado: 0
     }
   }
 
@@ -131,8 +133,9 @@ export class MapaComponent implements OnInit {
             tieneLibro: feature.get('tieneLibro'),
             lugar_id: feature.get('lugar_id'),
             latitud: feature.get('latitud'),
-            longitud: feature.get('longitud')
-
+            longitud: feature.get('longitud'),
+            puntosTotales: feature.get('puntosTotales'),
+            vecesPuntuado: feature.get('vecesPuntuado')
           }
 
         } else {
@@ -175,7 +178,9 @@ export class MapaComponent implements OnInit {
         tieneLibro: lugares[i].tieneLibro,
         latitud: lugares[i].latitud,
         longitud: lugares[i].longitud,
-        lugar_id: lugares[i].Lugar_id
+        lugar_id: lugares[i].Lugar_id,
+        puntosTotales: lugares[i].PuntosTotales,
+        vecesPuntuado: lugares[i].VecesPuntuado
 
       });
 
@@ -185,9 +190,9 @@ export class MapaComponent implements OnInit {
     }
   }
 
-  sendValueIdDetail(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id) {
+  sendValueIdDetail(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id, puntosTotales, vecesPuntuado) {
 
-    let lugarDetail = new Lugar(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id);
+    let lugarDetail = new Lugar(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id, puntosTotales, vecesPuntuado);
     // console.log("CONSOLEANDO "+lugarDetail.Lugar_id);
     
     this.mapaServicio.setLugarDetail(lugarDetail);

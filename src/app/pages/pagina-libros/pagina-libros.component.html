@@ -19,7 +19,7 @@
               <div class="container">
                   <div class="row">
                     <div class="col-6" *ngFor="let vista of librosVista | filter:filterTerm:'Titulo'">
-                        <div class="cardLibro" routerLink="/libros/detalle" (click)="sendLibroDetail(vista.Titulo, vista.Autor, vista.Descripcion, vista.Foto, vista.Genero, vista.libro_id)">
+                        <div class="cardLibro" routerLink="/libros/detalle" (click)="sendLibroDetail(vista.Titulo, vista.Autor, vista.Descripcion, vista.Foto, vista.Genero, vista.libro_id, vista.PuntosTotales, vista.VecesPuntuado)">
                           <div class="imagen">
                             <img [src]="vista.Foto" class="portaLibro" alt="Avatar" style="width:100%">
                           </div>

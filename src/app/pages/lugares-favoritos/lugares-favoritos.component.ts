@@ -29,9 +29,9 @@ export class LugaresFavoritosComponent implements OnInit {
       });
   }
 
-  sendValueIdDetail(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id) {
+  sendValueIdDetail(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id, puntosTotales, vecesPuntuado) {
 
-    let lugarDetail = new Lugar(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id);
+    let lugarDetail = new Lugar(Nombre, Descripcion, Foto, latitud, longitud, tieneLibro, lugar_id, puntosTotales, vecesPuntuado);
     // console.log("CONSOLEANDO "+lugarDetail.Lugar_id);
     
     this.mapaServicio.setLugarDetail(lugarDetail);

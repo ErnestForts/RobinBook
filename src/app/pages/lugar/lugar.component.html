@@ -40,17 +40,32 @@
                                 </ng-template>
                             </div>
                             <div class="row pista contenedor-modificar">
-                                <button (click)="modificarLugar();" [routerLink]="['modificar']" class="modificar">Modificar</button>
+                                <button (click)="modificarLugar();" [routerLink]="['modificar']"
+                                    class="modificar">Modificar</button>
+                            </div>
+                            <div class="row pista contenedor-modificar">
+                                <button (click)="modificarEstadoLibro();" class="modificar"
+                                    *ngIf="tieneLibro == true; else dejarLibro">Recoger libro</button>
+                                <ng-template #dejarLibro>
+                                    <button (click)="modificarEstadoLibro();" class="modificar">Dejar libro</button>
+                                </ng-template>
                             </div>
                             <div class="marco">
                                 <div class="estrellas">
                                     <ng-container *ngFor="let star of stars;">
-                                    <app-star (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating"></app-star>
-                                </ng-container>
+                                        <app-star (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()"
+                                            (starClicked)="onStarClicked($event)" [starId]="star"
+                                            [rating]="hoverState || rating"
+                                            *ngIf="estaPuntuado == false; else yaPuntuado"></app-star>
+                                        <ng-template #yaPuntuado>
+                                            <app-star [starId]="star" [rating]="rating"></app-star>
+                                        </ng-template>
+                                    </ng-container>
                                 </div>
-                                
+
                                 <div class="botones">
-                                    <a (click)="sendFav(lugarVista.Lugar_id); guardadoFav();" *ngIf="esFavorito == false; else esFav">
+                                    <a (click)="sendFav(lugarVista.Lugar_id); guardadoFav();"
+                                        *ngIf="esFavorito == false; else esFav">
                                         <img src="..\assets\icons\add-bookmark.svg" id="" alt="">
                                     </a>
                                 </div>
@@ -82,7 +97,9 @@
                                 <div class="fecha">
                                     <div>
                                         <p>
-                                            <a class="btn btn-counter multiple-count" [attr.data-count]="coment.LikeComent" (click)="contadorLikes(coment.id_ComentLugar)"><span>&#x2764;</span></a>
+                                            <a class="btn btn-counter multiple-count"
+                                                [attr.data-count]="coment.LikeComent"
+                                                (click)="contadorLikes(coment.id_ComentLugar)"><span>&#x2764;</span></a>
                                         </p>
                                     </div>
                                 </div>
@@ -94,7 +111,9 @@
                             <input type="text" placeholder="Escribir comentario" #coment><br>
                         </div>
                         <div class="contenedor-boton">
-                            <button (click)="sendComent(coment.value, lugarVista.Lugar_id)"><p>Enviar comentario</p></button>
+                            <button (click)="sendComent(coment.value, lugarVista.Lugar_id)">
+                                <p>Enviar comentario</p>
+                            </button>
                         </div>
                     </div>
                 </div>

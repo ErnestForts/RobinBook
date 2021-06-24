@@ -10,7 +10,7 @@ export class Lugar {
     public PuntosTotales? : number;
     public puntuacion : number;
 
-    constructor(Nombre? : string, Descripcion? : string, Foto? : string, latitud? : number, longitud? : number, tieneLibro? : boolean, Lugar_id? : string){
+    constructor(Nombre? : string, Descripcion? : string, Foto? : string, latitud? : number, longitud? : number, tieneLibro? : boolean, Lugar_id? : string,  puntosTotales?: number, vecesPuntuado?: number){
 
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
@@ -19,5 +19,7 @@ export class Lugar {
         this.longitud = longitud;
         this.tieneLibro = tieneLibro;
         this.Lugar_id = Lugar_id;
+        this.PuntosTotales = puntosTotales;
+        this.VecesPuntuado = vecesPuntuado;
     }
 }
