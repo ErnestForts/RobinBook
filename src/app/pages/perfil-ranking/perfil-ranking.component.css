@@ -18,14 +18,19 @@
     display: flex;
 }
 .crear-chat{
+    margin-top: 3%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .crear-chat > button {
     background-color: #388E3C;
-    padding: 4%;
-    width: 100%;
+    padding: 3%;
+    width: 20%;
 }
 .crear-chat > button > img{
+    width: 70%;
     filter: invert(99%) sepia(69%) saturate(0%) hue-rotate(248deg) brightness(105%) contrast(101%);
 }
 .content {
