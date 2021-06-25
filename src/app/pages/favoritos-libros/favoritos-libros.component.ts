@@ -11,8 +11,8 @@ export class FavoritosLibrosComponent implements OnInit {
 
   public librosFav: Libro[];
   public stars = [1, 2, 3, 4, 5];
+  public noBooks: boolean;
 
-  noBooks: boolean;
   constructor(private apiService: LibroService) { 
     this.mostrarLibrosFav();
   }

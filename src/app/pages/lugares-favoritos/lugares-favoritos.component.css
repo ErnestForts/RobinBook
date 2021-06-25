@@ -156,6 +156,15 @@ h3 {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+.noBooks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #689F38;
+    padding: 15%;
+}
+
 @media only screen and (min-width: 770px) {
     .mobile {
         display: none;

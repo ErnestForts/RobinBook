@@ -50,8 +50,8 @@ h3 {
 
 }
 
-.titulo > h4, .descripcion > h4{
-}
+/* .titulo > h4, .descripcion > h4{
+} */
 
 .titulo > h4{
     color: #31384F;
@@ -167,7 +167,10 @@ h3 {
 .noBooks{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #689F38;
+    padding: 15%;
 }
 
 
