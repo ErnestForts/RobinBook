@@ -31,7 +31,7 @@ export class PerfilRankingComponent implements OnInit {
       if (this.routeState) {
         this.usuario = this.routeState.user ? JSON.parse(this.routeState.user) : '';
       }
-    } 
+    }
     this.getBooks(); 
     this.compararDatos();
     this.mostrarChatsRooms();
