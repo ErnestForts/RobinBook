@@ -73,7 +73,7 @@ const routes: Routes = [
     }
     ]
   },
-  {path: 'new-password/:reset', component: LoginComponent,
+  {path: 'new-password', component: LoginComponent,
     children: [
     {
       outlet: 'new-password',

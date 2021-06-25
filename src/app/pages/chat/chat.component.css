@@ -10,21 +10,26 @@ app-header-favoritos{
 
 .bg {
     background-color: #F7F9C1;
-    height: 100%;
+    /* height: 100%;
     margin-top: 10%;
-    overflow-y: scroll;
+    overflow-y: scroll; */
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
+    flex: 1 0 auto;
+    background-color: #F7F9C1;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    overflow-y: scroll;
+    padding-top: 23%;
+    padding-bottom: 30%;
+
 }
 
-.imgperfil {
-    border-radius: 200px;
-    width: 50px;
+.contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mensajeEntrante, .mensajeSaliente{
@@ -37,7 +42,9 @@ app-header-favoritos{
     background: #689F38;
     border-radius: 12px 12px 12px 0px;
     align-self: flex-start;
-    margin-left: 1.5vw;
+    margin-left: 3vw;
+    margin-right: 30vw;
+
 }
 
 .mensajeSaliente {
@@ -45,6 +52,7 @@ app-header-favoritos{
     border-radius: 12px 12px 0px 12px;
     align-self: flex-end;
     margin-right: 1.5vw;
+    margin-left: 30vw;
 }
 
 .textChatEntrante {

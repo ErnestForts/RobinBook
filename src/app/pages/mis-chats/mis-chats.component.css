@@ -47,9 +47,13 @@ h3 {
 }
 
 #contenedor {
-    height: 100%;
-    margin-top: 10%;
+    flex: 1 0 auto;
+    background-color: #F7F9C1;
+    justify-content: center;
+    align-content: center;
     overflow-y: scroll;
+    padding-top: 23%;
+    padding-bottom: 23%;
 }
 
 .desktop-header, .mobile-header{
@@ -145,4 +149,20 @@ h3 {
     }
 
 
+}
+
+@media (min-aspect-ratio: 141/398) and (max-aspect-ratio: 300/667){
+    #contenedor{
+        padding-top: 30%;
+        padding-bottom: 30%;
+
+    }
+}
+
+@media (max-aspect-ratio: 141/398){
+    #contenedor{
+        padding-top: 60%;
+        padding-bottom: 60%;
+
+    }
 }

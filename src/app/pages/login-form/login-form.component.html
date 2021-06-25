@@ -1,19 +1,26 @@
 <div class="outletContent">
+    <div class="logo">
+        <img src="../../../assets/pics/logo.png" alt="logo">
+    </div>
     <div class="title">
         <h2>Login</h2>
     </div>
-    
+
     <div class="contenedor">
         <div class="formDiv">
             <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="formFlex">
-                
-                <input formControlName="txtEmail" type="email" placeholder="email">
 
-                <div *ngIf="emailInvalid">
-                    <div>Email invalid</div>
+                <div class="inputDiv">
+                    <input formControlName="txtEmail" type="email" placeholder="email">
+
+                    <div *ngIf="emailInvalid">
+                        <div>Email invalid</div>
+                    </div>
                 </div>
-                <div>
-                    <input id="txtPassword" formControlName="txtPassword" type="password" style="margin-top: 20px;" placeholder="password">
+
+                <div class="inputDiv">
+                    <input id="txtPassword" formControlName="txtPassword" type="password" style="margin-top: 20px;"
+                        placeholder="password">
                     <span toggle="#password-field" [ngClass]="isVisible" (click)="toggle()"></span>
                     <div *ngIf="passwordInvalid">
                         <div>Password invalid</div>
@@ -22,22 +29,22 @@
                         <div>Usuario o contraseña incorrectos</div>
                     </div>
                 </div>
-        
-                <button type="submit" class="loginButton">Entrar</button>
-        
-                <h4 id="registerTitle"><a  routerLink="/register">Olvidaste la contraseña?</a></h4>
-        
-                <button type='button' id="registerButton" class="registerButton" routerLink="/register">Registrarse</button>
+
+                <div>
+                    <button type="submit" class="loginButton">Entrar</button>
+
+                </div>
+
+                <h4 id="registerTitle"><a routerLink="/register">Olvidaste la contraseña?</a></h4>
+
+                <button type='button' id="registerButton" class="registerButton"
+                    routerLink="/register">Registrarse</button>
             </form>
-        </div>       
-        <div id="registerDiv" class="mobileRegister">
-            <p><a class="forgotLink" routerLink="/forgot">¿Olvidaste la contraseña?</a> | <a class="registerLink" routerLink="/register">Registrarse</a></p>
         </div>
-    </div>
-    <div class="footer">
-        <div class="child">
-            <a routerLink="/nosotros">Sobre nosotros</a>
+        <div id="registerDiv" class="mobileRegister">
+            <h1><a class="forgotLink" routerLink="/forgot">¿Olvidaste la contraseña?</a></h1> 
+            <h1><a> | </a></h1>
+            <h1><a class="registerLink" routerLink="/register">Registrarse</a></h1>
         </div>
     </div>
 </div>
-

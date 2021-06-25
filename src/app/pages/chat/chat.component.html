@@ -1,17 +1,21 @@
 <div class="bg">
     <div class="row">
-        <div class="content" *ngFor="let mensaje of mensajesVista">
+        <div class="content">
+
+        
+        <div class="contenido" *ngFor="let mensaje of mensajesVista">
             <div *ngIf="mensaje.user_id != user_id; else mensajeSaliente">
                 <div class="mensajeEntrante" >
-                    <p class="textChatEntrante"> {{mensaje.mensaje}} </p>
+                    <h4 class="textChatEntrante"> {{mensaje.mensaje}} </h4>
                 </div>
             </div>
             <ng-template #mensajeSaliente>
                 <div class="mensajeSaliente">
-                    <p class="textChatSaliente"> {{mensaje.mensaje}} </p>
+                    <h4 class="textChatSaliente"> {{mensaje.mensaje}} </h4>
                 </div>
             </ng-template>
         </div>
+    </div>
     </div>
     <div class="sendComent">
         <div>
@@ -19,7 +23,7 @@
         </div>
         <div class="contenedor-boton">
             <button type="reset" value="Reset" (click)="sendComent(insertar.value); insertar.value = ''">
-                <p>Enviar mensaje</p>
+                <h6>Enviar mensaje</h6>
             </button>
         </div>
     </div>
