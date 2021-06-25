@@ -4,7 +4,21 @@
 }
 
 .outletContent {
-    margin-bottom: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+img{
+    width: 20%;
 }
 
 h2 {
@@ -24,11 +38,10 @@ h4 {
 }
 
 .field-icon {
-    float: right;
     margin-left: -25px;
-    margin-top: 35px;
+    margin-top: 2.8rem;
     position: relative;
-    z-index: 2;
+    font-size: 2rem;
 }
 
 a:link {
@@ -42,15 +55,17 @@ a:hover {
 input {
     background: #FFFFFF;
 
-    width: 70vw;
-    height: 46px;
-    border: 1px solid #CED4DA;
+    width: 100%;
     box-sizing: border-box;
-
+    padding: 4%;
     font-family: Montserrat;
     font-style: normal;
     padding-left: 7px;
 
+}
+
+.ancho-completo{
+    width: 100%;
 }
 
 .registerButton {
@@ -125,8 +140,8 @@ button:hover {
     }
 
     input {
-        width: 300px;
-        height: 36px;
+        /* width: 300px;
+        height: 36px; */
     }
 
     .registerButton {

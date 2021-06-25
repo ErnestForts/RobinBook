@@ -161,6 +161,8 @@ export class LugarComponent implements OnInit {
     if(this.tieneLibro == true){
       this.lugarVista.tieneLibro = false;
       this.tieneLibro = false;
+      console.log(this.lugarVista);
+      
       this.mapaServicio.editarLugar(this.lugarVista, token);
     } else {
       this.lugarVista.tieneLibro = true;
