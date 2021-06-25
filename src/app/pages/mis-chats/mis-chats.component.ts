@@ -31,22 +31,21 @@ export class MisChatsComponent implements OnInit {
     this.chatService.setChatRoomDetail(chatRoom);
   }
 
-  // getChatRoomsDetails() {
-  //   this.idRoomAndMensajes = [];
-  //   let token = JSON.parse(localStorage.getItem('user')).token;
-  //   for(let chat of this.chatRooms) {
-  //     this.chatService.obtenerMensajesById(chat.id_chatRoom, token).subscribe( (result: any) => {
-  //       this.idRoomAndMensajes.push(result.data);
-  //       });
-  //   }
-  // }
+  getChatRoomsDetails() {
+    this.idRoomAndMensajes = [];
+    let token = JSON.parse(localStorage.getItem('user')).token;
+    for(let chat of this.chatRooms) {
+      this.chatService.obtenerMensajesById(chat.id_chatRoom, token).subscribe( (result: any) => {
+        this.idRoomAndMensajes.push(result.data);
+        });
+    }
+  }
 
   ngOnInit(): void {
-  //   setTimeout(() => {
-  //     this.getChatRoomsDetails();
-  //   }, 500)
-  //   setTimeout(()=> {
-  //     console.log(this.idRoomAndMensajes)
-  //   }, 1000);
+    setTimeout(() => {
+      this.getChatRoomsDetails();
+      console.log(this.idRoomAndMensajes)
+    }, 500)
+
   }
 }
