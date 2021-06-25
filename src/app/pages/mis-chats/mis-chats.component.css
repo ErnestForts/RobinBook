@@ -13,15 +13,6 @@ h3 {
     color: #689F38;
 }
 
-.nombre > h4, .mensaje > h4{
-}
-
-.hora{
-    text-align: center;
-}
-.hora > p {
-}
-
 .caja-burbuja{
     align-items: center;
     justify-content: center;
@@ -32,8 +23,9 @@ h3 {
     text-align: center;
     align-items: center;
     border-radius: 50%;
-    width: 4.8vw;
-    height: 4.8vw;
+    width: 5.8vw;
+    height: 5.8vw;
+    transform: scale(1.2, 1.2);
 
 }
 
