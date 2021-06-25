@@ -13,17 +13,16 @@ app-header-favoritos{
     background-color: #F7F9C1;
     height: 100%;
     width: 100vw;
-    margin-top: 10%;
     overflow-y: scroll;
     display: grid;
 }
 
 .content {
-    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     background-color: #F7F9C1;
 }
 
@@ -39,13 +38,13 @@ app-header-favoritos{
     width: 35vw;
 }
 
-.nombre>p {
+.nombre>h6 {
     font-weight: 600;
     text-align: center;
     color: #31384F;
 }
 
-.subtitulo>p {
+.subtitulo>h6 {
     font-weight: 500;
     text-align: center;
     color: #838795;

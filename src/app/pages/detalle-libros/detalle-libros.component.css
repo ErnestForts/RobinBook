@@ -8,13 +8,13 @@ app-header-favoritos{
     background-color: #388E3C;
 }
 
-.madre {
-
+.descripcion, .autor {
+    padding-top: 2%;
 }
 
 .contenedor {
-    padding-top: 20%;
-    padding-bottom: 23%;
+    padding-top: 18%;
+    padding-bottom: 26%;
     background-color: #F7F9C1;
     justify-content: center;
     align-content: center;
@@ -38,12 +38,14 @@ app-header-favoritos{
     justify-content: space-between;
     margin: 0;
     padding: 0;
+    width: 100vw;
 }
 
 .botones {
-    padding: 10px;
     /* position: relative; */
-    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .send {
@@ -130,12 +132,12 @@ input {
 .sendComent {
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     height: 12%;
     display: flex;
     flex-direction: column;
     background-color: #388E3C;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -229,8 +231,12 @@ input {
     height: 10%;
   }
 
-.mat-dialog-container{
-    background-color: #b12f27;
+  .contenedor-boton>button {
+    background-color: #27642A;
+    border: none;
+    color: white;
+    padding: 7px;
+    justify-items: center;
 }
 
   @media only screen and (min-width: 770px) {

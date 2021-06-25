@@ -9,18 +9,25 @@
     width: 100%;
     overflow-y: scroll;
     display: grid;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
 
 }
 
 .contenedor-content {
-
     display: flex;
-
-
 }
-
+.crear-chat{
+    width: 100%;
+}
+.crear-chat > button {
+    background-color: #388E3C;
+    padding: 4%;
+    width: 100%;
+}
+.crear-chat > button > img{
+    filter: invert(99%) sepia(69%) saturate(0%) hue-rotate(248deg) brightness(105%) contrast(101%);
+}
 .content {
     margin: auto;
     flex: 1 0 auto;
@@ -41,13 +48,13 @@
     width: 40vw;
 }
 
-.nombre>p {
+.nombre>h4 {
     font-weight: 600;
     text-align: center;
     color: #31384F;
 }
 
-.subtitulo>p {
+.subtitulo>h4 {
     font-weight: 500;
     text-align: center;
     color: #838795;
@@ -74,13 +81,30 @@
     color: #C2C4CB;
 }
 
-.contenedor-imagen {}
+.librosFav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.libroStyle{
+    align-self: center;
+    justify-self: center;
+}
+
 
 .imglibro {
     width: 19.4vw;
     height: 25vw;
     border-radius: 12px;
     margin: 0px 16px;
+}
+
+.noBooks{
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .librostyle {

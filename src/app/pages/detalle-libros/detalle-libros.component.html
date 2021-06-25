@@ -1,22 +1,24 @@
-<div class="madre" #pagina>
-    <div class="contenedor" >
+<div>
+    <div class="contenedor">
         <div class="imagen">
-           <img [src]="libroVista.Foto" alt="...">
+            <img [src]="libroVista.Foto" alt="...">
         </div>
         <div class="pista contenedor-modificar">
             <button (click)="modificarLibro();" [routerLink]="['modificar']" class="modificar">Modificar</button>
         </div>
-       <div class="marco">
-        <div class="estrellas">
-            <ng-container *ngFor="let star of stars;">
-            <app-star (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating" *ngIf="estaPuntuado == false; else yaPuntuado"></app-star>
-            <ng-template #yaPuntuado>
-                <app-star [starId]="star" [rating]="rating" ></app-star>
-            </ng-template>
-            
-        </ng-container>
+        <div class="marco">
+            <div class="estrellas">
+                <ng-container *ngFor="let star of stars;">
+                    <app-star (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()"
+                        (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating"
+                        *ngIf="estaPuntuado == false; else yaPuntuado"></app-star>
+                    <ng-template #yaPuntuado>
+                        <app-star [starId]="star" [rating]="rating"></app-star>
+                    </ng-template>
 
-        </div>
+                </ng-container>
+
+            </div>
             <div class="send">
                 <a (click)="enviarMail();">
                     <img src="..\assets\icons\send.svg">
@@ -32,26 +34,42 @@
                     <img src="..\assets\icons\remove-bookmark.svg">
                 </a>
             </ng-template>
-       </div>
-       <div class="description">
-            <h4 style="color:rgb(168, 164, 164);">
-                TITULO
-            </h4>
-            <h3>
-                {{libroVista.Titulo}}
-            </h3>
-            <h4 style="color:rgb(168, 164, 164);">
-                DESCRIPCION
-            </h4>
-            <h3>
-                {{libroVista.Descripcion}}
-            </h3>
-            <h4>
-                <b>Autor: </b>  {{libroVista.Autor}}
-            </h4>
-            <h4>
-                <b>Genero: </b>  {{libroVista.Genero}}
-            </h4>
+        </div>
+        <div class="description">
+            <div>
+                <h4 style="color:rgb(168, 164, 164);">
+                    TITULO
+                </h4>
+            </div>
+            <div>
+                <h3>
+                    {{libroVista.Titulo}}
+                </h3>
+            </div>
+            <div class="descripcion">
+                <h4 style="color:rgb(168, 164, 164);">
+                    DESCRIPCION
+                </h4>
+            </div>
+            <div>
+                <h3>
+                    {{libroVista.Descripcion}}
+                </h3>
+            </div>
+            <div class="autor">
+              <div>
+                <h4>
+                    <b>Autor: </b> {{libroVista.Autor}}
+                </h4>
+            </div>
+            <div>
+                <h4>
+                    <b>Género: </b> {{libroVista.Genero}}
+                </h4>
+            </div>  
+            </div>
+            
+
         </div>
         <div class="divisor" *ngIf="coments">
             <div class="reviews">
@@ -65,29 +83,31 @@
                         <img [src]="coment.Foto" id="" alt="">
                     </div>
                     <div class="comentario">
-                        <p><b>{{coment.Nombre}}</b><br>{{coment.Coment}}</p>
+                        <h5><b>{{coment.Nombre}}</b><br>{{coment.Coment}}</h5>
                     </div>
                 </div>
                 <div class="fecha">
                     <div>
                         <p>
-                            <a class="btn btn-counter multiple-count" [attr.data-count]="coment.likeComent" (click)="contadorLikes(coment.id_ComentLibro)"><span>&#x2764;</span></a>
+                            <a class="btn btn-counter multiple-count" [attr.data-count]="coment.likeComent"
+                                (click)="contadorLikes(coment.id_ComentLibro)"><span>&#x2764;</span></a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="sendComent">
+    <div class="sendComent mobile-footer">
         <div>
             <input type="text" placeholder="Escribir comentario" #coment><br>
         </div>
         <div class="contenedor-boton">
-            <button (click)="sendComent(coment.value, libroVista.libro_id)"><p>Enviar comentario</p></button>
+            <button (click)="sendComent(coment.value, libroVista.libro_id)">
+                <h6>Enviar comentario</h6>
+            </button>
         </div>
     </div>
-  <app-header-favoritos class="mobile mobile-header" src="..\assets\icons\new-arrow_back.svg" title="Detalle Libro" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
-  <app-footer class="desktop-header desktop"></app-footer>
-  <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
+    <app-header-favoritos class="mobile mobile-header" src="..\assets\icons\new-arrow_back.svg" title="Detalle Libro"
+        id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
 
 </div>

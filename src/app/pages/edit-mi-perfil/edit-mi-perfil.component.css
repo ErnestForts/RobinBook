@@ -12,17 +12,10 @@ app-header-favoritos{
     background-color: #F7F9C1;
     height: 100%;
     width: 100vw;
-    margin-top: 10%;
-    overflow-y: scroll;
+    padding-top: 25%;
+    padding-bottom: 23%;
 }
 
-.content{
-    margin-top: 3vw;
-    flex: 1 0 auto;
-    background-color: #F7F9C1;
-    justify-content: center;
-    align-content: center;
-}
 
 .subtitulo{
     font-style: normal;
@@ -55,8 +48,8 @@ app-header-favoritos{
 
 .separado{
     margin-top: 2vw;
-    padding-left: 10vw;
-    padding-right: 5vw;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 
@@ -70,7 +63,7 @@ app-header-favoritos{
 .line{
     width: 100vw;
     border-bottom: 0.5px solid #E2E3E4;
-    margin-top: 0.7vw;
+    margin-top: 2%;
 }
 
 .title2{
@@ -96,12 +89,27 @@ app-header-favoritos{
     height: 10%;
   }
 
+  .contenedor-boton{
+      margin-top: 3%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
 .boton {
     background-color: #689F38;
     color: white;
     height: 40px;
     margin-top: 1%;
     margin-bottom: 2%;
+    width: 60%;
+
+}
+
+input{
+    padding: 4%;
+    align-content: flex-end;
+    width: 100%;
 }
 
 
