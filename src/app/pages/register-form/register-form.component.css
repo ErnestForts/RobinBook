@@ -11,7 +11,6 @@ h2 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 31.1px;
     text-align: center;
     color: #979797;
 }
@@ -20,7 +19,6 @@ h4 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 17.3px;
 
     color: #979797;
 }
@@ -48,11 +46,9 @@ input {
     height: 46px;
     border: 1px solid #CED4DA;
     box-sizing: border-box;
-    border-radius: 4.8px;
 
     font-family: Montserrat;
     font-style: normal;
-    font-size: 20px;
     padding-left: 7px;
 
 }
@@ -69,13 +65,10 @@ input {
     /* Global/03. Success */
 
     background: rgba(40, 167, 69, 0.5);
-    border: none;
-    border-radius: 4px;
     color: #FFFFFF;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 4vw;
 }
 
 button:hover {
@@ -108,7 +101,6 @@ button:hover {
     }
 
     .registerButton {
-        font-size: 2vw;
     }
 
     .contenedor {
@@ -135,7 +127,6 @@ button:hover {
     input {
         width: 300px;
         height: 36px;
-        font-size: 16px;
     }
 
     .registerButton {

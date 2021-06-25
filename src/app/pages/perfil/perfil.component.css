@@ -5,11 +5,14 @@
 
 .bg {
     background-color: #F7F9C1;
-    height: 80vh;
+    height: 100%;
     width: 100vw;
-    margin-top: 10vh;
     overflow-y: scroll;
     display: grid;
+}
+
+.contenedor-content{
+    display: flex;
 }
 
 .content {
@@ -46,20 +49,17 @@ margin: auto;
 }
 
 .nombre {
-    font-size: 4vw;
     color: #31384F;
     margin: 0;
 }
 
 .subtitulo {
-    font-size: 4vw;
     color: #838795;
     margin-top: 1vw;
 }
 
 .flecha {
     font-weight: 600;
-    font-size: 8vw;
     color: #388E3C;
     transform: rotate(180deg);
     
@@ -92,33 +92,19 @@ margin: auto;
 }
 
 
-.desktop-header,
-.mobile-header {
+.desktop-header, .mobile-header{
     position: fixed;
     top: 0;
-    width: 100vw;
-}
-
-.desktop-footer,
-.mobile-footer {
+    width: 100%;
+    height: 10%;
+  }
+  
+  .desktop-footer, .mobile-footer{
     position: fixed;
     bottom: 0;
-    width: 100vw;
-}
-
-.desktop-header,
-.mobile-header {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-}
-
-.desktop-footer,
-.mobile-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-}
+    width: 100%;
+    height: 10%;
+  }
 
 @media only screen and (min-width: 770px) {
     .mobile {

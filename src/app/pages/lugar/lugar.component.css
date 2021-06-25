@@ -1,20 +1,21 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
-#contenedor {
-    height: 80vh;
-    margin-top: 10vh;
-    padding: 0;
-    overflow-y: scroll;
-    background-color: #F7F9C1;
+app-header-favoritos {
+    height: 10%;
+    background-color: #388E3C;
+
 }
+
 
 .content {
-    height: 100%;
-    padding-bottom: 3vw;
+    background-color: #F7F9C1;
     justify-content: center;
     align-content: center;
+    padding-top: 17%;
+    padding-bottom: 23%;
 }
 
 .desktop-row {
@@ -26,16 +27,16 @@
 .mobile-header {
     position: fixed;
     top: 0;
-    width: 100vw;
-    background-color: #388E3C;
-
+    width: 100%;
+    height: 10%;
 }
 
 .desktop-footer,
 .mobile-footer {
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
+    height: 10%;
 }
 
 .col-desktop {
@@ -47,15 +48,13 @@
     padding-right: 6px;
 }
 
-.pista > h6 {
-    font-size: 4.5vw;
+.pista>h6 {
     line-height: 7.5vw;
     color: #5A6072;
 }
 
 .col-nueva {
     padding-bottom: 8px;
-    color: #388E3C;
     width: 100%;
 }
 
@@ -73,7 +72,7 @@
 }
 
 .iconos {
-    margin-top: 2vh;
+    margin-top: 2%;
 }
 
 .icono>svg {
@@ -105,7 +104,8 @@
 }
 
 .pista {
-    margin-top: 2vh;
+    margin-top: 2%;
+    margin-left: 2%;
 }
 
 .imagen>img {
@@ -130,13 +130,11 @@
 .reviews {
     margin-left: 20px;
     color: grey;
-    font-size: 3vw;
 }
 
 .bajar {
     color: #388E3C;
     margin-right: 20px;
-    font-size: 3vw;
 }
 
 .bajar>a>img {
@@ -171,12 +169,10 @@
 
 .nombre>p {
     color: #31384F;
-    font-size: 4vw;
 }
 
 .mensaje>p {
     color: #31384F;
-    font-size: 4vw;
 }
 
 
@@ -187,12 +183,10 @@
     margin-left: 80px;
     margin-right: 15px;
     color: #838795;
-    font-size: 4vw;
 }
 
 .btn {
     box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5) inset;
-    border-radius: 3px;
     border: 1px solid;
     display: inline-block;
     height: 18px;
@@ -200,7 +194,6 @@
     padding: 0 8px;
     position: relative;
 
-    font-size: 12px;
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
@@ -229,24 +222,6 @@
     margin-right: -13px;
     position: absolute;
     top: -1px;
-}
-
-.btn-counter:before {
-    transform: rotate(45deg);
-    filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
-
-    background-color: #eee;
-    border: 1px solid #d3d3d3;
-    border-right: 0;
-    border-top: 0;
-    content: '';
-    position: absolute;
-    right: -13px;
-    top: 5px;
-    height: 6px;
-    width: 6px;
-    z-index: 1;
-    zoom: 1;
 }
 
 /*
@@ -289,25 +264,23 @@
     background-color: rgba(238, 238, 238, 0);
 }
 
-.tieneLibro > b{
+.tieneLibro>b {
     color: #388E3C;
 }
 
-.noTieneLibro > b{
+.noTieneLibro>b {
     color: #b12f27;
 }
 
-.contenedor-boton > button{
+.contenedor-boton>button {
     background-color: #27642A;
     border: none;
-    border-radius: 5px;
     color: white;
     padding: 7px;
     justify-items: center;
 }
 
 input {
-    border-radius: 5px;
     border: 1px solid black;
     width: 90vw;
     padding-left: 7px;
@@ -316,12 +289,12 @@ input {
 .sendComent {
     position: fixed;
     bottom: 0;
-    width: 100vw;
-    height: 12vh;
+    width: 100%;
+    height: 10%;
     display: flex;
     flex-direction: column;
     background-color: #388E3C;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -338,27 +311,25 @@ input {
     margin-right: 10px;
 }
 
-.estrellas{
+.estrellas {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 3vw;
 }
 
-.contenedor-modificar{
+.contenedor-modificar {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.modificar{
+.modificar {
     margin-top: 10px;
     width: 60%;
-    border-radius: 25px;
     background-color: #689F38;
     color: white;
-    border: none;
 
 }
 
@@ -390,5 +361,21 @@ input {
 @media (min-width: 576px) {
     .imagen {
         max-width: 100%;
+    }
+}
+
+@media (min-aspect-ratio: 141/398) and (max-aspect-ratio: 300/667) {
+    .content {
+        padding-top: 30%;
+        padding-bottom: 30%;
+
+    }
+}
+
+@media (max-aspect-ratio: 141/398) {
+    .content {
+        padding-top: 60%;
+        padding-bottom: 60%;
+
     }
 }

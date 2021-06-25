@@ -156,10 +156,16 @@ export class LugarComponent implements OnInit {
   }
 
   modificarEstadoLibro(){
+    let token = JSON.parse(localStorage.getItem('user')).token;
+
     if(this.tieneLibro == true){
+      this.lugarVista.tieneLibro = false;
       this.tieneLibro = false;
+      this.mapaServicio.editarLugar(this.lugarVista, token);
     } else {
+      this.lugarVista.tieneLibro = true;
       this.tieneLibro = true;
+      this.mapaServicio.editarLugar(this.lugarVista, token);
     }
   }
 

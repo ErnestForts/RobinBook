@@ -11,17 +11,17 @@
 }
 
 .buscar {
-    border-radius: 20px;
     border: 0;
     width: 60vw;
     padding: 2vw;
 }
 
 #contenedor {
+    padding-top: 20%;
+    padding-bottom: 23%;
     background-color: #F7F9C1;
-    height: 80vh;
-    margin-top: 10vh;
-    overflow-y: scroll;
+    justify-content: center;
+    align-content: center;
 }
 
 #iconoDentro {
@@ -35,6 +35,7 @@
 .animacion {
     animation-duration: 3s;
     animation-name: slidein;
+    width: 4rem;
 }
 
 @keyframes slidein {
@@ -82,7 +83,6 @@ datalist {
 .botones {
     background-color: #689F38;
     border: none;
-    border-radius: 8px;
     color: white;
     padding: 7px;
     margin: 2px;
@@ -91,7 +91,6 @@ datalist {
 .botonVolver {
     background-color: #388E3C;
     border: none;
-    border-radius: 20px;
     color: white;
     padding: 10px;
     margin: 5px;
@@ -106,13 +105,17 @@ datalist {
     transition: 0.3s;
     text-align: center;
     padding: 1vw;
-    margin: 2vw
+    margin: 2vw;
+    border-radius: 1rem;
 }
 
 .imagen {
     height: 45vw;
     overflow: hidden;
     border-radius: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .active {
@@ -123,22 +126,24 @@ datalist {
     cursor: pointer;
 }
 
-/* .portaLibro {
-} */
+.info{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
-.desktop-header,
-.mobile-header {
+.desktop-header, .mobile-header{
     position: fixed;
     top: 0;
-    width: 100vw;
-}
-
-.desktop-footer,
-.mobile-footer {
+    width: 100%;
+    height: 10%;
+  }
+  
+  .desktop-footer, .mobile-footer{
     position: fixed;
     bottom: 0;
-    width: 100vw;
-}
+    width: 100%;
+    height: 10%;
+  }
 
 .descripcion {
     overflow: hidden;
@@ -159,5 +164,21 @@ datalist {
 
     .col-desktop {
         padding-top: 0;
+    }
+}
+
+@media (min-aspect-ratio: 141/398) and (max-aspect-ratio: 300/667) {
+    #contenedor {
+        padding-top: 30%;
+        padding-bottom: 30%;
+
+    }
+}
+
+@media (max-aspect-ratio: 141/398) {
+    #contenedor {
+        padding-top: 60%;
+        padding-bottom: 60%;
+
     }
 }

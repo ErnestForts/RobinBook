@@ -1,50 +1,49 @@
-<div class="bg">
-    <div class="row">
-        <div class="content">
+<div>
+    <div class="bg">
 
-            <div class="parte1">
-                <div>
-                    <img class="imgperfil" src={{usuario.Foto}} alt="">
-                </div>
 
-                <div class="row">
-                    <div class="row nombre">
-                        <p class="">{{usuario.Nombre}}</p>
-                    </div>
-                    <div class="row subtitulo">
-                        <p class="">{{usuario.Frase}}</p>
+        <div class="contenedor-content">
+            <div class="content">
+                <div class="parte1">
+                    <div>
+                        <img class="imgperfil" src={{usuario.Foto}} alt="">
                     </div>
                     <div class="row crear-chat" *ngIf="sameUser == false;">
-                        <button routerLink="/perfil/chat" *ngIf="newChatRoom == false;"><img src="..\assets\icons\message-circle.svg" alt="">IR AL CHAT ROOM</button>
-                        <button (click)="createChatRoom(usuario.user_id);" *ngIf="newChatRoom == true;"><img src="..\assets\icons\message-circle.svg" alt="">CREAR UN CHAT ROOM</button>
+                        <button routerLink="/perfil/chat" *ngIf="newChatRoom == false;"><img src="..\assets\icons\message-circle.svg" alt=""></button>
+                        <button (click)="createChatRoom(usuario.user_id);" *ngIf="newChatRoom == true;"><img src="..\assets\icons\message-circle.svg" alt=""></button>
+                    </div>
+
+                    <div class="line"></div>
+                </div>
+
+                <div class="alinelibros">
+                    <h4 class="textlibros">LIBROS</h4>
+                </div>
+                <div class="librosFav">
+                    <div *ngFor="let book of books; let i = index" class="librostyle" routerLink="/libros/detalle"
+                        (click)="sendLibroDetail(book.Titulo, book.Autor, book.Descripcion, book.Foto, book.Genero, book.libro_id)">
+                        <div class="contenedor-imagen">
+                            <img class="imglibro" src={{book.Foto}} alt="">
+                        </div>
+                        <div>
+                            <h4 class="titlelibro">{{book.Titulo}}</h4>
+                            <div>
+                                <ng-container *ngFor="let star of stars;">
+                                    <app-star [starId]="star" rating="{{book.puntuacion}}"></app-star>
+                                </ng-container>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="line"></div>
-            </div>
-
-            <div class="alinelibros">
-                <p class="textlibros">LIBROS</p>
-            </div>
-            <div *ngFor="let book of books; let i = index" class="librostyle" routerLink="/libros/detalle"
-                (click)="sendLibroDetail(book.Titulo, book.Autor, book.Descripcion, book.Foto, book.Genero, book.libro_id)">
-                <img class="imglibro" src={{book.Foto}} alt="">
-                <div>
-                    <p class="titlelibro">{{book.Titulo}}</p>
-                    <div>
-                        <ng-container *ngFor="let star of stars;">
-                            <app-star [starId]="star" rating="{{book.puntuacion}}"></app-star>
-                        </ng-container>
-                    </div>
+                <div *ngIf="noBooks" class="noBooks">
+                    <h4>Aun no tiene libros favoritos</h4>
                 </div>
-            </div>
-            <div *ngIf="noBooks">
-                <p>Aun no tiene libros favoritos</p>
             </div>
         </div>
     </div>
-    <app-header-favoritos class="mobile mobile-header" title="Perfil Ranking" src="..\assets\icons\new-arrow_back.svg"
-        id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
+    <app-header-favoritos class="mobile mobile-header" title="Perfil" src="..\assets\icons\new-arrow_back.svg" id="back"
+        alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
     <app-footer class="desktop-header desktop"></app-footer>
     <app-footer class="mobile mobile-footer"></app-footer>
     <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>

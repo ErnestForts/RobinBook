@@ -1,19 +1,20 @@
 *{
   margin: 0;
+  padding: 0;
 }
 
 #contenedor{
   background-color: #F7F9C1;
-  height: 80vh;
+  height: 100%;
   padding: 0;
-  margin-top: 10vh;
 }
 
 .contenedor-mapa{
   margin: 0;
   padding: 0;
-  height: 80vh;
-  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  display: ;
 
 }
 
@@ -23,21 +24,22 @@
   width: 100%;
 }
 
-
 .desktop-header, .mobile-header{
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
+  height: 10%;
 }
 
 .desktop-footer, .mobile-footer{
   position: fixed;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
+  height: 10%;
 }
 
 .col-desktop{
-  padding-top: 5rem;
+  /* padding-top: 5rem; */
 }
 
 .lugares-favoritos{
@@ -51,12 +53,11 @@
 }
 
 .col > h6{
-  font-size: 1.3vw;
 }
 
 .col{
-  padding-bottom: 8px;
-  color: #388E3C;
+  /* padding-bottom: 8px;
+  color: #388E3C; */
 }
 
 .col-1{
@@ -130,13 +131,11 @@ svg{
 }
 
 .tieneLibro {
-  font-size: 3.5vw;
   color: #388E3C;
 }
 
 .noTieneLibro {
   color: #b12f27;
-  font-size: 3.5vw;
 
 }
 
@@ -147,12 +146,12 @@ svg{
 
     #mapa{
       width: 45%;
-      height: 50vh;
+      height: 50%;
       padding: 10px;
     }
 
     #contenedor{
-      padding-top: 12vh;
+      padding-top: 12%;
     }
 
     .col-desktop{
