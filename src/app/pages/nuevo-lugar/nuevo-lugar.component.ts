@@ -47,6 +47,4 @@ export class NuevoLugarComponent implements OnInit {
     let token = JSON.parse(localStorage.getItem('user')).token;
     this.mapaServicio.lugarNuevo(nuevoLugar, token);
   }
-  
 }
-

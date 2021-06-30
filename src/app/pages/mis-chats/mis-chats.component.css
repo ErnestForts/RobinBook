@@ -13,15 +13,6 @@ h3 {
     color: #689F38;
 }
 
-.nombre > h4, .mensaje > h4{
-}
-
-.hora{
-    text-align: center;
-}
-.hora > p {
-}
-
 .caja-burbuja{
     align-items: center;
     justify-content: center;
@@ -32,8 +23,9 @@ h3 {
     text-align: center;
     align-items: center;
     border-radius: 50%;
-    width: 4.8vw;
-    height: 4.8vw;
+    width: 5.8vw;
+    height: 5.8vw;
+    transform: scale(1.2, 1.2);
 
 }
 
@@ -47,9 +39,13 @@ h3 {
 }
 
 #contenedor {
-    height: 100%;
-    margin-top: 10%;
+    flex: 1 0 auto;
+    background-color: #F7F9C1;
+    justify-content: center;
+    align-content: center;
     overflow-y: scroll;
+    padding-top: 23%;
+    padding-bottom: 23%;
 }
 
 .desktop-header, .mobile-header{
@@ -145,4 +141,20 @@ h3 {
     }
 
 
+}
+
+@media (min-aspect-ratio: 141/398) and (max-aspect-ratio: 300/667){
+    #contenedor{
+        padding-top: 30%;
+        padding-bottom: 30%;
+
+    }
+}
+
+@media (max-aspect-ratio: 141/398){
+    #contenedor{
+        padding-top: 60%;
+        padding-bottom: 60%;
+
+    }
 }

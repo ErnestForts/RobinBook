@@ -29,15 +29,17 @@ export class RankingComponent implements OnInit {
     this.apiService.obtenerUsuarios(token).subscribe( (result: any) => {
       this.usuarios = result.data;
       this.usuarios.sort((a,b) => a.ranking < b.ranking && 1 || -1)
-       });
+      });
   }
 
-  userDetail(i:number){
-    this.router.navigate(['ranking/perfil',i], {
+  userDetail(user_id:number){
+    let result = this.usuarios.find(d => d.user_id === user_id);
+    this.router.navigate(['ranking/perfil',user_id], {
       state: {
-        user: JSON.stringify(this.usuarios[i])
+        user: JSON.stringify(result)
       }
     });
   }
+  
 
 }

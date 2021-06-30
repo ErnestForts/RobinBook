@@ -2,15 +2,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="contenedor">
-    <app-header-favoritos *ngIf="router.url == '/login'" src="" id="none" id2="ocultar" class="mobile-header"></app-header-favoritos>
+
+<app-header-favoritos *ngIf="router.url == '/login'" src="" id="none" id2="ocultar" class="mobile-header"></app-header-favoritos>
     <app-header-favoritos *ngIf="showBar()" class="mobile-header showBar" src="..\assets\icons\new-arrow_back.svg" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
+<div class="contenedor">
+    
     <div class="column left">
     </div>
     <div class="column middle">
-        <div class="logo">
-            <img src="../../../assets/pics/logo.png" alt="logo">
-        </div>
+        
         <div class="outletContent">
             <router-outlet name='login'></router-outlet>
             <router-outlet name='register'></router-outlet>
@@ -21,5 +21,6 @@
     <div class="column right">
         
     </div>
-    <app-footer-login class="mobile-footer"></app-footer-login>
+    
 </div>
+<app-footer-login class="mobile-footer"></app-footer-login>

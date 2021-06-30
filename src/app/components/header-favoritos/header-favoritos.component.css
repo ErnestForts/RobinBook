@@ -79,12 +79,18 @@ p {
 }
 
 .contenedor-perfil{
+    transform: scale(0.8, 0.8);
     border-radius: 50%;
     overflow: hidden;
     height: 100%;
     width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor-perfil > img{
+    border-radius: 50%;
 
+    height: 100%;
 }
