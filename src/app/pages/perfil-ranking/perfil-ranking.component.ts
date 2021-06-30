@@ -25,7 +25,7 @@ export class PerfilRankingComponent implements OnInit {
   public lugarRoom: number;
 
 
-  constructor(private router: Router,private route: ActivatedRoute, private apiService: LibroService, private chatService : ChatService) {
+  constructor(private router: Router, private route: ActivatedRoute, private apiService: LibroService, private chatService : ChatService) {
     if (this.router.getCurrentNavigation().extras.state) {
       this.routeState = this.router.getCurrentNavigation().extras.state;
       if (this.routeState) {
