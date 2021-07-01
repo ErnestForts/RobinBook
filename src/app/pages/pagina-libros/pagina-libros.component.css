@@ -38,7 +38,7 @@
     width: 4rem;
 }
 
-@keyframes slidein {
+/* @keyframes slidein {
     from {
         margin-left: 50%;
         transform: rotate(270deg);
@@ -47,7 +47,7 @@
     to {
         margin-left: 3%;
     }
-}
+} */
 
 
 datalist {
