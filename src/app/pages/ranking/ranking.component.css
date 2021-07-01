@@ -33,6 +33,28 @@
     padding: 2vw;
 }
 
+.buscar::placeholder {
+    text-align: center;
+}
+
+
+/* .animacion {
+    animation-duration: 3s;
+    animation-name: slidein;
+    width: 4rem;
+} */
+
+/* @keyframes slidein {
+    from {
+        margin-left: 50%;
+        transform: rotate(270deg);
+    }
+
+    to {
+        margin-left: 3%;
+    }
+} */
+
 .userstyle {
     display: grid;
     grid-template-columns: 20vw 50vw 25vw;

@@ -28,15 +28,11 @@
     position: relative;
 }
 
-#iconoDentro:hover {
-    transform: scale(1.4, 1.4);
-}
-
-.animacion {
+/* .animacion {
     animation-duration: 3s;
     animation-name: slidein;
     width: 4rem;
-}
+} */
 
 /* @keyframes slidein {
     from {
@@ -57,7 +53,6 @@ datalist {
 
 .buscar::placeholder {
     text-align: center;
-
 }
 
 .container {

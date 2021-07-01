@@ -1,7 +1,7 @@
 <div class="bg">
     <div class="content">
         <div class="busqueda">
-            <input [(ngModel)]="filterTerm" type="search" class="buscar" placeholder="Buscar usuario" list="busqueda" #titulo>
+            <input [(ngModel)]="filterTerm" type="search" class="buscar" placeholder="Buscar usuario" list="busqueda" #titulo><img src="..\assets\icons\magnifier.svg" class="animacion" id="iconoDentro"/>
         </div>
         <div *ngFor="let usuario of usuarios | filter:filterTerm:'Nombre'; let i = index" class="usuario" (click)="userDetail(usuario.user_id)">
             <div class="userstyle">
