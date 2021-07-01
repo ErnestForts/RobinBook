@@ -139,14 +139,18 @@ svg{
 
 }
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 650px) {
     .mobile{
       display: none;
     }
 
+    .padre{
+      margin-left: 22vw;
+    }
+
     #mapa{
-      width: 45%;
-      height: 50%;
+      width: 80%;
+      height: 70%;
       padding: 10px;
     }
 
@@ -164,7 +168,7 @@ svg{
     }
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 650px) {
   .desktop{
     display: none;
   }

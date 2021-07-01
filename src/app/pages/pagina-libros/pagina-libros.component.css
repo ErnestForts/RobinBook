@@ -162,18 +162,46 @@ datalist {
     }
 }
 
-@media (min-aspect-ratio: 141/398) and (max-aspect-ratio: 300/667) {
-    #contenedor {
-        padding-top: 30%;
-        padding-bottom: 30%;
+@media only screen and (min-width: 650px) {
+    .mobile{
+      display: none;
+    }
 
+    .padre{
+      margin-left: 35vw;
+    }
+
+    #mapa{
+      width: 45%;
+      height: 50%;
+      padding: 10px;
+    }
+
+    #contenedor{
+      padding-top: 12%;
+    }
+
+    .col-desktop{
+      padding-top: 0;
+    }
+
+    .desktop-row{
+      width: 45%;
+      margin: 0 auto;
     }
 }
 
-@media (max-aspect-ratio: 141/398) {
-    #contenedor {
-        padding-top: 60%;
-        padding-bottom: 60%;
+@media only screen and (max-width: 650px) {
+  .desktop{
+    display: none;
+  }
 
-    }
+  #mapa {
+    padding: 0;
+    margin: 0;
+  }
+
+  .col-desktop{
+    padding-top: 0;
+  }
 }
