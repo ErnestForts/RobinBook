@@ -1,39 +1,39 @@
 <div class="madre">
   <div>
-      <div class="row">
-          <div id="contenedor">
-            <div class="content">
-              <div class="busqueda">
-                  <input [(ngModel)]="filterTerm" type="search" class="buscar iconoDentro" placeholder="Inserta titulo" list="busqueda" #titulo><img src="..\assets\icons\magnifier.svg" class="animacion" id="iconoDentro"/>
-              </div>
-              <div class="contenedor-botones">
-                  <button class="botones" (click)="changeVista('fantastica'); setActive('1');" [ngClass]="statusClass1">Fantástica</button>
-                  <button class="botones" (click)="changeVista('ficcion'); setActive('2');" [ngClass]="statusClass2">Ficción</button>
-                  <button class="botones" (click)="changeVista('suspenso'); setActive('3');" [ngClass]="statusClass3">Suspenso</button>
-                  <button class="botones" (click)="changeVista('drama'); setActive('4');" [ngClass]="statusClass4">Drama</button>
-                  <button class="botones" (click)="changeVista('accion'); setActive('5');" [ngClass]="statusClass5">Acción</button>
-                  <button class="botones" (click)="changeVista('aventura'); setActive('6');" [ngClass]="statusClass6">Aventura</button>
-                  <button class="botones" (click)="changeVista('romance'); setActive('7');" [ngClass]="statusClass7">Romance</button>
-                  <button class="botones volver" (click)="reloadLista();" [ngClass]="statusVolver">Volver</button>
-              </div>
-              <div class="container">
-                  <div class="row">
-                    <div class="col-6" *ngFor="let vista of librosVista | filter:filterTerm:'Titulo'">
-                        <div class="cardLibro" routerLink="/libros/detalle" (click)="sendLibroDetail(vista.Titulo, vista.Autor, vista.Descripcion, vista.Foto, vista.Genero, vista.libro_id, vista.PuntosTotales, vista.VecesPuntuado)">
-                          <div class="imagen">
-                            <img [src]="vista.Foto" class="portaLibro" alt="Avatar" style="width:100%">
-                          </div>
-                            <div class="container info">
-                                <h5 class="titulo"><b>{{vista.Titulo}}</b></h5>
-                                <h5 class="descripcion">{{vista.Descripcion}}</h5>
-                            </div>
-                        </div>
-                    </div>
+    <div class="row">
+      <div id="contenedor">
+        <div class="content">
+          <div class="busqueda">
+            <input [(ngModel)]="filterTerm" type="search" class="buscar iconoDentro" placeholder="Inserta titulo" list="busqueda" #titulo><img src="..\assets\icons\magnifier.svg" class="animacion" id="iconoDentro"/>
+          </div>
+          <div class="contenedor-botones">
+            <button class="botones" (click)="changeVista('fantastica'); setActive('1');" [ngClass]="statusClass1">Fantástica</button>
+            <button class="botones" (click)="changeVista('ficcion'); setActive('2');" [ngClass]="statusClass2">Ficción</button>
+            <button class="botones" (click)="changeVista('suspenso'); setActive('3');" [ngClass]="statusClass3">Suspenso</button>
+            <button class="botones" (click)="changeVista('drama'); setActive('4');" [ngClass]="statusClass4">Drama</button>
+            <button class="botones" (click)="changeVista('accion'); setActive('5');" [ngClass]="statusClass5">Acción</button>
+            <button class="botones" (click)="changeVista('aventura'); setActive('6');" [ngClass]="statusClass6">Aventura</button>
+            <button class="botones" (click)="changeVista('romance'); setActive('7');" [ngClass]="statusClass7">Romance</button>
+            <button class="botones volver" (click)="reloadLista();" [ngClass]="statusVolver">Volver</button>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6" *ngFor="let vista of librosVista | filter:filterTerm:'Titulo'">
+                <div class="cardLibro" routerLink="/libros/detalle" (click)="sendLibroDetail(vista.Titulo, vista.Autor, vista.Descripcion, vista.Foto, vista.Genero, vista.libro_id, vista.PuntosTotales, vista.VecesPuntuado)">
+                  <div class="imagen">
+                    <img [src]="vista.Foto" class="portaLibro" alt="Avatar" style="width:100%">
                   </div>
+                  <div class="container info">
+                    <h5 class="titulo"><b>{{vista.Titulo}}</b></h5>
+                    <h5 class="descripcion">{{vista.Descripcion}}</h5>
+                  </div>
+                </div>
               </div>
+            </div>
           </div>
-          </div>
+        </div>
       </div>
+    </div>
   </div>
   <app-header-mapas class="mobile mobile-header" title="Libros" src="..\assets\icons\new-book_fav.svg" src2="..\assets\icons\new-book_add.svg" id="plus" alt="bookMark" alt2="newBook" router1="/libros/favoritos" router2="/libros/nuevo"></app-header-mapas>
   <app-footer class="desktop-header desktop"></app-footer>

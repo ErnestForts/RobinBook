@@ -146,23 +146,7 @@ datalist {
     text-overflow: ellipsis;
 }
 
-@media only screen and (min-width: 650px) {
-    .mobile {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .desktop {
-        display: none;
-    }
-
-    .col-desktop {
-        padding-top: 0;
-    }
-}
-
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 700px) {
     .mobile{
       display: none;
     }
@@ -189,9 +173,16 @@ datalist {
       width: 45%;
       margin: 0 auto;
     }
+
+    .content {
+        margin-top: 2vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
   .desktop{
     display: none;
   }

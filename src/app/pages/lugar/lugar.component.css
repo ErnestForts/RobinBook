@@ -333,7 +333,7 @@ input {
 
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 700px) {
 
     .mobile {
         display: none;
@@ -341,7 +341,7 @@ input {
 
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
     .desktop {
         display: none;
     }
@@ -352,13 +352,13 @@ input {
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
     .imagen {
         max-width: 100%;
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 700px) {
     .imagen {
         max-width: 100%;
     }
