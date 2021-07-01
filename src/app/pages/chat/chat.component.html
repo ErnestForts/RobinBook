@@ -17,13 +17,14 @@
         </div>
     </div>
     </div>
-    <div class="sendComent">
-        <div>
+
+    <div class="sendComent mobile-footer">
+        <div class="contenedor-input">
             <input type="text" placeholder="Escribir mensaje" (keydown.enter)="presionarEnter($event, insertar.value); insertar.value = ''" #insertar><br>
         </div>
         <div class="contenedor-boton">
             <button type="reset" value="Reset" (click)="sendComent(insertar.value); insertar.value = ''">
-                <h6>Enviar mensaje</h6>
+                <img src="..\assets\icons\send-comment.svg" alt="">
             </button>
         </div>
     </div>

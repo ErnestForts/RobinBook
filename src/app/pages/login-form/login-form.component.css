@@ -23,12 +23,24 @@ img{
 
 .contenedor{
     padding-top: 10%;
+    width: 100vw;
 }
 
 .inputDiv{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+}
+
+.inputLow{
+    margin-top: 5vw;
+}
+
+.loginInvalid{
+    margin-top: 3vw;
+    color: #D7323E;
 }
 
 h2 {
@@ -45,10 +57,11 @@ h1 > a{
 }
 
 .field-icon {
-    margin-left: -25px;
-    margin-top: 2.8rem;
-    position: relative;
+    /* margin-left: -25px; */
+    /* margin-top: 2.8rem; */
+    position: absolute;
     font-size: 2rem;
+    transform: translate(-130%, 100%);
 }
 
 .forgotPassword{
@@ -73,21 +86,29 @@ a:hover {
     flex-direction: column;
 }
 
-.formFlex {
-    /* display: flex;
+.formFlex{
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
 }
 
 
-input {
+
+.newInput > input {
     background: #FFFFFF;
 
-
+    width: 70vw;
     font-family: Montserrat;
     font-style: normal;
 
     padding: 4%;
+}
+
+.contenedor-boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .loginButton {
@@ -99,7 +120,7 @@ input {
 
     /* Global/03. Success */
 
-    background: rgba(40, 167, 69, 0.5);
+    background: #689F38;
     border: none;
     color: #FFFFFF;
     font-family: Poppins;
@@ -116,7 +137,7 @@ input {
 
     /* Global/03. Success */
 
-    background: rgba(40, 167, 69, 0.5);
+    background-color: #689F38;
     border: none;
     color: #FFFFFF;
     font-family: Poppins;
@@ -207,7 +228,7 @@ button:hover {
     }
 
     .forgotLink {
-        color: red;
+        color: #D7323E;
     }
 
     #registerTitle {

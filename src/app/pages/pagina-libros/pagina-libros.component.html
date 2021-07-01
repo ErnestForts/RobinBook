@@ -4,7 +4,7 @@
           <div id="contenedor">
             <div class="content">
               <div class="busqueda">
-                  <input [(ngModel)]="filterTerm" type="search" class="buscar iconoDentro" placeholder="Inserta titulo" list="busqueda" #titulo><img src="..\assets\icons\magnifier.svg" class="animacion" id="iconoDentro"/>
+                  <input [(ngModel)]="filterTerm" type="search" class="buscar" placeholder="Buscar título" list="busqueda" #titulo>
               </div>
               <div class="contenedor-botones">
                   <button class="botones" (click)="changeVista('fantastica'); setActive('1');" [ngClass]="statusClass1">Fantástica</button>

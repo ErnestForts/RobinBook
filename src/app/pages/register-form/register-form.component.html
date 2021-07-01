@@ -8,22 +8,22 @@
         <div class="formDiv">
             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="formFlex">
 
-                <input formControlName="txtEmail" type="email" style="margin-top: 20px;" placeholder="email">
+                <input formControlName="txtEmail" type="email" style="margin-top: 20px;" placeholder="Email">
 
-                <input formControlName="txtNombre" type="text" style="margin-top: 20px;" placeholder="nombre">
+                <input formControlName="txtNombre" type="text" style="margin-top: 20px;" placeholder="Nombre">
 
 
-                <input formControlName="txtApellidos" type="text" style="margin-top: 20px;" placeholder="apellidos">
+                <input formControlName="txtApellidos" type="text" style="margin-top: 20px;" placeholder="Apellido">
 
 
                 <div class="ancho-completo">
                     <input id="password" formControlName="txtPassword" type="password" style="margin-top: 20px;"
-                        placeholder="password">
+                        placeholder="Contraseña">
                     <span id="spanPassword" [ngClass]="isVisible" (click)="toggle('password','spanPassword')"></span>
                 </div>
                 <div class="ancho-completo">
                     <input id="Repassword" formControlName="txtRePassword" type="password" style="margin-top: 20px;"
-                        placeholder="repite el password">
+                        placeholder="Repite la contraseña">
                     <span id="spanRepassword" toggle="#txtRePassword" [ngClass]="isVisible"
                         (click)="toggle('Repassword','spanRepassword')"></span>
                 </div>
