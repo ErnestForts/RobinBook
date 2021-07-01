@@ -142,7 +142,7 @@ button:hover {
 .forgotLink{
     padding-right: 0%;
 }
-@media only screen and (max-width: 1019px) {
+@media only screen and (max-width: 800px) {
     .formDiv {
         max-width: 50%;
         min-height: 100%;
@@ -171,7 +171,7 @@ button:hover {
 
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 800px) {
     .formDiv {
         display: flex;
         flex-direction: row;
