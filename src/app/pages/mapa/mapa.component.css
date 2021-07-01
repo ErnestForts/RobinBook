@@ -158,10 +158,6 @@ svg{
       padding-top: 12%;
     }
 
-    .desktop:svg{
-      display: none;
-    }
-
     .col-desktop{
       padding-top: 0;
     }

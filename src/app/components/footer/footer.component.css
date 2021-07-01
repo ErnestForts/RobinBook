@@ -76,9 +76,11 @@ div.active-link{
       height: 0%;
       display: none;
     }
+
     img{
         display: none;
     }
+
     col{
         padding-bottom: 50px;
     }
@@ -92,7 +94,9 @@ div.active-link{
         margin: 0 auto;
     }
 
-
+    h4{
+        padding: 3vw;
+    }
 
     .fondo{
         padding-top: 0;
