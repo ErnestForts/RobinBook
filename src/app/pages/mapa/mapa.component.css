@@ -145,7 +145,7 @@ svg{
     }
 
     .padre{
-      margin-left: 22vw;
+      margin-left: 17vw;
     }
 
     #mapa{
@@ -156,6 +156,10 @@ svg{
 
     #contenedor{
       padding-top: 12%;
+    }
+
+    .desktop:svg{
+      display: none;
     }
 
     .col-desktop{
