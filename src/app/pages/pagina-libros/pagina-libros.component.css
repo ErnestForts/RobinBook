@@ -25,26 +25,6 @@
     align-content: center;
 }
 
-#iconoDentro {
-    position: relative;
-}
-
-/* .animacion {
-    animation-duration: 3s;
-    animation-name: slidein;
-    width: 4rem;
-} */
-
-/* @keyframes slidein {
-    from {
-        margin-left: 50%;
-        transform: rotate(270deg);
-    }
-
-    to {
-        margin-left: 3%;
-    }
-} */
 
 
 datalist {
@@ -149,6 +129,15 @@ datalist {
     text-overflow: ellipsis;
 }
 
+
+.libros-favoritos{
+    text-align: right;
+  }
+  
+  .nuevo-libro{
+    text-align: right;
+  }
+
 @media only screen and (min-width: 700px) {
     .mobile{
       display: none;
@@ -174,13 +163,33 @@ datalist {
 
     .desktop-row{
       width: 45%;
-      margin: 0 auto;
+      margin-left: 20vw;
+      margin-bottom: 1vw;
     }
 
     .content {
         margin-top: 2vw;
         margin-left: 15vw;
         margin-right: 15vw;
+    }
+
+    h6 {
+        color: #1D231E;
+      }
+  
+    #fav-plus {
+    height: 8vw;
+    width: 8vw;
+    }
+
+    .buscar {
+        width: 40vw;
+        height: 6vw;
+        font-size: 25px;
+    }
+
+    .botones {
+        font-size: 25px;
     }
 
 }

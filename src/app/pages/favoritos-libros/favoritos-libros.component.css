@@ -184,7 +184,16 @@ h3 {
     img {
         width: 80%;
     }
-    
+
+    .container {
+        margin-top: 2vw;
+        padding-left: 30vw;
+        padding-right: 30vw;
+    }
+
+    .description {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
