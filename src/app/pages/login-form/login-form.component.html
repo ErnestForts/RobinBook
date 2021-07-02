@@ -11,26 +11,32 @@
             <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="formFlex">
 
                 <div class="inputDiv">
-                    <input formControlName="txtEmail" type="email" placeholder="email">
+                    <div class="newInput">
+                        <input formControlName="txtEmail" type="email" placeholder="Email">
 
-                    <div *ngIf="emailInvalid">
-                        <div>Email invalid</div>
+                        <div *ngIf="emailInvalid">
+                            <div>Email invalid</div>
+                        </div>
                     </div>
+                    
                 </div>
 
                 <div class="inputDiv">
-                    <input id="txtPassword" formControlName="txtPassword" type="password" style="margin-top: 20px;"
-                        placeholder="password">
-                    <span toggle="#password-field" [ngClass]="isVisible" (click)="toggle()"></span>
+                    <div class="newInput inputLow">
+                      <input id="txtPassword" formControlName="txtPassword" type="password"
+                        placeholder="Contraseña">
+                    <span toggle="#password-field" [ngClass]="isVisible" (click)="toggle()"></span>  
+                    </div>
+                    
                     <div *ngIf="passwordInvalid">
                         <div>Password invalid</div>
                     </div>
-                    <div *ngIf="loginInvalid">
-                        <div>Usuario o contraseña incorrectos</div>
+                    <div *ngIf="loginInvalid" class="loginInvalid">
+                        <div><h5>Usuario o contraseña incorrectos</h5></div>
                     </div>
                 </div>
 
-                <div>
+                <div class="contenedor-boton">
                     <button type="submit" class="loginButton">Entrar</button>
 
                 </div>

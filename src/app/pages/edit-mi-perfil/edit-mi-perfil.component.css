@@ -16,6 +16,15 @@ app-header-favoritos{
     padding-bottom: 23%;
 }
 
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formDiv{
+}
+
 
 .subtitulo{
     font-style: normal;
@@ -48,8 +57,8 @@ app-header-favoritos{
 
 .separado{
     margin-top: 2vw;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 
@@ -99,10 +108,10 @@ app-header-favoritos{
 .boton {
     background-color: #689F38;
     color: white;
-    height: 40px;
+    height: 50px;
     margin-top: 1%;
     margin-bottom: 2%;
-    width: 60%;
+    width: 120px;
 
 }
 

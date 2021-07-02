@@ -306,10 +306,30 @@ app-header-favoritos {
 }
 
 #contenedor {
-
     background-color: #F7F9C1;
+    width: 100vw;
+}
+
+.content{
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-content: center;
+    width: 100vw;
+}
+
+.col-desktop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
 }
 
 
@@ -349,22 +369,15 @@ img {
 
 .info-nombre {
     padding-top: 3%;
-    align-self: flex-start;
-    padding-left: 10%;
     padding-bottom: 2%;
 }
 
 .info-input {
-
     padding-top: 3%;
-    align-content: flex-end;
-    width: 90%;
-
 }
 
 .info-input > input{
-
-    width: 100%;
+    width: 70vw;
     padding: 4%;
 }
 
@@ -374,7 +387,7 @@ h4 {
 
 textarea {
     margin-top: 3%;
-    width: 85vw;
+    width: 70vw;
     padding: 4%;
     resize: none;
 }
@@ -436,7 +449,8 @@ svg {
 .boton {
     background-color: #689F38;
     color: white;
-    padding: 4%;
+    height: 50px;
+    width: 100px;
 }
 
 .coordenada {

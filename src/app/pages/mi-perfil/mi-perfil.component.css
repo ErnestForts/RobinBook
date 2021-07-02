@@ -3,20 +3,20 @@
     padding: 0;
 }
 
-app-header-favoritos{
+app-header-favoritos {
     height: 10%;
     background-color: #388E3C;
 
 }
 
-.bg{
+.bg {
     background-color: #F7F9C1;
     height: 100%;
     width: 100vw;
     margin-top: 10%;
 }
 
-.content{
+.content {
     background-color: #F7F9C1;
     justify-content: center;
     align-content: center;
@@ -24,7 +24,7 @@ app-header-favoritos{
     padding-bottom: 23%;
 }
 
-.subtitulo{
+.subtitulo {
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
@@ -32,75 +32,88 @@ app-header-favoritos{
     color: white;
 }
 
-.imagen{
+.imagen {
     justify-content: center;
     align-items: center;
 }
 
-.imgperfil{
+.imgperfil {
     border-radius: 50%;
     width: 30vw;
 }
 
-#parte1{
+#parte1 {
     padding-top: 3vw;
     padding-bottom: 3vw;
 }
 
-#parte2{
+#parte2 {
     padding-top: 1vw;
     padding-bottom: 2vw;
 }
 
-.separado{
+.separado {
+    justify-content: flex-start;
+    align-items: flex-start;
     margin-top: 2vw;
-    padding-left: 10vw;
+    padding-left: 5vw;
     padding-right: 5vw;
 }
 
 
-.titles{
+.titles {
     font-weight: 600;
     line-height: 20px;
     text-transform: uppercase;
     color: #C2C4CB;
 }
 
-.line{
+.line {
     width: 100vw;
     border-bottom: 0.5px solid #E2E3E4;
     margin-top: 0.7vw;
 }
 
-.title2{
+.title2 {
     color: #5A6072;
 }
 
-.title3{
+.title3 {
     font-weight: 600;
     color: black;
 }
 
-.desktop-header, .mobile-header{
+.desktop-header,
+.mobile-header {
     position: fixed;
     top: 0;
     width: 100%;
     height: 10%;
-  }
-  
-  .desktop-footer, .mobile-footer{
+}
+
+.desktop-footer,
+.mobile-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 10%;
-  }
+}
+
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vw;
+}
 
 .boton {
     background-color: #689F38;
     color: white;
-    height: 40px;
+    height: 50px;
+    width: 120px;
     margin-top: 1%;
-    margin-bottom: 2%;;
+    margin-bottom: 2%;
+    ;
 }
 
 @media only screen and (min-width: 700px) {
@@ -114,5 +127,5 @@ app-header-favoritos{
     .desktop{
         display: none;
     }
-    
+
 }

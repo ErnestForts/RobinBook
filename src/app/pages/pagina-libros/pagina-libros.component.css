@@ -12,8 +12,9 @@
 
 .buscar {
     border: 0;
-    width: 60vw;
+    width: 70vw;
     padding: 2vw;
+    text-align: center;
 }
 
 #contenedor {
@@ -121,24 +122,26 @@ datalist {
     cursor: pointer;
 }
 
-.info{
+.info {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.desktop-header, .mobile-header{
+.desktop-header,
+.mobile-header {
     position: fixed;
     top: 0;
     width: 100%;
     height: 10%;
-  }
-  
-  .desktop-footer, .mobile-footer{
+}
+
+.desktop-footer,
+.mobile-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 10%;
-  }
+}
 
 .descripcion {
     overflow: hidden;
