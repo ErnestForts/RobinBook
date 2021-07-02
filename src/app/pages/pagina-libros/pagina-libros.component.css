@@ -175,11 +175,12 @@ datalist {
 
     h6 {
         color: #1D231E;
+        font-size: 2vw;
       }
   
     #fav-plus {
-    height: 8vw;
-    width: 8vw;
+    height: 5vw;
+    width: 5vw;
     }
 
     .buscar {

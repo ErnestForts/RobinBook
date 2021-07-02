@@ -5,17 +5,19 @@
         <div class="content">
           <div class="row desktop-row align-items-end desktop">
             <div class="col libros-favoritos" routerLink="/libros/favoritos">
-                <h6>Libros favoritos</h6><img src="..\assets\icons\new-book_favDesktop.svg" id="fav-plus" class="id3" alt="favoritos">
+                <h6>Libros favoritos</h6>
+                <!-- <img src="..\assets\icons\new-book_favDesktop.svg" id="fav-plus" class="id3" alt="favoritos"> -->
             </div>
-            <!-- <div class="col-1" routerLink="/libros/favoritos">
+            <div class="col-1" routerLink="/libros/favoritos">
                 <img src="..\assets\icons\new-book_favDesktop.svg" id="fav-plus" class="id3" alt="favoritos">
-            </div> -->
-            <div class="col nuevo-libro" routerLink="/libros/nuevo">
-                <h6>Nuevo libro</h6><img src="..\assets\icons\new-book_addDesktop.svg" id="fav-plus" class="id3" alt="newLocation">
             </div>
-            <!-- <div class="col-1" routerLink="/libros/nuevo">
+            <div class="col nuevo-libro" routerLink="/libros/nuevo">
+                <h6>Nuevo libro</h6>
+                <!-- <img src="..\assets\icons\new-book_addDesktop.svg" id="fav-plus" class="id3" alt="newLocation"> -->
+            </div>
+            <div class="col-1" routerLink="/libros/nuevo">
                 <img src="..\assets\icons\new-book_addDesktop.svg" id="fav-plus" class="id3" alt="newLocation">
-            </div> -->
+            </div>
         </div>
           <div class="busqueda">
             <input [(ngModel)]="filterTerm" type="search" class="buscar iconoDentro" placeholder="Inserta titulo" list="busqueda" #titulo>

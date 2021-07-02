@@ -17,4 +17,8 @@
     align-items: center;
     text-decoration: none;
     color: white;
- } 
+ }
+
+ h4 {
+    font-size: 2vw;
+ }
