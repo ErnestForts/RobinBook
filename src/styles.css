@@ -4,12 +4,11 @@ html, body {
     font-size: 2vw;
     overflow:unset;
     background-color: #F7F9C1;
-
 }
   
 *{
     font-family: 'Poppins';
-
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }

@@ -73,7 +73,7 @@
         </div>
         <div class="divisor" *ngIf="coments">
             <div class="reviews">
-                {{coments.length}} REVIEWS
+                <h5>{{coments.length}} REVIEWS</h5>
             </div>
         </div>
         <div class="comentarios" *ngFor="let coment of coments;" #comentarios>
@@ -98,16 +98,16 @@
         </div>
     </div>
     <div class="sendComent mobile-footer">
-        <div>
+        <div class="contenedor-input">
             <input type="text" placeholder="Escribir comentario" (keydown.enter)="presionarEnter($event, coment.value, libroVista.libro_id); coment.value = ''" #coment><br>
         </div>
         <div class="contenedor-boton">
             <button (click)="sendComent(coment.value, libroVista.libro_id)">
-                <h6>Enviar comentario</h6>
+                <img src="..\assets\icons\send-comment.svg" alt="">
             </button>
         </div>
     </div>
-    <app-header-favoritos class="mobile mobile-header" src="..\assets\icons\new-arrow_back.svg" title="Detalle Libro"
+    <app-header-favoritos class="mobile mobile-header" src="..\assets\icons\new-arrow_back.svg" title=""
         id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
 
 </div>

@@ -39,17 +39,20 @@
                                     <h5 class="noTieneLibro"><b>No hay ningún libro en estos momentos.</b></h5>
                                 </ng-template>
                             </div>
-                            <div class="row pista contenedor-modificar">
-                                <button (click)="modificarLugar();" [routerLink]="['modificar']"
-                                    class="modificar">Modificar</button>
+                            <div class="fila">
+                                <div class="contenedor-modificar">
+                                    <button (click)="modificarLugar();" [routerLink]="['modificar']"
+                                        class="modificar">Modificar</button>
+                                </div>
+                                <div class="contenedor-modificar">
+                                    <button (click)="modificarEstadoLibro();" class="modificar"
+                                        *ngIf="tieneLibro == true; else dejarLibro">Recoger libro</button>
+                                    <ng-template #dejarLibro>
+                                        <button (click)="modificarEstadoLibro();" class="modificar">Dejar libro</button>
+                                    </ng-template>
+                                </div>
                             </div>
-                            <div class="row pista contenedor-modificar">
-                                <button (click)="modificarEstadoLibro();" class="modificar"
-                                    *ngIf="tieneLibro == true; else dejarLibro">Recoger libro</button>
-                                <ng-template #dejarLibro>
-                                    <button (click)="modificarEstadoLibro();" class="modificar">Dejar libro</button>
-                                </ng-template>
-                            </div>
+
                             <div class="marco">
                                 <div class="estrellas">
                                     <ng-container *ngFor="let star of stars;">
@@ -103,13 +106,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sendComent">
-                        <div>
-                            <input type="text" placeholder="Escribir comentario" (keydown.enter)="presionarEnter($event, coment.value, lugarVista.Lugar_id); coment.value = ''" #coment ><br>
+                    <div class="sendComent mobile-footer">
+                        <div class="contenedor-input">
+                            <input type="text" placeholder="Escribir comentario" (keydown.enter)="presionarEnter($event, coment.value, lugarVista.Lugar_id); coment.value = ''" #coment><br>
                         </div>
                         <div class="contenedor-boton">
                             <button (click)="sendComent(coment.value, lugarVista.Lugar_id)">
-                                <h6>Enviar comentario</h6>
+                                <img src="..\assets\icons\send-comment.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -117,8 +120,8 @@
             </div>
         </div>
     </div>
-    <app-header-favoritos class="mobile mobile-header" title="Favoritos" src="..\assets\icons\new-arrow_back.svg"
-        id="back" alt="back" id2="ocultar" id3="ocultar">
+    <app-header-favoritos class="mobile mobile-header" title="" src="..\assets\icons\new-arrow_back.svg" id="back"
+        alt="back" id2="ocultar" id3="ocultar">
     </app-header-favoritos>
     <app-footer class="desktop-header desktop"></app-footer>
     <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
