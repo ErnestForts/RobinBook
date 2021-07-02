@@ -129,8 +129,7 @@
     }
 
     .content {
-        margin-left: 15vw;
-        margin-right: 15vw;
+        width: 100%;
     }
 
 }
@@ -140,9 +139,10 @@
         display: none;
     }
 
+
 }
 
-/* @media (min-aspect-ratio: 141/398) and (max-aspect-ratio: 300/667){
+@media (min-aspect-ratio: 141/398) and (max-aspect-ratio: 300/667){
     .content{
         padding-top: 25%;
         padding-bottom: 30%;
@@ -155,4 +155,4 @@
         padding-bottom: 60%;
 
     }
-} */
+}
