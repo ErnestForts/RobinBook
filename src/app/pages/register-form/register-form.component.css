@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
+    margin-top: 28vw;
 }
 
 .logo{
@@ -113,9 +114,6 @@ button:hover {
         flex-direction: row;
         justify-content: center;
         align-content: center;
-    }
-
-    .registerButton {
     }
 
     .contenedor {

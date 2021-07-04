@@ -5,23 +5,16 @@
         <div class="content">
           <div class="row desktop-row align-items-end desktop">
             <div class="col libros-favoritos" routerLink="/libros/favoritos">
-                <h6>Libros favoritos</h6>
-                <!-- <img src="..\assets\icons\new-book_favDesktop.svg" id="fav-plus" class="id3" alt="favoritos"> -->
+                <p>Libros favoritos</p>
             </div>
-            <div class="col-1" routerLink="/libros/favoritos">
-                <img src="..\assets\icons\new-book_favDesktop.svg" id="fav-plus" class="id3" alt="favoritos">
-            </div>
+            <img src="..\assets\icons\new-book_favDesktop.svg" id="fav-plus" class="id3" alt="favoritos">
             <div class="col nuevo-libro" routerLink="/libros/nuevo">
-                <h6>Nuevo libro</h6>
-                <!-- <img src="..\assets\icons\new-book_addDesktop.svg" id="fav-plus" class="id3" alt="newLocation"> -->
+                <p>Nuevo libro</p>
             </div>
-            <div class="col-1" routerLink="/libros/nuevo">
-                <img src="..\assets\icons\new-book_addDesktop.svg" id="fav-plus" class="id3" alt="newLocation">
-            </div>
+            <img src="..\assets\icons\new-book_addDesktop.svg" id="fav-plus" class="id3" alt="newLocation">
         </div>
           <div class="busqueda">
             <input [(ngModel)]="filterTerm" type="search" class="buscar iconoDentro" placeholder="Inserta titulo" list="busqueda" #titulo>
-            <!-- <img src="..\assets\icons\magnifier.svg" class="animacion" id="iconoDentro"/> -->
           </div>
           <div class="contenedor-botones">
             <button class="botones" (click)="changeVista('fantastica'); setActive('1');" [ngClass]="statusClass1">Fantástica</button>
@@ -55,6 +48,6 @@
   <app-header-mapas class="mobile mobile-header" title="Libros" src="..\assets\icons\new-book_fav.svg" src2="..\assets\icons\new-book_add.svg" id="plus" alt="bookMark" alt2="newBook" router1="/libros/favoritos" router2="/libros/nuevo"></app-header-mapas>
   <app-footer class="desktop-header desktop"></app-footer>
   <app-footer class="mobile mobile-footer"></app-footer>
-  <app-footer-vacio class="desktop-footer desktop"></app-footer-vacio>
+  <app-footer-login class="desktop-footer desktop"></app-footer-login>
 
 </div>
