@@ -116,9 +116,6 @@ button:hover {
         align-content: center;
     }
 
-    .registerButton {
-    }
-
     .contenedor {
         display: flex;
         flex-direction: row;

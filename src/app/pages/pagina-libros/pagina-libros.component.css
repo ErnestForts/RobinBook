@@ -154,7 +154,7 @@ datalist {
     }
 
     #contenedor{
-      padding-top: 12%;
+      padding-top: 4%;
     }
 
     .col-desktop{
@@ -173,13 +173,13 @@ datalist {
         margin-right: 15vw;
     }
 
-    h6 {
+    p {
         color: #1D231E;
       }
   
     #fav-plus {
-    height: 8vw;
-    width: 8vw;
+    height: 5vw;
+    width: 5vw;
     }
 
     .buscar {

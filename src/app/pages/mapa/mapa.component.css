@@ -5,8 +5,6 @@
 
 #contenedor{
   background-color: #F7F9C1;
-  height: 100%;
-  padding: 0;
 }
 
 .contenedor-mapa{
@@ -14,7 +12,6 @@
   padding: 0;
   height: 100vh;
   width: 100%;
-  display: ;
 
 }
 
@@ -138,6 +135,7 @@ svg{
 
     .padre{
       margin-left: 17vw;
+      margin-top: 7vw;
     }
 
 
@@ -147,9 +145,6 @@ svg{
       padding: 10px;
     }
 
-    #contenedor{
-      padding-top: 15vw;
-    }
 
     .col-desktop{
       padding-top: 0;
@@ -160,13 +155,13 @@ svg{
       margin: 0 auto;
     }
 
-    h6 {
+    p {
       color: #1D231E;
     }
 
     #fav-plus {
-      height: 8vw;
-      width: 8vw;
+      height: 5vw;
+      width: 5vw;
     }
 
 }
