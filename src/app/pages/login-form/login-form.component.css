@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 19vw;
 }
 
 .logo{
@@ -17,6 +18,7 @@
     align-items: center;
     margin-bottom: 2%;
 }
+
 img{
     width: 40%;
 }
@@ -24,6 +26,10 @@ img{
 .contenedor{
     padding-top: 10%;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .inputDiv{
@@ -57,20 +63,11 @@ h1 > a{
 }
 
 .field-icon {
-    /* margin-left: -25px; */
-    /* margin-top: 2.8rem; */
     position: absolute;
     font-size: 2rem;
     transform: translate(-130%, 100%);
 }
 
-.forgotPassword{
-    font-family: Montserrat;
-    font-size: 3rem;
-    font-weight: 500;
-    margin-top: 15px;
-    color: #979797;
-}
 
 a:link {
     text-decoration: none;
@@ -128,31 +125,11 @@ a:hover {
     font-weight: normal;
 }
 
-.registerButton {
-
-    margin-top: 10px;
-    align-items: center;
-    width: 255px;
-    height: 46px;
-
-    /* Global/03. Success */
-
-    background-color: #689F38;
-    border: none;
-    color: #FFFFFF;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-}
-
 button:hover {
     cursor: pointer;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.mobileRegister {
-    display: none;
-}
 
 .has-error input[type="email"],
 .has-error input[type="password"] {
@@ -163,7 +140,40 @@ button:hover {
 .forgotLink{
     padding-right: 0%;
 }
-@media only screen and (max-width: 800px) {
+
+.allRegister {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.forgotLink {
+    color: #D7323E;
+}
+
+.registerLink {
+    text-decoration: none;
+    color: rgba(39, 100, 42, 1);
+}
+
+.formDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 30%;
+    min-height: 100%;
+    align-content: center
+}
+
+@media only screen and (min-width: 800px) {
+
+    .outletContent {
+        margin-top: 1vw;
+    }
+
+
     .formDiv {
         max-width: 50%;
         min-height: 100%;
@@ -173,98 +183,39 @@ button:hover {
         align-content: center;
     }
 
-    .outletContent {
-        /* margin-top: 10%; */
+    img {
+        width: 20vw;
+    }
+
+    h2 {
+        font-size: 40px;
     }
 
     .contenedor {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        /* max-width: 100%;
-        min-height: 100%; */
+        margin-top: 0;
+        padding-top: 20px;
+        margin-bottom: 100px;
+        border: 50px;
     }
 
-    .footer {
-        display: none;
-    }
-
-
-}
-
-@media only screen and (max-width: 800px) {
-    .formDiv {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        max-width: 30%;
-        min-height: 100%;
-        align-content: center
-    }
-
-    .outletContent {
-        margin-top: 19vw;
-    }
-
-    .contenedor {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* max-width: 100%;
-        min-height: 100%; */
-    }
-
-    .title {
-        /* margin-top: -90px; */
-    }
-
-    .mobileRegister {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .forgotLink {
-        color: #D7323E;
-    }
-
-    #registerTitle {
-        display: none;
-
-    }
-
-    #registerButton {
-        display: none;
-    }
-
-    .registerLink {
-        text-decoration: none;
-        color: rgba(39, 100, 42, 1);
+    .newInput > input {
+        width: 30vw;
+        height: 8vw; 
     }
 
     .loginButton {
-
-        margin-top: 40px;
-        align-items: center;
         width: 255px;
         height: 46px;
+        font-size: 25px;
 
-
-        background: rgba(104, 159, 56, 1);
-
-        border: none;
-        color: #FFFFFF;
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: normal;
     }
 
-    .footer {
-        display: none;
+    .allRegister {
+        width: 30vw;
     }
 
+    h1 {
+        font-size: 10px;
+    }
 
 }
