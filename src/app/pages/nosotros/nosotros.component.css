@@ -65,9 +65,13 @@ app-header-favoritos{
   }
 
 @media only screen and (min-width: 700px) {
-
+    .mobile {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 700px) {
-
+    .desktop {
+        display: none;
+    }
 }
