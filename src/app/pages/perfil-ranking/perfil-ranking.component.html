@@ -6,6 +6,9 @@
                     <div>
                         <img class="imgperfil" src={{usuario.Foto}} alt="">
                     </div>
+                    <div class="nombreUser">
+                        <h3><b>{{usuario.Nombre}}</b></h3>
+                    </div>
                     <div class="row crear-chat" *ngIf="sameUser == false;">
                         <button routerLink="/perfil/chat" *ngIf="newChatRoom == false;"><img src="..\assets\icons\message-circle.svg" alt=""></button>
                         <button (click)="createChatRoom(usuario.user_id);" *ngIf="newChatRoom == true;"><img src="..\assets\icons\message-circle.svg" alt=""></button>
