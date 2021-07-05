@@ -163,11 +163,24 @@ export class LugarComponent implements OnInit {
       this.tieneLibro = false;
       console.log(this.lugarVista);
       
-      this.mapaServicio.editarLugar(this.lugarVista, token);
+      this.mapaServicio.editarLugar(this.lugarVista, token).subscribe((response:any) => {
+        if(response.success == 1){    
+          console.log("Éxito");               
+        }else{
+          console.log("Fracaso");
+        }
+      });
     } else {
       this.lugarVista.tieneLibro = true;
       this.tieneLibro = true;
-      this.mapaServicio.editarLugar(this.lugarVista, token);
+
+      this.mapaServicio.editarLugar(this.lugarVista, token).subscribe((response:any) => {
+      if(response.success == 1){
+        console.log("Éxito");
+      }else{
+        console.log("Fracaso");
+      }
+    });
     }
   }
 
