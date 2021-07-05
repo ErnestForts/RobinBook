@@ -100,14 +100,13 @@
             <input type="text" placeholder="Escribir comentario" (keydown.enter)="presionarEnter($event, coment.value, libroVista.libro_id); coment.value = ''" #coment><br>
         </div>
         <div class="contenedor-boton">
-            <button (click)="sendComent(coment.value, libroVista.libro_id)">
+            <button (click)="sendComent(coment.value, libroVista.libro_id); coment.value = ''">
                 <img src="..\assets\icons\send-comment.svg" alt="">
             </button>
         </div>
     </div>
     <app-header-favoritos class="mobile mobile-header" src="..\assets\icons\new-arrow_back.svg" title="" id="back" alt="back" id2="ocultar" id3="ocultar"></app-header-favoritos>
     <app-footer class="desktop-header desktop"></app-footer>
-    <app-footer class="mobile mobile-footer"></app-footer>
     <app-footer-login class="desktop-footer desktop"></app-footer-login>
 
 </div>

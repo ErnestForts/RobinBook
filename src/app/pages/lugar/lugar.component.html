@@ -111,7 +111,7 @@
                             <input type="text" placeholder="Escribir comentario" (keydown.enter)="presionarEnter($event, coment.value, lugarVista.Lugar_id); coment.value = ''" #coment><br>
                         </div>
                         <div class="contenedor-boton">
-                            <button (click)="sendComent(coment.value, lugarVista.Lugar_id)">
+                            <button (click)="sendComent(coment.value, lugarVista.Lugar_id); coment.value = ''">
                                 <img src="..\assets\icons\send-comment.svg" alt="">
                             </button>
                         </div>
