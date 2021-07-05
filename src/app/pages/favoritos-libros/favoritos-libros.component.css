@@ -181,18 +181,35 @@ h3 {
         display: none;
     }
 
-    img {
-        width: 80%;
+    #contenedor {
+        padding-top: 6vw;
+        padding-bottom: 10vw;
+    }
+
+    .content {
+        height: 20vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+    }
+
+    h4 {
+        font-size: 2vw;
+    }
+
+    .imagen{
+        height: 20vw;
+        width: 25vw;
     }
 
     .container {
         margin-top: 2vw;
-        padding-left: 30vw;
-        padding-right: 30vw;
+
     }
 
     .description {
-        font-size: 20px;
+        padding-top: 3vw;
     }
 }
 

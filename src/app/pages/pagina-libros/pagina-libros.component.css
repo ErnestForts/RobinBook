@@ -38,6 +38,7 @@ datalist {
 
 .container {
     padding: 0 3vw;
+    background-color: #F7F9C1;
 }
 
 .content {
@@ -70,10 +71,6 @@ datalist {
     color: white;
     padding: 10px;
     margin: 5px;
-}
-
-.container {
-    background-color: #F7F9C1;
 }
 
 .cardLibro {
@@ -147,14 +144,8 @@ datalist {
       margin-left: 35vw;
     }
 
-    #mapa{
-      width: 45%;
-      height: 50%;
-      padding: 10px;
-    }
-
     #contenedor{
-      padding-top: 4%;
+      padding-top: 5vw;
     }
 
     .col-desktop{
@@ -175,7 +166,7 @@ datalist {
 
     p {
         color: #1D231E;
-        font-size: 2vw;
+        font-size: 1.5vw;
       }
   
     #fav-plus {
@@ -190,7 +181,18 @@ datalist {
     }
 
     .botones {
-        font-size: 25px;
+      width: 12vw;
+      height: 4vw;
+      border-radius: 10px;
+    }
+
+    .botones
+
+    .busqueda>input {
+      width: 30vw;
+      height: 4vw;
+      font-size: 1.5vw;
+      border-radius: 10px;
     }
 
 }

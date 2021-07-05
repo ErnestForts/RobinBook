@@ -389,6 +389,19 @@ button > img {
         display: none;
     }
 
+    .content {
+        padding-top: 0vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        height: 20vw;
+        padding-bottom: 20vw;
+    }
+
+    .sendComent {
+        display: none;
+    }
+
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -400,12 +413,6 @@ button > img {
         padding-top: 0;
     }
 
-}
-
-@media (min-width: 700px) {
-    .imagen {
-        max-width: 100%;
-    }
 }
 
 @media (min-width: 700px) {

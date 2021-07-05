@@ -5,13 +5,11 @@
         <div class="content">
           <div class="row desktop-row align-items-end desktop">
             <div class="col libros-favoritos" routerLink="/libros/favoritos">
-                <p>Libros favoritos</p>
+                <p>Libros favoritos</p><img src="..\assets\icons\new-book_favDesktop.svg" id="fav-plus" class="id3" alt="favoritos">
             </div>
-            <img src="..\assets\icons\new-book_favDesktop.svg" id="fav-plus" class="id3" alt="favoritos">
             <div class="col nuevo-libro" routerLink="/libros/nuevo">
-                <p>Nuevo libro</p>
+                <p>Nuevo libro</p><img src="..\assets\icons\new-book_addDesktop.svg" id="fav-plus" class="id3" alt="newLocation">
             </div>
-            <img src="..\assets\icons\new-book_addDesktop.svg" id="fav-plus" class="id3" alt="newLocation">
         </div>
           <div class="busqueda">
             <input [(ngModel)]="filterTerm" type="search" class="buscar iconoDentro" placeholder="Inserta titulo" list="busqueda" #titulo>

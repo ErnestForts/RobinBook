@@ -230,6 +230,7 @@ button:hover {
     }
 
     .newInput > span {
+        margin-top: -0.8vw;
         font-size: 1rem;
         margin-top: -15px;
     }
