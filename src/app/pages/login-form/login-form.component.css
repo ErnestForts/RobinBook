@@ -188,7 +188,7 @@ button:hover {
     }
 
     h2 {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .contenedor {
@@ -199,14 +199,17 @@ button:hover {
 
     .newInput > input {
         width: 30vw;
-        height: 5vw; 
+        height: 4vw;
+        font-size: 30px;
+        border-radius: 10px;
     }
 
-    .loginButton {
-        width: 255px;
-        height: 46px;
-        font-size: 25px;
 
+    .loginButton {
+        width: 300px;
+        height: 60px;
+        border-radius: 10px;
+        font-size: 30px;
     }
 
     .allRegister {
@@ -222,4 +225,11 @@ button:hover {
         font-size: 1rem;
     }
 
+    .inputLow{
+        margin-top: 1vw;
+    }
+
+    .newInput > span {
+        font-size: 1rem;
+    }
 }

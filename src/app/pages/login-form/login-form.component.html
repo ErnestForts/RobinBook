@@ -23,9 +23,8 @@
 
                 <div class="inputDiv">
                     <div class="newInput inputLow">
-                      <input id="txtPassword" formControlName="txtPassword" type="password"
-                        placeholder="Contraseña">
-                    <span toggle="#password-field" [ngClass]="isVisible" (click)="toggle()"></span>  
+                      <input id="txtPassword" formControlName="txtPassword" type="password" placeholder="Contraseña">
+                      <span toggle="#password-field" [ngClass]="isVisible" (click)="toggle()"></span>  
                     </div>
                     
                     <div *ngIf="passwordInvalid">

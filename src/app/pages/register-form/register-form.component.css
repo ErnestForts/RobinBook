@@ -12,16 +12,6 @@
     margin-top: 28vw;
 }
 
-.logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2%;
-}
-img{
-    width: 20%;
-}
-
 h2 {
     font-family: Montserrat;
     font-style: normal;
@@ -30,19 +20,24 @@ h2 {
     color: #979797;
 }
 
-h4 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-
-    color: #979797;
+.formDiv{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
 }
 
-.field-icon {
-    margin-left: -25px;
-    margin-top: 2.8rem;
-    position: relative;
+#spanPassword {
+    position: absolute;
     font-size: 2rem;
+    top: 61vw;
+    left: 60vw;
+}
+
+#spanRepassword {
+    position: absolute;
+    font-size: 2rem;
+    top: 78vw;
+    left: 60vw;
 }
 
 a:link {
@@ -117,9 +112,31 @@ button:hover {
         font-size: 60px;
     }
 
+    #spanPassword {
+        font-size: 1rem;
+        top: 17.7vw;
+        left: 26vw;
+    }
+    
+    #spanRepassword {
+        font-size: 1rem;
+        top: 22.7vw;
+        left: 26vw;
+    }
+    
+
     input {
-        width: 350px;
-        height: 50px;
+        width: 30vw;
+        height: 4vw;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+
+    .registerButton {
+        width: 300px;
+        height: 60px;
+        border-radius: 10px;
+        font-size: 30px;
     }
 
 }
