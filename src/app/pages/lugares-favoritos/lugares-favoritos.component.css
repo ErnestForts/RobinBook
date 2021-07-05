@@ -28,6 +28,7 @@ h3 {
 .descripcion{
     color: #5A6072;
     margin-top: 1vw;
+    word-wrap: break-word;
 }
 
 .madre{
@@ -171,13 +172,38 @@ h3 {
     }
 
     .nombre, .descripcion{
-        width: 70%;
+        width: 50%;
+        padding: 10px;
+    }
+
+    #contenedor {
+        padding-top: 7vw;
+        padding-bottom: 7vw;
     }
 
     .content {
-        margin-top: 2vw;
-        margin-left: 15vw;
-        margin-right: 15vw;
+        padding-top: 0vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        height: 20vw;
+        padding: 2vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+    }
+
+    h4 {
+        font-size: 1.5vw;
+    }
+
+    .info{
+        padding-left: 0px;
+    }
+
+    .imagen{
+        height: 15vw;
+        width: 25vw;
     }
 
 }
@@ -194,6 +220,5 @@ h3 {
     .busqueda {
         display: none;
     }
-
 
 }
