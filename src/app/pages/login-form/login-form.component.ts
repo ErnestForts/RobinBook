@@ -38,12 +38,13 @@ export class LoginFormComponent implements OnInit {
       try {
         this.authService.login(this.formLogin.value);
         this.authService.isLoggedIn.subscribe((response:any) =>{
-          if(!response){
-            this.loginInvalid = true;
-          }
+          // if(!response){
+          //   // this.loginInvalid = true;
+          // }
         });            
       } catch (err) {
-        console.log('invalid '+ err);  
+        console.log('invalid '+ err); 
+        this.loginInvalid = true; 
       }
     } else {
       this.formSubmitAttempt = true;
