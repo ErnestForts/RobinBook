@@ -18,6 +18,7 @@ export class MiPerfilComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router,private usuarioService: UsuarioService) {
     this.url = 'https://robinbook.herokuapp.com/api/users';    
     this.user = JSON.parse(localStorage.getItem('user')).user;
+    this.info = this.user;
     this.mostrarUsuarios();
    }
   ngOnInit(): void {
