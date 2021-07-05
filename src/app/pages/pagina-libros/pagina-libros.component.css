@@ -183,16 +183,19 @@ datalist {
     .botones {
       width: 12vw;
       height: 4vw;
-      border-radius: 10px;
+      border-radius: 15px;
+      font-size: 1.5vw;
     }
-
-    .botones
 
     .busqueda>input {
       width: 30vw;
       height: 4vw;
       font-size: 1.5vw;
       border-radius: 10px;
+    }
+
+    .info>h5 {
+      font-size: 1.5vw;
     }
 
 }
