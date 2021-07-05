@@ -231,5 +231,6 @@ button:hover {
 
     .newInput > span {
         font-size: 1rem;
+        margin-top: -15px;
     }
 }
